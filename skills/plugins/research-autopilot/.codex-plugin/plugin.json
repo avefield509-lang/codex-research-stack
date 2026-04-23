@@ -1,0 +1,49 @@
+{
+  "name": "research-autopilot",
+  "version": "0.1.0",
+  "description": "Plugin-first research routing and multi-agent orchestration layer for Codex.",
+  "author": {
+    "name": "Codex Research Stack Contributors",
+    "email": "opensource@codexresearchstack.dev",
+    "url": "https://github.com/avefield509-lang/codex-research-stack"
+  },
+  "homepage": "https://avefield509-lang.github.io/codex-research-stack/",
+  "repository": "https://github.com/avefield509-lang/codex-research-stack",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "research",
+    "plugin",
+    "multi-agent",
+    "mcp",
+    "computational-social-science"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Research Autopilot",
+    "shortDescription": "Route research work, plan project-type multi-agent runs, and expose evidence-aware workflow contracts.",
+    "longDescription": "Research Autopilot is the public plugin layer of Codex Research Stack. It routes research tasks before execution, upgrades project-type work into structured multi-agent planning, and keeps citation, writing, and evidence workflows behind explicit contracts instead of hidden heuristics.",
+    "developerName": "Codex Research Stack Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://avefield509-lang.github.io/codex-research-stack/",
+    "privacyPolicyURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "termsOfServiceURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "defaultPrompt": [
+      "Route this research task automatically and explain the plan before execution.",
+      "Show which research route, quality gates, and profiles this task needs.",
+      "Turn this project task into a structured multi-agent dispatch."
+    ],
+    "brandColor": "#0D4F4E",
+    "composerIcon": "./assets/research-autopilot-small.svg",
+    "logo": "./assets/research-autopilot-small.svg",
+    "screenshots": [
+      "./assets/route-explanation-card.svg",
+      "./assets/multi-agent-dispatch.svg"
+    ]
+  }
+}

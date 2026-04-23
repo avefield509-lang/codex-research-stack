@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#F4F1E8"/>
+  <rect x="40" y="40" width="1120" height="640" rx="24" fill="#FFFFFF" stroke="#0D4F4E" stroke-width="4"/>
+  <text x="80" y="100" fill="#0D4F4E" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Research Team Orchestrator · Dispatch Overview</text>
+  <rect x="90" y="160" width="280" height="120" rx="18" fill="#0D4F4E"/>
+  <text x="120" y="210" fill="#F4F1E8" font-size="24" font-family="Segoe UI, Arial, sans-serif">文献智能体</text>
+  <text x="120" y="245" fill="#E0B04B" font-size="24" font-family="Segoe UI, Arial, sans-serif">literature-producer</text>
+  <rect x="460" y="160" width="280" height="120" rx="18" fill="#113B3B"/>
+  <text x="490" y="210" fill="#F4F1E8" font-size="24" font-family="Segoe UI, Arial, sans-serif">写作智能体</text>
+  <text x="490" y="245" fill="#E0B04B" font-size="24" font-family="Segoe UI, Arial, sans-serif">writing-producer</text>
+  <rect x="830" y="160" width="280" height="120" rx="18" fill="#E0B04B"/>
+  <text x="860" y="210" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif">审稿智能体</text>
+  <text x="860" y="245" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif">reviewer</text>
+  <path d="M370 220h80" stroke="#0D4F4E" stroke-width="6" fill="none"/>
+  <path d="M740 220h80" stroke="#0D4F4E" stroke-width="6" fill="none"/>
+  <rect x="90" y="350" width="1020" height="110" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="120" y="395" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Canonical artifacts</text>
+  <text x="120" y="435" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">dispatch · context packets · agent output dirs · handoff log · gate log · project state</text>
+  <rect x="90" y="500" width="480" height="120" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="120" y="545" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Mandatory review targets</text>
+  <text x="120" y="585" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">paper_draft · literature_synthesis · project_map</text>
+  <rect x="630" y="500" width="480" height="120" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="660" y="545" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Gate rule</text>
+  <text x="660" y="585" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">No handoff to next stage unless target-specific gate = pass</text>
+</svg>

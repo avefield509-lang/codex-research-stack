@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#F4F1E8"/>
+  <rect x="40" y="40" width="1120" height="640" rx="24" fill="#FFFFFF" stroke="#0D4F4E" stroke-width="4"/>
+  <text x="80" y="100" fill="#0D4F4E" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Research Autopilot · Route Explanation Card</text>
+  <rect x="80" y="140" width="320" height="110" rx="16" fill="#0D4F4E"/>
+  <text x="105" y="190" fill="#F4F1E8" font-size="24" font-family="Segoe UI, Arial, sans-serif">Route</text>
+  <text x="105" y="225" fill="#E0B04B" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">literature-review</text>
+  <rect x="430" y="140" width="300" height="110" rx="16" fill="#113B3B"/>
+  <text x="455" y="190" fill="#F4F1E8" font-size="24" font-family="Segoe UI, Arial, sans-serif">Profile</text>
+  <text x="455" y="225" fill="#E0B04B" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">literature</text>
+  <rect x="760" y="140" width="320" height="110" rx="16" fill="#113B3B"/>
+  <text x="785" y="190" fill="#F4F1E8" font-size="24" font-family="Segoe UI, Arial, sans-serif">Project Scope</text>
+  <text x="785" y="225" fill="#E0B04B" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">conditional_multi_agent</text>
+  <rect x="80" y="290" width="1000" height="120" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="105" y="335" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Why this route</text>
+  <text x="105" y="375" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">Cross-source discovery, citation verification, Zotero handoff, and synthesis writing all appear in the task.</text>
+  <rect x="80" y="440" width="460" height="180" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="105" y="485" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Selected components</text>
+  <text x="105" y="525" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">cnki-research</text>
+  <text x="105" y="560" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">citation-verifier</text>
+  <text x="105" y="595" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">zotero-sync</text>
+  <rect x="620" y="440" width="460" height="180" rx="16" fill="#F7FAF9" stroke="#C6D9D5"/>
+  <text x="645" y="485" fill="#0D4F4E" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Next step</text>
+  <text x="645" y="525" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">Create clarification card</text>
+  <text x="645" y="560" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">Check multi-agent upgrade rule</text>
+  <text x="645" y="595" fill="#294846" font-size="22" font-family="Segoe UI, Arial, sans-serif">Only then start retrieval</text>
+</svg>

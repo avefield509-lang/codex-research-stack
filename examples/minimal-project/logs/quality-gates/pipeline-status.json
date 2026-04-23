@@ -1,0 +1,7 @@
+{
+  "route_id": "literature-review",
+  "current_stage": "literature_discovery",
+  "completed_stages": [],
+  "gate_decisions": {},
+  "allowed_to_advance": false
+}
