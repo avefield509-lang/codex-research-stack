@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started · Codex Research Stack</title>
+    <meta name="description" content="Codex Research Stack 中文快速开始页面。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../getting-started.md">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Getting Started</div>
+          <h1>先跑起来，再往下看结构。</h1>
+          <p>这页只保留公开仓库里最短的上手路径：克隆仓库、初始化项目脚手架、再跑校验器。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="https://github.com/avefield509-lang/codex-research-stack">查看 GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/social-preview.png" alt="Getting started hero">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>你会拿到什么</h3>
+            <ul>
+              <li>执行前 route 解释</li>
+              <li>项目型多智能体编排</li>
+              <li>研究 pipeline gate</li>
+              <li>公开项目脚手架模板</li>
+              <li>`research-autopilot` 插件资产</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>最短路径</h3>
+            <ol>
+              <li>克隆仓库</li>
+              <li>读根目录 `README`</li>
+              <li>看 `skills/catalog/` 和 `skills/schemas/`</li>
+              <li>用 `init-research-project.ps1` 初始化示例项目</li>
+              <li>运行公开 validator</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>公开版最小命令</h2>
+        </div>
+        <div class="card">
+<pre><code>git clone https://github.com/avefield509-lang/codex-research-stack.git
+cd codex-research-stack
+pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
+python .\scripts\validate_subagent_registry.py
+python .\scripts\validate_agents_contract.py
+python .\scripts\validate_research_pipeline.py
+python .\scripts\validate_research_stack.py</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>

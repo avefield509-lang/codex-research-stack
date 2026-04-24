@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Project Guide · Codex Research Stack</title>
+    <meta name="description" content="Codex Research Stack 中文新项目上手页面。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../new-project-guide.md">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">New Project Guide</div>
+          <h1>如果明天开一个新项目，先做什么。</h1>
+          <p>这页只保留可执行顺序：建文件夹、初始化项目、先让系统解释 route，再看是否升级成项目型多智能体。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="./operator-guide.html">先看操作指南</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/pipeline-gates-overview.png" alt="New project guide hero">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>最稳的顺序</h3>
+          <ol>
+            <li>建项目文件夹</li>
+            <li>初始化项目脚手架</li>
+            <li>先让 `research-autopilot` 解释 route</li>
+            <li>如果任务变成项目型，再进入 `research-team-orchestrator`</li>
+            <li>用状态板和 gate 文件追踪当前阶段</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>初始化命令</h3>
+<pre><code>pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "&lt;PROJECT_ROOT&gt;"</code></pre>
+          </article>
+          <article class="card">
+            <h3>初始化后先看</h3>
+            <ul>
+              <li>`AGENTS.md`</li>
+              <li>`research-map.md`</li>
+              <li>`findings-memory.md`</li>
+              <li>`logs/project-state/current.json`</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>第一句怎么说</h3>
+<pre><code>@research-autopilot 这是一个新的研究项目。
+主题是：...
+问题是：...
+材料或数据是：...
+预期产出是：...
+先解释 route，再决定是否升级成项目型多智能体。</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
