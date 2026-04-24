@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Research integration chain">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071217"/>
+      <stop offset="1" stop-color="#101f25"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#69d3c9"/>
+      <stop offset="1" stop-color="#e2b45d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="80" y="104" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="800">Research materials stay in the right layer</text>
+  <text x="82" y="148" fill="#afc4c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">References, notes, platform evidence, and project traces should not collapse into one chat.</text>
+  <path d="M166 350 H1112" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g transform="translate(88 246)">
+      <rect width="220" height="208" rx="28" fill="#10262c" stroke="#315b5c"/>
+      <text x="34" y="62" fill="#69d3c9" font-size="24" font-weight="700">Codex</text>
+      <text x="34" y="110" fill="#ecf5f3" font-size="25">route</text>
+      <text x="34" y="146" fill="#ecf5f3" font-size="25">execute</text>
+    </g>
+    <g transform="translate(382 246)">
+      <rect width="220" height="208" rx="28" fill="#10262c" stroke="#315b5c"/>
+      <text x="34" y="62" fill="#69d3c9" font-size="24" font-weight="700">Zotero</text>
+      <text x="34" y="110" fill="#ecf5f3" font-size="25">verified</text>
+      <text x="34" y="146" fill="#ecf5f3" font-size="25">references</text>
+    </g>
+    <g transform="translate(676 246)">
+      <rect width="220" height="208" rx="28" fill="#10262c" stroke="#315b5c"/>
+      <text x="34" y="62" fill="#69d3c9" font-size="24" font-weight="700">Obsidian</text>
+      <text x="34" y="110" fill="#ecf5f3" font-size="25">long-lived</text>
+      <text x="34" y="146" fill="#ecf5f3" font-size="25">knowledge</text>
+    </g>
+    <g transform="translate(970 246)">
+      <rect width="220" height="208" rx="28" fill="#2a2418" stroke="#7d6534"/>
+      <text x="34" y="62" fill="#e2b45d" font-size="24" font-weight="700">Project</text>
+      <text x="34" y="110" fill="#ecf5f3" font-size="25">state</text>
+      <text x="34" y="146" fill="#ecf5f3" font-size="25">evidence</text>
+    </g>
+  </g>
+  <text x="88" y="564" fill="#afc4c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">The repo owns rules, schemas, validators, templates, and examples. A future app should make this easier to operate.</text>
+</svg>
+

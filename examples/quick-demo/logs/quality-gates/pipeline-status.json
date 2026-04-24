@@ -1,0 +1,11 @@
+{
+  "route_id": "computational-social-science",
+  "current_stage": "research_design",
+  "completed_stages": [],
+  "gate_decisions": {
+    "planning-review": "revise"
+  },
+  "allowed_to_advance": false,
+  "reason": "The project has a valid route and dispatch, but sampling and citation verification are not complete."
+}
+

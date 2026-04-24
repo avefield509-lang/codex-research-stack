@@ -104,11 +104,36 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 如果你只想跳到某一部分：
 
 - [快速开始](./docs/manual.zh-CN.md#start)
+- [3 分钟快速 Demo](./examples/quick-demo/)
 - [新项目怎么开始](./docs/manual.zh-CN.md#new-project)
 - [项目跑起来后看什么](./docs/manual.zh-CN.md#live-project)
 - [典型场景](./docs/manual.zh-CN.md#use-cases)
 - [集成与边界](./docs/manual.zh-CN.md#integrations)
 - [仓库与未来 App 的关系](./docs/manual.zh-CN.md#repo-and-app)
+
+## 3 分钟快速 Demo
+
+如果你暂时不想跑命令，可以先按顺序看这个最小故事：
+
+1. [用户怎么提需求](./examples/quick-demo/demo-prompt.md)
+2. [系统怎么解释路线](./examples/quick-demo/route-explanation-card.md)
+3. [项目怎么生成 dispatch](./examples/quick-demo/.codex/dispatch/demo-run.yaml)
+4. [项目状态怎么留痕](./examples/quick-demo/logs/project-state/current.json)
+5. [审稿 gate 怎么阻断弱产出](./examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json)
+
+## 视觉说明
+
+### 先解释路线
+
+![路线说明卡](./docs/assets/route-explanation-card.svg)
+
+### 多智能体 dispatch
+
+![多智能体 dispatch](./docs/assets/multi-agent-dispatch-flow.svg)
+
+### 研究工具联动
+
+![研究工具联动](./docs/assets/integration-chain.svg)
 
 ## 它的差异化在哪里
 
@@ -130,3 +155,8 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ## 如果你觉得有用
 
 如果这套思路能帮助你把 Codex 变成更清楚的研究工作台，欢迎点一个 star。
+
+## Release
+
+- 当前公开版说明：[v0.1.0](./.github/releases/v0.1.0.md)
+- GitHub 主页设置建议：[GitHub Repository Profile](./.github/repository-profile.md)

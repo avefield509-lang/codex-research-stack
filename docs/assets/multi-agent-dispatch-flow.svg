@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Multi-agent dispatch flow">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071217"/>
+      <stop offset="1" stop-color="#13231b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="80" y="96" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="800">Inspectable multi-agent dispatch</text>
+  <text x="82" y="136" fill="#afc4c0" font-family="Segoe UI, Arial, sans-serif" font-size="23">Not role-play. Each role gets inputs, output paths, handoff traces, and review gates.</text>
+  <g fill="none" stroke="#69d3c9" stroke-width="5" stroke-linecap="round">
+    <path d="M272 336 H435"/>
+    <path d="M586 336 H750"/>
+    <path d="M904 336 H1046"/>
+    <path d="M904 336 C940 438 940 496 904 558"/>
+    <path d="M746 558 H586"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(80 245)">
+      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
+      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Autopilot</text>
+      <text x="26" y="100" fill="#ecf5f3" font-size="23">route</text>
+      <text x="26" y="132" fill="#ecf5f3" font-size="23">explanation</text>
+    </g>
+    <g transform="translate(435 245)">
+      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
+      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Dispatch</text>
+      <text x="26" y="100" fill="#ecf5f3" font-size="23">agents</text>
+      <text x="26" y="132" fill="#ecf5f3" font-size="23">outputs</text>
+    </g>
+    <g transform="translate(750 245)">
+      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
+      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Producers</text>
+      <text x="26" y="100" fill="#ecf5f3" font-size="23">literature</text>
+      <text x="26" y="132" fill="#ecf5f3" font-size="23">analysis</text>
+    </g>
+    <g transform="translate(1046 245)">
+      <rect width="154" height="182" rx="26" fill="#2a2418" stroke="#7d6534"/>
+      <text x="24" y="58" fill="#e2b45d" font-size="22" font-weight="700">Gate</text>
+      <text x="24" y="100" fill="#ecf5f3" font-size="23">pass</text>
+      <text x="24" y="132" fill="#ecf5f3" font-size="23">revise</text>
+    </g>
+    <g transform="translate(746 476)">
+      <rect width="192" height="150" rx="26" fill="#10262c" stroke="#315b5c"/>
+      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Reviewer</text>
+      <text x="26" y="100" fill="#ecf5f3" font-size="23">target-specific</text>
+    </g>
+    <g transform="translate(394 500)">
+      <rect width="192" height="104" rx="24" fill="#10262c" stroke="#315b5c"/>
+      <text x="24" y="44" fill="#69d3c9" font-size="20" font-weight="700">Project state</text>
+      <text x="24" y="76" fill="#ecf5f3" font-size="22">current.json</text>
+    </g>
+  </g>
+</svg>
+

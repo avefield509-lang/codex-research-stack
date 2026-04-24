@@ -15,17 +15,18 @@
 4. [它适合谁](#who)
 5. [这套公开版真正由什么组成](#components)
 6. [第一次使用，只做这三件事](#start)
-7. [如果你完全不想折腾命令](#no-command)
-8. [新项目怎么开始](#new-project)
-9. [项目为什么会进入多智能体协作](#real-multi-agent)
-10. [项目跑起来后，你最该看什么](#live-project)
-11. [最值得先看的文件](#important-files)
-12. [这套系统适合哪些场景](#use-cases)
-13. [它和 Zotero、Obsidian 这些工具是什么关系](#integrations)
-14. [当前仓库和未来 App 是什么关系](#repo-and-app)
-15. [这个公开仓库不包含什么](#public-boundary)
-16. [如果出问题，先看哪里](#troubleshooting)
-17. [接下来还会补什么](#roadmap)
+7. [如果你只有三分钟](#quick-demo)
+8. [如果你完全不想折腾命令](#no-command)
+9. [新项目怎么开始](#new-project)
+10. [项目为什么会进入多智能体协作](#real-multi-agent)
+11. [项目跑起来后，你最该看什么](#live-project)
+12. [最值得先看的文件](#important-files)
+13. [这套系统适合哪些场景](#use-cases)
+14. [它和 Zotero、Obsidian 这些工具是什么关系](#integrations)
+15. [当前仓库和未来 App 是什么关系](#repo-and-app)
+16. [这个公开仓库不包含什么](#public-boundary)
+17. [如果出问题，先看哪里](#troubleshooting)
+18. [接下来还会补什么](#roadmap)
 
 ---
 
@@ -179,8 +180,25 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 
 ---
 
+<a id="quick-demo"></a>
+## 7. 如果你只有三分钟
+
+直接看这个快速 Demo：
+
+- [3 分钟快速 Demo](../examples/quick-demo/)
+
+按这个顺序看：
+
+1. `demo-prompt.md`
+2. `route-explanation-card.md`
+3. `.codex/dispatch/demo-run.yaml`
+4. `logs/project-state/current.json`
+5. `outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json`
+
+这是最快的理解方式。你不用先学所有术语，只要看见一个研究任务如何先被解释路线、如何变成明确的 agent 分工、又如何因为正式引用还没核验而被 reviewer gate 阻断。
+
 <a id="no-command"></a>
-## 7. 如果你完全不想折腾命令
+## 8. 如果你完全不想折腾命令
 
 那你现在只需要记住下面这句话：
 
@@ -193,7 +211,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="new-project"></a>
-## 8. 新项目怎么开始
+## 9. 新项目怎么开始
 
 开一个新项目时，不需要一口气理解所有文件。  
 最稳的顺序只有四步：
@@ -250,7 +268,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="real-multi-agent"></a>
-## 9. 项目为什么会进入多智能体协作
+## 10. 项目为什么会进入多智能体协作
 
 很多人第一次听到“多智能体”，会以为系统一开始就会自动分出很多角色。  
 其实不是。
@@ -288,7 +306,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="live-project"></a>
-## 10. 项目跑起来后，你最该看什么
+## 11. 项目跑起来后，你最该看什么
 
 项目一旦跑起来，最重要的不是“它调用了多少工具”，而是下面这三件事是否清楚：
 
@@ -329,7 +347,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="important-files"></a>
-## 11. 最值得先看的文件
+## 12. 最值得先看的文件
 
 如果你以后只记住一个排查顺序，就记这个：
 
@@ -355,7 +373,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="use-cases"></a>
-## 12. 这套系统适合哪些场景
+## 13. 这套系统适合哪些场景
 
 ### 文献综述
 
@@ -399,7 +417,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ---
 
 <a id="integrations"></a>
-## 13. 它和 Zotero、Obsidian 这些工具是什么关系
+## 14. 它和 Zotero、Obsidian 这些工具是什么关系
 
 一句话说：
 
@@ -443,7 +461,7 @@ Obsidian 是长期知识层。
 ---
 
 <a id="repo-and-app"></a>
-## 14. 当前仓库和未来 App 是什么关系
+## 15. 当前仓库和未来 App 是什么关系
 
 最容易理解的说法是：
 
@@ -475,7 +493,7 @@ Obsidian 是长期知识层。
 ---
 
 <a id="public-boundary"></a>
-## 15. 这个公开仓库不包含什么
+## 16. 这个公开仓库不包含什么
 
 这个仓库不是私人工作站镜像。
 
@@ -500,7 +518,7 @@ Obsidian 是长期知识层。
 ---
 
 <a id="troubleshooting"></a>
-## 16. 如果出问题，先看哪里
+## 17. 如果出问题，先看哪里
 
 很多问题其实不用一上来就排脚本。  
 先按这个顺序看：
@@ -542,7 +560,7 @@ python .\scripts\validate_research_stack.py
 ---
 
 <a id="roadmap"></a>
-## 17. 接下来还会补什么
+## 18. 接下来还会补什么
 
 近一点的内容主要是：
 

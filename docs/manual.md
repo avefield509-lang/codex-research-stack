@@ -15,17 +15,18 @@ If you are new here and want to understand what this stack is, how to begin, and
 4. [Who this is for](#who-it-is-for)
 5. [What the public stack is actually made of](#components)
 6. [First use: only do these three things](#getting-started)
-7. [If you do not want to deal with commands yet](#no-command)
-8. [How a new project begins](#starting-a-project)
-9. [Why a project turns into multi-agent work](#what-counts-as-real-multi-agent-execution)
-10. [What to look at during a live project](#during-a-live-project)
-11. [The files that matter most](#the-files-that-matter-most)
-12. [Use cases](#use-cases)
-13. [Integrations](#integrations)
-14. [Repository and future app](#repository-and-future-app)
-15. [Public boundary](#public-boundary)
-16. [If something goes wrong, where to look first](#troubleshooting)
-17. [Roadmap](#roadmap)
+7. [If you only have three minutes](#quick-demo)
+8. [If you do not want to deal with commands yet](#no-command)
+9. [How a new project begins](#starting-a-project)
+10. [Why a project turns into multi-agent work](#what-counts-as-real-multi-agent-execution)
+11. [What to look at during a live project](#during-a-live-project)
+12. [The files that matter most](#the-files-that-matter-most)
+13. [Use cases](#use-cases)
+14. [Integrations](#integrations)
+15. [Repository and future app](#repository-and-future-app)
+16. [Public boundary](#public-boundary)
+17. [If something goes wrong, where to look first](#troubleshooting)
+18. [Roadmap](#roadmap)
 
 ---
 
@@ -186,8 +187,25 @@ The point is to avoid going in the wrong direction too early.
 
 ---
 
+<a id="quick-demo"></a>
+## 7. If you only have three minutes
+
+Open the quick demo:
+
+- [3-minute quick demo](../examples/quick-demo/)
+
+Read these files in order:
+
+1. `demo-prompt.md`
+2. `route-explanation-card.md`
+3. `.codex/dispatch/demo-run.yaml`
+4. `logs/project-state/current.json`
+5. `outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json`
+
+This is the fastest way to understand the project without learning every term first. The demo shows a task being routed, turned into explicit agent roles, and stopped by a reviewer gate when formal citation verification is still missing.
+
 <a id="no-command"></a>
-## 7. If you do not want to deal with commands yet
+## 8. If you do not want to deal with commands yet
 
 Then just remember this sentence:
 
@@ -200,7 +218,7 @@ So even if you are not ready to run scripts or inspect directories, you can stil
 ---
 
 <a id="starting-a-project"></a>
-## 8. How a new project begins
+## 9. How a new project begins
 
 The safest order is:
 
@@ -249,7 +267,7 @@ That means:
 ---
 
 <a id="what-counts-as-real-multi-agent-execution"></a>
-## 9. Why a project turns into multi-agent work
+## 10. Why a project turns into multi-agent work
 
 Many people hear "multi-agent" and imagine a system that immediately splits into many roles.
 
@@ -285,7 +303,7 @@ If several viewpoints appear inside one answer, that is still not the same thing
 ---
 
 <a id="during-a-live-project"></a>
-## 10. What to look at during a live project
+## 11. What to look at during a live project
 
 During a live project, the most important questions are:
 
@@ -332,7 +350,7 @@ So the most important practical rule is:
 ---
 
 <a id="the-files-that-matter-most"></a>
-## 11. The files that matter most
+## 12. The files that matter most
 
 If you remember only one inspection order, use this one:
 
@@ -358,7 +376,7 @@ The later ones are more like state and checkpoint records.
 ---
 
 <a id="use-cases"></a>
-## 12. Use cases
+## 13. Use cases
 
 ### Literature review
 
@@ -404,7 +422,7 @@ This stack helps connect:
 ---
 
 <a id="integrations"></a>
-## 13. Integrations
+## 14. Integrations
 
 In simple terms:
 
@@ -448,7 +466,7 @@ If one of those is missing, the system should degrade gracefully rather than col
 ---
 
 <a id="repository-and-future-app"></a>
-## 14. Repository and future app
+## 15. Repository and future app
 
 The easiest way to think about the relationship is:
 
@@ -481,7 +499,7 @@ If you want the shortest version:
 ---
 
 <a id="public-boundary"></a>
-## 15. Public boundary
+## 16. Public boundary
 
 This repository is not a mirror of a private workstation.
 
@@ -506,7 +524,7 @@ So what you see here is a **public, explainable, reusable layer**, not the full 
 ---
 
 <a id="troubleshooting"></a>
-## 16. If something goes wrong, where to look first
+## 17. If something goes wrong, where to look first
 
 Most problems do not require debugging scripts immediately.
 
@@ -549,7 +567,7 @@ In simpler terms:
 ---
 
 <a id="roadmap"></a>
-## 17. Roadmap
+## 18. Roadmap
 
 Near-term work:
 

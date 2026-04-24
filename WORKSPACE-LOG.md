@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T16:49:16
+- generated_at: 2026-04-24T17:03:59
 - branch: `main`
-- HEAD: `b9ae534`
+- HEAD: `07a2d22`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(07a2d22 2026-04-24 Consolidate public documentation into single manual[0]) Consolidate public documentation into single manual
 - 2026-04-24 $(b9ae534 2026-04-24 Define repository and future app relationship[0]) Define repository and future app relationship
 - 2026-04-24 $(ded6f7a 2026-04-24 Refine public Pages visual hierarchy and mobile layout[0]) Refine public Pages visual hierarchy and mobile layout
 - 2026-04-24 $(7b3c4a9 2026-04-24 Add English visitor Pages and align bilingual docs[0]) Add English visitor Pages and align bilingual docs
@@ -89,38 +90,31 @@
 
 ## Current Working Tree Status
 
+- A  .github/releases/v0.1.0.md
+- A  .github/repository-profile.md
 - M  README.md
 - M  README.zh-CN.md
-- D  docs/app-relationship.html
-- D  docs/app-relationship.md
-- D  docs/app-relationship.zh-CN.md
-- D  docs/architecture.html
-- D  docs/architecture.md
-- M  docs/assets/site.css
-- D  docs/getting-started.html
-- D  docs/getting-started.md
+- M  assets/social-preview.png
+- A  docs/assets/integration-chain.svg
+- A  docs/assets/multi-agent-dispatch-flow.svg
+- A  docs/assets/route-explanation-card.svg
+- M  docs/assets/social-preview.png
 - M  docs/index.html
-- D  docs/index.md
-- D  docs/integrations.html
-- D  docs/integrations.md
-- A  docs/manual.html
-- A  docs/manual.md
-- A  docs/manual.zh-CN.md
-- D  docs/new-project-guide.html
-- D  docs/new-project-guide.md
-- D  docs/operator-guide.html
-- D  docs/operator-guide.md
-- D  docs/public-boundary.md
-- D  docs/roadmap.md
-- D  docs/use-cases.html
-- D  docs/use-cases.md
-- D  docs/zh/app-relationship.html
-- D  docs/zh/architecture.html
-- D  docs/zh/getting-started.html
+- M  docs/manual.html
+- M  docs/manual.md
+- M  docs/manual.zh-CN.md
 - M  docs/zh/index.html
-- D  docs/zh/integrations.html
-- A  docs/zh/manual.html
-- D  docs/zh/new-project-guide.html
-- D  docs/zh/operator-guide.html
-- D  docs/zh/use-cases.html
+- M  docs/zh/manual.html
+- A  examples/quick-demo/.codex/dispatch/demo-run.yaml
+- A  examples/quick-demo/README.md
+- A  examples/quick-demo/demo-prompt.md
+- A  examples/quick-demo/findings-memory.md
+- A  examples/quick-demo/logs/project-state/current.json
+- A  examples/quick-demo/logs/quality-gates/pipeline-status.json
+- A  examples/quick-demo/outputs/agent-runs/demo-run/literature-producer/result.json
+- A  examples/quick-demo/outputs/agent-runs/demo-run/literature-producer/summary.md
+- A  examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json
+- A  examples/quick-demo/outputs/agent-runs/demo-run/reviewer/review.literature-producer.md
+- A  examples/quick-demo/research-map.md
+- A  examples/quick-demo/route-explanation-card.md
 - M  scripts/validate_research_stack.py

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Route explanation card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071217"/>
+      <stop offset="0.55" stop-color="#0d2227"/>
+      <stop offset="1" stop-color="#13231b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#69d3c9"/>
+      <stop offset="1" stop-color="#e2b45d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="112" cy="86" r="190" fill="#69d3c9" opacity="0.10"/>
+  <circle cx="1120" cy="648" r="230" fill="#e2b45d" opacity="0.10"/>
+  <rect x="76" y="70" width="1128" height="580" rx="34" fill="#0f1f25" stroke="#2d5657" filter="url(#shadow)"/>
+  <rect x="112" y="108" width="210" height="34" rx="17" fill="url(#accent)"/>
+  <text x="134" y="132" fill="#082329" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">ROUTE FIRST</text>
+  <text x="112" y="204" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="800">Explain the path before execution</text>
+  <text x="112" y="252" fill="#afc4c0" font-family="Segoe UI, Arial, sans-serif" font-size="26">A research task becomes safer when Codex explains the route, tools, exclusions, and next action first.</text>
+  <g transform="translate(112 318)">
+    <rect width="320" height="210" rx="24" fill="#132b31" stroke="#335f60"/>
+    <text x="28" y="54" fill="#69d3c9" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Task type</text>
+    <text x="28" y="104" fill="#ecf5f3" font-family="Cascadia Code, Consolas, monospace" font-size="25">computational</text>
+    <text x="28" y="138" fill="#ecf5f3" font-family="Cascadia Code, Consolas, monospace" font-size="25">social science</text>
+  </g>
+  <g transform="translate(480 318)">
+    <rect width="320" height="210" rx="24" fill="#132b31" stroke="#335f60"/>
+    <text x="28" y="54" fill="#69d3c9" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Selected path</text>
+    <text x="28" y="104" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">Literature</text>
+    <text x="28" y="140" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">Evidence</text>
+    <text x="28" y="176" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">Analysis</text>
+  </g>
+  <g transform="translate(848 318)">
+    <rect width="320" height="210" rx="24" fill="#132b31" stroke="#335f60"/>
+    <text x="28" y="54" fill="#69d3c9" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Next action</text>
+    <text x="28" y="104" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">Create dispatch</text>
+    <text x="28" y="140" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">assign reviewer</text>
+    <text x="28" y="176" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="26">block weak outputs</text>
+  </g>
+  <path d="M432 423 H480" stroke="#69d3c9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M800 423 H848" stroke="#69d3c9" stroke-width="5" stroke-linecap="round"/>
+</svg>
+

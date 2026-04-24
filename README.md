@@ -40,6 +40,7 @@ If you only want one document, read the manual:
 If you want to jump to one chapter:
 
 - [Quick start](./docs/manual.md#getting-started)
+- [3-minute quick demo](./examples/quick-demo/)
 - [How a new project begins](./docs/manual.md#starting-a-project)
 - [What happens during a live project](./docs/manual.md#during-a-live-project)
 - [Integrations](./docs/manual.md#integrations)
@@ -91,9 +92,33 @@ If you want to know how the future app should relate to this repository, read:
 
 - [Repository and Future App](./docs/manual.md#repository-and-future-app)
 
+## 3-minute demo
+
+If you want to understand the repo without running anything first, read the demo in order:
+
+1. [User prompt](./examples/quick-demo/demo-prompt.md)
+2. [Route explanation card](./examples/quick-demo/route-explanation-card.md)
+3. [Dispatch artifact](./examples/quick-demo/.codex/dispatch/demo-run.yaml)
+4. [Project state](./examples/quick-demo/logs/project-state/current.json)
+5. [Reviewer gate](./examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json)
+
 ## Learn the repo through one manual
 
 - [Research Stack Manual](./docs/manual.md)
+
+## Visual walkthrough
+
+### Route explanation
+
+![Route explanation card](./docs/assets/route-explanation-card.svg)
+
+### Multi-agent dispatch
+
+![Multi-agent dispatch flow](./docs/assets/multi-agent-dispatch-flow.svg)
+
+### Research integrations
+
+![Research integration chain](./docs/assets/integration-chain.svg)
 
 ## Why this repo exists
 
@@ -111,6 +136,11 @@ Codex Research Stack focuses on that layer. It does not replace Codex. It gives 
 
 - [English Pages](https://avefield509-lang.github.io/codex-research-stack/)
 - [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
+
+## Release
+
+- Current public release notes: [v0.1.0](./.github/releases/v0.1.0.md)
+- Repository profile settings: [GitHub Repository Profile](./.github/repository-profile.md)
 
 ## If this is useful
 

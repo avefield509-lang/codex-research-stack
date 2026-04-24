@@ -160,10 +160,23 @@ def main() -> None:
         DOCS_DIR / "assets" / "multi-agent-workspace.png",
         DOCS_DIR / "assets" / "pipeline-gates-overview.png",
         DOCS_DIR / "assets" / "architecture-map.svg",
+        DOCS_DIR / "assets" / "route-explanation-card.svg",
+        DOCS_DIR / "assets" / "multi-agent-dispatch-flow.svg",
+        DOCS_DIR / "assets" / "integration-chain.svg",
         PLUGIN_DIR / "assets" / "route-explanation-card.svg",
         PLUGIN_DIR / "assets" / "multi-agent-dispatch.svg",
         PLUGIN_DIR / "assets" / "research-system-overview.png",
         PLUGIN_DIR / "assets" / "research-team-workspace.png",
+    ]
+    required_public_release = [
+        REPO_ROOT / ".github" / "repository-profile.md",
+        REPO_ROOT / ".github" / "releases" / "v0.1.0.md",
+        REPO_ROOT / "examples" / "quick-demo" / "README.md",
+        REPO_ROOT / "examples" / "quick-demo" / "demo-prompt.md",
+        REPO_ROOT / "examples" / "quick-demo" / "route-explanation-card.md",
+        REPO_ROOT / "examples" / "quick-demo" / ".codex" / "dispatch" / "demo-run.yaml",
+        REPO_ROOT / "examples" / "quick-demo" / "logs" / "project-state" / "current.json",
+        REPO_ROOT / "examples" / "quick-demo" / "outputs" / "agent-runs" / "demo-run" / "reviewer" / "gate.literature-producer.json",
     ]
     required_scripts = [
         SCRIPTS_DIR / "bootstrap_agent_dispatch.py",
@@ -202,7 +215,7 @@ def main() -> None:
         SCHEMAS_DIR / "project_agent_definition.schema.json",
     ]
 
-    for group in (required_root, required_docs, required_assets, required_scripts, required_catalog, required_schemas):
+    for group in (required_root, required_docs, required_assets, required_scripts, required_catalog, required_schemas, required_public_release):
         for path in group:
             if not path.exists():
                 errors.append(f"missing-required-file:{path.relative_to(REPO_ROOT).as_posix()}")
