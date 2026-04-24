@@ -1,0 +1,2 @@
+#!/bin/sh
+pwsh.exe -NoProfile -ExecutionPolicy Bypass -File ".workspace-tools/Update-WorkspaceLog.ps1"
