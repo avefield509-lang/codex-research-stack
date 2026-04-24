@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operator Guide · Codex Research Stack</title>
+    <meta name="description" content="Codex Research Stack 中文操作指南页面。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../operator-guide.md">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Operator Guide</div>
+          <h1>先看控制链，再看具体技能。</h1>
+          <p>这页解释这套系统是什么、你通常会先看到什么、什么才算真实多智能体执行，以及项目运行时最值得盯的文件。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="./new-project-guide.html">新项目上手</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/multi-agent-workspace.png" alt="Operator guide hero">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>公开控制链</h3>
+            <ul>
+              <li>`research-autopilot`：唯一顶层 router</li>
+              <li>`research-team-orchestrator`：只在项目型任务里进入</li>
+              <li>执行 skills：真正做核验、分析、写作、导出和同步</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>真实多智能体的最低标准</h3>
+            <ul>
+              <li>独立 `agent_id`</li>
+              <li>独立 context packet</li>
+              <li>独立输出目录</li>
+              <li>review 映射</li>
+              <li>target-specific gate</li>
+              <li>handoff / project-state trace</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>项目运行时最重要的文件</h3>
+            <ol>
+              <li>`AGENTS.md`</li>
+              <li>`research-map.md`</li>
+              <li>`findings-memory.md`</li>
+              <li>`material-passport.yaml`</li>
+              <li>`logs/project-state/current.json`</li>
+              <li>`logs/quality-gates/pipeline-status.json`</li>
+            </ol>
+          </article>
+          <article class="card">
+            <h3>为什么 gate 不是装饰</h3>
+            <p>这套公开仓库默认把 citation、data provenance、writing quality、result validity、reproducibility 和 final approval 都当作可以阻断推进的检查点。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>

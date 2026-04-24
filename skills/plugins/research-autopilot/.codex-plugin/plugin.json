@@ -1,0 +1,49 @@
+{
+  "name": "research-autopilot",
+  "version": "0.1.0",
+  "description": "Plugin-first research operating layer for Codex with routing, squads, and pipeline gates.",
+  "author": {
+    "name": "Codex Research Stack Contributors",
+    "email": "opensource@codexresearchstack.dev",
+    "url": "https://github.com/avefield509-lang/codex-research-stack"
+  },
+  "homepage": "https://avefield509-lang.github.io/codex-research-stack/",
+  "repository": "https://github.com/avefield509-lang/codex-research-stack",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "research",
+    "plugin",
+    "multi-agent",
+    "mcp",
+    "computational-social-science"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Research Autopilot",
+    "shortDescription": "Turn Codex into a research operating layer with route explanations, squads, and explicit gates.",
+    "longDescription": "Research Autopilot is the public plugin layer of Codex Research Stack. It explains the route before execution, upgrades project work into readable squads instead of role-play, and keeps citation, writing, social-evidence, and reproducibility workflows behind explicit contracts.",
+    "developerName": "Codex Research Stack Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://avefield509-lang.github.io/codex-research-stack/",
+    "privacyPolicyURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "termsOfServiceURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "defaultPrompt": [
+      "Route this research task automatically and explain the plan before execution.",
+      "Show which research route, quality gates, and profiles this task needs.",
+      "Turn this project task into a structured multi-agent dispatch."
+    ],
+    "brandColor": "#0D4F4E",
+    "composerIcon": "./assets/research-autopilot-small.svg",
+    "logo": "./assets/research-autopilot-small.svg",
+    "screenshots": [
+      "./assets/research-system-overview.png",
+      "./assets/research-team-workspace.png"
+    ]
+  }
+}

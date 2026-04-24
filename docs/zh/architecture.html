@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>架构说明 · Codex Research Stack</title>
+    <meta name="description" content="用更直白的语言解释 Codex Research Stack 如何组织任务判断、项目协作、检查点和知识沉淀。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../architecture.html">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">架构说明</div>
+          <h1>这套系统在底层其实只是在做四件事。</h1>
+          <p>
+            如果你已经知道这个仓库大概能做什么，这页会用更直白的方式解释：
+            它怎么判断任务、怎么组织项目协作、怎么用检查点拦住问题，
+            以及最后怎么把可靠材料放到正确的位置。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="./operator-guide.html">操作指南</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/hero-overview.png" alt="系统总览">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>你可以把它理解成四层</h3>
+            <ol>
+              <li><strong>任务判断</strong>：`research-autopilot` 先说明这是什么工作，建议怎么开始。</li>
+              <li><strong>项目协作</strong>：`research-team-orchestrator` 把较大的任务变成分工、审查和交接。</li>
+              <li><strong>检查点</strong>：引文、写作质量、阶段推进和复现会在这里被检查。</li>
+              <li><strong>材料沉淀</strong>：核验过的材料会进入 Zotero、Obsidian 和项目文件。</li>
+            </ol>
+          </article>
+          <article class="card">
+            <h3>为什么还要特别强调多智能体</h3>
+            <p>
+              因为很多系统把“换几个角色名继续回答”也叫多智能体。这里不是。
+              只有分工、输出、审查和日志都分开时，它才算真实多智能体运行。
+              这样做的好处不是更炫，而是以后还能回看。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card visual-card">
+            <img src="../assets/multi-agent-workspace.png" alt="多智能体工作区">
+          </article>
+          <article class="card visual-card">
+            <img src="../assets/pipeline-gates-overview.png" alt="检查点与阶段推进">
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>项目里最值得看的文件</h3>
+          <ul>
+            <li>`.codex/dispatch/`</li>
+            <li>`.codex/context-packets/`</li>
+            <li>`outputs/agent-runs/`</li>
+            <li>`logs/agent-handoffs/`</li>
+            <li>`logs/quality-gates/`</li>
+            <li>`logs/project-state/`</li>
+          </ul>
+          <p>
+            这些文件的作用很实际：如果一个项目运行到一半出问题，你不用靠回忆猜，
+            而是可以直接看到它停在了哪一步、前面发生过什么。
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

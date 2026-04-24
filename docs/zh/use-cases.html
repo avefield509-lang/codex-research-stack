@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Use Cases · Codex Research Stack</title>
+    <meta name="description" content="Codex Research Stack 的中文典型用例页面。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../use-cases.md">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Use Cases</div>
+          <h1>这套系统最适合哪些研究任务。</h1>
+          <p>
+            这里列的不是抽象口号，而是这套公开仓库最清楚、最稳定的几类工作模式：
+            文献综述、计算社会科学项目、平台证据任务，以及写作导出前的质量控制。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="https://github.com/avefield509-lang/codex-research-stack">查看 GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/multi-agent-workspace.png" alt="Use cases hero">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>文献综述与正式引文边界</h3>
+            <p>适合“检索一个主题、核验正式文献、组织成可继续写作的综述框架”这类任务。</p>
+            <ul>
+              <li>进入 `literature-review` route</li>
+              <li>任务变大后升级成文献型 squad</li>
+              <li>正式引用前强调 DOI 与元数据核验</li>
+              <li>综述结果作为项目 artifact 保留，而不是只留在聊天记录里</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>计算社会科学项目</h3>
+            <p>适合同时包含文献、平台证据、分析、写作和复现的项目型工作。</p>
+            <ul>
+              <li>进入 `computational-social-science` route</li>
+              <li>初始化项目脚手架和记忆文件</li>
+              <li>升级成 CSS squad，而不是试图一口气在单线程里做完</li>
+              <li>状态板、当前 owner、blocker 和下一道 gate 都保持可见</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>平台证据与案例任务</h3>
+            <p>适合从平台页面中提取浏览器真实可见内容，并把证据和后续解释拆开的任务。</p>
+            <ul>
+              <li>进入 `social-platform-case` route</li>
+              <li>优先使用浏览器可见证据边界</li>
+              <li>采集与解释分离</li>
+              <li>当任务变成案例库或评论分析时，可升级为 platform evidence squad</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>写作前的导出控制</h3>
+            <p>适合草稿、返修包、投稿包这类写作型工作，而不是简单格式转换。</p>
+            <ul>
+              <li>进入 `writing-export` route</li>
+              <li>草稿 / 返修 / 投稿包才会升级</li>
+              <li>导出前要求已用引文捕获和写作质量 gate</li>
+              <li>导出是 capture 与 review 之后的环节，不是绕过它们的捷径</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
