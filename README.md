@@ -4,52 +4,43 @@
 
 **A plugin-first research operating layer for Codex.**
 
-It focuses on the part most agent stacks leave implicit:
+Codex Research Stack makes four things explicit:
 
 - route selection before execution
 - real multi-agent project orchestration
-- explicit research pipeline gates
+- visible research pipeline gates
 - evidence-aware handoff into Zotero, Obsidian, and reproducibility artifacts
 
 ![Codex Research Stack Hero](./assets/social-preview.png)
 
-## Why it exists
+## Why it matters
 
-Most coding-agent systems are strongest after a task is already well defined.
+Most agent systems are strongest after a task is already well defined.
+Research work usually fails earlier:
 
-Research work usually breaks earlier:
+- the wrong route is chosen first
+- project work collapses into one long chat
+- citations, writing, and evidence move without explicit checks
+- runtime artifacts and knowledge tools drift apart
 
-- the wrong route is chosen before execution starts
-- project work is treated like one long chat instead of a structured runtime
-- citations, writing, and evidence move without visible gates
-- knowledge tools and runtime artifacts drift apart
-
-Codex Research Stack addresses that layer.
-It does not replace Codex.
-It makes Codex legible as a research system.
+This repository addresses that layer without replacing Codex.
 
 ## What you get
 
-| Layer | What it does |
-| --- | --- |
-| `research-autopilot` | Explains the route, profile, helper skills, and next action before work expands |
-| `research-team-orchestrator` | Turns project work into squads, dispatch artifacts, reviewer mappings, and project state |
-| Contract + gate layer | Blocks weak handoffs through explicit schemas, canonical paths, and pipeline gates |
-| Evidence + knowledge integrations | Connects citation verification, Zotero, Obsidian, social evidence, and reproducibility |
+- `research-autopilot` for route, profile, helper skills, and next action
+- `research-team-orchestrator` for squads, dispatch artifacts, reviewer mappings, and project state
+- explicit contract and gate assets for inspectable runs
+- integrations for citation verification, Zotero, Obsidian, social evidence, and reproducibility
 
 ## Product tour
 
-### Project work becomes a readable workspace
+### Multi-agent project workspace
 
 ![Multi-Agent Workspace](./assets/multi-agent-workspace.png)
 
-### Pipeline and gate logic stay visible
+### Pipeline and gate logic
 
 ![Pipeline and Gates](./assets/pipeline-gates-overview.png)
-
-### The repo still exposes a clear contract map
-
-![Architecture Map](./assets/architecture-map.svg)
 
 ## Typical use cases
 

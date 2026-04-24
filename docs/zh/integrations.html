@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Integrations · Codex Research Stack</title>
+    <meta name="description" content="Codex Research Stack 的中文集成说明页面。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../integrations.md">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Integrations</div>
+          <h1>这套系统怎么和外部工具配合。</h1>
+          <p>
+            公开仓库里的集成层不是“能连什么就都连上”，而是强调边界清楚：
+            什么地方负责正式文献，什么地方负责知识沉淀，什么地方负责证据采集。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">返回中文首页</a>
+            <a class="button button-secondary" href="https://github.com/avefield509-lang/codex-research-stack">查看 GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/pipeline-gates-overview.png" alt="Integrations hero">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>Zotero</h3>
+            <p>Zotero 被当成正式文献边界，而不是一个泛化资料仓。</p>
+            <ul>
+              <li>正式引用前先走核验链</li>
+              <li>collection 结构和引文完整性交接集中在这里</li>
+              <li>不把未经核验的文本直接当参考文献推进</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Obsidian</h3>
+            <p>Obsidian 被当成知识沉淀层，而不是和 Zotero 合并成一个工具。</p>
+            <ul>
+              <li>正式文献管理和知识综合分离</li>
+              <li>项目运行产物和长期知识笔记分离</li>
+              <li>更适合项目地图、方法卡和综合笔记</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>平台证据层</h3>
+            <p>平台证据设计故意偏保守。</p>
+            <ul>
+              <li>优先浏览器可见证据</li>
+              <li>证据采集和解释严格分开</li>
+              <li>后续回看时仍然能检查证据 artifact</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Plugin 入口层</h3>
+            <p>`research-autopilot` 是公开仓库里最重要的 visitor-facing plugin anchor。</p>
+            <ul>
+              <li>入口可见</li>
+              <li>route explanation 可见</li>
+              <li>项目升级到 squad 的路径可见</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>公开脚本层</h3>
+            <p>公开脚本强调可迁移，不假定你的机器和我的机器完全一样。</p>
+            <ul>
+              <li>优先 repo-relative path</li>
+              <li>优先环境变量</li>
+              <li>优先 validator，而不是本机特判</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+  </html>
