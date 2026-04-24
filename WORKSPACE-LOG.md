@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T15:22:56
+- generated_at: 2026-04-24T15:35:29
 - branch: `main`
-- HEAD: `7b3c4a9`
+- HEAD: `ded6f7a`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(ded6f7a 2026-04-24 Refine public Pages visual hierarchy and mobile layout[0]) Refine public Pages visual hierarchy and mobile layout
 - 2026-04-24 $(7b3c4a9 2026-04-24 Add English visitor Pages and align bilingual docs[0]) Add English visitor Pages and align bilingual docs
 - 2026-04-24 $(c5aa9c5 2026-04-24 Polish Chinese entry pages for consistency[0]) Polish Chinese entry pages for consistency
 - 2026-04-24 $(ef8efbf 2026-04-24 Refine cross-repo boundary policy[0]) Refine cross-repo boundary policy
@@ -87,4 +88,16 @@
 
 ## Current Working Tree Status
 
-- M  docs/assets/site.css
+- M  README.md
+- M  README.zh-CN.md
+- A  docs/app-relationship.html
+- A  docs/app-relationship.md
+- A  docs/app-relationship.zh-CN.md
+- M  docs/architecture.md
+- M  docs/getting-started.md
+- M  docs/index.html
+- M  docs/index.md
+- M  docs/integrations.md
+- A  docs/zh/app-relationship.html
+- M  docs/zh/index.html
+- M  scripts/validate_research_stack.py

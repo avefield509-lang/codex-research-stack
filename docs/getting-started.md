@@ -34,28 +34,11 @@ Windows shortcut:
 pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
 ```
 
-### 3. Start from the research question
+### 3. Understand the future app boundary
 
-Use the desktop app or the bridge to preview the most suitable route:
+If you want to understand how a future app should relate to this repository, read:
 
-```powershell
-python .\scripts\public_app_bridge.py route_preview --payload "{\"task\":\"做一个系统文献综述，并同步 Zotero 和写作大纲。\"}"
-```
-
-### 4. Open the workspace
-
-The public desktop app lives in:
-
-- `apps/desktop`
-
-The main user-facing structure is:
-
-- `Home`
-- `Projects`
-- `Sources`
-- `Analysis`
-- `Writing`
-- `Settings`
+- [Repository and Future App](./app-relationship.md)
 
 ## What to look at first
 
@@ -65,6 +48,7 @@ If you are a general researcher, start with:
 - this page
 - [Use Cases](./use-cases.md)
 - [Integrations](./integrations.md)
+- [Repository and Future App](./app-relationship.md)
 
 If you are an advanced user, then continue to:
 

@@ -77,11 +77,11 @@ Windows PowerShell shortcut:
 pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
 ```
 
-### 3. Preview a task path
+### 3. Understand the future app boundary
 
-```powershell
-python .\scripts\public_app_bridge.py route_preview --payload "{\"task\":\"做一个系统文献综述，并同步 Zotero 和写作大纲。\"}"
-```
+If you want to know how the future app should relate to this repository, read:
+
+- [Repository and Future App](./docs/app-relationship.md)
 
 ## Learn the repo in layers
 
@@ -91,6 +91,7 @@ python .\scripts\public_app_bridge.py route_preview --payload "{\"task\":\"做�
 - [Architecture](./docs/architecture.md)
 - [Use Cases](./docs/use-cases.md)
 - [Integrations](./docs/integrations.md)
+- [Repository and Future App](./docs/app-relationship.md)
 
 ## Why this repo exists
 

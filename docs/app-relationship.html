@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Repository and Future App · Codex Research Stack</title>
+    <meta name="description" content="Defines the relationship between the public repository and the future app: one source of truth, one interface layer.">
+    <link rel="stylesheet" href="./assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <span class="active">English</span>
+          <a href="./zh/app-relationship.html">简体中文</a>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Repository and future app</div>
+          <h1>One source of truth, one interface layer.</h1>
+          <p>
+            This repository should remain the public source of truth for the research workflow.
+            The future app should sit on top of it as a guided interface, not as a competing system
+            with its own private rules.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./">Back to home</a>
+            <a class="button button-secondary" href="./architecture.html">Read architecture</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="./assets/hero-overview.png" alt="Repository and app relationship overview">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="card">
+            <h3>This repository owns</h3>
+            <ul>
+              <li>workflow definitions</li>
+              <li>catalogs, schemas, and templates</li>
+              <li>validators and public scripts</li>
+              <li>docs, examples, and public assets</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>The future app should own</h3>
+            <ul>
+              <li>onboarding and project dashboards</li>
+              <li>task-entry forms and status views</li>
+              <li>visual route explanations</li>
+              <li>guided project creation and environment views</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>What the app should read instead of redefining</h3>
+          <p>
+            The app should derive its UI model from the repository's public contracts,
+            especially the catalog, schemas, templates, examples, and validators.
+            It should not silently fork the workflow logic.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>What the app should never become</h3>
+          <ul>
+            <li>a second source of truth for route logic</li>
+            <li>a hidden fork of the check and gate rules</li>
+            <li>the only way to understand how the stack works</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

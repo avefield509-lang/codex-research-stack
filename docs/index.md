@@ -13,6 +13,7 @@ This documentation site is the public guide to a research workspace for Codex, b
 - [Getting Started](./getting-started.md): start a project, understand the main workspace, and choose the right first action
 - [Use Cases](./use-cases.md): see how literature reviews, platform cases, CSS projects, and writing workflows fit the workspace
 - [Integrations](./integrations.md): understand how Zotero, Obsidian, browser-visible evidence, and local tooling fit together
+- [Repository and Future App](./app-relationship.md): see what the repository should own and what a future app should own
 
 ## For Advanced Users
 

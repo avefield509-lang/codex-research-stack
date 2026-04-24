@@ -2,9 +2,12 @@
 
 This page is for advanced users who want to understand how the public workspace stays inspectable.
 
-## Public product view
+## Planned interface view
 
-The public desktop app is organized around six user-facing modules:
+The future app should be treated as an interface layer above this repository.
+Its job is to surface a simpler daily workflow for ordinary researchers.
+
+That future interface can reasonably organize itself around six user-facing areas:
 
 - `Home`
 - `Projects`
@@ -13,7 +16,7 @@ The public desktop app is organized around six user-facing modules:
 - `Writing`
 - `Settings`
 
-This is the layer ordinary researchers should see first.
+But those views should sit on top of this repository's public contracts rather than replace them.
 
 ## Internal execution view
 
@@ -55,10 +58,19 @@ The explicit layer exists so a human can still inspect what happened.
 - `skills/profiles/`
 - `skills/schemas/`
 - `skills/templates/`
-- `scripts/public_app_bridge.py`
 - `scripts/init_research_project.py`
 - `scripts/plan_research_team.py`
 - `scripts/validate_*.py`
+
+## Repository and future app
+
+The clean relationship is:
+
+- this repository owns the workflow rules, schemas, validators, examples, and public docs
+- the future app owns the guided interface, dashboards, and visual project views
+
+The app should read from the repository's public contracts.
+It should not become a second source of truth.
 
 ## What is intentionally backgrounded
 

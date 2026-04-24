@@ -34,7 +34,7 @@ This is why the product talks about evidence capture rather than generic “scra
 
 ## Local environment tools
 
-The desktop app can detect the local presence of:
+A future app can detect the local presence of:
 
 - Python
 - Git
