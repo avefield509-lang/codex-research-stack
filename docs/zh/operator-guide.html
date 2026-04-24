@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Operator Guide · Codex Research Stack</title>
-    <meta name="description" content="Codex Research Stack 中文操作指南页面。">
+    <title>操作指南 · Codex Research Stack</title>
+    <meta name="description" content="解释项目跑起来后系统在做什么、哪些文件最值得看、什么才算真实多智能体协作。">
     <link rel="stylesheet" href="../assets/site.css">
   </head>
   <body>
@@ -19,38 +19,38 @@
 
       <section class="hero">
         <div>
-          <div class="eyebrow">Operator Guide</div>
-          <h1>先看控制链，再看具体技能。</h1>
-          <p>这页解释这套系统是什么、你通常会先看到什么、什么才算真实多智能体执行，以及项目运行时最值得盯的文件。</p>
+          <div class="eyebrow">操作指南</div>
+          <h1>项目跑起来以后，你应该看什么。</h1>
+          <p>这页不讲抽象概念，重点解释一件事：当系统开始工作以后，你应该从哪里判断它在做什么、是不是走偏了、接下来又该看哪一步。</p>
           <div class="hero-actions">
             <a class="button button-primary" href="./">返回中文首页</a>
             <a class="button button-secondary" href="./new-project-guide.html">新项目上手</a>
           </div>
         </div>
         <div class="hero-visual">
-          <img src="../assets/multi-agent-workspace.png" alt="Operator guide hero">
+          <img src="../assets/multi-agent-workspace.png" alt="操作指南主图">
         </div>
       </section>
 
       <section class="section">
         <div class="grid-2">
           <article class="card">
-            <h3>公开控制链</h3>
+            <h3>先看这条主链</h3>
             <ul>
-              <li>`research-autopilot`：唯一顶层 router</li>
-              <li>`research-team-orchestrator`：只在项目型任务里进入</li>
-              <li>执行 skills：真正做核验、分析、写作、导出和同步</li>
+              <li><code>research-autopilot</code>：先判断这是什么任务，建议从哪里开始</li>
+              <li><code>research-team-orchestrator</code>：只在任务已经变成项目时才介入</li>
+              <li>执行技能：真正负责核验、分析、写作、导出和同步</li>
             </ul>
           </article>
           <article class="card">
-            <h3>真实多智能体的最低标准</h3>
+            <h3>什么才算真实多智能体</h3>
             <ul>
-              <li>独立 `agent_id`</li>
-              <li>独立 context packet</li>
+              <li>独立的 <code>agent_id</code></li>
+              <li>独立的上下文包</li>
               <li>独立输出目录</li>
-              <li>review 映射</li>
-              <li>target-specific gate</li>
-              <li>handoff / project-state trace</li>
+              <li>明确的审查对应关系</li>
+              <li>能阻断推进的检查结果</li>
+              <li>交接记录和项目状态记录</li>
             </ul>
           </article>
         </div>
@@ -59,19 +59,19 @@
       <section class="section">
         <div class="grid-2">
           <article class="card">
-            <h3>项目运行时最重要的文件</h3>
+            <h3>项目运行时先盯这些文件</h3>
             <ol>
-              <li>`AGENTS.md`</li>
-              <li>`research-map.md`</li>
-              <li>`findings-memory.md`</li>
-              <li>`material-passport.yaml`</li>
-              <li>`logs/project-state/current.json`</li>
-              <li>`logs/quality-gates/pipeline-status.json`</li>
+              <li><code>AGENTS.md</code></li>
+              <li><code>research-map.md</code></li>
+              <li><code>findings-memory.md</code></li>
+              <li><code>material-passport.yaml</code></li>
+              <li><code>logs/project-state/current.json</code></li>
+              <li><code>logs/quality-gates/pipeline-status.json</code></li>
             </ol>
           </article>
           <article class="card">
-            <h3>为什么 gate 不是装饰</h3>
-            <p>这套公开仓库默认把 citation、data provenance、writing quality、result validity、reproducibility 和 final approval 都当作可以阻断推进的检查点。</p>
+            <h3>为什么检查点不是装饰</h3>
+            <p>这套公开仓库把正式引文、数据来源、写作质量、结果有效性、复现和最终放行都当成真正能拦住项目推进的检查点，而不是摆在那里的提醒语。</p>
           </article>
         </div>
       </section>

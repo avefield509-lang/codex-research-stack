@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T14:53:29
+- generated_at: 2026-04-24T14:59:36
 - branch: `main`
-- HEAD: `6ca51e3`
+- HEAD: `1ac2bb3`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(1ac2bb3 2026-04-24 Add repository boundary AGENTS[0]) Add repository boundary AGENTS
 - 2026-04-24 $(6ca51e3 2026-04-24 Refresh workspace log after public repo link[0]) Refresh workspace log after public repo link
 - 2026-04-24 $(5ca454c 2026-04-24 Link published codex-research-stack history[0]) Link published codex-research-stack history
 - 2026-04-24 $(d35a81a 2026-04-24 Polish workspace README[0]) Polish workspace README
@@ -82,4 +83,8 @@
 
 ## Current Working Tree Status
 
-- A  AGENTS.md
+- A  _config.yml
+- M  docs/zh/getting-started.html
+- M  docs/zh/integrations.html
+- M  docs/zh/operator-guide.html
+- M  docs/zh/use-cases.html

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Integrations · Codex Research Stack</title>
-    <meta name="description" content="Codex Research Stack 的中文集成说明页面。">
+    <title>集成说明 · Codex Research Stack</title>
+    <meta name="description" content="解释这套系统如何和 Zotero、Obsidian、平台证据和公开脚本层配合。">
     <link rel="stylesheet" href="../assets/site.css">
   </head>
   <body>
@@ -19,10 +19,10 @@
 
       <section class="hero">
         <div>
-          <div class="eyebrow">Integrations</div>
+          <div class="eyebrow">集成说明</div>
           <h1>这套系统怎么和外部工具配合。</h1>
           <p>
-            公开仓库里的集成层不是“能连什么就都连上”，而是强调边界清楚：
+            这套公开仓库并不是“能接什么就全接上”，而是强调边界清楚：
             什么地方负责正式文献，什么地方负责知识沉淀，什么地方负责证据采集。
           </p>
           <div class="hero-actions">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <img src="../assets/pipeline-gates-overview.png" alt="Integrations hero">
+          <img src="../assets/pipeline-gates-overview.png" alt="集成说明主图">
         </div>
       </section>
 
@@ -42,7 +42,7 @@
             <p>Zotero 被当成正式文献边界，而不是一个泛化资料仓。</p>
             <ul>
               <li>正式引用前先走核验链</li>
-              <li>collection 结构和引文完整性交接集中在这里</li>
+              <li>文献归档和正式引用交接集中在这里</li>
               <li>不把未经核验的文本直接当参考文献推进</li>
             </ul>
           </article>
@@ -63,17 +63,17 @@
             <ul>
               <li>优先浏览器可见证据</li>
               <li>证据采集和解释严格分开</li>
-              <li>后续回看时仍然能检查证据 artifact</li>
+              <li>后续回看时仍然能检查证据文件</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Plugin 入口层</h3>
-            <p>`research-autopilot` 是公开仓库里最重要的 visitor-facing plugin anchor。</p>
+            <h3>插件入口层</h3>
+            <p><code>research-autopilot</code> 是公开仓库里最重要的用户入口。</p>
             <ul>
               <li>入口可见</li>
-              <li>route explanation 可见</li>
-              <li>项目升级到 squad 的路径可见</li>
+              <li>任务判断过程可见</li>
+              <li>项目升级到协作模式的路径可见</li>
             </ul>
           </article>
 
@@ -81,9 +81,9 @@
             <h3>公开脚本层</h3>
             <p>公开脚本强调可迁移，不假定你的机器和我的机器完全一样。</p>
             <ul>
-              <li>优先 repo-relative path</li>
+              <li>优先使用仓库相对路径</li>
               <li>优先环境变量</li>
-              <li>优先 validator，而不是本机特判</li>
+              <li>优先校验脚本，而不是本机特判</li>
             </ul>
           </article>
         </div>
