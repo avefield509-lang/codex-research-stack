@@ -229,13 +229,13 @@ a:hover {
   justify-content: center;
   min-width: 0;
   max-width: 100%;
-  min-height: 100%;
-  padding: 14px;
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at top left, rgba(103, 209, 199, 0.08), transparent 38%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
-  border: 1px solid rgba(103, 155, 150, 0.14);
+  min-height: 0;
+  align-self: center;
+  padding: 0;
+  border-radius: 22px;
+  background: rgba(6, 15, 19, 0.28);
+  border: 1px solid rgba(103, 155, 150, 0.2);
+  overflow: hidden;
 }
 
 .hero-visual img,
@@ -243,14 +243,10 @@ a:hover {
   width: 100%;
   display: block;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 0;
+  box-shadow: none;
   object-fit: contain;
-  background: rgba(6, 15, 19, 0.42);
-}
-
-.hero-visual img {
-  aspect-ratio: 16 / 9;
+  background: rgba(6, 15, 19, 0.16);
 }
 
 .section {
@@ -407,9 +403,10 @@ pre code {
 }
 
 .visual-card {
-  padding: 14px;
+  padding: 0;
   overflow: hidden;
   max-width: 100%;
+  background: rgba(6, 15, 19, 0.28);
 }
 
 .visual-card img {
