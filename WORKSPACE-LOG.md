@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T15:01:26
+- generated_at: 2026-04-24T15:08:14
 - branch: `main`
-- HEAD: `64c3356`
+- HEAD: `ef8efbf`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(ef8efbf 2026-04-24 Refine cross-repo boundary policy[0]) Refine cross-repo boundary policy
 - 2026-04-24 $(64c3356 2026-04-24 Improve Chinese Pages readability and restore Pages config[0]) Improve Chinese Pages readability and restore Pages config
 - 2026-04-24 $(1ac2bb3 2026-04-24 Add repository boundary AGENTS[0]) Add repository boundary AGENTS
 - 2026-04-24 $(6ca51e3 2026-04-24 Refresh workspace log after public repo link[0]) Refresh workspace log after public repo link
@@ -84,4 +85,5 @@
 
 ## Current Working Tree Status
 
-- M  AGENTS.md
+- M  README.zh-CN.md
+- M  docs/zh/new-project-guide.html
