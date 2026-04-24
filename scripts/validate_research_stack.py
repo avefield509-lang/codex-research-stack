@@ -142,6 +142,8 @@ def main() -> None:
     required_docs = [
         DOCS_DIR / "index.md",
         DOCS_DIR / "getting-started.md",
+        DOCS_DIR / "operator-guide.md",
+        DOCS_DIR / "new-project-guide.md",
         DOCS_DIR / "architecture.md",
         DOCS_DIR / "use-cases.md",
         DOCS_DIR / "public-boundary.md",
@@ -149,7 +151,6 @@ def main() -> None:
         DOCS_DIR / "roadmap.md",
     ]
     required_assets = [
-        ASSETS_DIR / "hero-demo.gif",
         ASSETS_DIR / "hero-overview.png",
         ASSETS_DIR / "social-preview.png",
         ASSETS_DIR / "social-preview.svg",

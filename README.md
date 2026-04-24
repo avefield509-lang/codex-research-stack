@@ -12,11 +12,13 @@
 **Quick links**
 - [GitHub Pages](https://avefield509-lang.github.io/codex-research-stack/)
 - [Getting Started](./docs/getting-started.md)
+- [Operator Guide](./docs/operator-guide.md)
+- [New Project Guide](./docs/new-project-guide.md)
 - [Architecture](./docs/architecture.md)
 - [Use Cases](./docs/use-cases.md)
 - [Minimal Project Example](./examples/minimal-project/README.md)
 
-![Codex Research Stack Hero Demo](./assets/hero-demo.gif)
+![Codex Research Stack Overview](./assets/hero-overview.png)
 
 ## Why This Repo Exists | 为什么会有这个仓库
 

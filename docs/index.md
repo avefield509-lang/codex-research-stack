@@ -9,6 +9,8 @@ This documentation site is the public guide to a plugin-first research operating
 ## Start Here
 
 - [Getting Started](./getting-started.md): install the public repo, inspect the stack, and bootstrap a project
+- [Operator Guide](./operator-guide.md): understand the control plane, dispatch artifacts, and what counts as real multi-agent work
+- [New Project Guide](./new-project-guide.md): create a new project scaffold and run the first planning pass
 - [Architecture](./architecture.md): understand the control plane, squads, gates, and knowledge handoff
 - [Use Cases](./use-cases.md): see how the system behaves in real research scenarios
 - [Integrations](./integrations.md): understand Zotero, Obsidian, social evidence, and plugin boundaries
