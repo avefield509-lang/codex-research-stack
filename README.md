@@ -86,24 +86,11 @@ Windows PowerShell shortcut:
 pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
 ```
 
-### 3. Understand the future app boundary
+### 3. Read the quick demo
 
-If you want to know how the future app should relate to this repository, read:
+If you want to understand the workflow before running anything, read:
 
-- [Repository and Future App](./docs/manual.md#repository-and-future-app)
-
-## Repository boundary
-
-This public repository is one part of a four-repository setup:
-
-- `skills-environment-local`: private local environment and runtime rules
-- `skills-environment-release`: this public environment package
-- `skills-app-own`: private desktop app workspace
-- `skills-app-github`: public app workspace
-
-The rule is simple: this repo publishes the portable workflow layer. App repositories should use an explicit snapshot or sync step when they need environment rules; they should not silently become the source of truth.
-
-For browser and platform evidence, the public design remains conservative. It keeps `social-platform-reader` as the research entrypoint and allows MCP, Chrome DevTools, or browser automation adapters as implementation paths. It does not assume that native Computer Use is always available.
+- [3-minute quick demo](./examples/quick-demo/)
 
 ## 3-minute demo
 
@@ -153,7 +140,6 @@ Codex Research Stack focuses on that layer. It does not replace Codex. It gives 
 ## Release
 
 - Current public release notes: [v0.1.0](./.github/releases/v0.1.0.md)
-- Repository profile settings: [GitHub Repository Profile](./.github/repository-profile.md)
 
 ## If this is useful
 

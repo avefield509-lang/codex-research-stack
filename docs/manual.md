@@ -24,9 +24,8 @@ If you are new here and want to understand what this stack is, how to begin, and
 13. [Use cases](#use-cases)
 14. [Integrations](#integrations)
 15. [Repository and future app](#repository-and-future-app)
-16. [Public boundary](#public-boundary)
-17. [If something goes wrong, where to look first](#troubleshooting)
-18. [Roadmap](#roadmap)
+16. [If something goes wrong, where to look first](#troubleshooting)
+17. [Roadmap](#roadmap)
 
 ---
 
@@ -449,9 +448,8 @@ For platform and web cases, the repository stays conservative:
 - prefer browser-visible material
 - keep provenance explicit
 - keep "what was seen" separate from "how it is interpreted"
-- keep `social-platform-reader` as the research entrypoint
-- allow MCP, Chrome DevTools, or browser automation adapters as implementation paths
-- do not assume that native Computer Use is always available
+- treat capture and interpretation as two separate steps
+- leave enough context for another person to check where the evidence came from
 
 ### Local tools
 
@@ -476,17 +474,6 @@ The easiest way to think about the relationship is:
 - this repository is the rules and documentation layer
 - the future app is the easier daily interface
 
-In the wider ecosystem, the split is:
-
-- `skills-environment-local`
-  - private local environment and runtime rules
-- `skills-environment-release`
-  - this public environment package
-- `skills-app-own`
-  - private desktop app workspace
-- `skills-app-github`
-  - public app workspace
-
 The repository remains responsible for:
 
 - workflow rules
@@ -506,7 +493,7 @@ The future app is responsible for:
 So the future app is not a competing rule system.  
 It should sit on top of the repository, not beside it as a second source of truth.
 
-If an app needs environment rules, it should consume them through an explicit snapshot, export, or sync step. Silent cross-repository drift is the failure mode to avoid.
+The product idea is simple: the repository defines the workflow package; an app can make that workflow easier to start, inspect, and continue.
 
 If you want the shortest version:
 
@@ -514,33 +501,8 @@ If you want the shortest version:
 
 ---
 
-<a id="public-boundary"></a>
-## 16. Public boundary
-
-This repository is not a mirror of a private workstation.
-
-It publishes:
-
-- reusable rules
-- templates
-- examples
-- documentation
-- selected scripts
-
-It does not publish:
-
-- personal files
-- local trust state
-- private keys
-- cloud operator material
-- local runtime outputs
-
-So what you see here is a **public, explainable, reusable layer**, not the full contents of one person's machine.
-
----
-
 <a id="troubleshooting"></a>
-## 17. If something goes wrong, where to look first
+## 16. If something goes wrong, where to look first
 
 Most problems do not require debugging scripts immediately.
 
@@ -583,7 +545,7 @@ In simpler terms:
 ---
 
 <a id="roadmap"></a>
-## 18. Roadmap
+## 17. Roadmap
 
 Near-term work:
 

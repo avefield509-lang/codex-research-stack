@@ -52,7 +52,6 @@
             <a href="#use-cases">Use cases</a>
             <a href="#integrations">Integrations</a>
             <a href="#repository-and-future-app">Repository and future app</a>
-            <a href="#public-boundary">Public boundary</a>
             <a href="#troubleshooting">If something goes wrong, where to look first</a>
             <a href="#roadmap">Roadmap</a>
           </nav>
@@ -214,7 +213,7 @@ Explain the route first, then decide whether this should become project-type mul
               <li>the project folder holds runtime state and traces</li>
             </ul>
             <p>For platform and web cases, the repository stays conservative: prefer browser-visible material, keep provenance explicit, and keep capture separate from interpretation.</p>
-            <p><code>social-platform-reader</code> remains the research entrypoint. MCP, Chrome DevTools, and browser automation adapters are implementation paths, not competing research workflows. The public design does not assume that native Computer Use is always available.</p>
+            <p>The product rule is simple: make the source visible enough that another person can check where the evidence came from.</p>
           </section>
 
           <section id="repository-and-future-app" class="card prose-card">
@@ -224,15 +223,8 @@ Explain the route first, then decide whether this should become project-type mul
               <li>this repository is the rules and documentation layer</li>
               <li>the future app is the easier daily interface</li>
             </ul>
-            <p>In the wider ecosystem, <code>skills-environment-local</code> is the private local environment, <code>skills-environment-release</code> is this public environment package, <code>skills-app-own</code> is the private desktop app workspace, and <code>skills-app-github</code> is the public app workspace.</p>
-            <p>If an app needs environment rules, it should consume them through an explicit snapshot, export, or sync step. Silent cross-repository drift is the failure mode to avoid.</p>
+            <p>The product idea is simple: the repository defines the workflow package; an app can make that workflow easier to start, inspect, and continue.</p>
             <p><strong>The repository is the source, the app is the interface.</strong></p>
-          </section>
-
-          <section id="public-boundary" class="card prose-card">
-            <h2>Public boundary</h2>
-            <p>This repository publishes reusable rules, templates, examples, docs, and selected scripts.</p>
-            <p>It does not publish personal files, local trust state, private keys, cloud operator material, or local runtime outputs.</p>
           </section>
 
           <section id="troubleshooting" class="card prose-card">

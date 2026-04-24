@@ -73,24 +73,11 @@ Windows PowerShell 快捷方式：
 pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
 ```
 
-### 3. 先理解未来 app 应该处在什么位置
+### 3. 先看 3 分钟 Demo
 
-如果你想先理顺“当前仓库”和“未来 app”的关系，先看：
+如果你暂时不想跑命令，先看：
 
-- [总说明书：当前仓库与未来 App 的关系](./docs/manual.zh-CN.md#repo-and-app)
-
-## 仓库边界
-
-当前体系已经拆成四个仓库：
-
-- `skills-environment-local`：私有本地环境和运行规则
-- `skills-environment-release`：当前公开环境包
-- `skills-app-own`：私有桌面 app 工作区
-- `skills-app-github`：公开 app 工作区
-
-最重要的规则是：当前仓库负责发布可迁移的 workflow 层。app 仓如果需要环境规则，应通过明确的快照或同步步骤引入，不能悄悄变成第二个规则源。
-
-浏览器和平台证据链也保持保守：`social-platform-reader` 是研究入口，MCP、Chrome DevTools 或浏览器自动化适配器只是实现路径；公开设计不假设原生 Computer Use 一定可用。
+- [3 分钟快速 Demo](./examples/quick-demo/)
 
 ## 产品结构
 
@@ -172,4 +159,3 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 ## Release
 
 - 当前公开版说明：[v0.1.0](./.github/releases/v0.1.0.md)
-- GitHub 主页设置建议：[GitHub Repository Profile](./.github/repository-profile.md)

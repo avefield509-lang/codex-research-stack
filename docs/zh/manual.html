@@ -51,7 +51,6 @@
             <a href="#use-cases">这套系统适合哪些场景</a>
             <a href="#integrations">它和 Zotero、Obsidian 这些工具是什么关系</a>
             <a href="#repo-and-app">当前仓库和未来 App 是什么关系</a>
-            <a href="#public-boundary">这个公开仓库不包含什么</a>
             <a href="#troubleshooting">如果出问题，先看哪里</a>
             <a href="#roadmap">接下来还会补什么</a>
           </nav>
@@ -218,7 +217,7 @@ cd codex-research-stack</code></pre>
             <h2>它和 Zotero、Obsidian 这些工具是什么关系</h2>
             <p>一句话说：Zotero 管正式文献，Obsidian 管长期笔记，项目目录管运行中的状态和痕迹。</p>
             <p>对于平台与网页案例，这套仓库默认更保守：优先看浏览器可见内容，明确保留来源，把“我看到了什么”和“我怎么解释它”分开。</p>
-            <p><code>social-platform-reader</code> 保持为研究入口。MCP、Chrome DevTools 和浏览器自动化适配器只是实现路径，不是互相竞争的研究工作流。公开设计不假设原生 Computer Use 一定可用。</p>
+            <p>产品规则很简单：保留足够清楚的来源上下文，让别人能回看证据从哪里来。</p>
           </section>
 
           <section id="repo-and-app" class="card prose-card">
@@ -228,14 +227,8 @@ cd codex-research-stack</code></pre>
               <li>当前仓库是“规则和说明书”</li>
               <li>未来 app 是“更顺手的界面”</li>
             </ul>
-            <p>放到完整体系里，<code>skills-environment-local</code> 是私有本地环境，<code>skills-environment-release</code> 是当前公开环境包，<code>skills-app-own</code> 是私有桌面 app 工作区，<code>skills-app-github</code> 是公开 app 工作区。</p>
-            <p>如果 app 需要环境规则，应该通过明确的快照、导出或同步步骤引入。最需要避免的是 app 仓和环境仓悄悄分叉，最后出现两个互相冲突的规则源。</p>
+            <p>产品层面的关系很简单：仓库定义工作流包，app 让这个工作流更容易启动、查看和继续。</p>
             <p><strong>仓库是源头，app 是界面。</strong></p>
-          </section>
-
-          <section id="public-boundary" class="card prose-card">
-            <h2>这个公开仓库不包含什么</h2>
-            <p>它不是私人工作站镜像。它不会公开私人文件、本地 trust 状态、私钥、云端运维材料和本地运行输出。</p>
           </section>
 
           <section id="troubleshooting" class="card prose-card">
