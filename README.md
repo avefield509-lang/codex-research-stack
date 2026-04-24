@@ -85,6 +85,25 @@ Preview a route from a research task:
 python .\scripts\public_app_bridge.py route_preview --payload "{\"task\":\"做一个系统文献综述，并同步 Zotero 和写作大纲。\"}"
 ```
 
+## Repository boundary
+
+This repository is the **public environment/workspace line**.
+
+It includes:
+
+- research routing and orchestration assets
+- docs and GitHub Pages
+- examples and public scripts
+- public plugin metadata and visual assets
+
+It does **not** carry your private environment or private app line anymore.
+
+Those are managed separately in:
+
+- `skills-environment-local` (private)
+- `skills-app-own` (private)
+- `skills-app-github` (private-by-default app release workspace)
+
 ## Product structure
 
 - **Home**: workspace overview, current project, next-step guidance
