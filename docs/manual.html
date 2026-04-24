@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Research Stack Manual</title>
+    <meta name="description" content="A plain-language manual for Codex Research Stack: what it is, how to begin, what to inspect during a project, and how the future app should sit on top of it.">
+    <link rel="stylesheet" href="./assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <span class="active">English</span>
+          <a href="./zh/manual.html">简体中文</a>
+        </div>
+      </div>
+
+      <section class="hero hero-compact">
+        <div>
+          <div class="eyebrow">Single manual</div>
+          <h1>This manual is written for first-time readers.</h1>
+          <p>
+            You do not need a technical background to use it. Read it as a plain-language guide to
+            what the repository does, how to begin, what to inspect during a project, and where a
+            future app should sit on top of it.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html">Back to home</a>
+            <a class="button button-secondary" href="https://github.com/avefield509-lang/codex-research-stack">Open GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section manual-layout">
+        <aside class="card toc-card">
+          <h2>Contents</h2>
+          <nav class="toc-list">
+            <a href="#scope">What this manual covers</a>
+            <a href="#what-this-repository-is">In three sentences</a>
+            <a href="#plain-language-glossary">Terms you do not need to worry about</a>
+            <a href="#who-it-is-for">Who this is for</a>
+            <a href="#components">What the public stack is actually made of</a>
+            <a href="#getting-started">First use: only do these three things</a>
+            <a href="#no-command">If you do not want to deal with commands yet</a>
+            <a href="#starting-a-project">How a new project begins</a>
+            <a href="#what-counts-as-real-multi-agent-execution">Why a project turns into multi-agent work</a>
+            <a href="#during-a-live-project">What to look at during a live project</a>
+            <a href="#the-files-that-matter-most">The files that matter most</a>
+            <a href="#use-cases">Use cases</a>
+            <a href="#integrations">Integrations</a>
+            <a href="#repository-and-future-app">Repository and future app</a>
+            <a href="#public-boundary">Public boundary</a>
+            <a href="#troubleshooting">If something goes wrong, where to look first</a>
+            <a href="#roadmap">Roadmap</a>
+          </nav>
+        </aside>
+
+        <article class="manual-content">
+          <section id="scope" class="card prose-card">
+            <h2>What this manual covers</h2>
+            <p>This manual only explains the public repository: what it is, who it is for, how to begin, what to inspect during a live project, and how the future app should relate to it.</p>
+            <p>It does not try to explain a private workstation, private operations details, or the internal implementation of the future app. What you are reading here is a public, reusable user manual.</p>
+          </section>
+
+          <section id="what-this-repository-is" class="card prose-card">
+            <h2>In three sentences</h2>
+            <p>First, this repository is not the chatbot itself. It is the workflow layer around research work in Codex.</p>
+            <p>Second, its goal is not to add more tools. Its goal is to make research projects easier to start, inspect, and continue.</p>
+            <p>Third, it focuses on the part where research work usually becomes messy: how a task begins, how a project stays readable, when weak work should be blocked, and how references, notes, traces, and outputs stay separated.</p>
+          </section>
+
+          <section id="plain-language-glossary" class="card prose-card">
+            <h2>Terms you do not need to worry about at first</h2>
+            <ul>
+              <li><strong><code>research-autopilot</code></strong>: the front desk. You describe the task, and it explains how work should begin.</li>
+              <li><strong><code>research-team-orchestrator</code></strong>: the project manager. It only appears when work grows into a real project.</li>
+              <li><strong>gate</strong>: a checkpoint. If something is not good enough yet, the project should not move forward.</li>
+              <li><strong>Zotero</strong>: the formal reference library.</li>
+              <li><strong>Obsidian</strong>: the longer-lived note and knowledge layer.</li>
+            </ul>
+            <p><strong>If you remember only one thing:</strong> ask the system to explain the route before it starts doing work.</p>
+          </section>
+
+          <section id="who-it-is-for" class="card prose-card">
+            <h2>Who this is for</h2>
+            <ul>
+              <li>researchers doing literature reviews and evidence synthesis</li>
+              <li>computational social scientists working across text, platform data, networks, and reproducibility</li>
+              <li>researchers collecting browser-visible platform or web evidence</li>
+              <li>writers preparing drafts, revision packs, and submission-ready materials</li>
+            </ul>
+            <p>It can still help with smaller tasks. But it becomes most useful when you already realize that the task is turning into a project.</p>
+          </section>
+
+          <section id="components" class="card prose-card">
+            <h2>What the public stack is actually made of</h2>
+            <ul>
+              <li><strong>Codex</strong>: the front door for conversation and execution</li>
+              <li><strong>research-autopilot</strong>: decides what kind of task this is and how work should begin</li>
+              <li><strong>research-team-orchestrator</strong>: turns larger work into structured project coordination</li>
+              <li><strong>project files</strong>: write down rules, status, findings, and checks</li>
+              <li><strong>external tools</strong>: things like Zotero, Obsidian, and browser-visible evidence capture</li>
+            </ul>
+          </section>
+
+          <section id="getting-started" class="card prose-card">
+            <h2>First use: only do these three things</h2>
+            <ol>
+              <li>clone the repository</li>
+              <li>create a demo project</li>
+              <li>ask for route explanation before execution</li>
+            </ol>
+            <pre><code>git clone https://github.com/avefield509-lang/codex-research-stack.git
+cd codex-research-stack</code></pre>
+            <pre><code>python .\scripts\init_research_project.py --path ".\examples\demo-project" --route-hint "general-research"</code></pre>
+            <pre><code>pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"</code></pre>
+            <p>A good first prompt is:</p>
+            <pre><code>@research-autopilot This is a new research project.
+The topic is: ...
+The question is: ...
+The materials or data are: ...
+The expected outputs are: ...
+Explain the route first, then decide whether this should become project-type multi-agent work.</code></pre>
+          </section>
+
+          <section id="no-command" class="card prose-card">
+            <h2>If you do not want to deal with commands yet</h2>
+            <p>Then remember this sentence: state your topic, question, materials, and expected outputs clearly, and ask the system to explain the route before it starts doing work.</p>
+            <p>That is the core usage model, even before you learn scripts or directories.</p>
+          </section>
+
+          <section id="starting-a-project" class="card prose-card">
+            <h2>How a new project begins</h2>
+            <ol>
+              <li>create a project folder</li>
+              <li>initialize the scaffold</li>
+              <li>inspect the core files</li>
+              <li>let the system explain the route before execution</li>
+            </ol>
+            <p>Start with:</p>
+            <ul>
+              <li><code>AGENTS.md</code> = project rules</li>
+              <li><code>research-map.md</code> = project map</li>
+              <li><code>findings-memory.md</code> = what is already known</li>
+              <li><code>logs/project-state/current.json</code> = current status</li>
+            </ul>
+            <p>For most researchers, daily use mostly comes down to two things: starting a project and checking the current state.</p>
+          </section>
+
+          <section id="what-counts-as-real-multi-agent-execution" class="card prose-card">
+            <h2>Why a project turns into multi-agent work</h2>
+            <p>Small tasks stay simpler. Only larger project work turns into multi-agent coordination.</p>
+            <p>That happens when the project really needs division of work, handoff, review, and written traces.</p>
+            <p>It only counts as real multi-agent work when the project leaves behind separate identities, separate inputs, separate outputs, reviewer links, and inspectable traces.</p>
+          </section>
+
+          <section id="during-a-live-project" class="card prose-card">
+            <h2>What to look at during a live project</h2>
+            <ol>
+              <li>what stage the project is in</li>
+              <li>who owns the next step</li>
+              <li>what still blocks progress</li>
+            </ol>
+            <p>So the practical rule is: do not start by staring at the tool list. Start by looking at route choice and project state.</p>
+          </section>
+
+          <section id="the-files-that-matter-most" class="card prose-card">
+            <h2>The files that matter most</h2>
+            <ol>
+              <li><code>AGENTS.md</code></li>
+              <li><code>research-map.md</code></li>
+              <li><code>findings-memory.md</code></li>
+              <li><code>material-passport.yaml</code></li>
+              <li><code>evidence-ledger.yaml</code></li>
+              <li><code>logs/project-state/current.json</code></li>
+              <li><code>logs/quality-gates/pipeline-status.json</code></li>
+            </ol>
+            <p>For many non-technical users, the first four are the ones you will read most often.</p>
+          </section>
+
+          <section id="use-cases" class="card prose-card">
+            <h2>Use cases</h2>
+            <ul>
+              <li><strong>Literature review</strong>: review question, candidate literature, formal reference checks, synthesis</li>
+              <li><strong>Social-platform or web case study</strong>: visible material, provenance, evidence capture, preparation for later coding</li>
+              <li><strong>Computational social science project</strong>: literature, materials, analysis, writing, reproducibility</li>
+              <li><strong>Writing and submission</strong>: drafting, citation checks, writing quality, revision, submission materials</li>
+            </ul>
+          </section>
+
+          <section id="integrations" class="card prose-card">
+            <h2>Integrations</h2>
+            <p>In simple terms:</p>
+            <ul>
+              <li>Zotero holds formal references</li>
+              <li>Obsidian holds longer-lived notes</li>
+              <li>the project folder holds runtime state and traces</li>
+            </ul>
+            <p>For platform and web cases, the repository stays conservative: prefer browser-visible material, keep provenance explicit, and keep capture separate from interpretation.</p>
+          </section>
+
+          <section id="repository-and-future-app" class="card prose-card">
+            <h2>Repository and future app</h2>
+            <p>The simplest way to think about the relationship is:</p>
+            <ul>
+              <li>this repository is the rules and documentation layer</li>
+              <li>the future app is the easier daily interface</li>
+            </ul>
+            <p><strong>The repository is the source, the app is the interface.</strong></p>
+          </section>
+
+          <section id="public-boundary" class="card prose-card">
+            <h2>Public boundary</h2>
+            <p>This repository publishes reusable rules, templates, examples, docs, and selected scripts.</p>
+            <p>It does not publish personal files, local trust state, private keys, cloud operator material, or local runtime outputs.</p>
+          </section>
+
+          <section id="troubleshooting" class="card prose-card">
+            <h2>If something goes wrong, where to look first</h2>
+            <ol>
+              <li><strong>Where is the project blocked?</strong> Look at <code>logs/project-state/current.json</code>.</li>
+              <li><strong>What is the project trying to do?</strong> Look at <code>research-map.md</code> and <code>findings-memory.md</code>.</li>
+              <li><strong>Did a checkpoint fail?</strong> Look at <code>logs/quality-gates/pipeline-status.json</code>.</li>
+              <li><strong>Only then suspect the repository itself</strong>: run <code>python .\scripts\validate_research_stack.py</code>.</li>
+            </ol>
+          </section>
+
+          <section id="roadmap" class="card prose-card">
+            <h2>Roadmap</h2>
+            <ul>
+              <li>better public examples</li>
+              <li>clearer visual walkthroughs</li>
+              <li>tighter portable defaults</li>
+              <li>clearer integration setup notes</li>
+            </ul>
+          </section>
+
+          <section class="card prose-card">
+            <h2>Final one-sentence version</h2>
+            <p><strong>Tell the system what your topic, question, materials, and expected outputs are, then ask it to explain the route before it starts doing work.</strong></p>
+          </section>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

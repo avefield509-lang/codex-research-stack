@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T15:35:29
+- generated_at: 2026-04-24T16:49:16
 - branch: `main`
-- HEAD: `ded6f7a`
+- HEAD: `b9ae534`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(b9ae534 2026-04-24 Define repository and future app relationship[0]) Define repository and future app relationship
 - 2026-04-24 $(ded6f7a 2026-04-24 Refine public Pages visual hierarchy and mobile layout[0]) Refine public Pages visual hierarchy and mobile layout
 - 2026-04-24 $(7b3c4a9 2026-04-24 Add English visitor Pages and align bilingual docs[0]) Add English visitor Pages and align bilingual docs
 - 2026-04-24 $(c5aa9c5 2026-04-24 Polish Chinese entry pages for consistency[0]) Polish Chinese entry pages for consistency
@@ -90,14 +91,36 @@
 
 - M  README.md
 - M  README.zh-CN.md
-- A  docs/app-relationship.html
-- A  docs/app-relationship.md
-- A  docs/app-relationship.zh-CN.md
-- M  docs/architecture.md
-- M  docs/getting-started.md
+- D  docs/app-relationship.html
+- D  docs/app-relationship.md
+- D  docs/app-relationship.zh-CN.md
+- D  docs/architecture.html
+- D  docs/architecture.md
+- M  docs/assets/site.css
+- D  docs/getting-started.html
+- D  docs/getting-started.md
 - M  docs/index.html
-- M  docs/index.md
-- M  docs/integrations.md
-- A  docs/zh/app-relationship.html
+- D  docs/index.md
+- D  docs/integrations.html
+- D  docs/integrations.md
+- A  docs/manual.html
+- A  docs/manual.md
+- A  docs/manual.zh-CN.md
+- D  docs/new-project-guide.html
+- D  docs/new-project-guide.md
+- D  docs/operator-guide.html
+- D  docs/operator-guide.md
+- D  docs/public-boundary.md
+- D  docs/roadmap.md
+- D  docs/use-cases.html
+- D  docs/use-cases.md
+- D  docs/zh/app-relationship.html
+- D  docs/zh/architecture.html
+- D  docs/zh/getting-started.html
 - M  docs/zh/index.html
+- D  docs/zh/integrations.html
+- A  docs/zh/manual.html
+- D  docs/zh/new-project-guide.html
+- D  docs/zh/operator-guide.html
+- D  docs/zh/use-cases.html
 - M  scripts/validate_research_stack.py

@@ -2,7 +2,7 @@
 
 [English README](./README.md) | [English Pages](https://avefield509-lang.github.io/codex-research-stack/) | [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
 
-**一个面向社会科学研究者的 Codex 研究工作台。**
+**一个让研究工作更容易保持条理的 Codex 工作台。**
 
 Codex Research Stack 关注的不是“再多装几个 skill”，而是把研究项目真正放进同一条工作流里：
 
@@ -77,7 +77,7 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 
 如果你想先理顺“当前仓库”和“未来 app”的关系，先看：
 
-- [当前仓库与未来 App 的关系](./docs/app-relationship.zh-CN.md)
+- [总说明书：当前仓库与未来 App 的关系](./docs/manual.zh-CN.md#仓库与未来-app-的关系)
 
 ## 产品结构
 
@@ -95,16 +95,20 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 - **浏览器可见证据**：平台案例与网页证据
 - **本地脚本与校验器**：透明而可复查的本地工作流
 
-## 高级用户入口
+## 先看这一份说明书
 
-如果你想看底层的任务路径、项目编排、检查点和校验器，再从这里进入：
+如果你不想在很多说明页之间来回跳，直接看这一份：
 
-- [快速开始](./docs/getting-started.md)
-- [架构说明](./docs/architecture.md)
-- [典型用例](./docs/use-cases.md)
-- [集成说明](./docs/integrations.md)
-- [操作指南](./docs/operator-guide.md)
-- [当前仓库与未来 App 的关系](./docs/app-relationship.zh-CN.md)
+- [Codex Research Stack 总说明书](./docs/manual.zh-CN.md)
+
+如果你只想跳到某一部分：
+
+- [快速开始](./docs/manual.zh-CN.md#start)
+- [新项目怎么开始](./docs/manual.zh-CN.md#new-project)
+- [项目跑起来后看什么](./docs/manual.zh-CN.md#live-project)
+- [典型场景](./docs/manual.zh-CN.md#use-cases)
+- [集成与边界](./docs/manual.zh-CN.md#integrations)
+- [仓库与未来 App 的关系](./docs/manual.zh-CN.md#repo-and-app)
 
 ## 它的差异化在哪里
 
@@ -120,6 +124,8 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 - 证据来源可追溯
 - 方法工作流可执行
 - 写作与投稿准备有明确检查点
+
+换句话说，它不是想替代 Codex，而是想让研究工作在进入复杂阶段之前就先有结构。
 
 ## 如果你觉得有用
 

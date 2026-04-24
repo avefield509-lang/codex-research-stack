@@ -2,11 +2,11 @@
 
 [中文 README](./README.zh-CN.md) | [Pages](https://avefield509-lang.github.io/codex-research-stack/) | [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
 
-**A clearer research workspace for Codex.**
+**A research workbench for Codex.**
 
-Codex Research Stack is for researchers who want more than a long chat thread.
-It helps you start with a clearer plan, keep project work organized, and keep
-references, writing, and reproducibility checks visible.
+Codex Research Stack is for researchers who want their work to stay readable as it grows.
+Instead of turning everything into one long conversation, it helps you start with a clearer route,
+keep project state visible, and keep references, writing, and reproducibility checks in view.
 
 ![Codex Research Stack Hero](./assets/social-preview.png)
 
@@ -31,11 +31,19 @@ references, writing, and reproducibility checks visible.
 - project checks: blocks weak references, weak writing, and incomplete reproducibility
 - project scaffolds: gives you a reusable structure instead of starting every project from scratch
 
-## If you only want the essentials
+## Start here first
 
-1. Read [Getting Started](./docs/getting-started.md) for the shortest onboarding path.
-2. Read [Operator Guide](./docs/operator-guide.md) to understand what happens during a live project.
-3. Read [New Project Guide](./docs/new-project-guide.md) to see how a real project begins.
+If you only want one document, read the manual:
+
+- [Research Stack Manual](./docs/manual.md)
+
+If you want to jump to one chapter:
+
+- [Quick start](./docs/manual.md#getting-started)
+- [How a new project begins](./docs/manual.md#starting-a-project)
+- [What happens during a live project](./docs/manual.md#during-a-live-project)
+- [Integrations](./docs/manual.md#integrations)
+- [Repository and future app](./docs/manual.md#repository-and-future-app)
 
 ## Typical workflows
 
@@ -81,17 +89,11 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 
 If you want to know how the future app should relate to this repository, read:
 
-- [Repository and Future App](./docs/app-relationship.md)
+- [Repository and Future App](./docs/manual.md#repository-and-future-app)
 
-## Learn the repo in layers
+## Learn the repo through one manual
 
-- [Getting Started](./docs/getting-started.md)
-- [Operator Guide](./docs/operator-guide.md)
-- [New Project Guide](./docs/new-project-guide.md)
-- [Architecture](./docs/architecture.md)
-- [Use Cases](./docs/use-cases.md)
-- [Integrations](./docs/integrations.md)
-- [Repository and Future App](./docs/app-relationship.md)
+- [Research Stack Manual](./docs/manual.md)
 
 ## Why this repo exists
 
@@ -103,7 +105,7 @@ Research work usually breaks earlier:
 - references and writing move forward without visible checks
 - project files, knowledge tools, and outputs drift apart
 
-Codex Research Stack focuses on that layer. It does not replace Codex. It makes research work easier to follow.
+Codex Research Stack focuses on that layer. It does not replace Codex. It gives research work a clearer structure before the project becomes hard to inspect.
 
 ## Pages
 
