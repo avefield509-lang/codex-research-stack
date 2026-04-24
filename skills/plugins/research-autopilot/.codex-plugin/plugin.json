@@ -42,8 +42,8 @@
     "composerIcon": "./assets/research-autopilot-small.svg",
     "logo": "./assets/research-autopilot-small.svg",
     "screenshots": [
-      "./assets/route-explanation-card.svg",
-      "./assets/multi-agent-dispatch.svg"
+      "./assets/research-system-overview.png",
+      "./assets/research-team-workspace.png"
     ]
   }
 }

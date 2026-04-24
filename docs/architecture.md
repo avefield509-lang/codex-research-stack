@@ -1,6 +1,6 @@
 # Architecture
 
-![Architecture Map](../assets/architecture-map.svg)
+![System Overview](../assets/hero-overview.png)
 
 ## The Big Idea
 
@@ -33,6 +33,8 @@ flowchart TD
 ```
 
 ## Why The Multi-Agent Layer Matters
+
+![Multi-Agent Workspace](../assets/multi-agent-workspace.png)
 
 The multi-agent layer is designed to prevent “fake multi-agent” behavior.
 
@@ -83,6 +85,8 @@ The system keeps project traces visible through canonical paths.
 The goal is simple: when a run fails, a human should still be able to inspect what happened.
 
 ## Contract Assets
+
+![Pipeline and Gates](../assets/pipeline-gates-overview.png)
 
 The main contract layer lives in:
 

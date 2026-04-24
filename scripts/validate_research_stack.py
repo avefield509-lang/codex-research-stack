@@ -149,9 +149,16 @@ def main() -> None:
         DOCS_DIR / "roadmap.md",
     ]
     required_assets = [
+        ASSETS_DIR / "hero-demo.gif",
+        ASSETS_DIR / "hero-overview.png",
+        ASSETS_DIR / "social-preview.png",
         ASSETS_DIR / "social-preview.svg",
+        ASSETS_DIR / "multi-agent-workspace.png",
+        ASSETS_DIR / "pipeline-gates-overview.png",
         PLUGIN_DIR / "assets" / "route-explanation-card.svg",
         PLUGIN_DIR / "assets" / "multi-agent-dispatch.svg",
+        PLUGIN_DIR / "assets" / "research-system-overview.png",
+        PLUGIN_DIR / "assets" / "research-team-workspace.png",
     ]
     required_scripts = [
         SCRIPTS_DIR / "bootstrap_agent_dispatch.py",
