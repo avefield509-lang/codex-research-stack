@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T14:36:26
-- branch: `release-environment`
-- HEAD: `037a72f`
+- generated_at: 2026-04-24T14:41:34
+- branch: `main`
+- HEAD: `5ca454c`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,9 +63,22 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(5ca454c 2026-04-24 Link published codex-research-stack history[0]) Link published codex-research-stack history
+- 2026-04-24 $(d35a81a 2026-04-24 Polish workspace README[0]) Polish workspace README
 - 2026-04-24 $(037a72f 2026-04-24 Add automated workspace logging[0]) Add automated workspace logging
 - 2026-04-24 $(9c2b253 2026-04-24 Initialize release environment workspace[0]) Initialize release environment workspace
+- 2026-04-24 $(2d888cb 2026-04-24 Fix new project page layout and code styling[0]) Fix new project page layout and code styling
+- 2026-04-24 $(4326843 2026-04-24 Unify public Pages typography and code layout[0]) Unify public Pages typography and code layout
+- 2026-04-24 $(216e797 2026-04-24 Polish README language for mixed-locale clarity[0]) Polish README language for mixed-locale clarity
+- 2026-04-24 $(4e63b20 2026-04-24 Improve public repo readability for first-time visitors[0]) Improve public repo readability for first-time visitors
+- 2026-04-24 $(296b5db 2026-04-24 Complete Chinese Pages navigation chain[0]) Complete Chinese Pages navigation chain
+- 2026-04-24 $(2222701 2026-04-24 Add Chinese Pages for use cases and integrations[0]) Add Chinese Pages for use cases and integrations
+- 2026-04-24 $(354548b 2026-04-24 Create bilingual homepages and improve Pages landing[0]) Create bilingual homepages and improve Pages landing
+- 2026-04-24 $(f376e25 2026-04-24 Add sanitized public guides and simplify hero[0]) Add sanitized public guides and simplify hero
+- 2026-04-24 $(9f80078 2026-04-24 Add generated visual system for public release[0]) Add generated visual system for public release
+- 2026-04-24 $(3084d15 2026-04-24 Polish public site and multi-agent presentation[0]) Polish public site and multi-agent presentation
+- 2026-04-24 $(69dd0de 2026-04-24 Initial public release for Codex Research Stack[0]) Initial public release for Codex Research Stack
 
 ## Current Working Tree Status
 
-- M  README.md
+- M  WORKSPACE-LOG.md
