@@ -33,11 +33,11 @@ This repo is a good fit if you work on:
 - project checks: blocks weak references, weak writing, and incomplete reproducibility
 - project scaffolds: gives you a reusable structure instead of starting every project from scratch
 
-## If you only have 3 minutes
+## Start here first
 
-1. Read [Getting Started](./docs/getting-started.md) to see how the public repo is organized.
-2. Read [Operator Guide](./docs/operator-guide.md) to understand what the system does during a live project.
-3. Read [New Project Guide](./docs/new-project-guide.md) to see how a real project begins.
+1. Open [Getting Started](./docs/getting-started.md) to see how the public repo is organized.
+2. Open [Operator Guide](./docs/operator-guide.md) to understand what the system does during a live project.
+3. Open [New Project Guide](./docs/new-project-guide.md) to see how a real project begins.
 
 ## What it looks like
 
