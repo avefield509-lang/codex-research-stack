@@ -12,9 +12,10 @@ Expected filenames:
 - `multi-agent-dispatch-flow.png`
 - `integration-chain.png`
 
+`social-preview.png` is imported into both `assets/` and `docs/assets/` so README and Pages use the same approved overview image.
+
 Run from the repository root:
 
 ```powershell
 python .\scripts\import_image2_assets.py
 ```
-

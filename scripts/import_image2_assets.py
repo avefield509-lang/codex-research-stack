@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "image2-exports"
 
 ASSETS = {
-    "social-preview.png": [ROOT / "assets" / "social-preview.png"],
+    "social-preview.png": [
+        ROOT / "assets" / "social-preview.png",
+        ROOT / "docs" / "assets" / "social-preview.png",
+    ],
     "hero-overview.png": [ROOT / "docs" / "assets" / "hero-overview.png"],
     "multi-agent-workspace.png": [ROOT / "docs" / "assets" / "multi-agent-workspace.png"],
     "pipeline-gates-overview.png": [ROOT / "docs" / "assets" / "pipeline-gates-overview.png"],

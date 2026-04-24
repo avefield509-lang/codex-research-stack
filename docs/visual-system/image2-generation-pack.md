@@ -2,7 +2,7 @@
 
 This pack defines the replacement image system for Codex Research Stack.
 
-The current public pages should not depend on small text-heavy screenshots. Use image2 assets as product-grade illustrations: readable at GitHub width, usable on Pages, and visually distinct from the surrounding dark cards.
+The Pages homepage now uses the restored image2 system overview as the primary image asset and native HTML/CSS cards as fallback visuals. Future image2 replacements should stay readable at GitHub width, usable on Pages, and visually distinct from the surrounding dark cards.
 
 ## Global Direction
 
@@ -18,7 +18,7 @@ The current public pages should not depend on small text-heavy screenshots. Use 
 
 | Asset | Output path | Size | Purpose |
 | --- | --- | ---: | --- |
-| GitHub social preview | `assets/social-preview.png` | `1280x640` | README top image and social sharing |
+| GitHub social preview | `assets/social-preview.png` and `docs/assets/social-preview.png` | `2:1`, ideally `1280x640` or larger | README top image, Pages overview, and social sharing |
 | Pages hero visual | `docs/assets/hero-overview.png` | `1200x1200` | Homepage hero, desktop and mobile |
 | Workspace visual | `docs/assets/multi-agent-workspace.png` | `1600x1000` | Pages project workspace section |
 | Pipeline gates visual | `docs/assets/pipeline-gates-overview.png` | `1600x900` | Pages gate/check section |
@@ -27,6 +27,8 @@ The current public pages should not depend on small text-heavy screenshots. Use 
 | Integration visual | `docs/assets/integration-chain.png` | `1280x720` | Demo walkthrough card |
 
 For README, copy only the social preview and at most one large explanatory image into `assets/`. Do not duplicate every Pages image in `assets/` unless README references it.
+
+The current `social-preview.png` is the visual reference image: a full-system image2 overview with route planning, research autopilot, specialized roles, quality gates, and integrations. New assets should simplify that direction rather than returning to small text-heavy screenshot cards.
 
 ## Prompt 1: GitHub Social Preview
 
@@ -146,4 +148,3 @@ python .\scripts\import_image2_assets.py
 ```
 
 The script copies approved files into public asset paths.
-

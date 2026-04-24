@@ -8,6 +8,8 @@ Codex Research Stack is for researchers who want their work to stay readable as 
 Instead of turning everything into one long conversation, it helps you start with a clearer route,
 keep project state visible, and keep references, writing, and reproducibility checks in view.
 
+![Codex Research Stack system overview](./assets/social-preview.png)
+
 ## Who it is for
 
 - researchers doing literature reviews and evidence synthesis
