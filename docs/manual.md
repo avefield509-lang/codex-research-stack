@@ -2,18 +2,18 @@
 
 Updated: 2026-04-24
 
-This is the single public manual for the repository.  
+This is the main manual for the repository.
 If you are new here and want to understand what this stack is, how to begin, and what to inspect during a real project, start with this page.
 
 ---
 
 ## Table of Contents
 
-1. [What this manual covers](#scope)
+1. [What this manual helps you do](#scope)
 2. [In three sentences](#what-this-repository-is)
 3. [Terms you do not need to worry about at first](#plain-language-glossary)
 4. [Who this is for](#who-it-is-for)
-5. [What the public stack is actually made of](#components)
+5. [What the stack is actually made of](#components)
 6. [First use: only do these three things](#getting-started)
 7. [If you only have three minutes](#quick-demo)
 8. [If you do not want to deal with commands yet](#no-command)
@@ -30,23 +30,16 @@ If you are new here and want to understand what this stack is, how to begin, and
 ---
 
 <a id="scope"></a>
-## 1. What this manual covers
+## 1. What this manual helps you do
 
-This manual only explains the public repository:
+This manual is the fastest way to understand and try Codex Research Stack:
 
 - what it is
 - who it is for
 - how to begin
 - what to inspect during a live project
-- how the future app should relate to it
-
-It does **not** try to explain:
-
-- a private local workstation
-- private operations or environment details
-- the internal implementation of the future app
-
-So what you are reading here is a **public, reusable user manual**, not a full dump of someone's private setup.
+- how Zotero, Obsidian, evidence capture, and project files fit together
+- how the future app should sit on top of this workflow
 
 ---
 
@@ -117,9 +110,9 @@ But it becomes most useful when you already realize: **this is no longer just on
 ---
 
 <a id="components"></a>
-## 5. What the public stack is actually made of
+## 5. What the stack is actually made of
 
-Without using technical language, you can think of the public stack as five layers:
+Without using technical language, you can think of the stack as five layers:
 
 - `Codex`
   - the front door for conversation and execution
@@ -481,7 +474,7 @@ The repository remains responsible for:
 - validators
 - templates
 - examples
-- public documentation
+- documentation
 
 The future app is responsible for:
 
@@ -527,7 +520,7 @@ Look at:
 
 - `logs/quality-gates/pipeline-status.json`
 
-### 4. Only then ask whether the public stack itself is broken
+### 4. Only then ask whether the workflow itself is broken
 
 If needed, run:
 
@@ -549,14 +542,14 @@ In simpler terms:
 
 Near-term work:
 
-- better public examples
+- better examples
 - clearer visual walkthroughs
 - tighter portable defaults
 - clearer integration setup notes
 
 Later work:
 
-- stronger public test coverage
+- stronger test coverage
 - clearer release packaging
 - optional adapter layers for heavier runtimes
 

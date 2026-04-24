@@ -3,3 +3,5 @@ __pycache__/
 .pytest_cache/
 .workspace-tools/
 .githooks/
+image2-exports/*
+!image2-exports/README.md

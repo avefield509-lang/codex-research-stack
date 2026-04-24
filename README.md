@@ -8,8 +8,6 @@ Codex Research Stack is for researchers who want their work to stay readable as 
 Instead of turning everything into one long conversation, it helps you start with a clearer route,
 keep project state visible, and keep references, writing, and reproducibility checks in view.
 
-![Codex Research Stack Hero](./assets/social-preview.png)
-
 ## Who it is for
 
 - researchers doing literature reviews and evidence synthesis
@@ -55,13 +53,12 @@ If you want to jump to one chapter:
 
 ## What it looks like
 
-### Project workspace
+The Pages homepage presents the workflow as a small set of readable project cards instead of dense screenshots. The visual model is simple:
 
-![Multi-Agent Workspace](./assets/multi-agent-workspace.png)
-
-### Checks and stage transitions
-
-![Pipeline and Gates](./assets/pipeline-gates-overview.png)
+- explain the route before tools run
+- dispatch project work into visible roles
+- block weak outputs through review gates
+- hand off verified materials into project files and knowledge tools
 
 ## Quick start
 
@@ -108,17 +105,7 @@ If you want to understand the repo without running anything first, read the demo
 
 ## Visual walkthrough
 
-### Route explanation
-
-![Route explanation card](./docs/assets/route-explanation-card.svg)
-
-### Multi-agent dispatch
-
-![Multi-agent dispatch flow](./docs/assets/multi-agent-dispatch-flow.svg)
-
-### Research integrations
-
-![Research integration chain](./docs/assets/integration-chain.svg)
+The walkthrough is described in the [3-minute quick demo](./examples/quick-demo/): route explanation, dispatch, reviewer gate, project state, and handoff.
 
 ## Why this repo exists
 
@@ -139,7 +126,7 @@ Codex Research Stack focuses on that layer. It does not replace Codex. It gives 
 
 ## Release
 
-- Current public release notes: [v0.1.0](./.github/releases/v0.1.0.md)
+- Current release notes: [v0.1.0](./.github/releases/v0.1.0.md)
 
 ## If this is useful
 

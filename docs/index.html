@@ -39,8 +39,23 @@
             <span class="pill">Knowledge handoff</span>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="./assets/hero-overview.png" alt="Codex Research Stack hero image">
+        <div class="hero-visual product-visual" aria-label="Route, dispatch, and review gate illustration">
+          <div class="visual-shell">
+            <div class="visual-step">
+              <strong>1. Explain route</strong>
+              <span>task type · path · risk · next action</span>
+            </div>
+            <div class="visual-arrow"></div>
+            <div class="visual-step">
+              <strong>2. Dispatch roles</strong>
+              <span>literature · evidence · analysis · writing</span>
+            </div>
+            <div class="visual-arrow visual-arrow-gold"></div>
+            <div class="visual-step visual-step-gate">
+              <strong>3. Review gate</strong>
+              <span>verify sources · check outputs · hand off</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -70,15 +85,21 @@
           <h2>Understand it in three minutes</h2>
           <p>The quick demo shows one project-shaped task moving from prompt, to route explanation, to dispatch, to reviewer gate.</p>
         </div>
-        <div class="grid-3">
-          <article class="card visual-card">
-            <img src="./assets/route-explanation-card.svg" alt="Route explanation card">
+        <div class="grid-3 explainer-grid">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Route</span>
+            <h3>Explain before running</h3>
+            <p>The first card says what the task is, which path is selected, and what could block the work.</p>
           </article>
-          <article class="card visual-card">
-            <img src="./assets/multi-agent-dispatch-flow.svg" alt="Multi-agent dispatch flow">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Dispatch</span>
+            <h3>Split work into roles</h3>
+            <p>Producer and reviewer roles are visible before project work expands into files and handoffs.</p>
           </article>
-          <article class="card visual-card">
-            <img src="./assets/integration-chain.svg" alt="Research integration chain">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Handoff</span>
+            <h3>Keep materials separate</h3>
+            <p>References, project files, notes, evidence, and outputs stay in their own lanes.</p>
           </article>
         </div>
         <div class="footer-note">
@@ -89,7 +110,7 @@
       <section class="section">
         <div class="section-head">
           <h2>If you are new here, start from one manual</h2>
-          <p>You do not need to learn the whole system first. The public explanations now live in one place, so you can jump straight to the chapter you need.</p>
+          <p>You do not need to learn the whole system first. The main explanations now live in one place, so you can jump straight to the chapter you need.</p>
         </div>
         <div class="grid-2">
           <div class="card card-links">
@@ -112,11 +133,27 @@
           <p>The visuals below summarize the workspace view and the project checks without assuming you already know the internal terms.</p>
         </div>
         <div class="grid-2">
-          <article class="card visual-card">
-            <img src="./assets/multi-agent-workspace.png" alt="Multi-agent workspace">
+          <article class="card workspace-card">
+            <span class="explainer-kicker">Workspace</span>
+            <h3>Roles and state stay visible</h3>
+            <p>Each project keeps a route, current stage, owner, next action, and active roles instead of hiding them inside a long chat.</p>
+            <div class="mini-board">
+              <span>State</span>
+              <span>Producer</span>
+              <span>Reviewer</span>
+              <span>Output</span>
+            </div>
           </article>
-          <article class="card visual-card">
-            <img src="./assets/pipeline-gates-overview.png" alt="Pipeline gates overview">
+          <article class="card workspace-card">
+            <span class="explainer-kicker">Gates</span>
+            <h3>Weak outputs are blocked early</h3>
+            <p>Citation, evidence, writing, and reproducibility checks appear before final export or handoff.</p>
+            <div class="mini-board mini-board-gates">
+              <span>Citation</span>
+              <span>Evidence</span>
+              <span>Writing</span>
+              <span>Reproducibility</span>
+            </div>
           </article>
         </div>
       </section>
@@ -138,7 +175,7 @@
       </section>
 
       <div class="footer-note">
-        If this helps you run research work in Codex with more clarity, open the repository and explore the public project scaffold.
+        If this helps you run research work in Codex with more clarity, open the repository and explore the project scaffold.
       </div>
     </main>
   </body>

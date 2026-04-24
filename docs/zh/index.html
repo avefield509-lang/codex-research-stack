@@ -20,7 +20,7 @@
       <section class="hero">
         <div>
           <div class="eyebrow">Codex 研究工作台</div>
-          <h1>在研究还没变乱之前，先把它整理清楚。</h1>
+          <h1>让 Codex 里的研究项目保持清楚。</h1>
           <p>
             Codex Research Stack 更像一张研究工作台。它先帮你判断任务该怎么开头，
             再帮你把项目状态、关键检查和材料沉淀放到能回看的位置上，
@@ -39,8 +39,23 @@
             <span class="pill">材料清楚沉淀</span>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="../assets/hero-overview.png" alt="Codex Research Stack 封面图">
+        <div class="hero-visual product-visual" aria-label="路线、dispatch 和审查 gate 示意图">
+          <div class="visual-shell">
+            <div class="visual-step">
+              <strong>1. 解释路线</strong>
+              <span>任务类型 · 路径 · 风险 · 下一步</span>
+            </div>
+            <div class="visual-arrow"></div>
+            <div class="visual-step">
+              <strong>2. 分派角色</strong>
+              <span>文献 · 证据 · 分析 · 写作</span>
+            </div>
+            <div class="visual-arrow visual-arrow-gold"></div>
+            <div class="visual-step visual-step-gate">
+              <strong>3. 审查 gate</strong>
+              <span>核验来源 · 检查产出 · 清楚交接</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -70,15 +85,21 @@
           <h2>先用三分钟看懂它</h2>
           <p>快速 Demo 展示一个项目型任务如何从用户提示，进入路线解释、dispatch，再被 reviewer gate 检查。</p>
         </div>
-        <div class="grid-3">
-          <article class="card visual-card">
-            <img src="../assets/route-explanation-card.svg" alt="路线说明卡">
+        <div class="grid-3 explainer-grid">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Route</span>
+            <h3>先解释，再执行</h3>
+            <p>第一张卡会说清楚任务类型、选择路径、阻塞风险和下一步动作。</p>
           </article>
-          <article class="card visual-card">
-            <img src="../assets/multi-agent-dispatch-flow.svg" alt="多智能体 dispatch 流程">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Dispatch</span>
+            <h3>把工作拆给角色</h3>
+            <p>项目扩展之前，producer、reviewer、产出和状态先变成可见结构。</p>
           </article>
-          <article class="card visual-card">
-            <img src="../assets/integration-chain.svg" alt="研究工具联动链路">
+          <article class="card explainer-card">
+            <span class="explainer-kicker">Handoff</span>
+            <h3>材料不要混成一团</h3>
+            <p>文献、项目文件、笔记、证据和最终产出分别沉淀，不塞进同一条聊天。</p>
           </article>
         </div>
         <div class="footer-note">
@@ -112,11 +133,27 @@
           <p>下面这两张图分别对应“项目怎么协作”和“项目怎么过检查点”。不需要先懂术语，也能看明白大意。</p>
         </div>
         <div class="grid-2">
-          <article class="card visual-card">
-            <img src="../assets/multi-agent-workspace.png" alt="多智能体工作区">
+          <article class="card workspace-card">
+            <span class="explainer-kicker">Workspace</span>
+            <h3>角色和状态保持可见</h3>
+            <p>每个项目都保留路线、阶段、负责人、下一步和当前角色，而不是藏在一条很长的对话里。</p>
+            <div class="mini-board">
+              <span>状态</span>
+              <span>执行者</span>
+              <span>审查者</span>
+              <span>产出</span>
+            </div>
           </article>
-          <article class="card visual-card">
-            <img src="../assets/pipeline-gates-overview.png" alt="研究 pipeline 与 gate">
+          <article class="card workspace-card">
+            <span class="explainer-kicker">Gates</span>
+            <h3>弱产出提前被挡住</h3>
+            <p>引文、证据、写作和复现检查会在最终导出或交接之前出现。</p>
+            <div class="mini-board mini-board-gates">
+              <span>引文</span>
+              <span>证据</span>
+              <span>写作</span>
+              <span>复现</span>
+            </div>
           </article>
         </div>
       </section>
