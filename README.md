@@ -1,70 +1,108 @@
 # Codex Research Stack
 
-**A plugin-first research workflow stack for Codex: routing, multi-agent orchestration, research pipeline gates, and evidence-aware integrations.**
+**A plugin-first research operating layer for Codex: routing, real multi-agent orchestration, pipeline gates, and evidence-aware integrations.**
 
-**一个以插件为中心的 Codex 研究工作栈：自动选路、多智能体编排、研究阶段门控，以及面向证据的集成链路。**
+**一个以插件为中心的 Codex 研究操作层：自动选路、真实多智能体编排、研究阶段门控，以及面向证据的集成链路。**
 
 ![MIT](https://img.shields.io/badge/license-MIT-0D4F4E.svg)
 ![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-2F6FED.svg)
 ![Plugin First](https://img.shields.io/badge/plugin-first-0B7A75.svg)
 ![Multi Agent](https://img.shields.io/badge/multi--agent-contract%20driven-CB6D51.svg)
 
-![Social Preview](./assets/social-preview.svg)
+**Quick links**
+- [GitHub Pages](https://avefield509-lang.github.io/codex-research-stack/)
+- [Getting Started](./docs/getting-started.md)
+- [Architecture](./docs/architecture.md)
+- [Use Cases](./docs/use-cases.md)
+- [Minimal Project Example](./examples/minimal-project/README.md)
 
-## What It Is | 这是什么
+![Codex Research Stack Social Preview](./assets/social-preview.svg)
 
-Codex Research Stack is a public, reusable layer built on top of Codex for research-heavy work.  
-It focuses on four problems that most general coding agents do not solve well by default:
+## Why This Repo Exists | 为什么会有这个仓库
 
-- routing a research task before execution
-- turning project work into real multi-agent runs instead of role-play
-- blocking invalid stage transitions with quality gates
-- connecting writing, citation verification, social-platform evidence, Zotero, and Obsidian
+Most coding-agent stacks are good at execution after a task is already defined.  
+Research work fails earlier:
 
-Codex Research Stack 是一套建立在 Codex 之上的公开研究工作层。  
-它重点解决四类通用 coding agent 默认处理不好的问题：
+- the wrong route is chosen before execution starts
+- project work is treated like a single chat instead of a real team workflow
+- writing, citations, and evidence move without explicit quality gates
+- Zotero, Obsidian, and browser-visible evidence stay disconnected
 
-- 在执行前先判断研究任务该走哪条路线
-- 把项目型任务变成真实多 agent 编排，而不是聊天式角色扮演
-- 用阶段 gate 阻断错误推进
-- 把写作、引文核验、社媒证据、Zotero 和 Obsidian 接成一条研究链
+Codex Research Stack addresses exactly that layer. It does **not** try to replace Codex.  
+It turns Codex into a more legible research system.
 
-## Why It Matters | 为什么值得看
+多数 coding agent 擅长“任务已经定义好之后”的执行。  
+但研究任务更容易在前面几步出问题：
 
-- **Research routing**: one entrypoint decides route, profile, helper skills, and next action.
-- **Multi-agent orchestration**: project tasks default to structured planning with dispatch, review mapping, and canonical outputs.
-- **Pipeline gates**: research stages, writing quality, citation integrity, and reproducibility are all explicit.
-- **Evidence-aware integrations**: browser-visible platform evidence, DOI verification, Zotero sync, and Obsidian handoff live in one stack.
-- **Reusable project scaffolding**: every project can start with a consistent research map, findings memory, material passport, and gate logs.
+- 执行前就走错了 route
+- 项目型任务被当成单线程对话，而不是团队工作流
+- 写作、引文和证据链在没有 gate 的情况下被直接推进
+- Zotero、Obsidian 与浏览器可见证据互相断开
 
-- **研究自动选路**：先选 route、profile、helper 和下一步，而不是直接胡乱调用 skill。
-- **真实多 agent 编排**：项目型任务默认进入 dispatch、review mapping 和 canonical output 体系。
-- **阶段门控**：研究阶段、写作质量、引文完整性和复现要求全部显式化。
-- **证据链集成**：浏览器可见平台证据、DOI 核验、Zotero 同步和 Obsidian 沉淀在同一栈里。
-- **可复用项目脚手架**：每个项目都可以从 research map、findings memory、material passport 和 gate log 起步。
+Codex Research Stack 解决的正是这一层。它**不是**替代 Codex，而是把 Codex 变成一个更像研究系统的工作栈。
 
-## Who It Is For | 适合谁
+## What You Actually Get | 你实际拿到什么
 
-- computational social science researchers
-- social scientists working with literature, digital trace data, and writing-heavy projects
-- Codex users who want a research-first orchestration layer instead of a generic coding workflow
-- people building evidence-bound agent workflows on top of Codex
+| Layer | What it does | Why it matters |
+| --- | --- | --- |
+| `research-autopilot` | Chooses route, profile, helper skills, and next action before execution | Prevents the “wrong workflow, right effort” problem |
+| `research-team-orchestrator` | Turns project work into squads, dispatch cards, review mappings, and project-state boards | Makes multi-agent work real instead of role-play |
+| Contract + Gate layer | Uses explicit schemas, canonical paths, review rules, and pipeline gates | Blocks silent drift and unverifiable handoffs |
+| Evidence + Knowledge integrations | Connects citations, Zotero, Obsidian, social evidence, and reproducibility artifacts | Keeps research outputs grounded and reusable |
 
-## Architecture At A Glance | 一眼看懂架构
+## Product Tour | 产品预览
 
-```mermaid
-flowchart TD
-    A["User Request / 用户任务"] --> B["research-autopilot<br/>Route + Profile + Skill Selection"]
-    B --> C["research-team-orchestrator<br/>Dispatch + Review Mapping + Project State"]
-    C --> D["Producer Agents<br/>Literature / Social Evidence / Analysis / Writing"]
-    D --> E["Reviewer Agent<br/>Target-Specific Gate"]
-    E --> F["Pipeline Gates<br/>Citation / Writing / Reproducibility / Freeze"]
-    F --> G["Outputs<br/>Docs / Figures / Evidence / Project Artifacts"]
-    G --> H["Knowledge Layer<br/>Zotero / Obsidian / Reports"]
-```
+### 1. Route explanation happens first
 
-For a fuller system map, see [Architecture](./docs/architecture.md).  
-完整体系说明见 [Architecture](./docs/architecture.md)。
+Visitors should understand that this stack does not fire tools blindly. It explains the research route first.
+
+![Route Explanation Card](./skills/plugins/research-autopilot/assets/route-explanation-card.svg)
+
+### 2. Project work becomes a squad
+
+Project tasks are upgraded into readable squads with producers, reviewer mappings, canonical artifacts, and state tracking.
+
+![Multi-Agent Dispatch](./skills/plugins/research-autopilot/assets/multi-agent-dispatch.svg)
+
+### 3. The stack looks like a research system, not a script dump
+
+The public repo is intentionally organized as a small research OS layer:
+
+![Architecture Map](./assets/architecture-map.svg)
+
+## What Makes It Different | 它和一般 agent 仓库有什么不同
+
+- **Plugin-first**: the public face of the stack is a plugin, not a loose set of prompts.
+- **Contract-driven multi-agent**: squads, dispatch cards, reviewer mappings, and canonical paths are explicit.
+- **Pipeline-aware**: a project can be blocked by citation, writing, evidence, or reproducibility gates.
+- **Research-specific integrations**: Zotero, Obsidian, browser-visible social evidence, and writing-reference capture are first-class.
+- **Reusable project scaffolding**: a new project starts with `AGENTS.md`, `research-map.md`, `findings-memory.md`, `material-passport.yaml`, and logs.
+
+## DeepScientist-Style Direction, Codex-Native Execution | 借鉴 DeepScientist，但不替代 Codex
+
+This repository is structurally closer to a research operating system than to a generic plugin demo.
+
+What it borrows in spirit:
+
+- project-first thinking instead of isolated task runs
+- visible project memory and stage progression
+- research artifacts that remain inspectable after the run
+
+What it keeps different:
+
+- Codex stays the runtime entrypoint
+- the public layer is plugin-first
+- contract assets and validators are emphasized over hidden heuristics
+
+## Typical Use Cases | 典型用例
+
+- literature reviews with DOI verification before formal use
+- computational social science projects that need squad-level orchestration
+- social-platform case studies that must stay inside browser-visible evidence boundaries
+- writing flows where used references are captured before export
+- submission packages with reproducibility and writing-quality checks
+
+See [Use Cases](./docs/use-cases.md) for full walkthroughs.
 
 ## Quick Start | 快速开始
 
@@ -75,79 +113,53 @@ git clone https://github.com/avefield509-lang/codex-research-stack.git
 cd codex-research-stack
 ```
 
-### 2. Inspect the public contract assets
+### 2. Inspect the contract assets
 
 - `skills/catalog/`
 - `skills/schemas/`
 - `skills/plugins/research-autopilot/`
 - `scripts/`
 
-### 3. Initialize a minimal research project
+### 3. Create a project scaffold
 
 ```powershell
 pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
 ```
 
-### 4. Validate the public stack
+### 4. Validate the stack
 
 ```powershell
-python .\scripts\validate_research_stack.py
+python .\scripts\validate_subagent_registry.py
 python .\scripts\validate_agents_contract.py
 python .\scripts\validate_research_pipeline.py
+python .\scripts\validate_research_stack.py
 ```
-
-## Typical Use Cases | 典型用例
-
-- literature review with explicit citation verification
-- computational social science projects with project-level agent dispatch
-- social-platform case reading with browser-visible evidence rules
-- writing workflows that require reference capture before export
-- reproducible submission packages with stage gating
-
-See [Use Cases](./docs/use-cases.md) for concrete scenarios.  
-具体场景见 [Use Cases](./docs/use-cases.md)。
 
 ## Public Repo Boundary | 公开仓库边界
 
-This public repo is **not** a mirror of a private local machine.  
+This public repo is **not** a mirror of one private machine.
+
 It intentionally excludes:
 
 - private credentials and SSH material
-- cloud instance logs and operator notes
+- cloud operator logs and server-specific notes
 - personal application materials
-- machine repair scripts and user-specific shell tuning
-- local runtime blobs, caches, outputs, and trust state
-
-这个公开仓库**不是**本地私有环境的完整镜像。  
-它明确排除了：
-
-- 私钥、凭证和账号痕迹
-- 云主机运维日志和直连材料
-- 个人申请材料
-- 本机修复和私有 shell 定制脚本
-- 本地运行时、缓存、输出和 trust 状态
+- machine repair scripts and local shell tuning
+- runtime blobs, caches, outputs, and local trust state
 
 More detail: [Public Boundary](./docs/public-boundary.md)
 
-## Docs, Pages, and Contribution | 文档、Pages 与贡献
+## Docs and Pages | 文档与 Pages
 
-- Documentation index: [docs/index.md](./docs/index.md)
-- GitHub Pages entry: `https://avefield509-lang.github.io/codex-research-stack/`
+- Pages: [https://avefield509-lang.github.io/codex-research-stack/](https://avefield509-lang.github.io/codex-research-stack/)
+- Docs index: [docs/index.md](./docs/index.md)
+- Architecture: [docs/architecture.md](./docs/architecture.md)
+- Integrations: [docs/integrations.md](./docs/integrations.md)
+- Roadmap: [docs/roadmap.md](./docs/roadmap.md)
 - Contribution guide: [CONTRIBUTING.md](./CONTRIBUTING.md)
-- Privacy boundary: [PRIVACY-BOUNDARIES.md](./PRIVACY-BOUNDARIES.md)
-
-## Roadmap | 路线图
-
-Current focus:
-
-- strengthen public examples
-- make plugin metadata fully publishable
-- add more visitor-friendly visuals
-- keep the contract stable while expanding integrations
-
-See [Roadmap](./docs/roadmap.md).
 
 ## Star This Repo | 如果你觉得有用
 
-If this project helps you think about research routing, multi-agent contracts, or evidence-aware workflows in Codex, give it a star.  
+If this project helps you think more clearly about research routing, multi-agent contracts, or evidence-aware workflows in Codex, give it a star.
+
 如果这套思路对你的研究自动化、Codex 编排或证据链工作流有帮助，欢迎点一个 star。

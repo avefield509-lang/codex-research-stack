@@ -37,6 +37,17 @@ def load_route(route_id: str) -> dict:
     raise KeyError(f"Unknown route_id: {route_id}")
 
 
+def load_team_playbook(route_id: str) -> dict | None:
+    path = CATALOG / "research_team_playbooks.json"
+    if not path.exists():
+        return None
+    payload = load_json(path)
+    for item in payload.get("playbooks", []):
+        if item.get("route_id") == route_id:
+            return item
+    return None
+
+
 def resolve_conditional_rule(route_id: str, rules: dict) -> dict:
     raw = rules["conditional_rules"].get(route_id, {})
     if "copy_of" in raw:
@@ -363,6 +374,7 @@ def main() -> None:
         sys.exit(1)
 
     route = load_route(args.route_id)
+    team_playbook = load_team_playbook(args.route_id)
     scope_rules = payload["scope_rules"]
     enums = scope_rules["enums"]
 
@@ -472,6 +484,7 @@ def main() -> None:
         "missing_reviewers": missing_reviewers,
         "agent_display_names": {agent_id: effective_agents[agent_id]["display_name"] for agent_id in selected_agents},
         "project_state_preview": project_state_preview(project_root, route, selected_agents, review_pairs, effective_agents, args.merge_owner),
+        "team_playbook": team_playbook,
         "next_step": (
             "dispatch artifact 已落盘，可以进入子 agent 执行。"
             if bootstrap_result and bootstrap_result["ok"]

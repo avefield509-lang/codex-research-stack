@@ -1,7 +1,7 @@
 {
   "name": "research-autopilot",
   "version": "0.1.0",
-  "description": "Plugin-first research routing and multi-agent orchestration layer for Codex.",
+  "description": "Plugin-first research operating layer for Codex with routing, squads, and pipeline gates.",
   "author": {
     "name": "Codex Research Stack Contributors",
     "email": "opensource@codexresearchstack.dev",
@@ -21,8 +21,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Research Autopilot",
-    "shortDescription": "Route research work, plan project-type multi-agent runs, and expose evidence-aware workflow contracts.",
-    "longDescription": "Research Autopilot is the public plugin layer of Codex Research Stack. It routes research tasks before execution, upgrades project-type work into structured multi-agent planning, and keeps citation, writing, and evidence workflows behind explicit contracts instead of hidden heuristics.",
+    "shortDescription": "Turn Codex into a research operating layer with route explanations, squads, and explicit gates.",
+    "longDescription": "Research Autopilot is the public plugin layer of Codex Research Stack. It explains the route before execution, upgrades project work into readable squads instead of role-play, and keeps citation, writing, social-evidence, and reproducibility workflows behind explicit contracts.",
     "developerName": "Codex Research Stack Contributors",
     "category": "Productivity",
     "capabilities": [

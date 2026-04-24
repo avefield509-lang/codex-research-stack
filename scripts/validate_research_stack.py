@@ -175,6 +175,7 @@ def main() -> None:
         CATALOG_DIR / "multi_agent_harness_adapter.json",
         CATALOG_DIR / "project_scope_rules.json",
         CATALOG_DIR / "quality_gates.json",
+        CATALOG_DIR / "research_team_playbooks.json",
         CATALOG_DIR / "research_pipeline_stages.json",
         CATALOG_DIR / "reviewer_allowlist.json",
         CATALOG_DIR / "routing_table.json",

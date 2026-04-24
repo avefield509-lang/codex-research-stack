@@ -1,12 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
-  <rect width="1280" height="640" fill="#0D4F4E"/>
-  <rect x="64" y="64" width="1152" height="512" rx="28" fill="#113B3B" stroke="#E0B04B" stroke-width="4"/>
-  <text x="96" y="180" fill="#F4F1E8" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Codex Research Stack</text>
-  <text x="96" y="250" fill="#CFE4DE" font-size="30" font-family="Segoe UI, Arial, sans-serif">Plugin-first research routing, multi-agent orchestration, and pipeline gates for Codex</text>
-  <rect x="96" y="320" width="300" height="70" rx="16" fill="#E0B04B"/>
-  <text x="126" y="365" fill="#0D4F4E" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Research Routing</text>
-  <rect x="420" y="320" width="360" height="70" rx="16" fill="#E0B04B"/>
-  <text x="450" y="365" fill="#0D4F4E" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Multi-Agent Dispatch</text>
-  <rect x="804" y="320" width="300" height="70" rx="16" fill="#E0B04B"/>
-  <text x="834" y="365" fill="#0D4F4E" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Pipeline Gates</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081C1C"/>
+      <stop offset="55%" stop-color="#0D3B3C"/>
+      <stop offset="100%" stop-color="#163F57"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#132A2E"/>
+      <stop offset="100%" stop-color="#0E2227"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E5B85A"/>
+      <stop offset="100%" stop-color="#F3D38A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#021012" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1140" cy="88" r="180" fill="#1C6B6F" opacity="0.18"/>
+  <circle cx="160" cy="560" r="220" fill="#1B5061" opacity="0.16"/>
+
+  <rect x="56" y="52" width="1168" height="536" rx="32" fill="#0A181C" opacity="0.35"/>
+
+  <text x="84" y="112" fill="#D9E9E5" font-size="18" font-family="Segoe UI, Arial, sans-serif" letter-spacing="2">PLUGIN-FIRST RESEARCH SYSTEM FOR CODEX</text>
+  <text x="84" y="192" fill="#F6F5EF" font-size="64" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Codex Research Stack</text>
+  <text x="84" y="248" fill="#C2D7D3" font-size="28" font-family="Segoe UI, Arial, sans-serif">Research routing, multi-agent orchestration, pipeline gates, and evidence-aware integrations.</text>
+
+  <rect x="84" y="288" width="178" height="46" rx="23" fill="#14363C"/>
+  <text x="112" y="317" fill="#F3D38A" font-size="22" font-family="Segoe UI, Arial, sans-serif">Plugin-first</text>
+  <rect x="276" y="288" width="218" height="46" rx="23" fill="#14363C"/>
+  <text x="304" y="317" fill="#F3D38A" font-size="22" font-family="Segoe UI, Arial, sans-serif">Contract-driven</text>
+  <rect x="510" y="288" width="192" height="46" rx="23" fill="#14363C"/>
+  <text x="538" y="317" fill="#F3D38A" font-size="22" font-family="Segoe UI, Arial, sans-serif">Research OS</text>
+
+  <text x="84" y="396" fill="#F6F5EF" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="600">What visitors understand in 10 seconds</text>
+  <text x="84" y="434" fill="#C6D6D3" font-size="21" font-family="Segoe UI, Arial, sans-serif">• One entrypoint chooses the right research route before execution</text>
+  <text x="84" y="470" fill="#C6D6D3" font-size="21" font-family="Segoe UI, Arial, sans-serif">• Project work becomes real squads, dispatch cards, and review chains</text>
+  <text x="84" y="506" fill="#C6D6D3" font-size="21" font-family="Segoe UI, Arial, sans-serif">• Gates block weak citations, weak writing, and weak evidence handoffs</text>
+
+  <g filter="url(#shadow)">
+    <rect x="736" y="96" width="420" height="420" rx="28" fill="url(#card)" stroke="#29555A"/>
+    <rect x="772" y="136" width="348" height="74" rx="18" fill="#10282C"/>
+    <text x="800" y="168" fill="#98BDB6" font-size="18" font-family="Segoe UI, Arial, sans-serif">ROUTE EXPLANATION</text>
+    <text x="800" y="197" fill="#F7F5EE" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700">literature-review → multi-agent</text>
+
+    <rect x="772" y="232" width="160" height="100" rx="20" fill="#143A40"/>
+    <text x="794" y="264" fill="#9EC7BF" font-size="16" font-family="Segoe UI, Arial, sans-serif">SQUAD</text>
+    <text x="794" y="294" fill="#F6F4EC" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Literature</text>
+    <text x="794" y="320" fill="#F3D38A" font-size="18" font-family="Segoe UI, Arial, sans-serif">Synthesis Squad</text>
+
+    <rect x="948" y="232" width="172" height="100" rx="20" fill="#143A40"/>
+    <text x="970" y="264" fill="#9EC7BF" font-size="16" font-family="Segoe UI, Arial, sans-serif">AGENTS</text>
+    <text x="970" y="294" fill="#F6F4EC" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">producer + reviewer</text>
+    <text x="970" y="320" fill="#F3D38A" font-size="18" font-family="Segoe UI, Arial, sans-serif">target-specific gate</text>
+
+    <rect x="772" y="356" width="348" height="118" rx="20" fill="#10282C"/>
+    <rect x="792" y="376" width="150" height="34" rx="17" fill="url(#accent)"/>
+    <text x="816" y="398" fill="#10282C" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">citation gate</text>
+    <rect x="956" y="376" width="144" height="34" rx="17" fill="url(#accent)"/>
+    <text x="982" y="398" fill="#10282C" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">writing gate</text>
+    <text x="794" y="442" fill="#D1DEDA" font-size="20" font-family="Segoe UI, Arial, sans-serif">Canonical outputs:</text>
+    <text x="794" y="472" fill="#B8CECA" font-size="19" font-family="Segoe UI, Arial, sans-serif">dispatch · context packets · handoff log · project state</text>
+  </g>
 </svg>

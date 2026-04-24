@@ -19,6 +19,7 @@ This skill takes an already-selected research route and turns it into a project-
 - `skills/catalog/project_scope_rules.json`
 - `skills/catalog/agent_execution_modes.json`
 - `skills/catalog/subagent_registry.json`
+- `skills/catalog/research_team_playbooks.json`
 - `skills/catalog/reviewer_allowlist.json`
 - `skills/schemas/agent_dispatch_card.schema.json`
 - `skills/schemas/project_agent_definition.schema.json`
@@ -40,6 +41,7 @@ Produce:
 - a clarification card
 - selected producers
 - selected reviewers
+- route-aligned squad / playbook
 - review mapping
 - dispatch artifact location
 - project state preview

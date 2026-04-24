@@ -28,6 +28,7 @@ def contract_assets() -> dict[str, bool]:
         "project_scope_rules": (CATALOG_DIR / "project_scope_rules.json").exists(),
         "agent_execution_modes": (CATALOG_DIR / "agent_execution_modes.json").exists(),
         "subagent_registry": (CATALOG_DIR / "subagent_registry.json").exists(),
+        "research_team_playbooks": (CATALOG_DIR / "research_team_playbooks.json").exists(),
         "reviewer_allowlist": (CATALOG_DIR / "reviewer_allowlist.json").exists(),
         "quality_gates": (CATALOG_DIR / "quality_gates.json").exists(),
         "research_pipeline_stages": (CATALOG_DIR / "research_pipeline_stages.json").exists(),
