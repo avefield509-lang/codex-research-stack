@@ -123,12 +123,14 @@ pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path "
 
 ## 视觉说明
 
-Pages 首页会用一组可读的项目卡片说明工作流，而不是让访问者去辨认密密麻麻的截图。它固定说明四件事：
+Pages 首页会用一组可读的项目卡片和工作流总览图说明系统，而不是让访问者去辨认密密麻麻的截图。它固定说明四件事：
 
 - 先解释路线，再执行工具
 - 把项目工作拆成可见角色
 - 通过 review gate 阻断弱产出
 - 把可靠材料交接到项目文件和知识工具
+
+![Codex Research Stack 工作流总览](./assets/workflow-map.png)
 
 更完整的过程可以看：[3 分钟快速 Demo](./examples/quick-demo/)。
 

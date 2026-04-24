@@ -12,6 +12,10 @@ ASSETS = {
         ROOT / "assets" / "social-preview.png",
         ROOT / "docs" / "assets" / "social-preview.png",
     ],
+    "workflow-map.png": [
+        ROOT / "assets" / "workflow-map.png",
+        ROOT / "docs" / "assets" / "workflow-map.png",
+    ],
     "hero-overview.png": [ROOT / "docs" / "assets" / "hero-overview.png"],
     "multi-agent-workspace.png": [ROOT / "docs" / "assets" / "multi-agent-workspace.png"],
     "pipeline-gates-overview.png": [ROOT / "docs" / "assets" / "pipeline-gates-overview.png"],

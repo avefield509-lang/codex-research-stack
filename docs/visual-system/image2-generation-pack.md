@@ -2,7 +2,7 @@
 
 This pack defines the replacement image system for Codex Research Stack.
 
-The Pages homepage now uses the restored image2 system overview as the primary image asset and native HTML/CSS cards as fallback visuals. Future image2 replacements should stay readable at GitHub width, usable on Pages, and visually distinct from the surrounding dark cards.
+The Pages homepage now uses separate image2 assets for brand presentation and workflow explanation, with native HTML/CSS cards as fallback visuals. Future image2 replacements should stay readable at GitHub width, usable on Pages, and visually distinct from the surrounding dark cards.
 
 ## Global Direction
 
@@ -18,7 +18,8 @@ The Pages homepage now uses the restored image2 system overview as the primary i
 
 | Asset | Output path | Size | Purpose |
 | --- | --- | ---: | --- |
-| GitHub social preview | `assets/social-preview.png` and `docs/assets/social-preview.png` | `2:1`, ideally `1280x640` or larger | README top image, Pages overview, and social sharing |
+| GitHub social preview | `assets/social-preview.png` and `docs/assets/social-preview.png` | `16:9` or `2:1`, ideally `1600px` wide or larger | README top image and social sharing |
+| Workflow map | `assets/workflow-map.png` and `docs/assets/workflow-map.png` | `16:9`, ideally `1600x900` or larger | README and Pages workflow explanation |
 | Pages hero visual | `docs/assets/hero-overview.png` | `1200x1200` | Homepage hero, desktop and mobile |
 | Workspace visual | `docs/assets/multi-agent-workspace.png` | `1600x1000` | Pages project workspace section |
 | Pipeline gates visual | `docs/assets/pipeline-gates-overview.png` | `1600x900` | Pages gate/check section |
@@ -28,7 +29,9 @@ The Pages homepage now uses the restored image2 system overview as the primary i
 
 For README, copy only the social preview and at most one large explanatory image into `assets/`. Do not duplicate every Pages image in `assets/` unless README references it.
 
-The current `social-preview.png` is the visual reference image: a full-system image2 overview with route planning, research autopilot, specialized roles, quality gates, and integrations. New assets should simplify that direction rather than returning to small text-heavy screenshot cards.
+The current `social-preview.png` is the brand reference image: project name, tagline, multi-agent research framing, and a polished high-level product mood.
+The current `workflow-map.png` is the workflow reference image: research routing, multi-agent orchestration, quality gates, citation verification, Zotero/Obsidian sync, social evidence capture, and evidence-to-writing handoff.
+New assets should simplify these directions rather than returning to small text-heavy screenshot cards.
 
 ## Prompt 1: GitHub Social Preview
 
@@ -46,7 +49,20 @@ Design brief:
 - No tiny text. Every label must be readable at GitHub preview size.
 - Colors: deep teal, muted cyan, warm amber, off-white, graphite.
 
-## Prompt 2: Pages Hero Visual
+## Prompt 2: Workflow Map
+
+Create a polished workflow map illustration for "Codex Research Stack".
+
+Design brief:
+- 16:9 landscape, ideally 1600x900 or larger.
+- Show the research workflow as connected panels, not as a literal screenshot.
+- Required panels: Research routing, Multi-agent orchestration, Quality gates, Citation verification, Zotero and Obsidian sync, Social evidence capture, Evidence to writing.
+- Use short readable labels only.
+- Keep the composition grounded with visible connection lines and generous spacing.
+- Colors: deep teal, muted cyan, warm amber, off-white, graphite.
+- No fake star counts, fake metrics, personal data, API keys, or unreadable tiny paragraphs.
+
+## Prompt 3: Pages Hero Visual
 
 Create a square product illustration for "Codex Research Stack".
 
@@ -59,7 +75,7 @@ Design brief:
 - Include subtle project-file motifs: dispatch card, result JSON, gate JSON, handoff log.
 - Avoid fake app chrome, fake browser windows, fake metrics, real user data, and tiny text.
 
-## Prompt 3: Workspace Visual
+## Prompt 4: Workspace Visual
 
 Create a wide product illustration showing a research project workspace.
 
@@ -72,7 +88,7 @@ Design brief:
 - Avoid long sentences, tiny labels, floating panels, and decorative clutter.
 - Use light panels or high-contrast surfaces so it does not disappear inside a dark webpage card.
 
-## Prompt 4: Pipeline Gates Visual
+## Prompt 5: Pipeline Gates Visual
 
 Create a wide product illustration for a research workflow gate system.
 
@@ -84,7 +100,7 @@ Design brief:
 - Make it highly readable at README width.
 - Do not include paragraphs, fake metrics, screenshots, or small UI text.
 
-## Prompt 5: Route Card Visual
+## Prompt 6: Route Card Visual
 
 Create a clean card-style illustration called "Route explanation".
 
@@ -100,7 +116,7 @@ Design brief:
 - Use a product illustration style, not a literal screenshot.
 - Leave generous spacing.
 
-## Prompt 6: Dispatch Visual
+## Prompt 7: Dispatch Visual
 
 Create a clean card-style illustration called "Dispatch board".
 
@@ -117,7 +133,7 @@ Design brief:
   - State: next step
 - No tiny text, no squeezed card, no vertical narrow State card.
 
-## Prompt 7: Integration Visual
+## Prompt 8: Integration Visual
 
 Create a clean layered illustration called "Materials stay separated".
 

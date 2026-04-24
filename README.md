@@ -55,12 +55,14 @@ If you want to jump to one chapter:
 
 ## What it looks like
 
-The Pages homepage presents the workflow as a small set of readable project cards instead of dense screenshots. The visual model is simple:
+The Pages homepage presents the workflow as readable project cards plus a workflow map instead of dense screenshots. The visual model is simple:
 
 - explain the route before tools run
 - dispatch project work into visible roles
 - block weak outputs through review gates
 - hand off verified materials into project files and knowledge tools
+
+![Codex Research Stack workflow map](./assets/workflow-map.png)
 
 ## Quick start
 
