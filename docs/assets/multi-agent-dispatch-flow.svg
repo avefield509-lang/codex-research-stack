@@ -1,58 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Multi-agent dispatch flow">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Multi-agent dispatch board">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#071217"/>
-      <stop offset="1" stop-color="#13231b"/>
+      <stop offset="1" stop-color="#0d2026"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.32"/>
-    </filter>
   </defs>
   <rect width="1280" height="720" fill="url(#bg)"/>
-  <text x="80" y="96" fill="#ecf5f3" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="800">Inspectable multi-agent dispatch</text>
-  <text x="82" y="136" fill="#afc4c0" font-family="Segoe UI, Arial, sans-serif" font-size="23">Not role-play. Each role gets inputs, output paths, handoff traces, and review gates.</text>
-  <g fill="none" stroke="#69d3c9" stroke-width="5" stroke-linecap="round">
-    <path d="M272 336 H435"/>
-    <path d="M586 336 H750"/>
-    <path d="M904 336 H1046"/>
-    <path d="M904 336 C940 438 940 496 904 558"/>
-    <path d="M746 558 H586"/>
+  <text x="84" y="96" fill="#eaf5f2" font-family="Bahnschrift, Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Dispatch board</text>
+  <text x="86" y="140" fill="#b6cbc7" font-family="Segoe UI, Arial, sans-serif" font-size="24">Real multi-agent work leaves separate inputs, outputs, reviewers, and project state.</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="96" y="216" width="248" height="360" rx="28" fill="#102b33" stroke="#376b6b" stroke-width="2"/>
+    <text x="128" y="268" fill="#69d3c9" font-size="28" font-weight="700">Producer</text>
+    <text x="128" y="318" fill="#f0faf7" font-size="26">Literature agent</text>
+    <text x="128" y="370" fill="#b6cbc7" font-size="22">Input</text>
+    <text x="128" y="404" fill="#f0faf7" font-size="24">review question</text>
+    <text x="128" y="462" fill="#b6cbc7" font-size="22">Output</text>
+    <text x="128" y="496" fill="#f0faf7" font-size="24">candidate map</text>
+    <rect x="390" y="216" width="248" height="360" rx="28" fill="#102b33" stroke="#376b6b" stroke-width="2"/>
+    <text x="422" y="268" fill="#69d3c9" font-size="28" font-weight="700">Reviewer</text>
+    <text x="422" y="318" fill="#f0faf7" font-size="26">Quality gate</text>
+    <text x="422" y="370" fill="#b6cbc7" font-size="22">Checks</text>
+    <text x="422" y="404" fill="#f0faf7" font-size="24">citations</text>
+    <text x="422" y="438" fill="#f0faf7" font-size="24">method fit</text>
+    <text x="422" y="496" fill="#e2b45d" font-size="26" font-weight="700">revise if weak</text>
+    <rect x="684" y="216" width="248" height="360" rx="28" fill="#102b33" stroke="#376b6b" stroke-width="2"/>
+    <text x="716" y="268" fill="#69d3c9" font-size="28" font-weight="700">Outputs</text>
+    <text x="716" y="318" fill="#f0faf7" font-size="26">summary.md</text>
+    <text x="716" y="356" fill="#f0faf7" font-size="26">result.json</text>
+    <text x="716" y="426" fill="#b6cbc7" font-size="22">stored in</text>
+    <text x="716" y="462" fill="#f0faf7" font-size="24">agent output dir</text>
+    <rect x="978" y="216" width="206" height="360" rx="28" fill="#312718" stroke="#8b6a29" stroke-width="2"/>
+    <text x="1010" y="268" fill="#e2b45d" font-size="28" font-weight="700">State</text>
+    <text x="1010" y="318" fill="#f0faf7" font-size="26">current.json</text>
+    <text x="1010" y="372" fill="#b6cbc7" font-size="22">who owns</text>
+    <text x="1010" y="406" fill="#b6cbc7" font-size="22">what next</text>
+    <text x="1010" y="440" fill="#b6cbc7" font-size="22">what blocks</text>
   </g>
-  <g font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
-    <g transform="translate(80 245)">
-      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
-      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Autopilot</text>
-      <text x="26" y="100" fill="#ecf5f3" font-size="23">route</text>
-      <text x="26" y="132" fill="#ecf5f3" font-size="23">explanation</text>
-    </g>
-    <g transform="translate(435 245)">
-      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
-      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Dispatch</text>
-      <text x="26" y="100" fill="#ecf5f3" font-size="23">agents</text>
-      <text x="26" y="132" fill="#ecf5f3" font-size="23">outputs</text>
-    </g>
-    <g transform="translate(750 245)">
-      <rect width="192" height="182" rx="26" fill="#10262c" stroke="#315b5c"/>
-      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Producers</text>
-      <text x="26" y="100" fill="#ecf5f3" font-size="23">literature</text>
-      <text x="26" y="132" fill="#ecf5f3" font-size="23">analysis</text>
-    </g>
-    <g transform="translate(1046 245)">
-      <rect width="154" height="182" rx="26" fill="#2a2418" stroke="#7d6534"/>
-      <text x="24" y="58" fill="#e2b45d" font-size="22" font-weight="700">Gate</text>
-      <text x="24" y="100" fill="#ecf5f3" font-size="23">pass</text>
-      <text x="24" y="132" fill="#ecf5f3" font-size="23">revise</text>
-    </g>
-    <g transform="translate(746 476)">
-      <rect width="192" height="150" rx="26" fill="#10262c" stroke="#315b5c"/>
-      <text x="26" y="58" fill="#69d3c9" font-size="22" font-weight="700">Reviewer</text>
-      <text x="26" y="100" fill="#ecf5f3" font-size="23">target-specific</text>
-    </g>
-    <g transform="translate(394 500)">
-      <rect width="192" height="104" rx="24" fill="#10262c" stroke="#315b5c"/>
-      <text x="24" y="44" fill="#69d3c9" font-size="20" font-weight="700">Project state</text>
-      <text x="24" y="76" fill="#ecf5f3" font-size="22">current.json</text>
-    </g>
-  </g>
+  <path d="M344 396 H390 M638 396 H684 M932 396 H978" stroke="#69d3c9" stroke-width="5" stroke-linecap="round"/>
 </svg>
-
