@@ -144,6 +144,7 @@ def main() -> None:
         DOCS_DIR / "index.md",
         DOCS_DIR / "getting-started.md",
         DOCS_DIR / "index.html",
+        DOCS_DIR / "architecture.html",
         DOCS_DIR / "zh" / "index.html",
         DOCS_DIR / "zh" / "getting-started.html",
         DOCS_DIR / "zh" / "operator-guide.html",

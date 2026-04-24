@@ -2,78 +2,67 @@
 
 ![System Overview](../assets/hero-overview.png)
 
-## The Big Idea
+## In one sentence
 
-Codex Research Stack treats research work as a routed system, not a generic chat.
+Codex Research Stack helps a research task move through four practical stages:
 
-The system is organized into four visible layers:
+1. understand the task,
+2. organize the work,
+3. block weak outputs,
+4. hand verified material to the right place.
 
-1. **Control plane**
-   `research-autopilot` decides the route, profile, helper skills, and whether the task upgrades into project-type orchestration.
-2. **Squad layer**
-   `research-team-orchestrator` turns a routed project into producers, reviewers, dispatch cards, and project-state artifacts.
-3. **Gate layer**
-   quality gates block invalid stage transitions, weak citations, weak writing, and unreproducible exports.
-4. **Knowledge layer**
-   verified outputs move into Zotero, Obsidian, and reusable project artifacts.
+## What happens when a task comes in
 
-## Core Flow
+### 1. The system decides how to begin
 
-```mermaid
-flowchart TD
-    A["User task"] --> B["research-autopilot"]
-    B --> C["Route + profile + helper skills"]
-    C --> D["Clarification card"]
-    D --> E["research-team-orchestrator"]
-    E --> F["Producer squad"]
-    F --> G["Reviewer mapping"]
-    G --> H["Quality gates"]
-    H --> I["Canonical artifacts"]
-    I --> J["Zotero / Obsidian / exports"]
-```
+`research-autopilot` looks at the task first.
+Its job is simple: explain what kind of work this is, choose an appropriate path,
+and say what should happen next.
 
-## Why The Multi-Agent Layer Matters
+### 2. Project work becomes a workspace
 
-![Multi-Agent Workspace](../assets/multi-agent-workspace.png)
+If the task is large enough to count as a project, `research-team-orchestrator`
+turns it into something more structured than a chat:
 
-The multi-agent layer is designed to prevent “fake multi-agent” behavior.
+- who is producing the work
+- who is reviewing it
+- where the outputs go
+- what still blocks progress
 
-In this stack, a project only counts as a real multi-agent run if it has:
+### 3. Weak work can be stopped
 
-- explicit producer and reviewer roles
-- dispatch artifacts
+The stack uses explicit checks so that weak work does not quietly move forward.
+These checks cover:
+
+- citation integrity
+- writing quality
+- stage transitions
+- reproducibility
+
+### 4. Verified material is handed off cleanly
+
+Once the work is good enough, it moves to the right boundary:
+
+- formal references -> Zotero
+- knowledge notes and synthesis -> Obsidian
+- runtime traces -> project files
+
+## When it is really multi-agent
+
+This repo does not treat role-play as multi-agent work.
+A run only counts as real multi-agent work when it has:
+
+- separate producer and reviewer roles
+- dispatch files
 - context packets
-- canonical output directories
-- target-specific review mapping
-- project state and gate logs
+- separate output folders
+- review logs and gate results
 
-That is why the public repo emphasizes contracts and validators, not just prompt personas.
+That distinction matters because it keeps the project inspectable later.
 
-## Research Team Playbooks
+## The files that matter most
 
-The public stack now includes route-aligned team playbooks in:
-
-- `skills/catalog/research_team_playbooks.json`
-
-These playbooks make the system easier to inspect because each route can show:
-
-- squad name
-- mission
-- default agents
-- optional agents
-- expected outputs
-- review chain
-
-Example direction:
-
-- `literature-review` → Literature Synthesis Squad
-- `social-platform-case` → Platform Evidence Squad
-- `computational-social-science` → CSS Project Squad
-- `social-science-submission-package` → Submission Package Squad
-
-## Canonical Artifacts
-
-The system keeps project traces visible through canonical paths.
+These locations are the backbone of a project run:
 
 - `.codex/dispatch/`
 - `.codex/context-packets/`
@@ -82,30 +71,37 @@ The system keeps project traces visible through canonical paths.
 - `logs/quality-gates/`
 - `logs/project-state/`
 
-The goal is simple: when a run fails, a human should still be able to inspect what happened.
+The point is not complexity for its own sake.
+The point is that when something goes wrong, a human can still reconstruct what happened.
 
-## Contract Assets
+## Why the checks exist
 
-![Pipeline and Gates](../assets/pipeline-gates-overview.png)
+Research projects often fail quietly:
 
-The main contract layer lives in:
+- the wrong task type is chosen at the beginning
+- references are treated as formal before they are verified
+- writing becomes polished before the argument is sound
+- outputs are exported before the project is reproducible
 
-- `skills/catalog/project_scope_rules.json`
-- `skills/catalog/agent_execution_modes.json`
-- `skills/catalog/subagent_registry.json`
-- `skills/catalog/research_team_playbooks.json`
-- `skills/catalog/quality_gates.json`
-- `skills/catalog/research_pipeline_stages.json`
-- `skills/catalog/writing_quality_rules.json`
-- `skills/schemas/agent_dispatch_card.schema.json`
-- `skills/schemas/project_agent_definition.schema.json`
+The check layer exists to slow those failures down and make them visible.
 
-## Knowledge Handoff
+## How the main pieces fit together
 
-This public stack keeps a strict distinction between:
+```mermaid
+flowchart TD
+    A["User task"] --> B["research-autopilot"]
+    B --> C["Suggested path and next step"]
+    C --> D["Project workspace, if needed"]
+    D --> E["Producers and reviewers"]
+    E --> F["Checks and stage gates"]
+    F --> G["Project files"]
+    G --> H["Zotero / Obsidian / exports"]
+```
 
-- **formal reference boundary** → Zotero
-- **knowledge synthesis boundary** → Obsidian
-- **project runtime boundary** → canonical project files
+## What this architecture is not trying to do
 
-This separation is one of the reasons the stack behaves more like a research operating layer than a generic plugin bundle.
+- It does not replace Codex.
+- It does not hide everything behind one smart-looking answer.
+- It does not merge formal references, knowledge notes, and runtime traces into one bucket.
+
+It tries to make research work easier to follow, inspect, and reuse.

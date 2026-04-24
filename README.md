@@ -1,54 +1,53 @@
 # Codex Research Stack
 
-[中文首页](./README.zh-CN.md) | [English Pages](https://avefield509-lang.github.io/codex-research-stack/) | [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
+[中文 README](./README.zh-CN.md) | [English Pages](https://avefield509-lang.github.io/codex-research-stack/) | [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
 
-**A plugin-first research operating layer for Codex.**
+**Turn Codex into a clearer research workspace.**
 
-Codex Research Stack makes four things explicit:
-
-- route selection before execution
-- real multi-agent project orchestration
-- visible research pipeline gates
-- evidence-aware handoff into Zotero, Obsidian, and reproducibility artifacts
+Codex Research Stack is for researchers who want more than a long chat thread.
+It helps you start research tasks with a clearer plan, keep project work organized,
+and make reference, writing, and reproducibility checks visible.
 
 ![Codex Research Stack Hero](./assets/social-preview.png)
 
-## Why it matters
+## What this repo helps you do
 
-Most agent systems are strongest after a task is already well defined.
-Research work usually fails earlier:
+- decide what kind of task you are doing before tools start running
+- turn project work into a visible workspace instead of one long conversation
+- keep citations, writing quality, and reproducibility checks in view
+- hand verified material into Zotero, Obsidian, and reusable project files
 
-- the wrong route is chosen first
-- project work collapses into one long chat
-- citations, writing, and evidence move without explicit checks
-- runtime artifacts and knowledge tools drift apart
+## Who this is for
 
-This repository addresses that layer without replacing Codex.
+This repo is a good fit if you work on:
+
+- literature reviews that need citation verification before formal use
+- computational social science or mixed-method projects
+- platform case studies constrained to browser-visible evidence
+- manuscript, revision, or submission workflows that need explicit checks
 
 ## What you get
 
-- `research-autopilot` for route, profile, helper skills, and next action
-- `research-team-orchestrator` for squads, dispatch artifacts, reviewer mappings, and project state
-- explicit contract and gate assets for inspectable runs
-- integrations for citation verification, Zotero, Obsidian, social evidence, and reproducibility
+- `research-autopilot`: explains the task route before work expands
+- `research-team-orchestrator`: turns project work into visible roles, review steps, and handoffs
+- project checks: blocks weak references, weak writing, and incomplete reproducibility
+- project scaffolds: gives you a reusable structure instead of starting every project from scratch
 
-## Product tour
+## If you only have 3 minutes
 
-### Multi-agent project workspace
+1. Read [Getting Started](./docs/getting-started.md) to see how the public repo is organized.
+2. Read [Operator Guide](./docs/operator-guide.md) to understand what the system does during a live project.
+3. Read [New Project Guide](./docs/new-project-guide.md) to see how a real project begins.
+
+## What it looks like
+
+### Project workspace
 
 ![Multi-Agent Workspace](./assets/multi-agent-workspace.png)
 
-### Pipeline and gate logic
+### Checks and stage transitions
 
 ![Pipeline and Gates](./assets/pipeline-gates-overview.png)
-
-## Typical use cases
-
-- literature reviews with DOI verification before formal use
-- computational social science projects that need coordinated squads
-- social-platform case studies constrained to browser-visible evidence
-- writing workflows where used references are captured before export
-- submission packages with reproducibility and writing-quality checks
 
 ## Quick start
 
@@ -62,7 +61,7 @@ python .\scripts\validate_research_pipeline.py
 python .\scripts\validate_research_stack.py
 ```
 
-## Start here
+## Learn the repo in layers
 
 - [Getting Started](./docs/getting-started.md)
 - [Operator Guide](./docs/operator-guide.md)
@@ -71,11 +70,23 @@ python .\scripts\validate_research_stack.py
 - [Use Cases](./docs/use-cases.md)
 - [Integrations](./docs/integrations.md)
 
+## Why this repo exists
+
+Many agent systems become useful only after a task is already well defined.
+Research work usually breaks earlier:
+
+- the wrong kind of task is chosen first
+- project work collapses into a single conversation
+- references and writing move forward without visible checks
+- project files, knowledge tools, and outputs drift apart
+
+Codex Research Stack focuses on that layer. It does not replace Codex. It makes research work easier to follow.
+
 ## Pages
 
 - [English Pages](https://avefield509-lang.github.io/codex-research-stack/)
 - [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
 
-## Star this repo
+## If this is useful
 
-If this project helps you think more clearly about research routing, multi-agent contracts, or evidence-aware workflows in Codex, give it a star.
+If this repo helps you think more clearly about research work in Codex, give it a star.
