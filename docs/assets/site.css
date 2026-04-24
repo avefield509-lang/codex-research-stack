@@ -500,6 +500,18 @@ pre code {
   font-size: 0.88rem;
 }
 
+.stacked-posters {
+  display: grid;
+  gap: 18px;
+}
+
+.poster-caption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
 .explainer-card,
 .workspace-card {
   position: relative;
