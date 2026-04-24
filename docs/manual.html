@@ -214,6 +214,7 @@ Explain the route first, then decide whether this should become project-type mul
               <li>the project folder holds runtime state and traces</li>
             </ul>
             <p>For platform and web cases, the repository stays conservative: prefer browser-visible material, keep provenance explicit, and keep capture separate from interpretation.</p>
+            <p><code>social-platform-reader</code> remains the research entrypoint. MCP, Chrome DevTools, and browser automation adapters are implementation paths, not competing research workflows. The public design does not assume that native Computer Use is always available.</p>
           </section>
 
           <section id="repository-and-future-app" class="card prose-card">
@@ -223,6 +224,8 @@ Explain the route first, then decide whether this should become project-type mul
               <li>this repository is the rules and documentation layer</li>
               <li>the future app is the easier daily interface</li>
             </ul>
+            <p>In the wider ecosystem, <code>skills-environment-local</code> is the private local environment, <code>skills-environment-release</code> is this public environment package, <code>skills-app-own</code> is the private desktop app workspace, and <code>skills-app-github</code> is the public app workspace.</p>
+            <p>If an app needs environment rules, it should consume them through an explicit snapshot, export, or sync step. Silent cross-repository drift is the failure mode to avoid.</p>
             <p><strong>The repository is the source, the app is the interface.</strong></p>
           </section>
 

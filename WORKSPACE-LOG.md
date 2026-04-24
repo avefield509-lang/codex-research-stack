@@ -1,8 +1,8 @@
 ﻿# skills仓库管理 Workspace Log
 
-- generated_at: 2026-04-24T17:03:59
+- generated_at: 2026-04-24T17:27:09
 - branch: `main`
-- HEAD: `07a2d22`
+- HEAD: `1cbbf10`
 - purpose: GitHub 公开发行版环境包工作仓库。
 
 ## Automation
@@ -63,6 +63,7 @@
 
 ## Independent Repo Commit History
 
+- 2026-04-24 $(1cbbf10 2026-04-24 Prepare public v0.1.0 launch assets[0]) Prepare public v0.1.0 launch assets
 - 2026-04-24 $(07a2d22 2026-04-24 Consolidate public documentation into single manual[0]) Consolidate public documentation into single manual
 - 2026-04-24 $(b9ae534 2026-04-24 Define repository and future app relationship[0]) Define repository and future app relationship
 - 2026-04-24 $(ded6f7a 2026-04-24 Refine public Pages visual hierarchy and mobile layout[0]) Refine public Pages visual hierarchy and mobile layout
@@ -90,31 +91,10 @@
 
 ## Current Working Tree Status
 
-- A  .github/releases/v0.1.0.md
-- A  .github/repository-profile.md
+- M  AGENTS.md
 - M  README.md
 - M  README.zh-CN.md
-- M  assets/social-preview.png
-- A  docs/assets/integration-chain.svg
-- A  docs/assets/multi-agent-dispatch-flow.svg
-- A  docs/assets/route-explanation-card.svg
-- M  docs/assets/social-preview.png
-- M  docs/index.html
 - M  docs/manual.html
 - M  docs/manual.md
 - M  docs/manual.zh-CN.md
-- M  docs/zh/index.html
 - M  docs/zh/manual.html
-- A  examples/quick-demo/.codex/dispatch/demo-run.yaml
-- A  examples/quick-demo/README.md
-- A  examples/quick-demo/demo-prompt.md
-- A  examples/quick-demo/findings-memory.md
-- A  examples/quick-demo/logs/project-state/current.json
-- A  examples/quick-demo/logs/quality-gates/pipeline-status.json
-- A  examples/quick-demo/outputs/agent-runs/demo-run/literature-producer/result.json
-- A  examples/quick-demo/outputs/agent-runs/demo-run/literature-producer/summary.md
-- A  examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json
-- A  examples/quick-demo/outputs/agent-runs/demo-run/reviewer/review.literature-producer.md
-- A  examples/quick-demo/research-map.md
-- A  examples/quick-demo/route-explanation-card.md
-- M  scripts/validate_research_stack.py

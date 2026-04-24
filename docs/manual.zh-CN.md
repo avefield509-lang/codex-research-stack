@@ -444,6 +444,9 @@ Obsidian 是长期知识层。
 - 优先看浏览器可见内容
 - 明确保留来源
 - 把“我看到了什么”和“我怎么解释它”分开
+- `social-platform-reader` 保持为研究入口
+- MCP、Chrome DevTools 或浏览器自动化适配器只是实现路径
+- 不假设原生 Computer Use 一定可用
 
 ### 本地环境工具
 
@@ -468,6 +471,17 @@ Obsidian 是长期知识层。
 - 当前仓库是“规则和说明书”
 - 未来 app 是“更顺手的界面”
 
+放到完整体系里，四个仓库的分工是：
+
+- `skills-environment-local`
+  - 私有本地环境和运行规则
+- `skills-environment-release`
+  - 当前公开环境包
+- `skills-app-own`
+  - 私有桌面 app 工作区
+- `skills-app-github`
+  - 公开 app 工作区
+
 仓库负责：
 
 - workflow rules
@@ -485,6 +499,8 @@ Obsidian 是长期知识层。
 - 项目可视化界面
 
 所以未来 app 不是另起一套规则，而是建立在当前仓库上面。
+
+如果 app 需要环境规则，应该通过明确的快照、导出或同步步骤引入。最需要避免的是 app 仓和环境仓悄悄分叉，最后出现两个互相冲突的规则源。
 
 如果用一句最简单的话概括：
 
