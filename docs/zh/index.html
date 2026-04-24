@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Research Stack</title>
+    <meta name="description" content="一个以插件为中心的 Codex 研究操作层，强调 route、真实多智能体编排和显式研究 gate。">
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="topbar">
+        <div class="brand"><span class="brand-mark"></span><span>Codex Research Stack</span></div>
+        <div class="lang-switch">
+          <a href="../">English</a>
+          <span class="active">简体中文</span>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div>
+          <div class="eyebrow">研究操作层</div>
+          <h1>把 Codex 变成一个更可读的研究系统。</h1>
+          <p>
+            Codex Research Stack 是一层以插件为中心的研究控制面，
+            用来处理 route 选择、项目型多智能体编排、研究 pipeline gate，
+            以及 Zotero、Obsidian、证据链和复现材料之间的清楚交接。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/avefield509-lang/codex-research-stack">打开 GitHub</a>
+            <a class="button button-secondary" href="../getting-started.md">快速开始</a>
+            <a class="button button-secondary" href="../new-project-guide.md">新项目上手</a>
+          </div>
+          <div class="hero-pills">
+            <span class="pill">Plugin-first</span>
+            <span class="pill">真实多智能体 dispatch</span>
+            <span class="pill">显式 pipeline gate</span>
+            <span class="pill">证据链集成</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/social-preview.png" alt="Codex Research Stack 封面图">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>这套系统公开展示的是什么</h2>
+          <p>它不是一个“prompt 集合”，而是一套把研究自动化关键层显式化的工作栈。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>研究 route</h3>
+            <p>在工具真正执行前，先说明 route、profile、helper skills 和下一步动作。</p>
+          </article>
+          <article class="card">
+            <h3>项目 squad</h3>
+            <p>项目型任务会升级成 producer、reviewer、dispatch artifact 和项目状态板。</p>
+          </article>
+          <article class="card">
+            <h3>显式 gate</h3>
+            <p>引文、写作、结果有效性、来源和复现检查保持可见，而不是悄悄跳过。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>先看系统怎么长</h2>
+          <p>下面两张图分别对应项目级工作区和研究 pipeline，不用靠虚构数字来制造“像产品”的感觉。</p>
+        </div>
+        <div class="grid-2">
+          <article class="card visual-card">
+            <img src="../assets/multi-agent-workspace.png" alt="多智能体工作区">
+          </article>
+          <article class="card visual-card">
+            <img src="../assets/pipeline-gates-overview.png" alt="研究 pipeline 与 gate">
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>从哪里开始看</h2>
+          <p>建议按“入口说明 → contract → 项目脚手架”的顺序理解这套公开仓库。</p>
+        </div>
+        <div class="grid-2">
+          <div class="card card-links">
+            <a class="card-link" href="../getting-started.md"><strong>快速开始</strong><span>安装公开仓库、检查目录并跑校验器。</span></a>
+            <a class="card-link" href="../operator-guide.md"><strong>操作指南</strong><span>理解 control plane、dispatch artifact 和真实多智能体的判定标准。</span></a>
+            <a class="card-link" href="../new-project-guide.md"><strong>新项目上手</strong><span>初始化项目脚手架，并跑第一次 project planning。</span></a>
+          </div>
+          <div class="card card-links">
+            <a class="card-link" href="../architecture.md"><strong>架构说明</strong><span>查看 control plane、gate layer 和 canonical artifact 模型。</span></a>
+            <a class="card-link" href="../use-cases.md"><strong>典型用例</strong><span>文献综述、计算社会科学、平台证据和写作链怎么走。</span></a>
+            <a class="card-link" href="../integrations.md"><strong>集成说明</strong><span>Zotero、Obsidian、平台证据和脚本层各自处在什么边界。</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>它和一般 agent 仓库的差别</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>不替代 Codex</h3>
+            <p>这套系统把 Codex 保留为运行时入口，把研究层做成一个更可读的 plugin-first 公共表面。</p>
+          </article>
+          <article class="card">
+            <h3>强调 inspectability</h3>
+            <p>仓库更重视 schema、canonical 文件、review mapping 和 gate，而不是把逻辑藏进提示词戏法。</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        如果这套工作流对你的研究自动化、Codex 编排或证据链设计有帮助，欢迎查看 GitHub 仓库并点一个 star。
+      </div>
+    </main>
+  </body>
+  </html>

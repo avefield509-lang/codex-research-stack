@@ -133,6 +133,7 @@ def main() -> None:
 
     required_root = [
         REPO_ROOT / "README.md",
+        REPO_ROOT / "README.zh-CN.md",
         REPO_ROOT / "LICENSE",
         REPO_ROOT / ".gitignore",
         REPO_ROOT / "CONTRIBUTING.md",
@@ -142,6 +143,8 @@ def main() -> None:
     required_docs = [
         DOCS_DIR / "index.md",
         DOCS_DIR / "getting-started.md",
+        DOCS_DIR / "index.html",
+        DOCS_DIR / "zh" / "index.html",
         DOCS_DIR / "operator-guide.md",
         DOCS_DIR / "new-project-guide.md",
         DOCS_DIR / "architecture.md",
@@ -156,6 +159,12 @@ def main() -> None:
         ASSETS_DIR / "social-preview.svg",
         ASSETS_DIR / "multi-agent-workspace.png",
         ASSETS_DIR / "pipeline-gates-overview.png",
+        DOCS_DIR / "assets" / "site.css",
+        DOCS_DIR / "assets" / "social-preview.png",
+        DOCS_DIR / "assets" / "hero-overview.png",
+        DOCS_DIR / "assets" / "multi-agent-workspace.png",
+        DOCS_DIR / "assets" / "pipeline-gates-overview.png",
+        DOCS_DIR / "assets" / "architecture-map.svg",
         PLUGIN_DIR / "assets" / "route-explanation-card.svg",
         PLUGIN_DIR / "assets" / "multi-agent-dispatch.svg",
         PLUGIN_DIR / "assets" / "research-system-overview.png",

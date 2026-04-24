@@ -4,7 +4,10 @@ This documentation site is the public guide to a plugin-first research operating
 
 它不是内部备忘录的直接公开版，而是面向 GitHub 访客重写过的公开说明层。
 
-![Codex Research Stack Overview](../assets/social-preview.png)
+Pages home:
+
+- [English](https://avefield509-lang.github.io/codex-research-stack/)
+- [简体中文](https://avefield509-lang.github.io/codex-research-stack/zh/)
 
 ## Start Here
 
