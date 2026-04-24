@@ -14,6 +14,8 @@
   --radius-lg: 20px;
   --radius-md: 14px;
   --width: 1180px;
+  --font-sans: "Inter", "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-mono: "Cascadia Code", "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 * {
@@ -29,7 +31,18 @@ body {
     radial-gradient(circle at bottom right, rgba(204, 149, 50, 0.12), transparent 28%),
     linear-gradient(180deg, #081318 0%, #0a161b 100%);
   color: var(--text);
-  font-family: "Segoe UI", "Inter", "SF Pro Display", sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
 }
 
 a {
@@ -217,6 +230,11 @@ a:hover {
   gap: 18px;
 }
 
+.grid-3 > *,
+.grid-2 > * {
+  min-width: 0;
+}
+
 .grid-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -231,6 +249,7 @@ a:hover {
   background: var(--panel);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .card h3 {
@@ -244,9 +263,50 @@ a:hover {
   line-height: 1.7;
 }
 
+.card ol,
 .card ul {
   margin: 10px 0 0;
-  padding-left: 18px;
+  padding-left: 22px;
+}
+
+.card li + li {
+  margin-top: 6px;
+}
+
+code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.08rem 0.42rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(103, 155, 150, 0.2);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.94em;
+  vertical-align: baseline;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  margin: 14px 0 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(6, 15, 19, 0.72);
+  border: 1px solid rgba(103, 155, 150, 0.18);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.75;
 }
 
 .card-links {
