@@ -9,7 +9,7 @@ Research workflow stack for Codex: route tasks, coordinate multi-agent projects,
 ## Homepage
 
 ```text
-https://avefield509-lang.github.io/codex-research-stack/
+https://marcus-ai4ss.github.io/codex-research-stack/
 ```
 
 ## Topics

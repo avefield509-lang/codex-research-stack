@@ -145,7 +145,7 @@ Only do these three things:
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/avefield509-lang/codex-research-stack.git
+git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
 cd codex-research-stack
 ```
 

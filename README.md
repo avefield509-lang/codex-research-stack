@@ -1,8 +1,12 @@
 # Codex Research Stack
 
-[中文 README](./README.zh-CN.md) | [Pages](https://avefield509-lang.github.io/codex-research-stack/) | [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
+[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/codex-research-stack/) | [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
 
 **A research workbench for Codex.**
+
+Brand line: **Multi-agent research workflows for serious scholarship.**
+
+Brand kit: [docs/brand.md](./docs/brand.md)
 
 Codex Research Stack is for researchers who want their work to stay readable as it grows.
 Instead of turning everything into one long conversation, it helps you start with a clearer route,
@@ -69,7 +73,7 @@ The Pages homepage presents the workflow as readable project cards plus a workfl
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/avefield509-lang/codex-research-stack.git
+git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
 cd codex-research-stack
 ```
 
@@ -125,8 +129,8 @@ Codex Research Stack focuses on that layer. It does not replace Codex. It gives 
 
 ## Pages
 
-- [English Pages](https://avefield509-lang.github.io/codex-research-stack/)
-- [中文 Pages](https://avefield509-lang.github.io/codex-research-stack/zh/)
+- [English Pages](https://marcus-ai4ss.github.io/codex-research-stack/)
+- [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
 
 ## Release
 

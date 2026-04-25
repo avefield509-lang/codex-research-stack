@@ -5,10 +5,10 @@
   "author": {
     "name": "Codex Research Stack Contributors",
     "email": "opensource@codexresearchstack.dev",
-    "url": "https://github.com/avefield509-lang/codex-research-stack"
+    "url": "https://github.com/Marcus-AI4SS/codex-research-stack"
   },
-  "homepage": "https://avefield509-lang.github.io/codex-research-stack/",
-  "repository": "https://github.com/avefield509-lang/codex-research-stack",
+  "homepage": "https://marcus-ai4ss.github.io/codex-research-stack/",
+  "repository": "https://github.com/Marcus-AI4SS/codex-research-stack",
   "license": "MIT",
   "keywords": [
     "codex",
@@ -30,9 +30,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://avefield509-lang.github.io/codex-research-stack/",
-    "privacyPolicyURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
-    "termsOfServiceURL": "https://github.com/avefield509-lang/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "websiteURL": "https://marcus-ai4ss.github.io/codex-research-stack/",
+    "privacyPolicyURL": "https://github.com/Marcus-AI4SS/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
+    "termsOfServiceURL": "https://github.com/Marcus-AI4SS/codex-research-stack/blob/main/PRIVACY-BOUNDARIES.md",
     "defaultPrompt": [
       "Route this research task automatically and explain the plan before execution.",
       "Show which research route, quality gates, and profiles this task needs.",

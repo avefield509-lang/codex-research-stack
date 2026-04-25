@@ -139,7 +139,7 @@
 ### 1. 把仓库拉下来
 
 ```powershell
-git clone https://github.com/avefield509-lang/codex-research-stack.git
+git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
 cd codex-research-stack
 ```
 
