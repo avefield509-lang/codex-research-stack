@@ -93,5 +93,3 @@ HELM 后续可以读取 VELA 项目状态，用于展示状态、证据、交付
 - `examples/`：小型项目示例。
 - `scripts/`：初始化和验证辅助脚本。
 - `skills/`：工作流包使用的 Codex skill、profile、schema 和模板层。
-
-本地 `image2-exports/` 会被忽略。它只作为生成图草稿的临时区，确认后的图片应放入 `docs/assets/brand/`。

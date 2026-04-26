@@ -5,14 +5,13 @@
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.md">English</a>
+    · <a href="https://marcus-ai4ss.github.io/codex-research-stack/">Pages</a>
     · <a href="./docs/getting-started.md">快速开始</a>
     · <a href="./docs/workflow-core.md">工作流核心</a>
     · <a href="./docs/evidence-lifecycle.md">证据生命周期</a>
     · <a href="./docs/quality-checks.md">质量检查</a>
   </p>
 </div>
-
-![VELA 视觉系统](./docs/assets/brand/vela-brand-board-reference.png)
 
 VELA 是一套可以放进用户自己 Codex 工作空间的可移植科研工作流环境。它给研究项目提供稳定的运行层：材料、证据、主张、方法说明、交付物和 Codex 交接保持分层、可读、可复核。
 
@@ -99,9 +98,3 @@ my-research-project/
 | `examples/` | 可检查的最小项目和快速演示 |
 | `scripts/` | 初始化、验证和本地维护辅助脚本 |
 | `skills/` | Codex skill、profile、schema 和模板层 |
-
-ChatGPT-image2 生成草稿应只放在本地 `image2-exports/`。该目录已被忽略，不应出现在 GitHub 根目录。
-
-## 视觉语言
-
-VELA 使用淡蓝与白色表面、深海军蓝文字、分层帆形、证据路径、导航环和柔和波层。品牌素材位于 [`docs/assets/brand`](./docs/assets/brand/)，公开规则位于 [`docs/brand.md`](./docs/brand.md)。

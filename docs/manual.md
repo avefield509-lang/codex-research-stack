@@ -93,5 +93,3 @@ HELM can later read VELA project state for status, evidence, deliverables, envir
 - `examples/`: small project examples.
 - `scripts/`: setup and validation helpers.
 - `skills/`: Codex skill, profile, schema, and template layer used by the workflow package.
-
-The local `image2-exports/` folder is intentionally ignored. It is only a staging area for generated drafts before approved images are copied into `docs/assets/brand/`.

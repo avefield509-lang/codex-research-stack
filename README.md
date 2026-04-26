@@ -5,14 +5,13 @@
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
+    · <a href="https://marcus-ai4ss.github.io/codex-research-stack/">Pages</a>
     · <a href="./docs/getting-started.md">Getting started</a>
     · <a href="./docs/workflow-core.md">Workflow core</a>
     · <a href="./docs/evidence-lifecycle.md">Evidence lifecycle</a>
     · <a href="./docs/quality-checks.md">Quality checks</a>
   </p>
 </div>
-
-![VELA visual system](./docs/assets/brand/vela-brand-board-reference.png)
 
 VELA is a portable research workflow environment you can place inside your own Codex workspace. It gives a research project a stable operating layer: materials, evidence, claims, method notes, deliverables, and Codex handoffs remain separate, readable, and reviewable.
 
@@ -99,9 +98,3 @@ Use VELA by itself when you want a portable workflow. Add HELM when you want a v
 | `examples/` | Minimal project and quick demo for inspection |
 | `scripts/` | Setup, validation, and local maintenance helpers |
 | `skills/` | Codex skill, profile, schema, and template layer |
-
-Generated ChatGPT-image2 drafts should stay in local `image2-exports/`. That folder is ignored and should not appear in the GitHub root.
-
-## Visual Language
-
-VELA uses pale blue and white surfaces, navy text, layered sail forms, evidence traces, navigation rings, and soft wave layers. Brand assets are in [`docs/assets/brand`](./docs/assets/brand/) and the public rules are in [`docs/brand.md`](./docs/brand.md).
