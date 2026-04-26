@@ -1,26 +1,15 @@
 # Roadmap
 
-## Brand Split
+## Near Term
 
-- Replace the old public stack wording with **VELA** for the workflow environment.
-- Reserve **HELM** for the independent local research board.
-- Keep `research-autopilot` and other legacy names as internal identifiers only until compatibility-safe migration is possible.
+- Provide a compact downloadable VELA starter package.
+- Add example project templates for literature review, platform research, computational social science, and paper preparation.
+- Publish a clean handoff template for Codex tasks.
 
-## VELA Package
+## Later
 
-- Separate the installable workflow package from dashboard-specific code.
-- Document the portable project shape, evidence lifecycle, method notes, and Codex handoff format.
-- Add environment health checks that can run without HELM.
-- Keep examples sanitized with placeholders such as `<PROJECT_ROOT>` and `<CODEX_HOME>`.
+- Document how HELM reads VELA project state.
+- Add optional health checks for project folders.
+- Add more examples for evidence lifecycle and deliverable review.
 
-## HELM Link
-
-- Let HELM read VELA project state without making HELM mandatory.
-- Show evidence, deliverables, environment health, and handoff readiness through the local board.
-- Avoid copy that implies the app controls the workflow.
-
-## Release Standard
-
-- Public docs explain VELA as a workflow environment, not an app-only product.
-- Pages use the pale blue and white visual language from the VELA/HELM brand boards.
-- Public assets avoid private paths, credentials, local logs, and unpublished research material.
+VELA will remain usable without HELM.

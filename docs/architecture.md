@@ -1,24 +1,23 @@
-# Architecture
+# Project Structure
 
-VELA is a local-first workflow environment. Its architecture is a portable project state, an evidence lifecycle, and bounded Codex handoff context. HELM may read that state, but VELA should not require HELM to exist.
+VELA does not require a hidden database. A project should be readable as files and folders.
 
-## User-Facing Model
+## Suggested Shape
 
-The public workflow is organized around:
+```text
+my-research-project/
+  materials/
+  evidence/
+  claims/
+  methods/
+  deliverables/
+  handoffs/
+```
 
-- project question and scope;
-- materials;
-- evidence;
-- candidate and supported claims;
-- method notes and artifacts;
-- deliverables;
-- environment checks;
-- Codex handoffs.
+## What To Keep Private
 
-## Local Storage Model
+Keep raw private data, credentials, account traces, personal notes, and restricted source material inside your own project storage. Do not place them in a public copy of VELA.
 
-Project files should remain portable and inspectable. Public examples must use placeholders such as `<PROJECT_ROOT>` and `<CODEX_HOME>` rather than private machine paths.
+## What HELM Reads
 
-## Safety Boundary
-
-VELA should not hide autonomous execution behind product language. Codex receives bounded tasks and scoped context. Generated suggestions require review before they change project facts.
+If you use HELM, it should read the project state you already maintain. HELM is a view over the work, not the only place where the work exists.

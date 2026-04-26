@@ -1,16 +1,19 @@
 # Integrations
 
-VELA treats integrations as optional enhancements. The base workflow environment should still support project setup, evidence tracking, method notes, deliverable preparation, and Codex handoff structure when optional tools are absent.
+VELA works without optional tools. Integrations should make the workflow easier to inspect, not make the workflow dependent on one product.
 
-## Optional Layers
+## Codex
 
-- **Codex:** executes bounded tasks from scoped handoff context.
-- **HELM:** reads project state, evidence status, deliverables, environment health, and handoff readiness.
-- **Python:** enables richer local checks, data processing, and reproducibility scripts.
-- **Zotero:** supports formal reference management.
-- **Obsidian:** supports long-lived research notes.
-- **OpenAI-compatible providers:** may assist with drafts or suggestions only when configured by the user.
+Codex receives bounded handoffs: task, files, constraints, expected output, and known gaps.
 
-## Boundary
+## HELM
 
-No integration should silently turn a material into evidence, mark a claim as supported, or treat an unverified draft as a project fact. Missing optional tools should be visible as a gap, not hidden as a completed step.
+HELM is the optional local research board. It can show status, evidence, deliverables, environment health, and handoff readiness. VELA remains usable without it.
+
+## Zotero And Obsidian
+
+Zotero can manage formal references. Obsidian can hold long-lived notes. VELA should point to those tools without copying private databases into the public workflow package.
+
+## Python Or Analysis Tools
+
+Use Python, R, notebooks, GIS tools, or statistical software where appropriate. VELA records the state and evidence path around that work.

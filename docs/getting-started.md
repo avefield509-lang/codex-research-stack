@@ -1,37 +1,60 @@
 # Getting Started
 
-VELA is easiest to understand as a workflow environment package. Start with a real project folder, define the research question, collect materials, upgrade only verified materials into evidence, then hand scoped context to Codex when a task needs agentic work.
+Use VELA when you want Codex to work from a clear research state rather than from loose conversation history.
 
-## 1. Create a project folder
+## 1. Download VELA
 
-Choose a portable project location. Avoid machine-specific paths in shared examples. Use placeholders such as `<PROJECT_ROOT>` when writing public documentation or handoff notes.
+Clone or download the repository you are viewing:
 
-## 2. Initialize the workflow shape
+```powershell
+git clone <REPOSITORY_URL> vela
+cd vela
+```
 
-A VELA project should keep these layers distinct:
+`<REPOSITORY_URL>` is the URL of this public VELA repository.
 
-- materials;
-- evidence;
-- candidate claims;
-- method notes and artifacts;
-- deliverables;
-- Codex handoff context.
+## 2. Create A Project Folder
 
-Materials are easy to capture. Evidence is stricter: source, access time, verification status, and rights or ethics notes must be visible before a material supports a claim.
+Create a folder for your research project. Keep private data in your project folder, not in the VELA repository.
 
-## 3. Work through the lifecycle
+Suggested top-level sections:
 
-Use the VELA lifecycle as the operating loop:
+- `materials/`
+- `evidence/`
+- `claims/`
+- `methods/`
+- `deliverables/`
+- `handoffs/`
 
-1. Collect sources and project materials.
-2. Analyze what each material can and cannot support.
-3. Validate evidence status, method assumptions, and claim bindings.
-4. Report only what the project state can justify.
+The names can change, but the distinction should remain.
 
-## 4. Use Codex deliberately
+## 3. Capture Materials
 
-Send Codex bounded tasks: clean a dataset, draft a method note, inspect evidence gaps, prepare a reproducibility checklist, or generate a handoff summary. Keep the prompt tied to project files and expected outputs.
+Save DOI records, URLs, files, datasets, platform captures, policy documents, notes, or screenshots as materials. A material is only a source clue at this point.
 
-## 5. Add HELM only when needed
+## 4. Upgrade Evidence Carefully
 
-HELM is optional. Use it when you want a local board for status, evidence, deliverables, environment health, and Codex handoffs. VELA does not require HELM to run.
+A material becomes evidence only when the project records:
+
+- source locator;
+- access time;
+- verification status;
+- rights or ethics note;
+- the claim it supports;
+- how it supports that claim.
+
+## 5. Ask Codex For Bounded Work
+
+Before asking Codex to work, write a handoff that states:
+
+- task;
+- relevant files;
+- constraints;
+- expected output;
+- known gaps.
+
+This keeps Codex work reviewable and prevents a broad prompt from silently changing the research record.
+
+## 6. Add HELM Later If Useful
+
+HELM is optional. Use it when you want a local board for project status, evidence, deliverables, environment health, and Codex handoffs.

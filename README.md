@@ -1,53 +1,96 @@
-# VELA
-
-[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/codex-research-stack/) | [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
-
-**VELA = Versioned Evidence Lifecycle Architecture.**
-
-Public subtitle: **Workflow Environment Package**. Chinese subtitle: **科研工作流环境**.
-
-VELA is a portable research workflow environment for Codex. It packages the project structure, evidence rules, method checkpoints, handoff conventions, and visual language needed to run traceable research work from the first question to a deliverable artifact. It is not a desktop app, not a chat interface, and not a black-box paper generator.
+<div align="center">
+  <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA layered sail mark" width="132">
+  <h1>VELA</h1>
+  <p><strong>Workflow Environment Package for Codex-based research</strong></p>
+  <p><em>Versioned Evidence Lifecycle Architecture</em></p>
+  <p>
+    <a href="./README.zh-CN.md">中文</a>
+    · <a href="./docs/getting-started.md">Getting started</a>
+    · <a href="./docs/workflow-core.md">Workflow core</a>
+    · <a href="./docs/evidence-lifecycle.md">Evidence lifecycle</a>
+    · <a href="./docs/quality-checks.md">Quality checks</a>
+  </p>
+</div>
 
 ![VELA visual system](./docs/assets/brand/vela-brand-board-reference.png)
 
-## Product Boundary
+VELA is a portable research workflow environment you can place inside your own Codex workspace. It gives a research project a stable operating layer: materials, evidence, claims, method notes, deliverables, and Codex handoffs remain separate, readable, and reviewable.
 
-VELA can be downloaded and used inside a user's own Codex environment without installing the local dashboard app. The workflow environment remains the primary artifact: docs, configs, prompts, evidence templates, project-state conventions, and reproducible handoff rules.
+It is not a desktop app. It is not a chat interface. It is not a black-box paper generator. VELA is the workflow package; HELM is the optional local research board that can later read the same project state.
 
-HELM is the companion brand for the optional local research board. HELM can read project state, surface evidence and deliverables, monitor environment health, and prepare Codex handoffs. VELA and HELM are independent products with one visual language: **use either separately; use both when you want a smoother local workflow.**
+## Start In Five Minutes
 
-## What VELA Provides
+```powershell
+git clone <REPOSITORY_URL> vela
+cd vela
+```
 
-- **Versioned evidence lifecycle.** Materials, evidence, claims, method artifacts, and deliverables stay distinct until the required fields and review steps are present.
-- **Composable workflow stages.** Collect, analyze, validate, and report are treated as explicit phases with repairable gaps rather than hidden automation.
-- **Codex handoff structure.** Context passed to Codex is scoped, inspectable, and tied to project state instead of loose chat history.
-- **Portable environment package.** The package is designed to move between local Codex setups without depending on HELM.
-- **Shared visual system.** Pale blue and white, layered sail forms, evidence traces, navigation rings, and calm iOS-style surfaces make the workflow recognizable without making it feel like a chat product.
+Then create your research project folder next to it:
 
-## Relationship To HELM
+```text
+my-research-project/
+  materials/
+  evidence/
+  claims/
+  methods/
+  deliverables/
+  handoffs/
+```
 
-| Brand | Public role | Depends on the other? |
+Use `<REPOSITORY_URL>` as the URL of the public VELA repository you are viewing.
+
+## What VELA Helps You Do
+
+| Need | What VELA Gives You |
+| --- | --- |
+| Start a project without losing structure | A clear place for question, scope, sources, and expected deliverables |
+| Keep evidence honest | A lifecycle that separates collected material from verified evidence |
+| Work with Codex safely | Handoff prompts that name the task, files, constraints, expected output, and known gaps |
+| Prepare shareable outputs | Checks that reveal unsupported claims and private material before a deliverable leaves the project |
+
+## The Workflow
+
+| Layer | Keep Here | Do Not Confuse It With |
 | --- | --- | --- |
-| **VELA** | Workflow environment package for Codex-based research work | No |
-| **HELM** | Local research board for project state, evidence, deliverables, environment health, and Codex handoffs | No |
+| Materials | DOI records, URLs, files, datasets, notes, captures | Evidence |
+| Evidence | Verified materials with source, access time, status, and ethics or rights notes | A broad reading list |
+| Claims | Candidate and supported statements | Final findings |
+| Methods | Assumptions, coding rules, analysis plans, reproducibility notes | Results |
+| Deliverables | Reports, briefs, figures, tables, status notes | Raw project state |
+| Handoffs | Bounded tasks for Codex or collaborators | Whole-project delegation |
 
-HELM is not the controller of VELA. VELA is not a plugin that only works inside HELM. Their integration point is project state and handoff context.
+## A Good Codex Handoff
+
+```markdown
+Task:
+Relevant files:
+Constraints:
+Expected output:
+Known gaps:
+Review standard:
+```
+
+The handoff is intentionally small. Codex should receive enough context to do the task, not an unbounded invitation to rewrite the project.
+
+## VELA And HELM
+
+| Product | Role | Can Stand Alone? |
+| --- | --- | --- |
+| **VELA** | Research workflow environment for Codex | Yes |
+| **HELM** | Local research board for status, evidence, deliverables, environment health, and handoffs | Yes |
+
+Use VELA by itself when you want a portable workflow. Add HELM when you want a visual local board over the same project state.
+
+## Read Next
+
+- [Getting started](./docs/getting-started.md)
+- [Workflow core](./docs/workflow-core.md)
+- [Evidence lifecycle](./docs/evidence-lifecycle.md)
+- [Quality checks](./docs/quality-checks.md)
+- [Use cases](./docs/use-cases.md)
+- [Integrations](./docs/integrations.md)
+- [FAQ](./docs/faq.md)
 
 ## Visual Language
 
-The visual system is intentionally quiet: pale blue, white, navy text, translucent layers, trace paths, and navigation nodes. Core assets are under [`docs/assets/brand`](./docs/assets/brand/).
-
-![VELA and HELM relationship](./docs/assets/brand/vela-helm-relationship-board-reference.png)
-
-## Documentation
-
-- [Pages home](https://marcus-ai4ss.github.io/codex-research-stack/)
-- [Getting started](./docs/getting-started.md)
-- [Installation notes](./docs/installation.md)
-- [Workflow core](./docs/workflow-core.md)
-- [Integrations](./docs/integrations.md)
-- [Roadmap](./docs/roadmap.md)
-
-## Public Naming Note
-
-From this brand pass forward, public README and Pages copy use **VELA** for the workflow environment and **HELM** for the optional local board. Older internal module names may remain in historical docs or implementation files until they are safely migrated.
+VELA uses pale blue and white surfaces, navy text, layered sail forms, evidence traces, navigation rings, and soft wave layers. Brand assets are in [`docs/assets/brand`](./docs/assets/brand/).

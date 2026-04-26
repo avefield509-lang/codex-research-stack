@@ -2,7 +2,7 @@
 
 ## HELM is not installed
 
-VELA should still be usable. HELM is an optional local board, not a runtime requirement for the workflow environment.
+VELA should still be usable. HELM is an optional local board, not a requirement for the workflow environment.
 
 ## Python is not installed
 

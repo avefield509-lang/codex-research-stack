@@ -1,31 +1,28 @@
 # Workflow Core
 
-VELA organizes research work around a versioned evidence lifecycle. The workflow core is deliberately file- and state-oriented so it can run in a user's own Codex environment without requiring a dashboard app.
+VELA keeps research work in layers. Each layer answers a different question.
 
-## Project Layers
-
-- **Materials:** DOI records, URLs, files, datasets, platform captures, notes, and other source clues.
-- **Evidence:** materials with source, access time, verification status, and rights or ethics notes.
-- **Claims:** statements that require explicit support before they enter a deliverable.
-- **Methods:** route notes, assumptions, data decisions, coding rules, analysis plans, and reproducibility checks.
-- **Deliverables:** reports, papers, briefs, figures, tables, status exports, and handoff summaries.
-- **Handoffs:** scoped context packages for Codex or another agent.
+| Layer | Question |
+| --- | --- |
+| Materials | What have I collected? |
+| Evidence | What has been verified enough to support a claim? |
+| Claims | What am I trying to say? |
+| Methods | How did I produce or interpret the evidence? |
+| Deliverables | What can be shared from the current project state? |
+| Handoffs | What should Codex or a collaborator do next? |
 
 ## Lifecycle
 
 ```mermaid
 flowchart LR
-  A["Collect"] --> B["Analyze"]
-  B --> C["Validate"]
-  C --> D["Report"]
-  D --> E["Handoff"]
-  E --> B
+  A["Collect materials"] --> B["Verify evidence"]
+  B --> C["Bind claims"]
+  C --> D["Write method notes"]
+  D --> E["Prepare deliverables"]
+  E --> F["Hand off bounded tasks"]
+  F --> A
 ```
 
-## Evidence Rule
+## Operating Rule
 
-Materials are not evidence by default. A material becomes usable evidence only when the project records the source, access time, verification status, and rights or ethics boundary. Claims remain unsupported until they are linked to evidence with a support explanation.
-
-## HELM Link
-
-HELM can project this workflow state into a local board. That projection is useful for scanning and handoff preparation, but it is not the source of VELA's independence. VELA remains the portable workflow environment.
+Do not collapse layers too early. A note is not evidence, a candidate claim is not a finding, and a generated draft is not a project fact until the supporting state is visible.

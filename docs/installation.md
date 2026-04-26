@@ -1,22 +1,24 @@
 # Installation
 
-VELA is designed as a portable workflow environment package. The base workflow should remain usable in a user's own Codex setup without the local research board.
+VELA is a repository-based workflow environment. There is no required desktop installer.
 
-## Normal Use
-
-Download or clone the public package, then place the workflow files where your Codex environment can read them. Keep project data in your own project folder, not inside generated build output.
+## Download
 
 ```powershell
-git clone https://github.com/Marcus-AI4SS/codex-research-stack.git vela
+git clone <REPOSITORY_URL> vela
 cd vela
 ```
 
-This repository currently hosts the public README, GitHub Pages, release-facing workspace, and shared brand assets while the installable VELA package is being separated from the older public app workspace.
+You can also download the repository as a ZIP from GitHub and unpack it wherever your Codex environment can read it.
 
-## Optional HELM Companion
+## Use With Codex
 
-HELM is the local research board. It may read VELA project state and prepare Codex handoffs, but VELA must remain understandable and usable without HELM.
+Open the VELA folder and your research project folder in the same Codex session. Use the docs as the workflow reference and keep project-specific materials in your project folder.
 
-## Public Build Rule
+## Keep It Portable
 
-Public packages must not include private research notes, PDFs, browser sessions, Zotero databases, Obsidian vaults, tokens, SSH keys, account traces, or machine-specific paths.
+Do not put private notes, PDFs, browser sessions, Zotero databases, Obsidian vaults, tokens, SSH keys, or machine-specific paths into files you plan to share.
+
+## Optional HELM
+
+HELM is a separate local board. It can make VELA project state easier to inspect, but it is not required to use VELA.
