@@ -7,8 +7,8 @@ VELA is designed as a portable workflow environment package. The base workflow s
 Download or clone the public package, then place the workflow files where your Codex environment can read them. Keep project data in your own project folder, not inside generated build output.
 
 ```powershell
-git clone https://github.com/Marcus-AI4SS/skills-app-github.git vela-public
-cd vela-public
+git clone https://github.com/Marcus-AI4SS/codex-research-stack.git vela
+cd vela
 ```
 
 This repository currently hosts the public README, GitHub Pages, release-facing workspace, and shared brand assets while the installable VELA package is being separated from the older public app workspace.

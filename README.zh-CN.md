@@ -1,6 +1,6 @@
 # VELA
 
-[English README](./README.md) | [文档](https://marcus-ai4ss.github.io/skills-app-github/zh/)
+[English README](./README.md) | [文档](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
 
 **VELA = Versioned Evidence Lifecycle Architecture。**
 
@@ -41,7 +41,7 @@ HELM 不是 VELA 的控制器。VELA 也不是只能在 HELM 里运行的插件�
 
 ## 文档
 
-- [Pages 首页](https://marcus-ai4ss.github.io/skills-app-github/zh/)
+- [Pages 首页](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
 - [快速开始](./docs/getting-started.md)
 - [安装说明](./docs/installation.md)
 - [工作流核心](./docs/workflow-core.md)

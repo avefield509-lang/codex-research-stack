@@ -1,6 +1,6 @@
 # VELA
 
-[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/skills-app-github/) | [中文 Pages](https://marcus-ai4ss.github.io/skills-app-github/zh/)
+[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/codex-research-stack/) | [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
 
 **VELA = Versioned Evidence Lifecycle Architecture.**
 
@@ -41,7 +41,7 @@ The visual system is intentionally quiet: pale blue, white, navy text, transluce
 
 ## Documentation
 
-- [Pages home](https://marcus-ai4ss.github.io/skills-app-github/)
+- [Pages home](https://marcus-ai4ss.github.io/codex-research-stack/)
 - [Getting started](./docs/getting-started.md)
 - [Installation notes](./docs/installation.md)
 - [Workflow core](./docs/workflow-core.md)
