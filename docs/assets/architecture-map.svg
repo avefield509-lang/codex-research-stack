@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EAF4FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#2F80ED" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 54px 'Segoe UI',Arial,sans-serif;fill:#102033}
+      .subtitle{font:400 23px 'Segoe UI',Arial,sans-serif;fill:#536B82}
+      .label{font:800 18px 'Segoe UI',Arial,sans-serif;fill:#2F80ED;letter-spacing:4px}
+      .card-title{font:700 28px 'Segoe UI',Arial,sans-serif;fill:#102033}
+      .card-body{font:400 19px 'Segoe UI',Arial,sans-serif;fill:#536B82}
+      .pill{font:700 16px 'Segoe UI',Arial,sans-serif;fill:#2367BF}
+    </style>
+  </defs>
+  <rect width="1400" height="820" rx="42" fill="url(#bg)"/>
+  <text x="70" y="96" class="label">VELA WORKFLOW CORE</text>
+  <text x="70" y="166" class="title">A local workflow core for social-science research</text>
+  <text x="70" y="212" class="subtitle">Project state, materials, claims, evidence, checks, and status export stay readable and local.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="290" width="360" height="330" rx="30" fill="#FFFFFF" stroke="#D6E8FA"/>
+    <text x="116" y="350" class="card-title">1. Project state</text>
+    <text x="116" y="398" class="card-body">Define the question and keep</text>
+    <text x="116" y="428" class="card-body">managed objects inside the</text>
+    <text x="116" y="458" class="card-body">local project folder.</text>
+    <rect x="116" y="508" width="130" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="140" y="534" class="pill">question</text>
+    <rect x="260" y="508" width="120" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="285" y="534" class="pill">status</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="520" y="290" width="360" height="330" rx="30" fill="#FFFFFF" stroke="#D6E8FA"/>
+    <text x="556" y="350" class="card-title">2. Evidence chain</text>
+    <text x="556" y="398" class="card-body">Materials become evidence</text>
+    <text x="556" y="428" class="card-body">only after source, access,</text>
+    <text x="556" y="458" class="card-body">verification, and ethics notes.</text>
+    <rect x="556" y="508" width="120" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="582" y="534" class="pill">material</text>
+    <rect x="690" y="508" width="120" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="716" y="534" class="pill">evidence</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="960" y="290" width="360" height="330" rx="30" fill="#FFFFFF" stroke="#D6E8FA"/>
+    <text x="996" y="350" class="card-title">3. Quality checks</text>
+    <text x="996" y="398" class="card-body">Unsupported claims and</text>
+    <text x="996" y="428" class="card-body">missing fields stay visible</text>
+    <text x="996" y="458" class="card-body">before formal writing.</text>
+    <rect x="996" y="508" width="124" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="1024" y="534" class="pill">repair</text>
+    <rect x="1135" y="508" width="124" height="40" rx="20" fill="#EAF4FF"/>
+    <text x="1158" y="534" class="pill">export</text>
+  </g>
+
+  <path d="M445 455 C480 455 485 455 515 455" stroke="#2F80ED" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M885 455 C920 455 925 455 955 455" stroke="#2F80ED" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,141 +1,53 @@
-# Codex Research Stack
+# VELA
 
-[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/codex-research-stack/) | [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
+[中文 README](./README.zh-CN.md) | [Pages](https://marcus-ai4ss.github.io/skills-app-github/) | [中文 Pages](https://marcus-ai4ss.github.io/skills-app-github/zh/)
 
-**A research workbench for Codex.**
+**VELA = Versioned Evidence Lifecycle Architecture.**
 
-Brand line: **Multi-agent research workflows for serious scholarship.**
+Public subtitle: **Workflow Environment Package**. Chinese subtitle: **科研工作流环境**.
 
-Brand kit: [docs/brand.md](./docs/brand.md)
+VELA is a portable research workflow environment for Codex. It packages the project structure, evidence rules, method checkpoints, handoff conventions, and visual language needed to run traceable research work from the first question to a deliverable artifact. It is not a desktop app, not a chat interface, and not a black-box paper generator.
 
-Codex Research Stack is for researchers who want their work to stay readable as it grows.
-Instead of turning everything into one long conversation, it helps you start with a clearer route,
-keep project state visible, and keep references, writing, and reproducibility checks in view.
+![VELA visual system](./docs/assets/brand/vela-brand-board-reference.png)
 
-![Codex Research Stack system overview](./assets/social-preview.png)
+## Product Boundary
 
-## Who it is for
+VELA can be downloaded and used inside a user's own Codex environment without installing the local dashboard app. The workflow environment remains the primary artifact: docs, configs, prompts, evidence templates, project-state conventions, and reproducible handoff rules.
 
-- researchers doing literature reviews and evidence synthesis
-- computational social scientists working across text, platform data, networks, and reproducibility
-- policy and communication researchers who need browser-visible source capture
-- writers preparing drafts, revision packs, and submission-ready materials
+HELM is the companion brand for the optional local research board. HELM can read project state, surface evidence and deliverables, monitor environment health, and prepare Codex handoffs. VELA and HELM are independent products with one visual language: **use either separately; use both when you want a smoother local workflow.**
 
-## What this repo helps you do
+## What VELA Provides
 
-- decide what kind of research task you are doing before tools start running
-- turn project work into a visible workspace instead of one long conversation
-- keep references, writing quality, and reproducibility checks in view
-- hand verified material into Zotero, Obsidian, and reusable project files
+- **Versioned evidence lifecycle.** Materials, evidence, claims, method artifacts, and deliverables stay distinct until the required fields and review steps are present.
+- **Composable workflow stages.** Collect, analyze, validate, and report are treated as explicit phases with repairable gaps rather than hidden automation.
+- **Codex handoff structure.** Context passed to Codex is scoped, inspectable, and tied to project state instead of loose chat history.
+- **Portable environment package.** The package is designed to move between local Codex setups without depending on HELM.
+- **Shared visual system.** Pale blue and white, layered sail forms, evidence traces, navigation rings, and calm iOS-style surfaces make the workflow recognizable without making it feel like a chat product.
 
-## What you get
+## Relationship To HELM
 
-- `research-autopilot`: explains the task path before work expands
-- `research-team-orchestrator`: turns project work into visible roles, review steps, and handoffs
-- project checks: blocks weak references, weak writing, and incomplete reproducibility
-- project scaffolds: gives you a reusable structure instead of starting every project from scratch
+| Brand | Public role | Depends on the other? |
+| --- | --- | --- |
+| **VELA** | Workflow environment package for Codex-based research work | No |
+| **HELM** | Local research board for project state, evidence, deliverables, environment health, and Codex handoffs | No |
 
-## Start here first
+HELM is not the controller of VELA. VELA is not a plugin that only works inside HELM. Their integration point is project state and handoff context.
 
-If you only want one document, read the manual:
+## Visual Language
 
-- [Research Stack Manual](./docs/manual.md)
+The visual system is intentionally quiet: pale blue, white, navy text, translucent layers, trace paths, and navigation nodes. Core assets are under [`docs/assets/brand`](./docs/assets/brand/).
 
-If you want to jump to one chapter:
+![VELA and HELM relationship](./docs/assets/brand/vela-helm-relationship-board-reference.png)
 
-- [Quick start](./docs/manual.md#getting-started)
-- [3-minute quick demo](./examples/quick-demo/)
-- [How a new project begins](./docs/manual.md#starting-a-project)
-- [What happens during a live project](./docs/manual.md#during-a-live-project)
-- [Integrations](./docs/manual.md#integrations)
-- [Repository and future app](./docs/manual.md#repository-and-future-app)
+## Documentation
 
-## Typical workflows
+- [Pages home](https://marcus-ai4ss.github.io/skills-app-github/)
+- [Getting started](./docs/getting-started.md)
+- [Installation notes](./docs/installation.md)
+- [Workflow core](./docs/workflow-core.md)
+- [Integrations](./docs/integrations.md)
+- [Roadmap](./docs/roadmap.md)
 
-- **Literature review**: define a review question, collect candidate sources, verify formal references, and turn the project into a reviewable synthesis.
-- **Social-platform case study**: capture browser-visible evidence, keep provenance explicit, and prepare material for later coding and analysis.
-- **Computational social science project**: coordinate literature, sources, analysis, writing, and reproducibility as one project system.
-- **Writing and submission**: move from evidence and analysis into drafts, writing checks, revision packs, and final submission materials.
+## Public Naming Note
 
-## What it looks like
-
-The Pages homepage presents the workflow as readable project cards plus a workflow map instead of dense screenshots. The visual model is simple:
-
-- explain the route before tools run
-- dispatch project work into visible roles
-- block weak outputs through review gates
-- hand off verified materials into project files and knowledge tools
-
-![Codex Research Stack workflow map](./assets/workflow-map.png)
-
-## Quick start
-
-### 1. Clone the repository
-
-```powershell
-git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
-cd codex-research-stack
-```
-
-### 2. Create a project scaffold
-
-Cross-platform:
-
-```powershell
-python .\scripts\init_research_project.py --path ".\examples\demo-project" --route-hint "general-research"
-```
-
-Windows PowerShell shortcut:
-
-```powershell
-pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
-```
-
-### 3. Read the quick demo
-
-If you want to understand the workflow before running anything, read:
-
-- [3-minute quick demo](./examples/quick-demo/)
-
-## 3-minute demo
-
-If you want to understand the repo without running anything first, read the demo in order:
-
-1. [User prompt](./examples/quick-demo/demo-prompt.md)
-2. [Route explanation card](./examples/quick-demo/route-explanation-card.md)
-3. [Dispatch artifact](./examples/quick-demo/.codex/dispatch/demo-run.yaml)
-4. [Project state](./examples/quick-demo/logs/project-state/current.json)
-5. [Reviewer gate](./examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json)
-
-## Learn the repo through one manual
-
-- [Research Stack Manual](./docs/manual.md)
-
-## Visual walkthrough
-
-The walkthrough is described in the [3-minute quick demo](./examples/quick-demo/): route explanation, dispatch, reviewer gate, project state, and handoff.
-
-## Why this repo exists
-
-Many agent systems become useful only after a task is already well defined.
-Research work usually breaks earlier:
-
-- the wrong kind of task is chosen first
-- project work collapses into a single conversation
-- references and writing move forward without visible checks
-- project files, knowledge tools, and outputs drift apart
-
-Codex Research Stack focuses on that layer. It does not replace Codex. It gives research work a clearer structure before the project becomes hard to inspect.
-
-## Pages
-
-- [English Pages](https://marcus-ai4ss.github.io/codex-research-stack/)
-- [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
-
-## Release
-
-- Current release notes: [v0.1.0](./.github/releases/v0.1.0.md)
-
-## If this is useful
-
-If this project helps you turn Codex into a clearer research workspace, give it a star.
+From this brand pass forward, public README and Pages copy use **VELA** for the workflow environment and **HELM** for the optional local board. Older internal module names may remain in historical docs or implementation files until they are safely migrated.

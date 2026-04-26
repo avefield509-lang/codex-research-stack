@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codex Research Stack</title>
-    <meta name="description" content="一个更用户友好的 Codex 研究工作台：任务先判断，项目可回看，关键检查保持可见。">
+    <title>VELA · 科研工作流环境</title>
+    <meta name="description" content="VELA 是面向 Codex 的可移植科研工作流环境。">
     <link rel="stylesheet" href="../assets/site.css">
   </head>
   <body>
     <main class="page-shell">
       <div class="topbar">
-        <div class="brand"><img class="brand-logo" src="../assets/brand-mark.svg" alt=""><span>Codex Research Stack</span></div>
+        <div class="brand"><span class="brand-mark"></span><span>VELA</span></div>
         <div class="lang-switch">
           <a href="../">English</a>
           <span class="active">简体中文</span>
@@ -19,209 +19,50 @@
 
       <section class="hero">
         <div>
-          <div class="eyebrow">Codex 研究工作台</div>
-          <h1>让 Codex 里的研究项目保持清楚。</h1>
-          <p>
-            Codex Research Stack 更像一张研究工作台。它先帮你判断任务该怎么开头，
-            再帮你把项目状态、关键检查和材料沉淀放到能回看的位置上，
-            而不是让所有东西都挤进一条很长的对话里。
-          </p>
+          <div class="eyebrow">科研工作流环境</div>
+          <h1>VELA</h1>
+          <p>Versioned Evidence Lifecycle Architecture，面向 Codex 科研工作的可移植环境包。VELA 封装项目结构、证据规则、方法检查点、交付物流和交接上下文；用户不安装本地看板，也能在自己的 Codex 环境中使用。</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/Marcus-AI4SS/codex-research-stack">打开 GitHub</a>
-            <a class="button button-secondary" href="./manual.html">打开总说明书</a>
-            <a class="button button-secondary" href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3 分钟 Demo</a>
-            <a class="button button-secondary" href="./brand.html">品牌说明</a>
-            <a class="button button-secondary" href="./manual.html#new-project">新项目怎么开始</a>
-          </div>
-          <div class="hero-pills">
-            <span class="pill">先判断任务</span>
-            <span class="pill">项目可回看</span>
-            <span class="pill">关键检查可见</span>
-            <span class="pill">材料清楚沉淀</span>
+            <a class="button button-primary" href="../getting-started.html">快速开始</a>
+            <a class="button" href="../installation.html">安装说明</a>
+            <a class="button" href="../integrations.html">可选集成</a>
           </div>
         </div>
-        <div class="hero-visual product-visual" aria-label="路线、dispatch 和审查 gate 示意图">
-          <div class="visual-shell">
-            <div class="visual-step">
-              <strong>1. 解释路线</strong>
-              <span>任务类型 · 路径 · 风险 · 下一步</span>
-            </div>
-            <div class="visual-arrow"></div>
-            <div class="visual-step">
-              <strong>2. 分派角色</strong>
-              <span>文献 · 证据 · 分析 · 写作</span>
-            </div>
-            <div class="visual-arrow visual-arrow-gold"></div>
-            <div class="visual-step visual-step-gate">
-              <strong>3. 审查 gate</strong>
-              <span>核验来源 · 检查产出 · 清楚交接</span>
-            </div>
-          </div>
+        <div class="hero-visual">
+          <img src="../assets/brand/vela-brand-board-reference.png" alt="VELA 品牌板">
         </div>
       </section>
 
       <section class="section">
         <div class="section-head">
-          <h2>品牌系统</h2>
-          <p>公开身份使用一个指南针形态的 C，表达路线规划、引文纪律和可检查的研究交接。</p>
-        </div>
-        <article class="card brand-showcase">
-          <img src="../assets/brand-lockup.svg" alt="Codex Research Stack logo lockup">
-          <div>
-            <span class="explainer-kicker">宣传语</span>
-            <h3>为严肃学术研究而设计的多智能体研究工作流。</h3>
-            <p>品牌说明页集中放置名称、简介、logo、色彩、语气和公开使用规则。</p>
-            <a class="button button-secondary" href="./brand.html">打开品牌说明</a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>工作流总览</h2>
-          <p>这张 image2 图展示路线规划、多智能体编排、质量检查、引文核验、Zotero 与 Obsidian 同步、社媒证据采集和写作交接之间的关系。</p>
-        </div>
-        <article class="poster-card">
-          <img src="../assets/workflow-map.png" alt="Codex Research Stack 工作流总览">
-          <div class="poster-hint">小屏幕可以横向滑动查看完整工作流图。</div>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>产品形态</h2>
-          <p>这套系统最终应该呈现为一个可见的研究工作区，而不是藏在提示词里的工具包。下面两张预览图展示项目状态、智能体角色、检查点、交接记录、来源和产出应该如何被看见。</p>
-        </div>
-        <div class="stacked-posters">
-          <article class="poster-card">
-            <img src="../assets/research-system-overview.png" alt="研究系统总览">
-            <div class="poster-caption">研究系统：路线、证据、引文核验、写作、复现和知识同步。</div>
-          </article>
-          <article class="poster-card">
-            <img src="../assets/research-team-workspace.png" alt="多智能体研究工作区预览">
-            <div class="poster-caption">研究工作区：项目阶段、智能体团队、审查 gate、交接日志和进行中的 dispatch。</div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>这个仓库主要想解决什么</h2>
-          <p>很多研究自动化工具在“已经知道该怎么做”之后才有用。真正容易出错的是更前面：任务判断、项目推进、检查点和材料交接。</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>先把任务说清楚</h3>
-            <p>系统会先告诉你这是什么类型的工作、建议怎么开始，而不是直接把工具全调起来。</p>
-          </article>
-          <article class="card">
-            <h3>项目不再像长对话</h3>
-            <p>项目型任务会变成一个能回看的工作区，谁在做、交给谁审、卡在哪一步都能看见。</p>
-          </article>
-          <article class="card">
-            <h3>检查点摆在台面上</h3>
-            <p>引文、写作质量和复现检查会显式出现，不再靠“默认应该没问题”往前推进。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>先用三分钟看懂它</h2>
-          <p>快速 Demo 展示一个项目型任务如何从用户提示，进入路线解释、dispatch，再被 reviewer gate 检查。</p>
-        </div>
-        <div class="grid-3 explainer-grid">
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Route</span>
-            <h3>先解释，再执行</h3>
-            <p>第一张卡会说清楚任务类型、选择路径、阻塞风险和下一步动作。</p>
-          </article>
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Dispatch</span>
-            <h3>把工作拆给角色</h3>
-            <p>项目扩展之前，producer、reviewer、产出和状态先变成可见结构。</p>
-          </article>
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Handoff</span>
-            <h3>材料不要混成一团</h3>
-            <p>文献、项目文件、笔记、证据和最终产出分别沉淀，不塞进同一条聊天。</p>
-          </article>
-        </div>
-        <div class="footer-note">
-          如果你暂时不想跑命令，先看 <a href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3 分钟快速 Demo</a>。
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>现在只保留一份说明书</h2>
-          <p>你不需要先把整个系统学会。公开说明现在都收在一份总说明书里，你只要按自己的目的跳到对应章节就可以。</p>
-        </div>
-        <div class="grid-2">
-          <div class="card card-links">
-            <a class="card-link" href="./manual.html#start"><strong>我想先试一下</strong><span>直接跳到最短、安全的上手路径。</span></a>
-            <a class="card-link" href="./manual.html#live-project"><strong>我想知道项目跑起来后发生什么</strong><span>看项目从 route 到 dispatch 会留下哪些可读痕迹。</span></a>
-            <a class="card-link" href="./manual.html#new-project"><strong>我想直接开一个项目</strong><span>看一个项目怎么从零开始，以及最该先看哪些文件。</span></a>
-          </div>
-          <div class="card card-links">
-            <a class="card-link" href="./manual.html#use-cases"><strong>我想看适合什么场景</strong><span>看文献综述、平台案例、计算社会科学和写作场景。</span></a>
-            <a class="card-link" href="./manual.html#integrations"><strong>我想看工具怎么接</strong><span>理解 Zotero、Obsidian、脚本和证据采集各自处在什么位置。</span></a>
-            <a class="card-link" href="./manual.html#repo-app"><strong>我想先理顺未来 app 的位置</strong><span>看当前仓库负责什么，未来 app 又该建立在哪一层。</span></a>
-            <a class="card-link" href="./manual.html"><strong>我想一次看全</strong><span>打开总说明书，从目录直接跳到需要的章节。</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>你会看到怎样的项目工作区</h2>
-          <p>下面这两张图分别对应“项目怎么协作”和“项目怎么过检查点”。不需要先懂术语，也能看明白大意。</p>
-        </div>
-        <div class="grid-2">
-          <article class="card workspace-card">
-            <span class="explainer-kicker">Workspace</span>
-            <h3>角色和状态保持可见</h3>
-            <p>每个项目都保留路线、阶段、负责人、下一步和当前角色，而不是藏在一条很长的对话里。</p>
-            <div class="mini-board">
-              <span>状态</span>
-              <span>执行者</span>
-              <span>审查者</span>
-              <span>产出</span>
-            </div>
-          </article>
-          <article class="card workspace-card">
-            <span class="explainer-kicker">Gates</span>
-            <h3>弱产出提前被挡住</h3>
-            <p>引文、证据、写作和复现检查会在最终导出或交接之前出现。</p>
-            <div class="mini-board mini-board-gates">
-              <span>引文</span>
-              <span>证据</span>
-              <span>写作</span>
-              <span>复现</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>它和一般 agent 仓库最大的差别</h2>
+          <h2>独立使用，组合后更顺手</h2>
+          <p>VELA 是工作流环境。HELM 是可选本地科研看板。两者都可以独立存在；组合使用时，项目状态、证据、交付物、环境健康和 Codex 交接更容易检查。</p>
         </div>
         <div class="grid-2">
           <article class="card">
-            <h3>它不替代 Codex</h3>
-            <p>它保留 Codex 作为入口，只把研究工作这层整理得更清楚。</p>
+            <h3>VELA · 科研工作流环境</h3>
+            <p>放进用户自己的 Codex 环境中使用。材料、证据、主张、方法、交付物和交接上下文都保留在可移植工作流结构里。</p>
           </article>
           <article class="card">
-            <h3>它强调能回看</h3>
-            <p>重点不是当下回答得多像专家，而是以后还能回看发生了什么、哪里出了问题、哪些材料已经可靠。</p>
+            <h3>HELM · 本地科研看板</h3>
+            <p>作为独立本地看板读取项目状态、证据、交付物、环境健康和交接准备度；它不是 VELA 的控制器。</p>
           </article>
         </div>
       </section>
 
-      <div class="footer-note">
-        如果这套工作流能帮你把 Codex 里的研究工作做得更有条理，欢迎查看 GitHub 仓库。
-      </div>
+      <section class="section">
+        <div class="grid-4">
+          <article class="card"><h3>分层</h3><p>材料、证据、主张、方法和产物保持区分，满足复核条件后才进入下一层。</p></article>
+          <article class="card"><h3>可追踪</h3><p>证据路径和交接决策在整个生命周期中保持可见。</p></article>
+          <article class="card"><h3>可移植</h3><p>工作流面向本地 Codex 环境迁移，不要求绑定某一个 app。</p></article>
+          <article class="card"><h3>克制</h3><p>视觉系统使用淡蓝、白色和深海军蓝，接近 iOS 的轻盈表面，而不是命令控制台。</p></article>
+        </div>
+      </section>
+
+      <section class="wide-visual">
+        <img src="../assets/brand/vela-helm-design-language-reference.png" alt="VELA 与 HELM 共享视觉语言">
+        <p class="caption">共享视觉语言：分层帆形、证据路径、导航环和柔和波层。</p>
+      </section>
     </main>
   </body>
 </html>

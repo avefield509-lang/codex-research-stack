@@ -1,164 +1,53 @@
-# Codex Research Stack
+# VELA
 
-[English README](./README.md) | [English Pages](https://marcus-ai4ss.github.io/codex-research-stack/) | [中文 Pages](https://marcus-ai4ss.github.io/codex-research-stack/zh/)
+[English README](./README.md) | [文档](https://marcus-ai4ss.github.io/skills-app-github/zh/)
 
-**一个让研究工作更容易保持条理的 Codex 工作台。**
+**VELA = Versioned Evidence Lifecycle Architecture。**
 
-品牌宣传语：**为严肃学术研究而设计的多智能体研究工作流。**
+公开英文副标题：**Workflow Environment Package**。中文副标题：**科研工作流环境**。
 
-品牌说明：[docs/brand.md](./docs/brand.md)
+VELA 是面向 Codex 的可移植科研工作流环境。它封装项目结构、证据规则、方法检查点、交接约定和视觉语言，使研究从问题提出到交付物产出都能保留可追踪路径。它不是桌面 app，不是聊天界面，也不是黑箱论文生成器。
 
-Codex Research Stack 关注的不是“再多装几个 skill”，而是把研究项目真正放进同一条工作流里：
+![VELA 视觉系统](./docs/assets/brand/vela-brand-board-reference.png)
 
-- 启动并跟踪项目
-- 组织文献、网页、平台证据和数据
-- 进入分析与研究团队协作
-- 推进写作、返修和投稿准备
-- 让本地集成和研究状态保持可见
+## 产品边界
 
-![Codex Research Stack 系统总览](./assets/social-preview.png)
+用户不安装本地看板 app，也可以把 VELA 下载到自己的 Codex 环境中使用。VELA 的核心交付物是工作流环境：文档、配置、提示词、证据模板、项目状态约定和可复现交接规则。
 
-## 它适合谁
+HELM 是可选本地科研看板的独立品牌。HELM 可以读取项目状态、展示证据和交付物、监测环境健康，并准备 Codex 上下文交接。VELA 与 HELM 是两个独立产品，共用同一套视觉语言：**可分别使用，组合后更顺手。**
 
-- 做文献综述和证据综合的研究者
-- 做文本、平台数据、网络与复现的计算社会科学研究者
-- 需要浏览器可见证据采集的平台案例研究者
-- 正在写作、返修和准备投稿包的学术写作者
+## VELA 提供什么
 
-## 你可以用它做什么
+- **版本化证据生命周期。** 材料、证据、主张、方法产物和交付物保持区分，字段和复核条件满足后才进入下一层。
+- **可组合工作流阶段。** 收集、分析、验证、报告是显式阶段，缺口必须可定位、可修复。
+- **Codex 交接结构。** 交给 Codex 的上下文有范围、有依据，并绑定项目状态，而不是散落在聊天记录里。
+- **可移植环境包。** VELA 面向用户自己的本地 Codex 设置，不依赖 HELM 才能运行。
+- **共享视觉系统。** 淡蓝与白色、分层帆形、证据路径、导航环和克制的 iOS 风格表面，形成清晰但不过度工具化的识别。
 
-### 项目
+## 与 HELM 的关系
 
-启动研究项目、查看阶段、跟踪阻塞点和里程碑，而不是把项目压缩成一段很长的聊天记录。
+| 品牌 | 公开角色 | 是否依赖对方 |
+| --- | --- | --- |
+| **VELA** | 面向 Codex 科研工作的工作流环境包 | 否 |
+| **HELM** | 管理项目状态、证据、交付物、环境健康和 Codex 交接的本地科研看板 | 否 |
 
-### 材料与来源
+HELM 不是 VELA 的控制器。VELA 也不是只能在 HELM 里运行的插件。两者的连接点是项目状态和交接上下文。
 
-把文献、政策文本、网页、社媒证据和数据集放进同一条以证据为中心的研究流程。
+## 视觉语言
 
-### 分析与研究协作
+视觉系统保持简洁、轻、安静：淡蓝、白色、深海军蓝文字、半透明层、证据路径和导航节点。核心素材位于 [`docs/assets/brand`](./docs/assets/brand/)。
 
-从笔记、论点和抽取结果，进入质性编码、量化分析、网络分析，以及与项目绑定的研究团队协作。
+![VELA 与 HELM 关系](./docs/assets/brand/vela-helm-relationship-board-reference.png)
 
-### 写作与投稿准备
+## 文档
 
-统一处理提纲、草稿、写作质量检查、引文对齐、回复材料包和投稿准备度。
+- [Pages 首页](https://marcus-ai4ss.github.io/skills-app-github/zh/)
+- [快速开始](./docs/getting-started.md)
+- [安装说明](./docs/installation.md)
+- [工作流核心](./docs/workflow-core.md)
+- [可选集成](./docs/integrations.md)
+- [路线图](./docs/roadmap.md)
 
-### 设置与环境状态
+## 公开命名说明
 
-探测 Python、Codex、Zotero、Obsidian、Git、浏览器环境，以及需要时才展开的高级设置。
-
-## 典型工作流
-
-- **文献综述**：先定义综述问题，再收集候选文献、核验正式引用、形成可复核的综合稿。
-- **社媒或平台案例研究**：先采集浏览器可见证据，保留来源与权限边界，再进入编码和分析。
-- **计算社会科学项目**：把文献、材料、分析、写作和复现串成一个项目系统。
-- **写作与投稿**：从证据和分析推进到草稿、写作检查、返修包和最终投稿材料。
-
-## 快速开始
-
-### 1. 克隆仓库
-
-```powershell
-git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
-cd codex-research-stack
-```
-
-### 2. 创建项目骨架
-
-跨平台方式：
-
-```powershell
-python .\scripts\init_research_project.py --path ".\examples\demo-project" --route-hint "general-research"
-```
-
-Windows PowerShell 快捷方式：
-
-```powershell
-pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"
-```
-
-### 3. 先看 3 分钟 Demo
-
-如果你暂时不想跑命令，先看：
-
-- [3 分钟快速 Demo](./examples/quick-demo/)
-
-## 产品结构
-
-- **首页**：工作台总览、当前项目、下一步建议
-- **项目**：项目列表、阶段流、阻塞点、里程碑、新项目向导
-- **材料与来源**：文献、数据、网页、社媒证据和集成状态
-- **分析**：研究团队与方法工作区
-- **写作**：草稿、写作检查、投稿准备度
-- **设置**：本地配置、集成、校验脚本和高级项
-
-## 集成方向
-
-- **Zotero**：正式文献边界
-- **Obsidian**：长期知识沉淀
-- **浏览器可见证据**：平台案例与网页证据
-- **本地脚本与校验器**：透明而可复查的本地工作流
-
-## 先看这一份说明书
-
-如果你不想在很多说明页之间来回跳，直接看这一份：
-
-- [Codex Research Stack 总说明书](./docs/manual.zh-CN.md)
-
-如果你只想跳到某一部分：
-
-- [快速开始](./docs/manual.zh-CN.md#start)
-- [3 分钟快速 Demo](./examples/quick-demo/)
-- [新项目怎么开始](./docs/manual.zh-CN.md#new-project)
-- [项目跑起来后看什么](./docs/manual.zh-CN.md#live-project)
-- [典型场景](./docs/manual.zh-CN.md#use-cases)
-- [集成方式](./docs/manual.zh-CN.md#integrations)
-- [仓库与未来 App 的关系](./docs/manual.zh-CN.md#repo-and-app)
-
-## 3 分钟快速 Demo
-
-如果你暂时不想跑命令，可以先按顺序看这个最小故事：
-
-1. [用户怎么提需求](./examples/quick-demo/demo-prompt.md)
-2. [系统怎么解释路线](./examples/quick-demo/route-explanation-card.md)
-3. [项目怎么生成 dispatch](./examples/quick-demo/.codex/dispatch/demo-run.yaml)
-4. [项目状态怎么留痕](./examples/quick-demo/logs/project-state/current.json)
-5. [审稿 gate 怎么阻断弱产出](./examples/quick-demo/outputs/agent-runs/demo-run/reviewer/gate.literature-producer.json)
-
-## 视觉说明
-
-Pages 首页会用一组可读的项目卡片和工作流总览图说明系统，而不是让访问者去辨认密密麻麻的截图。它固定说明四件事：
-
-- 先解释路线，再执行工具
-- 把项目工作拆成可见角色
-- 通过 review gate 阻断弱产出
-- 把可靠材料交接到项目文件和知识工具
-
-![Codex Research Stack 工作流总览](./assets/workflow-map.png)
-
-更完整的过程可以看：[3 分钟快速 Demo](./examples/quick-demo/)。
-
-## 它的差异化在哪里
-
-这个仓库不想做成：
-
-- 一个图谱优先的文献发现产品
-- 一个 skill 安装器集合
-- 一个把项目结构彻底隐藏起来的一次性 agent
-
-它更想解决的是：
-
-- 项目状态可见
-- 证据来源可追溯
-- 方法工作流可执行
-- 写作与投稿准备有明确检查点
-
-换句话说，它不是想替代 Codex，而是想让研究工作在进入复杂阶段之前就先有结构。
-
-## 如果你觉得有用
-
-如果这套思路能帮助你把 Codex 变成更清楚的研究工作台，欢迎点一个 star。
-
-## Release
-
-- 当前版本说明：[v0.1.0](./.github/releases/v0.1.0.md)
+从本轮品牌重构起，README 和 Pages 的公开叙事使用 **VELA** 指代科研工作流环境，使用 **HELM** 指代可选本地科研看板。历史文档或实现文件中的旧内部模块名会在后续安全迁移时逐步处理。

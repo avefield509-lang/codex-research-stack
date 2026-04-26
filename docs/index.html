@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codex Research Stack</title>
-    <meta name="description" content="A clearer, more user-friendly way to run research projects in Codex with visible planning, review, and handoff.">
+    <title>VELA · Workflow Environment Package</title>
+    <meta name="description" content="VELA is a portable research workflow environment for Codex.">
     <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>
     <main class="page-shell">
       <div class="topbar">
-        <div class="brand"><img class="brand-logo" src="./assets/brand-mark.svg" alt=""><span>Codex Research Stack</span></div>
+        <div class="brand"><span class="brand-mark"></span><span>VELA</span></div>
         <div class="lang-switch">
           <span class="active">English</span>
           <a href="./zh/">简体中文</a>
@@ -19,209 +19,50 @@
 
       <section class="hero">
         <div>
-          <div class="eyebrow">Research workspace for Codex</div>
-          <h1>Keep research work readable before it turns into a mess.</h1>
-          <p>
-            Codex Research Stack is a research workbench for Codex. It helps you start with a
-            clearer route, keep project state visible, and keep references, writing, and
-            reproducibility checks in view before the project becomes hard to inspect.
-          </p>
+          <div class="eyebrow">Workflow Environment Package</div>
+          <h1>VELA</h1>
+          <p>Versioned Evidence Lifecycle Architecture for Codex-based research work. VELA packages project structure, evidence rules, method checkpoints, deliverable flow, and handoff context so a researcher can run the workflow without installing the local board.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/Marcus-AI4SS/codex-research-stack">Open GitHub</a>
-            <a class="button button-secondary" href="./manual.html">Read the Manual</a>
-            <a class="button button-secondary" href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3-Minute Demo</a>
-            <a class="button button-secondary" href="./brand.html">Brand Kit</a>
-            <a class="button button-secondary" href="./manual.html#starting-a-project">Start a Project</a>
-          </div>
-          <div class="hero-pills">
-            <span class="pill">Clear task choices</span>
-            <span class="pill">Visible project roles</span>
-            <span class="pill">Checks before export</span>
-            <span class="pill">Knowledge handoff</span>
+            <a class="button button-primary" href="./getting-started.html">Getting started</a>
+            <a class="button" href="./installation.html">Install notes</a>
+            <a class="button" href="./integrations.html">Integrations</a>
           </div>
         </div>
-        <div class="hero-visual product-visual" aria-label="Route, dispatch, and review gate illustration">
-          <div class="visual-shell">
-            <div class="visual-step">
-              <strong>1. Explain route</strong>
-              <span>task type · path · risk · next action</span>
-            </div>
-            <div class="visual-arrow"></div>
-            <div class="visual-step">
-              <strong>2. Dispatch roles</strong>
-              <span>literature · evidence · analysis · writing</span>
-            </div>
-            <div class="visual-arrow visual-arrow-gold"></div>
-            <div class="visual-step visual-step-gate">
-              <strong>3. Review gate</strong>
-              <span>verify sources · check outputs · hand off</span>
-            </div>
-          </div>
+        <div class="hero-visual">
+          <img src="./assets/brand/vela-brand-board-reference.png" alt="VELA brand board with layered sail, evidence trace, and pale blue visual system">
         </div>
       </section>
 
       <section class="section">
         <div class="section-head">
-          <h2>Brand system</h2>
-          <p>The public identity uses a compass-shaped C to signal route planning, citation discipline, and inspectable research handoffs.</p>
-        </div>
-        <article class="card brand-showcase">
-          <img src="./assets/brand-lockup.svg" alt="Codex Research Stack logo lockup">
-          <div>
-            <span class="explainer-kicker">Tagline</span>
-            <h3>Multi-agent research workflows for serious scholarship.</h3>
-            <p>Use the brand kit for the name, one-line introduction, logo assets, colors, and voice rules.</p>
-            <a class="button button-secondary" href="./brand.html">Open Brand Kit</a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Workflow map</h2>
-          <p>This image2 map shows how route planning, multi-agent orchestration, quality gates, citation verification, Zotero and Obsidian sync, social evidence capture, and writing handoff fit together.</p>
-        </div>
-        <article class="poster-card">
-          <img src="./assets/workflow-map.png" alt="Codex Research Stack workflow map">
-          <div class="poster-hint">On small screens, scroll horizontally to inspect the full workflow map.</div>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Product direction</h2>
-          <p>The stack is designed to become a visible research workspace, not a hidden prompt bundle. These previews show how project state, agent roles, gates, handoffs, sources, and outputs should stay inspectable.</p>
-        </div>
-        <div class="stacked-posters">
-          <article class="poster-card">
-            <img src="./assets/research-system-overview.png" alt="Research system overview">
-            <div class="poster-caption">Research system: routing, evidence, citation verification, writing, reproducibility, and knowledge sync.</div>
-          </article>
-          <article class="poster-card">
-            <img src="./assets/research-team-workspace.png" alt="Multi-agent research workspace preview">
-            <div class="poster-caption">Research workspace: project pipeline, agent squad, review gates, handoff log, and active dispatches.</div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>What this repo is trying to fix</h2>
-          <p>Research work often becomes confusing before the real analysis even begins. This stack focuses on that earlier layer: task choice, project coordination, and visible checkpoints.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Choose the right kind of work</h3>
-            <p>Before tools start running, the system explains what kind of task this is and what it plans to do next.</p>
-          </article>
-          <article class="card">
-            <h3>Keep projects readable</h3>
-            <p>Project work becomes a visible workspace with roles, review steps, and progress traces instead of one giant conversation.</p>
-          </article>
-          <article class="card">
-            <h3>Keep key checks visible</h3>
-            <p>References, writing quality, and reproducibility stay in view as explicit checks rather than hidden assumptions.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Understand it in three minutes</h2>
-          <p>The quick demo shows one project-shaped task moving from prompt, to route explanation, to dispatch, to reviewer gate.</p>
-        </div>
-        <div class="grid-3 explainer-grid">
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Route</span>
-            <h3>Explain before running</h3>
-            <p>The first card says what the task is, which path is selected, and what could block the work.</p>
-          </article>
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Dispatch</span>
-            <h3>Split work into roles</h3>
-            <p>Producer and reviewer roles are visible before project work expands into files and handoffs.</p>
-          </article>
-          <article class="card explainer-card">
-            <span class="explainer-kicker">Handoff</span>
-            <h3>Keep materials separate</h3>
-            <p>References, project files, notes, evidence, and outputs stay in their own lanes.</p>
-          </article>
-        </div>
-        <div class="footer-note">
-          Start with the <a href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3-minute quick demo</a> if you want to inspect the workflow before running anything.
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>If you are new here, start from one manual</h2>
-          <p>You do not need to learn the whole system first. The main explanations now live in one place, so you can jump straight to the chapter you need.</p>
-        </div>
-        <div class="grid-2">
-          <div class="card card-links">
-            <a class="card-link" href="./manual.html#getting-started"><strong>I want to try it quickly</strong><span>Jump to the shortest safe onboarding path.</span></a>
-            <a class="card-link" href="./manual.html#during-a-live-project"><strong>I want to know what it does during a project</strong><span>See what should appear before work expands.</span></a>
-            <a class="card-link" href="./manual.html#starting-a-project"><strong>I want to start a real project</strong><span>See how a project should begin and which files to inspect first.</span></a>
-          </div>
-          <div class="card card-links">
-            <a class="card-link" href="./manual.html#use-cases"><strong>I want examples</strong><span>See literature review, platform evidence, CSS, and writing workflows.</span></a>
-            <a class="card-link" href="./manual.html#integrations"><strong>I want to know how tools connect</strong><span>See how Zotero, Obsidian, scripts, and evidence capture fit into the stack.</span></a>
-            <a class="card-link" href="./manual.html#repo-and-app"><strong>I want to understand the future app</strong><span>See what the repository should own and what the app should add on top.</span></a>
-            <a class="card-link" href="./manual.html"><strong>I want the full picture</strong><span>Open the complete manual with one table of contents.</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>What the project workspace looks like</h2>
-          <p>The visuals below summarize the workspace view and the project checks without assuming you already know the internal terms.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card workspace-card">
-            <span class="explainer-kicker">Workspace</span>
-            <h3>Roles and state stay visible</h3>
-            <p>Each project keeps a route, current stage, owner, next action, and active roles instead of hiding them inside a long chat.</p>
-            <div class="mini-board">
-              <span>State</span>
-              <span>Producer</span>
-              <span>Reviewer</span>
-              <span>Output</span>
-            </div>
-          </article>
-          <article class="card workspace-card">
-            <span class="explainer-kicker">Gates</span>
-            <h3>Weak outputs are blocked early</h3>
-            <p>Citation, evidence, writing, and reproducibility checks appear before final export or handoff.</p>
-            <div class="mini-board mini-board-gates">
-              <span>Citation</span>
-              <span>Evidence</span>
-              <span>Writing</span>
-              <span>Reproducibility</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Why this feels different from a generic agent repo</h2>
+          <h2>Independent, but designed to pair</h2>
+          <p>VELA is the workflow environment. HELM is the optional local research board. Each can stand alone; together they make project state, evidence, deliverables, environment health, and Codex handoffs easier to inspect.</p>
         </div>
         <div class="grid-2">
           <article class="card">
-            <h3>It stays inside Codex</h3>
-            <p>This repo does not try to replace Codex. It gives research work inside Codex a clearer structure.</p>
+            <h3>VELA · 科研工作流环境</h3>
+            <p>Use it inside your own Codex environment. Keep materials, evidence, claims, methods, deliverables, and handoff context in a portable workflow structure.</p>
           </article>
           <article class="card">
-            <h3>It favors traceability over theater</h3>
-            <p>The point is not to sound clever. The point is to leave behind files, checks, and handoffs that a person can read later.</p>
+            <h3>HELM · 本地科研看板</h3>
+            <p>Use it as an independent local board when you want project status, evidence, deliverables, environment health, and handoffs in one desktop surface.</p>
           </article>
         </div>
       </section>
 
-      <div class="footer-note">
-        If this helps you run research work in Codex with more clarity, open the repository and explore the project scaffold.
-      </div>
+      <section class="section">
+        <div class="grid-4">
+          <article class="card"><h3>Layered</h3><p>Materials, evidence, claims, methods, and artifacts stay separate until review conditions are met.</p></article>
+          <article class="card"><h3>Traceable</h3><p>Evidence paths and handoff decisions remain visible across the lifecycle.</p></article>
+          <article class="card"><h3>Portable</h3><p>The workflow is designed to move across local Codex setups without a required app dependency.</p></article>
+          <article class="card"><h3>Calm</h3><p>The visual system uses pale blue, white, and navy with iOS-like restraint rather than a command-console look.</p></article>
+        </div>
+      </section>
+
+      <section class="wide-visual">
+        <img src="./assets/brand/vela-helm-design-language-reference.png" alt="Shared VELA and HELM visual design language">
+        <p class="caption">Shared visual language: layered sail, evidence trace, navigation rings, and soft wave layers.</p>
+      </section>
     </main>
   </body>
 </html>

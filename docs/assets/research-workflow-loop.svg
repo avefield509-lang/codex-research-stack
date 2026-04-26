@@ -1,0 +1,88 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">VELA workflow lifecycle</title>
+  <desc id="desc">A light blue product illustration showing the workflow from materials to claims, evidence, quality checks, and project status export.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFF"/>
+      <stop offset="1" stop-color="#EAF5FF"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7EB6FF"/>
+      <stop offset="1" stop-color="#2F80ED"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#2F80ED" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .title { font: 900 48px 'Segoe UI', sans-serif; fill: #102033; letter-spacing: -1.5px; }
+      .body { font: 500 20px 'Segoe UI', sans-serif; fill: #536B82; }
+      .small { font: 700 15px 'Segoe UI', sans-serif; fill: #536B82; }
+      .label { font: 900 22px 'Segoe UI', sans-serif; fill: #102033; }
+      .card { fill: #FFFFFF; stroke: #D8E8F5; stroke-width: 1.5; }
+      .pill { fill: #EEF7FF; stroke: #C9E1FB; }
+      .line { stroke: #8EC5FF; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 18 14; animation: dash 6s linear infinite; }
+      .node { fill: url(#primary); }
+      @keyframes dash { to { stroke-dashoffset: -128; } }
+    </style>
+  </defs>
+  <rect width="1280" height="720" rx="34" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="210" fill="#DCEEFF"/>
+  <circle cx="190" cy="620" r="260" fill="#F1F8FF"/>
+
+  <text x="90" y="118" class="small" style="fill:#2F80ED;letter-spacing:5px">LOCAL-FIRST · EVIDENCE-LED · CHECKED BEFORE WRITING</text>
+  <text x="90" y="180" class="title">Make social-science research checkable</text>
+  <text x="90" y="222" class="body">Create a project, collect materials, support claims with evidence, run quality checks, and export a truthful project status file.</text>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="88" y="282" width="1104" height="318" rx="34"/>
+  </g>
+
+  <path class="line" d="M178 434 H1030"/>
+
+  <g>
+    <rect class="card" x="126" y="338" width="166" height="168" rx="26"/>
+    <circle class="node" cx="166" cy="382" r="22"/>
+    <text x="152" y="390" style="font:900 18px 'Segoe UI';fill:white">1</text>
+    <text x="154" y="438" class="label">Materials</text>
+    <text x="154" y="470" class="small">DOI · URL · file</text>
+  </g>
+
+  <g>
+    <rect class="card" x="350" y="338" width="166" height="168" rx="26"/>
+    <circle class="node" cx="390" cy="382" r="22"/>
+    <text x="376" y="390" style="font:900 18px 'Segoe UI';fill:white">2</text>
+    <text x="378" y="438" class="label">Claims</text>
+    <text x="378" y="470" class="small">candidate finding</text>
+  </g>
+
+  <g>
+    <rect class="card" x="574" y="338" width="166" height="168" rx="26"/>
+    <circle class="node" cx="614" cy="382" r="22"/>
+    <text x="600" y="390" style="font:900 18px 'Segoe UI';fill:white">3</text>
+    <text x="602" y="438" class="label">Evidence</text>
+    <text x="602" y="470" class="small">source + rights</text>
+  </g>
+
+  <g>
+    <rect class="card" x="798" y="338" width="166" height="168" rx="26"/>
+    <circle class="node" cx="838" cy="382" r="22"/>
+    <text x="824" y="390" style="font:900 18px 'Segoe UI';fill:white">4</text>
+    <text x="826" y="438" class="label">Quality</text>
+    <text x="826" y="470" class="small">fix blockers</text>
+  </g>
+
+  <g>
+    <rect class="card" x="1022" y="338" width="166" height="168" rx="26"/>
+    <circle class="node" cx="1062" cy="382" r="22"/>
+    <text x="1048" y="390" style="font:900 18px 'Segoe UI';fill:white">5</text>
+    <text x="1050" y="438" class="label">Status</text>
+    <text x="1050" y="470" class="small">truthful export</text>
+  </g>
+
+  <rect class="pill" x="90" y="626" width="346" height="46" rx="23"/>
+  <text x="116" y="655" class="small">No Python or Codex required for the basic flow</text>
+  <rect class="pill" x="458" y="626" width="330" height="46" rx="23"/>
+  <text x="484" y="655" class="small">Optional Zotero and Obsidian integration</text>
+  <rect class="pill" x="810" y="626" width="300" height="46" rx="23"/>
+  <text x="836" y="655" class="small">No PDFs or private notes in exports</text>
+</svg>
