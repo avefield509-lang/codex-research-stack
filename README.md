@@ -21,7 +21,7 @@ It is not a desktop app. It is not a chat interface. It is not a black-box paper
 ## Start In Five Minutes
 
 ```powershell
-git clone <REPOSITORY_URL> vela
+git clone REPOSITORY_URL vela
 cd vela
 ```
 
@@ -37,7 +37,7 @@ my-research-project/
   handoffs/
 ```
 
-Use `<REPOSITORY_URL>` as the URL of the public VELA repository you are viewing.
+Use `REPOSITORY_URL` as the URL of the public VELA repository you are viewing.
 
 ## What VELA Helps You Do
 

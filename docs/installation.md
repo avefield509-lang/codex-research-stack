@@ -5,7 +5,7 @@ VELA is a repository-based workflow environment. There is no required desktop in
 ## Download
 
 ```powershell
-git clone <REPOSITORY_URL> vela
+git clone REPOSITORY_URL vela
 cd vela
 ```
 

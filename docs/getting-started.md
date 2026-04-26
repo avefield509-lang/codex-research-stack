@@ -7,11 +7,11 @@ Use VELA when you want Codex to work from a clear research state rather than fro
 Clone or download the repository you are viewing:
 
 ```powershell
-git clone <REPOSITORY_URL> vela
+git clone REPOSITORY_URL vela
 cd vela
 ```
 
-`<REPOSITORY_URL>` is the URL of this public VELA repository.
+`REPOSITORY_URL` is the URL of this public VELA repository.
 
 ## 2. Create A Project Folder
 
