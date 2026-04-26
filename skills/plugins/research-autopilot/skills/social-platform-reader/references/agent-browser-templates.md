@@ -12,11 +12,10 @@ Switch from `chrome-devtools` to the template when:
 
 ## Template Entry Script
 
-Primary template:
+This public repository does not ship an agent-browser runner script by default.
+Use agent-browser directly, or add a local project wrapper only after reviewing the target platform and output path.
 
-- `scripts/run-social-platform-agent-browser-template.ps1`
-
-Workspace wrapper:
+Optional local wrapper name:
 
 - `<PROJECT_ROOT>/scripts/run-social-platform-agent-browser-template.ps1`
 
@@ -25,25 +24,25 @@ Workspace wrapper:
 ### Xiaohongshu board or collection
 
 ```powershell
-pwsh -ExecutionPolicy Bypass -File "<PROJECT_ROOT>/scripts/run-social-platform-agent-browser-template.ps1" -Platform xiaohongshu -ArtifactType board -Url "https://www.xiaohongshu.com/board/..."
+agent-browser open "https://www.xiaohongshu.com/board/..."
 ```
 
 ### Douyin video
 
 ```powershell
-pwsh -ExecutionPolicy Bypass -File "<PROJECT_ROOT>/scripts/run-social-platform-agent-browser-template.ps1" -Platform douyin -ArtifactType video -Url "https://www.douyin.com/video/..."
+agent-browser open "https://www.douyin.com/video/..."
 ```
 
 ### Bilibili video
 
 ```powershell
-pwsh -ExecutionPolicy Bypass -File "<PROJECT_ROOT>/scripts/run-social-platform-agent-browser-template.ps1" -Platform bilibili -ArtifactType video -Url "https://www.bilibili.com/video/..."
+agent-browser open "https://www.bilibili.com/video/..."
 ```
 
 ### WeChat public article
 
 ```powershell
-pwsh -ExecutionPolicy Bypass -File "<PROJECT_ROOT>/scripts/run-social-platform-agent-browser-template.ps1" -Platform wechat -ArtifactType article -Url "https://mp.weixin.qq.com/s/..."
+agent-browser open "https://mp.weixin.qq.com/s/..."
 ```
 
 ## Default Artifacts

@@ -5,6 +5,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# This script downloads/stages Zotero add-ons and writes them into the selected
+# Zotero profile. Run it explicitly only after confirming the profile path.
+
 function Resolve-ZoteroProfile {
     param([string]$BasePath)
     if (Test-Path -LiteralPath (Join-Path $BasePath "extensions")) { return $BasePath }

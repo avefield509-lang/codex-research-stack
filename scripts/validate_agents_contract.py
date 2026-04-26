@@ -541,7 +541,7 @@ def validate_project(project_root: Path, payload: dict, *, mode: str = "project"
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--project-root", type=Path)
+    parser.add_argument("--project-root", "--project", dest="project_root", type=Path)
     parser.add_argument(
         "--mode",
         choices=["project", "bootstrap"],

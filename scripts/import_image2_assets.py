@@ -16,12 +16,14 @@ ASSETS = {
         ROOT / "assets" / "workflow-map.png",
         ROOT / "docs" / "assets" / "workflow-map.png",
     ],
-    "hero-overview.png": [ROOT / "docs" / "assets" / "hero-overview.png"],
-    "multi-agent-workspace.png": [ROOT / "docs" / "assets" / "multi-agent-workspace.png"],
-    "pipeline-gates-overview.png": [ROOT / "docs" / "assets" / "pipeline-gates-overview.png"],
-    "route-explanation-card.png": [ROOT / "docs" / "assets" / "route-explanation-card.png"],
-    "multi-agent-dispatch-flow.png": [ROOT / "docs" / "assets" / "multi-agent-dispatch-flow.png"],
-    "integration-chain.png": [ROOT / "docs" / "assets" / "integration-chain.png"],
+    "research-system-overview.png": [
+        ROOT / "docs" / "assets" / "research-system-overview.png",
+        ROOT / "skills" / "plugins" / "research-autopilot" / "assets" / "research-system-overview.png",
+    ],
+    "research-team-workspace.png": [
+        ROOT / "docs" / "assets" / "research-team-workspace.png",
+        ROOT / "skills" / "plugins" / "research-autopilot" / "assets" / "research-team-workspace.png",
+    ],
 }
 
 

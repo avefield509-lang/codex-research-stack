@@ -36,11 +36,9 @@ agent_output_path:
   reviewer: outputs/agent-runs/demo-run/reviewer/
 review_agents:
   literature-producer: reviewer
-  analysis-producer: reviewer
-quality_gate: planning-review
+quality_gate: research_question_defined
 handoff_log: logs/agent-handoffs/demo-run.md
 gate_log: logs/quality-gates/demo-run.md
 conflict_resolution: project-manager
 merge_owner: project-manager
 user_veto_window: confirmed-in-thread
-

@@ -3,5 +3,9 @@ __pycache__/
 .pytest_cache/
 .workspace-tools/
 .githooks/
+.handoff/
+artifacts/
+/outputs/
+/skills/outputs/
 image2-exports/*
 !image2-exports/README.md

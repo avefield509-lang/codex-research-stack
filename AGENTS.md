@@ -1,6 +1,6 @@
 # AGENTS
 
-This repository is the public `skills仓库管理` workspace.
+This repository is the Codex Research Stack public release workspace.
 
 ## Scope
 
@@ -17,6 +17,6 @@ This repository is the public `skills仓库管理` workspace.
 
 ## Thread Rule
 
-- The `skills仓库管理` thread should only work in this repository.
+- The Codex Research Stack public release thread should only work in this repository.
 - Cross-repo reading and copying are allowed.
 - Cross-repo writes require explicit user approval first; without that approval, stop and switch to the corresponding repository thread instead of editing across boundaries.

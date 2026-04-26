@@ -5,6 +5,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# This script writes into the supplied Obsidian vault. Run it explicitly only after
+# staging the plugin files in artifacts/downloads and confirming the vault path.
+
 function Read-JsonFile {
     param([string]$Path)
     if (-not (Test-Path -LiteralPath $Path)) { return [pscustomobject]@{} }

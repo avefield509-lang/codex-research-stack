@@ -1,6 +1,6 @@
 project_name: minimal-project
 route_id: literature-review
-current_stage: literature_discovery
+current_stage: research_design
 data_access_level: public_open
 materials:
   - type: bibliography

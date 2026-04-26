@@ -1,0 +1,5 @@
+entries:
+  - id: demo-boundary-note
+    type: planning_note
+    status: pending
+    note: Platform sampling boundary has not been finalized.

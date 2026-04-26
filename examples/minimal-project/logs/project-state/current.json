@@ -4,13 +4,14 @@
   "project_type": "literature-review",
   "dispatch_run_id": null,
   "dispatch_stage": "planning",
-  "pipeline_stage": "literature_discovery",
+  "pipeline_stage": "research_design",
   "status": "initialized",
   "current_owner_agent_id": "project-manager",
   "current_owner_display_name": "Project Manager Agent",
   "blockers": [],
   "next_quality_gates": [
-    "citation_integrity_checked"
+    "research_question_defined",
+    "method_boundary_declared"
   ],
   "selected_agents": [],
   "selected_producers": [],

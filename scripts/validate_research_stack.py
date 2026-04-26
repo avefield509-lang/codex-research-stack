@@ -141,30 +141,28 @@ def main() -> None:
         REPO_ROOT / "_config.yml",
     ]
     required_docs = [
+        DOCS_DIR / "brand.md",
+        DOCS_DIR / "brand.html",
         DOCS_DIR / "manual.md",
         DOCS_DIR / "manual.zh-CN.md",
         DOCS_DIR / "index.html",
         DOCS_DIR / "manual.html",
+        DOCS_DIR / "zh" / "brand.html",
         DOCS_DIR / "zh" / "index.html",
         DOCS_DIR / "zh" / "manual.html",
     ]
     required_assets = [
-        ASSETS_DIR / "hero-overview.png",
         ASSETS_DIR / "social-preview.png",
-        ASSETS_DIR / "social-preview.svg",
-        ASSETS_DIR / "multi-agent-workspace.png",
-        ASSETS_DIR / "pipeline-gates-overview.png",
+        ASSETS_DIR / "workflow-map.png",
         DOCS_DIR / "assets" / "site.css",
+        DOCS_DIR / "assets" / "brand-mark.svg",
+        DOCS_DIR / "assets" / "brand-lockup.svg",
         DOCS_DIR / "assets" / "social-preview.png",
-        DOCS_DIR / "assets" / "hero-overview.png",
-        DOCS_DIR / "assets" / "multi-agent-workspace.png",
-        DOCS_DIR / "assets" / "pipeline-gates-overview.png",
-        DOCS_DIR / "assets" / "architecture-map.svg",
-        DOCS_DIR / "assets" / "route-explanation-card.svg",
-        DOCS_DIR / "assets" / "multi-agent-dispatch-flow.svg",
-        DOCS_DIR / "assets" / "integration-chain.svg",
-        PLUGIN_DIR / "assets" / "route-explanation-card.svg",
+        DOCS_DIR / "assets" / "workflow-map.png",
+        DOCS_DIR / "assets" / "research-system-overview.png",
+        DOCS_DIR / "assets" / "research-team-workspace.png",
         PLUGIN_DIR / "assets" / "multi-agent-dispatch.svg",
+        PLUGIN_DIR / "assets" / "route-explanation-card.svg",
         PLUGIN_DIR / "assets" / "research-system-overview.png",
         PLUGIN_DIR / "assets" / "research-team-workspace.png",
     ]
@@ -174,7 +172,13 @@ def main() -> None:
         REPO_ROOT / "examples" / "quick-demo" / "README.md",
         REPO_ROOT / "examples" / "quick-demo" / "demo-prompt.md",
         REPO_ROOT / "examples" / "quick-demo" / "route-explanation-card.md",
+        REPO_ROOT / "examples" / "quick-demo" / "AGENTS.md",
+        REPO_ROOT / "examples" / "quick-demo" / "material-passport.yaml",
+        REPO_ROOT / "examples" / "quick-demo" / "evidence-ledger.yaml",
         REPO_ROOT / "examples" / "quick-demo" / ".codex" / "dispatch" / "demo-run.yaml",
+        REPO_ROOT / "examples" / "quick-demo" / ".codex" / "context-packets" / "demo-run" / "literature-producer.md",
+        REPO_ROOT / "examples" / "quick-demo" / "logs" / "agent-handoffs" / "demo-run.md",
+        REPO_ROOT / "examples" / "quick-demo" / "logs" / "quality-gates" / "demo-run.md",
         REPO_ROOT / "examples" / "quick-demo" / "logs" / "project-state" / "current.json",
         REPO_ROOT / "examples" / "quick-demo" / "outputs" / "agent-runs" / "demo-run" / "reviewer" / "gate.literature-producer.json",
     ]
@@ -219,6 +223,13 @@ def main() -> None:
         for path in group:
             if not path.exists():
                 errors.append(f"missing-required-file:{path.relative_to(REPO_ROOT).as_posix()}")
+
+    gitignore_path = REPO_ROOT / ".gitignore"
+    if gitignore_path.exists():
+        gitignore = gitignore_path.read_text(encoding="utf-8")
+        for required_ignore in (".handoff/", "artifacts/", "outputs/", "skills/outputs/"):
+            if required_ignore not in gitignore:
+                errors.append(f"missing-required-ignore:{required_ignore}")
 
     plugin_manifest_path = PLUGIN_DIR / ".codex-plugin" / "plugin.json"
     if plugin_manifest_path.exists():

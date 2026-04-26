@@ -4,6 +4,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# This script overwrites matching Research Autopilot skills under CODEX_HOME.
+# Run it explicitly only when you want to sync the public plugin skills locally.
+
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $pluginSkillsRoot = Join-Path $repoRoot "skills\plugins\research-autopilot\skills"
 $targetRoot = Join-Path $CodexHome "skills"

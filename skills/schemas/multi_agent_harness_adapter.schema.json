@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://research-environment-local/schemas/multi_agent_harness_adapter.schema.json",
+  "$id": "https://codex-research-stack.dev/schemas/multi_agent_harness_adapter.schema.json",
   "type": "object",
   "additionalProperties": false,
   "required": [

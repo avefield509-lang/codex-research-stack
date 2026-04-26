@@ -20,12 +20,8 @@ The Pages homepage now uses separate image2 assets for brand presentation and wo
 | --- | --- | ---: | --- |
 | GitHub social preview | `assets/social-preview.png` and `docs/assets/social-preview.png` | `16:9` or `2:1`, ideally `1600px` wide or larger | README top image and social sharing |
 | Workflow map | `assets/workflow-map.png` and `docs/assets/workflow-map.png` | `16:9`, ideally `1600x900` or larger | README and Pages workflow explanation |
-| Pages hero visual | `docs/assets/hero-overview.png` | `1200x1200` | Homepage hero, desktop and mobile |
-| Workspace visual | `docs/assets/multi-agent-workspace.png` | `1600x1000` | Pages project workspace section |
-| Pipeline gates visual | `docs/assets/pipeline-gates-overview.png` | `1600x900` | Pages gate/check section |
-| Route card visual | `docs/assets/route-explanation-card.png` | `1280x720` | Demo walkthrough card |
-| Dispatch visual | `docs/assets/multi-agent-dispatch-flow.png` | `1280x720` | Demo walkthrough card |
-| Integration visual | `docs/assets/integration-chain.png` | `1280x720` | Demo walkthrough card |
+| Research system overview | `docs/assets/research-system-overview.png` and `skills/plugins/research-autopilot/assets/research-system-overview.png` | `16:9`, ideally `1600x900` or larger | Pages product direction and plugin screenshot |
+| Research team workspace | `docs/assets/research-team-workspace.png` and `skills/plugins/research-autopilot/assets/research-team-workspace.png` | `16:9`, ideally `1600x900` or larger | Pages product direction and plugin screenshot |
 
 For README, copy only the social preview and at most one large explanatory image into `assets/`. Do not duplicate every Pages image in `assets/` unless README references it.
 
@@ -62,92 +58,29 @@ Design brief:
 - Colors: deep teal, muted cyan, warm amber, off-white, graphite.
 - No fake star counts, fake metrics, personal data, API keys, or unreadable tiny paragraphs.
 
-## Prompt 3: Pages Hero Visual
+## Prompt 3: Research System Overview
 
-Create a square product illustration for "Codex Research Stack".
-
-Design brief:
-- 1200x1200 square.
-- This image will sit inside a dark homepage hero panel, so use a lighter internal surface or clear contrast.
-- Show a simple vertical workflow: "Explain route" -> "Dispatch roles" -> "Review gate".
-- Use large labels only. No paragraphs.
-- The design should feel anchored to a workbench, not like floating stickers.
-- Include subtle project-file motifs: dispatch card, result JSON, gate JSON, handoff log.
-- Avoid fake app chrome, fake browser windows, fake metrics, real user data, and tiny text.
-
-## Prompt 4: Workspace Visual
-
-Create a wide product illustration showing a research project workspace.
+Create a polished product overview illustration for "Codex Research Stack".
 
 Design brief:
-- 1600x1000.
-- Show a readable board with four zones: Project State, Roles, Reviewer Gate, Handoff Status.
+- 16:9 landscape, ideally 1600x900 or larger.
+- Show the system as one readable research workbench, not a literal screenshot.
+- Required ideas: route planning, evidence capture, citation verification, writing, reproducibility, knowledge sync.
+- Use large short labels only.
+- Avoid fake metrics, fake screenshots, real user data, and tiny text.
+
+## Prompt 4: Research Team Workspace
+
+Create a polished product illustration showing a multi-agent research workspace.
+
+Design brief:
+- 16:9 landscape, ideally 1600x900 or larger.
+- Show a readable board with zones for project state, agent roles, reviewer gate, handoff log, active dispatches, sources, and outputs.
 - The layout should look like a real organized workbench.
-- Use large short labels: State, Literature, Evidence, Analysis, Writing, Reviewer Gate, Handoff.
+- Use large short labels only.
 - No text should touch card borders.
 - Avoid long sentences, tiny labels, floating panels, and decorative clutter.
 - Use light panels or high-contrast surfaces so it does not disappear inside a dark webpage card.
-
-## Prompt 5: Pipeline Gates Visual
-
-Create a wide product illustration for a research workflow gate system.
-
-Design brief:
-- 1600x900.
-- Show five clear steps: Route, Dispatch, Produce, Review, Handoff.
-- The Review step should use warm amber and feel like a blocking gate.
-- Add four check chips: Citation, Evidence, Writing, Reproducibility.
-- Make it highly readable at README width.
-- Do not include paragraphs, fake metrics, screenshots, or small UI text.
-
-## Prompt 6: Route Card Visual
-
-Create a clean card-style illustration called "Route explanation".
-
-Design brief:
-- 1280x720.
-- Show three large cards: Task, Path, Risk.
-- Show one final strip: Next action.
-- Text must be short and large:
-  - Task: literature review
-  - Path: discover + verify
-  - Risk: unverified DOI
-  - Next action: verify sources first
-- Use a product illustration style, not a literal screenshot.
-- Leave generous spacing.
-
-## Prompt 7: Dispatch Visual
-
-Create a clean card-style illustration called "Dispatch board".
-
-Design brief:
-- 1280x720.
-- Show four equal-width cards: Producer, Reviewer, Outputs, State.
-- Cards should be aligned on a shared grid.
-- Use arrows between cards, not through text.
-- Reviewer card uses warm amber; other cards use teal.
-- Text:
-  - Producer: writes output
-  - Reviewer: checks gate
-  - Outputs: files + JSON
-  - State: next step
-- No tiny text, no squeezed card, no vertical narrow State card.
-
-## Prompt 8: Integration Visual
-
-Create a clean layered illustration called "Materials stay separated".
-
-Design brief:
-- 1280x720.
-- Show separate lanes:
-  - Codex workspace
-  - Project files
-  - Zotero
-  - Obsidian
-  - Evidence vault
-- The point is separation and handoff, not a dense architecture diagram.
-- Use large labels only.
-- Keep the composition calm, grounded, and readable.
 
 ## Import Rule
 

@@ -1,6 +1,6 @@
 {
   "route_id": "literature-review",
-  "current_stage": "literature_discovery",
+  "current_stage": "research_design",
   "completed_stages": [],
   "gate_decisions": {},
   "allowed_to_advance": false

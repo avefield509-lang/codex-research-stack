@@ -14,9 +14,10 @@
     "Formal citations have not yet been verified."
   ],
   "next_quality_gates": [
-    "research-design-gate",
-    "citation-integrity-gate",
-    "evidence-provenance-gate"
+    "research_question_defined",
+    "method_boundary_declared",
+    "doi_and_metadata_verified",
+    "data_provenance_verified"
   ],
   "selected_agents": [
     "literature-producer",
@@ -54,4 +55,3 @@
     }
   ]
 }
-

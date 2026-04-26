@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://research-environment-local/schemas/agent_dispatch_card.schema.json",
+  "$id": "https://codex-research-stack.dev/schemas/agent_dispatch_card.schema.json",
   "type": "object",
   "additionalProperties": false,
   "required": [

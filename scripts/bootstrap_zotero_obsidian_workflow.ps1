@@ -6,6 +6,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# This script changes a user-selected Obsidian vault, Zotero profile, and Codex skills directory.
+# It is never run by README/Pages; invoke it manually only after reviewing the target paths.
+
 New-Item -ItemType Directory -Force -Path $CodexResearchPath | Out-Null
 
 $dirs = @(

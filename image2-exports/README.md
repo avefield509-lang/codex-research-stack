@@ -6,15 +6,12 @@ Expected filenames:
 
 - `social-preview.png`
 - `workflow-map.png`
-- `hero-overview.png`
-- `multi-agent-workspace.png`
-- `pipeline-gates-overview.png`
-- `route-explanation-card.png`
-- `multi-agent-dispatch-flow.png`
-- `integration-chain.png`
+- `research-system-overview.png`
+- `research-team-workspace.png`
 
 `social-preview.png` is imported into both `assets/` and `docs/assets/` for the README and GitHub social preview.
 `workflow-map.png` is imported into both `assets/` and `docs/assets/` for README and Pages workflow explanations.
+`research-system-overview.png` and `research-team-workspace.png` are imported into `docs/assets/` and the Research Autopilot plugin screenshot folder.
 
 Run from the repository root:
 
