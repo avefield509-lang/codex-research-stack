@@ -30,16 +30,10 @@ VELA is a portable research workflow environment for Codex: structure materials,
 
 ## Homepage
 
-Current URL before repository rename:
+Current URL:
 
 ```text
-https://marcus-ai4ss.github.io/codex-research-stack/
-```
-
-After renaming the repository to `vela-workflow`, use:
-
-```text
-https://marcus-ai4ss.github.io/vela-workflow/
+https://marcus-ai4ss.github.io/VELA-workflow/
 ```
 
 ## Topics

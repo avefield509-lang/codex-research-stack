@@ -5,7 +5,7 @@
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
-    · <a href="https://marcus-ai4ss.github.io/codex-research-stack/">Pages</a>
+    · <a href="https://marcus-ai4ss.github.io/VELA-workflow/">Pages</a>
     · <a href="./docs/getting-started.md">Getting started</a>
     · <a href="./docs/workflow-core.md">Workflow core</a>
     · <a href="./docs/evidence-lifecycle.md">Evidence lifecycle</a>
