@@ -37,7 +37,7 @@ TEMPLATES_DIR = SKILLS_ROOT / "templates"
 PLUGIN_DIR = SKILLS_ROOT / "plugins" / "research-autopilot"
 PLUGIN_SKILLS_DIR = PLUGIN_DIR / "skills"
 DOCS_DIR = REPO_ROOT / "docs"
-ASSETS_DIR = REPO_ROOT / "assets"
+BRAND_ASSETS_DIR = DOCS_DIR / "assets" / "brand"
 EXAMPLES_DIR = REPO_ROOT / "examples"
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 
@@ -51,7 +51,9 @@ ARTIFACTS_DIR = REPO_ROOT / "artifacts"
 DOWNLOADS_DIR = ARTIFACTS_DIR / "downloads"
 REPORTS_DIR = SKILLS_ROOT / "outputs" / "reports"
 APP_STATE_HOME = Path(
-    os.environ.get("CODEX_RESEARCH_STACK_HOME", str(Path.home() / ".codex-research-stack"))
+    os.environ.get("VELA_HOME")
+    or os.environ.get("CODEX_RESEARCH_STACK_HOME")
+    or str(Path.home() / ".vela")
 ).expanduser()
 APP_STATE_DIR = APP_STATE_HOME / "state"
 APP_CACHE_DIR = APP_STATE_HOME / "cache"

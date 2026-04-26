@@ -4,7 +4,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# This script overwrites matching Research Autopilot skills under CODEX_HOME.
+# This script overwrites matching VELA internal research-autopilot skills under CODEX_HOME.
 # Run it explicitly only when you want to sync the public plugin skills locally.
 
 $repoRoot = Split-Path -Parent $PSScriptRoot

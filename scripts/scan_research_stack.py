@@ -44,7 +44,7 @@ def contract_assets() -> dict[str, bool]:
 
 def render_markdown(payload: dict) -> str:
     lines = [
-        "# Codex Research Stack Scan Report",
+        "# VELA Scan Report",
         "",
         f"- Generated at: {payload['generated_at']}",
         f"- Repository root: `{payload['repo_root']}`",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://codex-research-stack.dev/schemas/project_agent_definition.schema.json",
+  "$id": "urn:vela:schemas:project_agent_definition",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,6 +1,6 @@
 # 3-Minute Quick Demo
 
-This demo shows the smallest useful story behind Codex Research Stack.
+This demo shows the smallest useful story behind VELA.
 
 The question it answers is:
 
@@ -19,8 +19,8 @@ This is not just one answer. It has literature, platform evidence, analysis, wri
 ## The Demo Flow
 
 1. The user gives a project prompt.
-2. `research-autopilot` explains the route.
-3. `research-team-orchestrator` turns the route into project roles.
+2. The VELA route layer explains the work before execution.
+3. The project coordination layer turns the route into explicit project roles.
 4. A reviewer gate checks whether the output can move forward.
 5. The project state files show where the work stands.
 

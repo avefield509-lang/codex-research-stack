@@ -3,9 +3,9 @@ name: research-autopilot
 description: Use when a research task should be routed before execution across routes, profiles, skills, and project-type multi-agent planning.
 ---
 
-# Research Autopilot
+# VELA Workflow Core
 
-Use this skill as the default entrypoint for research work in Codex Research Stack.
+Use this skill as the default internal entrypoint for research work in VELA.
 
 ## What It Does
 

@@ -7,5 +7,6 @@ __pycache__/
 artifacts/
 /outputs/
 /skills/outputs/
-image2-exports/*
-!image2-exports/README.md
+/apps/
+# Local ChatGPT-image2 export staging. Keep generated drafts out of GitHub root.
+image2-exports/

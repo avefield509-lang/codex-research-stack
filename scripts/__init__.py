@@ -1,1 +1,1 @@
-# Public Codex Research Stack scripts package.
+# Public VELA scripts package.

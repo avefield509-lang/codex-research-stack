@@ -91,6 +91,17 @@ my-research-project/
 - [可选集成](./docs/integrations.md)
 - [FAQ](./docs/faq.md)
 
+## 仓库结构
+
+| 路径 | 用途 |
+| --- | --- |
+| `docs/` | 公开文档、GitHub Pages 和确认后的视觉资产 |
+| `examples/` | 可检查的最小项目和快速演示 |
+| `scripts/` | 初始化、验证和本地维护辅助脚本 |
+| `skills/` | Codex skill、profile、schema 和模板层 |
+
+ChatGPT-image2 生成草稿应只放在本地 `image2-exports/`。该目录已被忽略，不应出现在 GitHub 根目录。
+
 ## 视觉语言
 
-VELA 使用淡蓝与白色表面、深海军蓝文字、分层帆形、证据路径、导航环和柔和波层。品牌素材位于 [`docs/assets/brand`](./docs/assets/brand/)。
+VELA 使用淡蓝与白色表面、深海军蓝文字、分层帆形、证据路径、导航环和柔和波层。品牌素材位于 [`docs/assets/brand`](./docs/assets/brand/)，公开规则位于 [`docs/brand.md`](./docs/brand.md)。

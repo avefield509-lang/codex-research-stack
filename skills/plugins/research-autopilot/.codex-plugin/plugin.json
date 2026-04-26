@@ -1,10 +1,9 @@
 {
   "name": "research-autopilot",
   "version": "0.1.0",
-  "description": "Plugin-first research operating layer for Codex with routing, squads, and pipeline gates.",
+  "description": "VELA workflow core for Codex research projects with routing, evidence discipline, and review gates.",
   "author": {
-    "name": "Codex Research Stack Contributors",
-    "email": "opensource@codexresearchstack.dev",
+    "name": "VELA Contributors",
     "url": "https://github.com/Marcus-AI4SS/codex-research-stack"
   },
   "homepage": "https://marcus-ai4ss.github.io/codex-research-stack/",
@@ -20,10 +19,10 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Research Autopilot",
-    "shortDescription": "Turn Codex into a research operating layer with route explanations, squads, and explicit gates.",
-    "longDescription": "Research Autopilot is the public plugin layer of Codex Research Stack. It explains the route before execution, upgrades project work into readable squads instead of role-play, and keeps citation, writing, social-evidence, and reproducibility workflows behind explicit contracts.",
-    "developerName": "Codex Research Stack Contributors",
+    "displayName": "VELA Workflow Core",
+    "shortDescription": "Use VELA project structure, route explanations, evidence discipline, and explicit review gates in Codex.",
+    "longDescription": "VELA Workflow Core supports the portable VELA research environment. It explains the route before execution, upgrades project-shaped work into readable coordination, and keeps citation, writing, social-evidence, and reproducibility workflows behind explicit contracts.",
+    "developerName": "VELA Contributors",
     "category": "Productivity",
     "capabilities": [
       "Interactive",

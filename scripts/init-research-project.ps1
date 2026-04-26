@@ -75,7 +75,7 @@ if (-not (Test-Path $readmePath)) {
     @(
         "# $projectName",
         '',
-        'This project was initialized from Codex Research Stack.',
+        'This project was initialized from VELA.',
         '',
         '## What you get',
         '',
@@ -100,7 +100,7 @@ if (-not (Test-Path $agentsMdPath)) {
     @(
         '# AGENTS',
         '',
-        'This project inherits the global constraints from skills/AGENTS.md in the Codex Research Stack repository.',
+        'This project inherits the global constraints from skills/AGENTS.md in the VELA repository.',
         'Project rules may only become stricter; they must not expand permissions or bypass the required citation, evidence, writing-capture, or reproducibility chains.',
         '',
         '```yaml',

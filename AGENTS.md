@@ -1,10 +1,10 @@
 # AGENTS
 
-This repository is the Codex Research Stack public release workspace.
+This repository is the VELA public workflow environment workspace.
 
 ## Scope
 
-- Manage the public environment package and GitHub-facing research workspace.
+- Manage the public VELA environment package and GitHub-facing research workspace.
 - Work only inside this repository root.
 - Main areas: public docs, public scripts, public skills, examples, Pages assets.
 
@@ -17,6 +17,6 @@ This repository is the Codex Research Stack public release workspace.
 
 ## Thread Rule
 
-- The Codex Research Stack public release thread should only work in this repository.
+- The VELA public release thread should only work in this repository.
 - Cross-repo reading and copying are allowed.
 - Cross-repo writes require explicit user approval first; without that approval, stop and switch to the corresponding repository thread instead of editing across boundaries.

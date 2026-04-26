@@ -10,8 +10,8 @@ Research project profile with literature, platform evidence, coding, analysis, w
 
 ## Selected Components
 
-- `research-autopilot`: explains the route and decides whether the task should become project-type work.
-- `research-team-orchestrator`: creates inspectable project roles, context packets, handoff logs, and gate files.
+- VELA route layer: explains the route and decides whether the task should become project-type work.
+- Coordination layer: creates inspectable project roles, context packets, handoff logs, and gate files.
 - `citation-verifier`: prevents unverified references from becoming formal citations.
 - `social-platform-reader`: handles browser-visible platform evidence without pretending hidden data is available.
 - `text-analysis`: supports qualitative coding and text-based synthesis.

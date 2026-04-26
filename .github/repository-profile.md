@@ -2,29 +2,59 @@
 
 Use these values when configuring the public GitHub repository page.
 
+## Repository Name
+
+Recommended slug:
+
+```text
+vela-workflow
+```
+
+Alternative if you want the Codex context visible in the URL:
+
+```text
+vela-codex-workflow
+```
+
+The repository slug cannot be changed by editing files. Rename it from:
+
+```text
+Settings -> General -> Repository name
+```
+
+After renaming, update the local remote URL to the new GitHub URL.
+
 ## Repository Description
 
-Research workflow stack for Codex: route tasks, coordinate multi-agent projects, gate citations and reproducibility, and sync research knowledge.
+VELA is a portable research workflow environment for Codex: structure materials, evidence, claims, methods, deliverables, and handoffs without depending on a desktop app.
 
 ## Homepage
 
+Current URL before repository rename:
+
 ```text
 https://marcus-ai4ss.github.io/codex-research-stack/
+```
+
+After renaming the repository to `vela-workflow`, use:
+
+```text
+https://marcus-ai4ss.github.io/vela-workflow/
 ```
 
 ## Topics
 
 ```text
 codex
-research-agents
-multi-agent
+research-workflow
+evidence-management
+codex-workflow
 computational-social-science
 literature-review
-research-workflow
+reproducible-research
+project-handoff
 zotero
 obsidian
-reproducible-research
-agent-orchestration
 ```
 
 ## Social Preview
@@ -32,7 +62,7 @@ agent-orchestration
 Upload this image in GitHub repository settings:
 
 ```text
-assets/social-preview.png
+docs/assets/brand/vela-brand-board-reference.png
 ```
 
 GitHub CLI is not authenticated in this local environment, so these repository-level settings may need to be applied through the GitHub web UI:

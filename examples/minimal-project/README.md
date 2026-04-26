@@ -4,7 +4,7 @@ This folder shows what the public scaffold looks like after initialization.
 
 It is meant to answer a simple question for GitHub visitors:
 
-**What does this stack actually create once it stops being a README?**
+**What does VELA actually create once it stops being a README?**
 
 ## Included Files
 

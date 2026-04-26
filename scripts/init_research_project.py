@@ -258,7 +258,7 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
             [
                 f"# {project_name}",
                 "",
-                "This project was initialized from Codex Research Stack.",
+                "This project was initialized from VELA.",
                 "",
                 "## What you get",
                 "",
@@ -282,7 +282,7 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
             [
                 "# AGENTS",
                 "",
-                "This project inherits the global constraints from skills/AGENTS.md in the Codex Research Stack repository.",
+                "This project inherits the global constraints from skills/AGENTS.md in the VELA repository.",
                 "Project rules may only become stricter; they must not expand permissions or bypass the required citation, evidence, writing-capture, or reproducibility chains.",
                 "",
                 "```yaml",
@@ -416,7 +416,7 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Initialize a public Codex Research Stack project scaffold.")
+    parser = argparse.ArgumentParser(description="Initialize a public VELA project scaffold.")
     parser.add_argument("--path", required=True, help="Project root path.")
     parser.add_argument("--route-hint", default=None, help="Optional route hint.")
     parser.add_argument("--skip-codex-trust", action="store_true", help="Do not write Codex trust config.")

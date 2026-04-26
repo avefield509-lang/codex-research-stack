@@ -91,6 +91,17 @@ Use VELA by itself when you want a portable workflow. Add HELM when you want a v
 - [Integrations](./docs/integrations.md)
 - [FAQ](./docs/faq.md)
 
+## Repository Layout
+
+| Path | Purpose |
+| --- | --- |
+| `docs/` | Public documentation, GitHub Pages, and approved visual assets |
+| `examples/` | Minimal project and quick demo for inspection |
+| `scripts/` | Setup, validation, and local maintenance helpers |
+| `skills/` | Codex skill, profile, schema, and template layer |
+
+Generated ChatGPT-image2 drafts should stay in local `image2-exports/`. That folder is ignored and should not appear in the GitHub root.
+
 ## Visual Language
 
-VELA uses pale blue and white surfaces, navy text, layered sail forms, evidence traces, navigation rings, and soft wave layers. Brand assets are in [`docs/assets/brand`](./docs/assets/brand/).
+VELA uses pale blue and white surfaces, navy text, layered sail forms, evidence traces, navigation rings, and soft wave layers. Brand assets are in [`docs/assets/brand`](./docs/assets/brand/) and the public rules are in [`docs/brand.md`](./docs/brand.md).

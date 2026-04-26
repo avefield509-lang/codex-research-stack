@@ -8,22 +8,15 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "image2-exports"
 
 ASSETS = {
-    "social-preview.png": [
-        ROOT / "assets" / "social-preview.png",
-        ROOT / "docs" / "assets" / "social-preview.png",
+    "vela-workflow-mark.png": [ROOT / "docs" / "assets" / "brand" / "vela-workflow-mark.png"],
+    "vela-brand-board-reference.png": [ROOT / "docs" / "assets" / "brand" / "vela-brand-board-reference.png"],
+    "vela-helm-relationship-board-reference.png": [
+        ROOT / "docs" / "assets" / "brand" / "vela-helm-relationship-board-reference.png",
     ],
-    "workflow-map.png": [
-        ROOT / "assets" / "workflow-map.png",
-        ROOT / "docs" / "assets" / "workflow-map.png",
+    "vela-helm-design-language-reference.png": [
+        ROOT / "docs" / "assets" / "brand" / "vela-helm-design-language-reference.png",
     ],
-    "research-system-overview.png": [
-        ROOT / "docs" / "assets" / "research-system-overview.png",
-        ROOT / "skills" / "plugins" / "research-autopilot" / "assets" / "research-system-overview.png",
-    ],
-    "research-team-workspace.png": [
-        ROOT / "docs" / "assets" / "research-team-workspace.png",
-        ROOT / "skills" / "plugins" / "research-autopilot" / "assets" / "research-team-workspace.png",
-    ],
+    "helm-local-board-icon-master.png": [ROOT / "docs" / "assets" / "brand" / "helm-local-board-icon-master.png"],
 }
 
 

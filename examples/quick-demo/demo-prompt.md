@@ -1,7 +1,7 @@
 # Demo Prompt
 
 ```text
-@research-autopilot This is a new computational social science project.
+Use VELA for this new computational social science project.
 
 Topic:
 Public reactions to AI-generated content labels.
@@ -21,6 +21,6 @@ Expected outputs:
 - project state files
 - reproducibility-ready folder structure
 
-Please explain the route first, then decide whether this should become project-type multi-agent work.
+Please explain the route first, then decide whether this should become project-type coordinated work.
 ```
 

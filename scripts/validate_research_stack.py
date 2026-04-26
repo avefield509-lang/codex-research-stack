@@ -7,7 +7,6 @@ import re
 
 try:
     from public_release_env import (
-        ASSETS_DIR,
         CATALOG_DIR,
         CODEX_CONFIG_PATH,
         CODEX_HOME,
@@ -22,7 +21,6 @@ try:
     )
 except ModuleNotFoundError:
     from scripts.public_release_env import (
-        ASSETS_DIR,
         CATALOG_DIR,
         CODEX_CONFIG_PATH,
         CODEX_HOME,
@@ -152,15 +150,11 @@ def main() -> None:
         DOCS_DIR / "zh" / "manual.html",
     ]
     required_assets = [
-        ASSETS_DIR / "social-preview.png",
-        ASSETS_DIR / "workflow-map.png",
         DOCS_DIR / "assets" / "site.css",
-        DOCS_DIR / "assets" / "brand-mark.svg",
-        DOCS_DIR / "assets" / "brand-lockup.svg",
-        DOCS_DIR / "assets" / "social-preview.png",
-        DOCS_DIR / "assets" / "workflow-map.png",
-        DOCS_DIR / "assets" / "research-system-overview.png",
-        DOCS_DIR / "assets" / "research-team-workspace.png",
+        DOCS_DIR / "assets" / "brand" / "vela-workflow-mark.png",
+        DOCS_DIR / "assets" / "brand" / "vela-brand-board-reference.png",
+        DOCS_DIR / "assets" / "brand" / "vela-helm-relationship-board-reference.png",
+        DOCS_DIR / "assets" / "brand" / "vela-helm-design-language-reference.png",
         PLUGIN_DIR / "assets" / "multi-agent-dispatch.svg",
         PLUGIN_DIR / "assets" / "route-explanation-card.svg",
         PLUGIN_DIR / "assets" / "research-system-overview.png",

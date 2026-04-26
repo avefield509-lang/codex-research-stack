@@ -3,256 +3,79 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codex Research Stack Manual</title>
-    <meta name="description" content="A plain-language manual for Codex Research Stack: what it is, how to begin, what to inspect during a project, and how the future app should sit on top of it.">
+    <title>VELA Manual</title>
+    <meta name="description" content="A concise manual for VELA, the portable research workflow environment for Codex.">
     <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>
     <main class="page-shell">
       <div class="topbar">
-        <div class="brand"><img class="brand-logo" src="./assets/brand-mark.svg" alt=""><span>Codex Research Stack</span></div>
+        <div class="brand"><span class="brand-mark"></span><span>VELA</span></div>
         <div class="lang-switch">
           <span class="active">English</span>
           <a href="./zh/manual.html">简体中文</a>
         </div>
       </div>
 
-      <section class="hero hero-compact">
+      <section class="hero">
         <div>
-          <div class="eyebrow">Single manual</div>
-          <h1>This manual is written for first-time readers.</h1>
-          <p>
-            You do not need a technical background to use it. Read it as a plain-language guide to
-            what the repository does, how to begin, what to inspect during a project, and where a
-            future app should sit on top of it.
-          </p>
+          <div class="eyebrow">Manual</div>
+          <h1>Use files as research state.</h1>
+          <p>VELA keeps materials, evidence, claims, methods, deliverables, and Codex handoffs separate enough to review. It is a workflow package, not a desktop app.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html">Back to home</a>
-            <a class="button button-secondary" href="https://github.com/Marcus-AI4SS/codex-research-stack">Open GitHub</a>
+            <a class="button button-primary" href="./getting-started.html">Get Started</a>
+            <a class="button" href="./brand.html">Brand System</a>
           </div>
+        </div>
+        <div class="hero-visual">
+          <img src="./assets/brand/vela-helm-relationship-board-reference.png" alt="VELA and HELM relationship board">
         </div>
       </section>
 
-      <section class="section manual-layout">
-        <aside class="card toc-card">
-          <h2>Contents</h2>
-          <nav class="toc-list">
-            <a href="#scope">What this manual helps you do</a>
-            <a href="#what-this-repository-is">In three sentences</a>
-            <a href="#plain-language-glossary">Terms you do not need to worry about</a>
-            <a href="#who-it-is-for">Who this is for</a>
-            <a href="#components">What the stack is actually made of</a>
-            <a href="#getting-started">First use: only do these three things</a>
-            <a href="#quick-demo">If you only have three minutes</a>
-            <a href="#no-command">If you do not want to deal with commands yet</a>
-            <a href="#starting-a-project">How a new project begins</a>
-            <a href="#what-counts-as-real-multi-agent-execution">Why a project turns into multi-agent work</a>
-            <a href="#during-a-live-project">What to look at during a live project</a>
-            <a href="#the-files-that-matter-most">The files that matter most</a>
-            <a href="#use-cases">Use cases</a>
-            <a href="#integrations">Integrations</a>
-            <a href="#repository-and-future-app">Repository and future app</a>
-            <a href="#troubleshooting">If something goes wrong, where to look first</a>
-            <a href="#roadmap">Roadmap</a>
-          </nav>
-        </aside>
+      <section class="section">
+        <div class="section-head">
+          <h2>Project Shape</h2>
+          <p>Start with a readable folder structure. Keep private project data outside public repository copies.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Materials</h3><p>Collected sources, URLs, files, screenshots, datasets, and notes.</p></article>
+          <article class="card"><h3>Evidence</h3><p>Verified material with source, access time, status, and rights or ethics notes.</p></article>
+          <article class="card"><h3>Claims</h3><p>Candidate and supported statements that must remain linked to evidence.</p></article>
+          <article class="card"><h3>Methods</h3><p>Assumptions, coding rules, analysis plans, and reproducibility notes.</p></article>
+          <article class="card"><h3>Deliverables</h3><p>Reports, briefs, tables, figures, and status notes.</p></article>
+          <article class="card"><h3>Handoffs</h3><p>Bounded tasks for Codex or collaborators with constraints and known gaps.</p></article>
+        </div>
+      </section>
 
-        <article class="manual-content">
-          <section id="scope" class="card prose-card">
-            <h2>What this manual helps you do</h2>
-            <p>This manual is the fastest way to understand and try Codex Research Stack: what it is, who it is for, how to begin, and what to inspect during a live project.</p>
-            <p>It also explains how Zotero, Obsidian, evidence capture, project files, and the future app fit into one research workflow.</p>
-          </section>
-
-          <section id="what-this-repository-is" class="card prose-card">
-            <h2>In three sentences</h2>
-            <p>First, this repository is not the chatbot itself. It is the workflow layer around research work in Codex.</p>
-            <p>Second, its goal is not to add more tools. Its goal is to make research projects easier to start, inspect, and continue.</p>
-            <p>Third, it focuses on the part where research work usually becomes messy: how a task begins, how a project stays readable, when weak work should be blocked, and how references, notes, traces, and outputs stay separated.</p>
-          </section>
-
-          <section id="plain-language-glossary" class="card prose-card">
-            <h2>Terms you do not need to worry about at first</h2>
-            <ul>
-              <li><strong><code>research-autopilot</code></strong>: the front desk. You describe the task, and it explains how work should begin.</li>
-              <li><strong><code>research-team-orchestrator</code></strong>: the project manager. It only appears when work grows into a real project.</li>
-              <li><strong>gate</strong>: a checkpoint. If something is not good enough yet, the project should not move forward.</li>
-              <li><strong>Zotero</strong>: the formal reference library.</li>
-              <li><strong>Obsidian</strong>: the longer-lived note and knowledge layer.</li>
-            </ul>
-            <p><strong>If you remember only one thing:</strong> ask the system to explain the route before it starts doing work.</p>
-          </section>
-
-          <section id="who-it-is-for" class="card prose-card">
-            <h2>Who this is for</h2>
-            <ul>
-              <li>researchers doing literature reviews and evidence synthesis</li>
-              <li>computational social scientists working across text, platform data, networks, and reproducibility</li>
-              <li>researchers collecting browser-visible platform or web evidence</li>
-              <li>writers preparing drafts, revision packs, and submission-ready materials</li>
-            </ul>
-            <p>It can still help with smaller tasks. But it becomes most useful when you already realize that the task is turning into a project.</p>
-          </section>
-
-          <section id="components" class="card prose-card">
-            <h2>What the stack is actually made of</h2>
-            <ul>
-              <li><strong>Codex</strong>: the front door for conversation and execution</li>
-              <li><strong>research-autopilot</strong>: decides what kind of task this is and how work should begin</li>
-              <li><strong>research-team-orchestrator</strong>: turns larger work into structured project coordination</li>
-              <li><strong>project files</strong>: write down rules, status, findings, and checks</li>
-              <li><strong>external tools</strong>: things like Zotero, Obsidian, and browser-visible evidence capture</li>
-            </ul>
-          </section>
-
-          <section id="getting-started" class="card prose-card">
-            <h2>First use: only do these three things</h2>
-            <ol>
-              <li>clone the repository</li>
-              <li>create a demo project</li>
-              <li>ask for route explanation before execution</li>
-            </ol>
-            <pre><code>git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
-cd codex-research-stack</code></pre>
-            <pre><code>python .\scripts\init_research_project.py --path ".\examples\demo-project" --route-hint "general-research"</code></pre>
-            <pre><code>pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"</code></pre>
-            <p>A good first prompt is:</p>
-            <pre><code>@research-autopilot This is a new research project.
-The topic is: ...
-The question is: ...
-The materials or data are: ...
-The expected outputs are: ...
-Explain the route first, then decide whether this should become project-type multi-agent work.</code></pre>
-          </section>
-
-          <section id="quick-demo" class="card prose-card">
-            <h2>If you only have three minutes</h2>
-            <p>Open the quick demo if you want to understand the project before running anything.</p>
-            <ul>
-              <li><a href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3-minute quick demo</a></li>
-              <li><code>demo-prompt.md</code>: the user request</li>
-              <li><code>route-explanation-card.md</code>: the route explanation</li>
-              <li><code>.codex/dispatch/demo-run.yaml</code>: the agent dispatch</li>
-              <li><code>logs/project-state/current.json</code>: the project state</li>
-              <li><code>gate.literature-producer.json</code>: the reviewer gate</li>
-            </ul>
-            <p>The demo shows a task being routed, turned into explicit agent roles, and stopped by a reviewer gate when formal citation verification is still missing.</p>
-          </section>
-
-          <section id="no-command" class="card prose-card">
-            <h2>If you do not want to deal with commands yet</h2>
-            <p>Then remember this sentence: state your topic, question, materials, and expected outputs clearly, and ask the system to explain the route before it starts doing work.</p>
-            <p>That is the core usage model, even before you learn scripts or directories.</p>
-          </section>
-
-          <section id="starting-a-project" class="card prose-card">
-            <h2>How a new project begins</h2>
-            <ol>
-              <li>create a project folder</li>
-              <li>initialize the scaffold</li>
-              <li>inspect the core files</li>
-              <li>let the system explain the route before execution</li>
-            </ol>
-            <p>Start with:</p>
-            <ul>
-              <li><code>AGENTS.md</code> = project rules</li>
-              <li><code>research-map.md</code> = project map</li>
-              <li><code>findings-memory.md</code> = what is already known</li>
-              <li><code>logs/project-state/current.json</code> = current status</li>
-            </ul>
-            <p>For most researchers, daily use mostly comes down to two things: starting a project and checking the current state.</p>
-          </section>
-
-          <section id="what-counts-as-real-multi-agent-execution" class="card prose-card">
-            <h2>Why a project turns into multi-agent work</h2>
-            <p>Small tasks stay simpler. Only larger project work turns into multi-agent coordination.</p>
-            <p>That happens when the project really needs division of work, handoff, review, and written traces.</p>
-            <p>It only counts as real multi-agent work when the project leaves behind separate identities, separate inputs, separate outputs, reviewer links, and inspectable traces.</p>
-          </section>
-
-          <section id="during-a-live-project" class="card prose-card">
-            <h2>What to look at during a live project</h2>
-            <ol>
-              <li>what stage the project is in</li>
-              <li>who owns the next step</li>
-              <li>what still blocks progress</li>
-            </ol>
-            <p>So the practical rule is: do not start by staring at the tool list. Start by looking at route choice and project state.</p>
-          </section>
-
-          <section id="the-files-that-matter-most" class="card prose-card">
-            <h2>The files that matter most</h2>
-            <ol>
-              <li><code>AGENTS.md</code></li>
-              <li><code>research-map.md</code></li>
-              <li><code>findings-memory.md</code></li>
-              <li><code>material-passport.yaml</code></li>
-              <li><code>evidence-ledger.yaml</code></li>
-              <li><code>logs/project-state/current.json</code></li>
-              <li><code>logs/quality-gates/pipeline-status.json</code></li>
-            </ol>
-            <p>For many non-technical users, the first four are the ones you will read most often.</p>
-          </section>
-
-          <section id="use-cases" class="card prose-card">
-            <h2>Use cases</h2>
-            <ul>
-              <li><strong>Literature review</strong>: review question, candidate literature, formal reference checks, synthesis</li>
-              <li><strong>Social-platform or web case study</strong>: visible material, provenance, evidence capture, preparation for later coding</li>
-              <li><strong>Computational social science project</strong>: literature, materials, analysis, writing, reproducibility</li>
-              <li><strong>Writing and submission</strong>: drafting, citation checks, writing quality, revision, submission materials</li>
-            </ul>
-          </section>
-
-          <section id="integrations" class="card prose-card">
-            <h2>Integrations</h2>
-            <p>In simple terms:</p>
-            <ul>
-              <li>Zotero holds formal references</li>
-              <li>Obsidian holds longer-lived notes</li>
-              <li>the project folder holds runtime state and traces</li>
-            </ul>
-            <p>For platform and web cases, the repository stays conservative: prefer browser-visible material, keep provenance explicit, and keep capture separate from interpretation.</p>
-            <p>The product rule is simple: make the source visible enough that another person can check where the evidence came from.</p>
-          </section>
-
-          <section id="repository-and-future-app" class="card prose-card">
-            <h2>Repository and future app</h2>
-            <p>The simplest way to think about the relationship is:</p>
-            <ul>
-              <li>this repository is the rules and documentation layer</li>
-              <li>the future app is the easier daily interface</li>
-            </ul>
-            <p>The product idea is simple: the repository defines the workflow package; an app can make that workflow easier to start, inspect, and continue.</p>
-            <p><strong>The repository is the source, the app is the interface.</strong></p>
-          </section>
-
-          <section id="troubleshooting" class="card prose-card">
-            <h2>If something goes wrong, where to look first</h2>
-            <ol>
-              <li><strong>Where is the project blocked?</strong> Look at <code>logs/project-state/current.json</code>.</li>
-              <li><strong>What is the project trying to do?</strong> Look at <code>research-map.md</code> and <code>findings-memory.md</code>.</li>
-              <li><strong>Did a checkpoint fail?</strong> Look at <code>logs/quality-gates/pipeline-status.json</code>.</li>
-              <li><strong>Only then suspect the repository itself</strong>: run <code>python .\scripts\validate_research_stack.py</code>.</li>
-            </ol>
-          </section>
-
-          <section id="roadmap" class="card prose-card">
-            <h2>Roadmap</h2>
-            <ul>
-              <li>better examples</li>
-              <li>clearer visual walkthroughs</li>
-              <li>tighter portable defaults</li>
-              <li>clearer integration setup notes</li>
-            </ul>
-          </section>
-
-          <section class="card prose-card">
-            <h2>Final one-sentence version</h2>
-            <p><strong>Tell the system what your topic, question, materials, and expected outputs are, then ask it to explain the route before it starts doing work.</strong></p>
-          </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>Codex Handoff</h2>
+          <p>Keep prompts narrow enough that review is possible.</p>
+        </div>
+        <article class="card">
+          <pre><code>Task:
+Relevant files:
+Constraints:
+Expected output:
+Known gaps:
+Review standard:</code></pre>
         </article>
       </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>VELA And HELM</h2>
+          <p>VELA can run alone. HELM can later read the same project state as an optional local board.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h3>VELA</h3><p>Portable research workflow environment for Codex.</p></article>
+          <article class="card"><h3>HELM</h3><p>Local board for status, evidence, deliverables, environment health, and handoff readiness.</p></article>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        Markdown version: <a href="./manual.md">docs/manual.md</a>.
+      </div>
     </main>
   </body>
 </html>

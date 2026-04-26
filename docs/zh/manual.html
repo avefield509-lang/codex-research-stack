@@ -3,260 +3,79 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Codex Research Stack 总说明书</title>
-    <meta name="description" content="给没有技术基础的读者准备的 Codex Research Stack 总说明书：先用人话解释这是什么、怎么开始、项目跑起来以后该看什么，以及未来 app 该处在什么位置。">
+    <title>VELA 总说明书</title>
+    <meta name="description" content="VELA 面向 Codex 的可移植科研工作流环境说明。">
     <link rel="stylesheet" href="../assets/site.css">
   </head>
   <body>
     <main class="page-shell">
       <div class="topbar">
-        <div class="brand"><img class="brand-logo" src="../assets/brand-mark.svg" alt=""><span>Codex Research Stack</span></div>
+        <div class="brand"><span class="brand-mark"></span><span>VELA</span></div>
         <div class="lang-switch">
           <a href="../manual.html">English</a>
           <span class="active">简体中文</span>
         </div>
       </div>
 
-      <section class="hero hero-compact">
+      <section class="hero">
         <div>
-          <div class="eyebrow">唯一说明书</div>
-          <h1>这份说明书，是写给第一次接触它的人看的。</h1>
-          <p>
-            你不需要有技术背景，也不需要先理解一堆术语。先把它当成一套“帮助研究项目保持条理”的工作台，
-            再顺着这份说明书往下看。
-          </p>
+          <div class="eyebrow">总说明书</div>
+          <h1>用文件承载研究状态。</h1>
+          <p>VELA 将材料、证据、主张、方法、交付物和 Codex 交接分开管理，使研究过程可读、可复核。它是工作流包，不是桌面 app。</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="./index.html">返回首页</a>
-            <a class="button button-secondary" href="https://github.com/Marcus-AI4SS/codex-research-stack">打开 GitHub</a>
+            <a class="button button-primary" href="./getting-started.html">快速开始</a>
+            <a class="button" href="./brand.html">品牌系统</a>
           </div>
+        </div>
+        <div class="hero-visual">
+          <img src="../assets/brand/vela-helm-relationship-board-reference.png" alt="VELA 与 HELM 关系图">
         </div>
       </section>
 
-      <section class="section manual-layout">
-        <aside class="card toc-card">
-          <h2>目录</h2>
-          <nav class="toc-list">
-            <a href="#scope">这份说明书帮你做什么</a>
-            <a href="#what">先用三句话说清楚</a>
-            <a href="#glossary">你不用先懂这些词</a>
-            <a href="#who">它适合谁</a>
-            <a href="#components">这套系统真正由什么组成</a>
-            <a href="#start">第一次使用，只做这三件事</a>
-            <a href="#quick-demo">如果你只有三分钟</a>
-            <a href="#no-command">如果你完全不想折腾命令</a>
-            <a href="#new-project">新项目怎么开始</a>
-            <a href="#real-multi-agent">项目为什么会进入多智能体协作</a>
-            <a href="#live-project">项目跑起来后，你最该看什么</a>
-            <a href="#important-files">最值得先看的文件</a>
-            <a href="#use-cases">这套系统适合哪些场景</a>
-            <a href="#integrations">它和 Zotero、Obsidian 这些工具是什么关系</a>
-            <a href="#repo-and-app">当前仓库和未来 App 是什么关系</a>
-            <a href="#troubleshooting">如果出问题，先看哪里</a>
-            <a href="#roadmap">接下来还会补什么</a>
-          </nav>
-        </aside>
+      <section class="section">
+        <div class="section-head">
+          <h2>项目结构</h2>
+          <p>先建立可读目录。私人项目数据不要放进公开仓库副本。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Materials</h3><p>收集到的来源、URL、文件、截图、数据集和笔记。</p></article>
+          <article class="card"><h3>Evidence</h3><p>带来源、访问时间、核验状态、权利或伦理说明的材料。</p></article>
+          <article class="card"><h3>Claims</h3><p>候选主张和已支持主张，必须保持证据链接。</p></article>
+          <article class="card"><h3>Methods</h3><p>假设、编码规则、分析计划和可复现说明。</p></article>
+          <article class="card"><h3>Deliverables</h3><p>报告、简报、表格、图和状态说明。</p></article>
+          <article class="card"><h3>Handoffs</h3><p>给 Codex 或合作者的有边界任务，包含约束和已知缺口。</p></article>
+        </div>
+      </section>
 
-        <article class="manual-content">
-          <section id="scope" class="card prose-card">
-            <h2>这份说明书帮你做什么</h2>
-            <p>这份说明书的作用，是让你最快看懂并试用 Codex Research Stack：它是什么、它适合谁、第一次怎么开始、项目跑起来以后看什么。</p>
-            <p>它也会说明 Zotero、Obsidian、证据采集、项目文件和未来 app 分别处在这套研究工作流的哪一层。</p>
-          </section>
-
-          <section id="what" class="card prose-card">
-            <h2>先用三句话说清楚</h2>
-            <p>第一，这个仓库不是聊天机器人本身，而是一套“研究工作怎么组织”的规则和模板。</p>
-            <p>第二，它的重点不是多装工具，而是让研究项目从一开始就更有条理。</p>
-            <p>第三，它想解决的是研究里最容易失控的部分：任务怎么开头、项目怎么推进、材料怎么留痕、写作前哪些东西必须先检查。</p>
-            <p>你可以把它理解成一个研究工作台：你先说你要做什么，系统先告诉你该怎么开始，项目做大之后，它会把过程整理成可以回看的结构。</p>
-          </section>
-
-          <section id="glossary" class="card prose-card">
-            <h2>你不用先懂这些词</h2>
-            <ul>
-              <li><strong><code>research-autopilot</code></strong>：接待台。你先说需求，它先判断这是什么任务、应该怎么开始。</li>
-              <li><strong><code>research-team-orchestrator</code></strong>：项目经理。只有项目变复杂时，它才会出来安排角色、步骤和检查点。</li>
-              <li><strong>gate</strong>：检查口。某一步没过关，项目就不应该继续往前推。</li>
-              <li><strong>Zotero</strong>：正式文献库。</li>
-              <li><strong>Obsidian</strong>：长期研究笔记和知识沉淀的地方。</li>
-            </ul>
-            <p><strong>你只需要记住一句话：</strong>先让系统告诉你该怎么开始，再决定项目要不要变复杂。</p>
-          </section>
-
-          <section id="who" class="card prose-card">
-            <h2>它适合谁</h2>
-            <ul>
-              <li>做文献综述的人</li>
-              <li>做平台案例、网页材料或社媒案例研究的人</li>
-              <li>做计算社会科学项目的人</li>
-              <li>正在写论文、返修或整理投稿材料的人</li>
-            </ul>
-            <p>如果你只是偶尔问一个很小的问题，它也能用。但它最有价值的时候，是你已经意识到：这个任务不像一条聊天能说完，它更像一个项目。</p>
-          </section>
-
-          <section id="components" class="card prose-card">
-            <h2>这套系统真正由什么组成</h2>
-            <ul>
-              <li><strong>Codex</strong>：前台对话和执行入口</li>
-              <li><strong>research-autopilot</strong>：先判断任务、解释路线</li>
-              <li><strong>research-team-orchestrator</strong>：把复杂任务整理成项目协作</li>
-              <li><strong>项目文件</strong>：留下规则、状态、发现和检查记录</li>
-              <li><strong>外部工具</strong>：Zotero、Obsidian、浏览器证据链</li>
-            </ul>
-            <p>换句话说：Codex 负责“你怎么进来”，autopilot 负责“先走哪条路”，orchestrator 负责“项目怎么排”，项目文件负责“以后怎么回看”，外部工具负责“文献、笔记和证据各放在哪里”。</p>
-          </section>
-
-          <section id="start" class="card prose-card">
-            <h2>第一次使用，只做这三件事</h2>
-            <ol>
-              <li>把仓库拉下来</li>
-              <li>创建一个示例项目</li>
-              <li>先让系统解释路线，不要急着执行</li>
-            </ol>
-            <pre><code>git clone https://github.com/Marcus-AI4SS/codex-research-stack.git
-cd codex-research-stack</code></pre>
-            <pre><code>python .\scripts\init_research_project.py --path ".\examples\demo-project" --route-hint "general-research"</code></pre>
-            <pre><code>pwsh -ExecutionPolicy Bypass -File ".\scripts\init-research-project.ps1" -Path ".\examples\demo-project"</code></pre>
-            <p>第一句最推荐这样说：</p>
-            <pre><code>@research-autopilot 这是一个新的研究项目。
-主题是：...
-问题是：...
-材料或数据是：...
-预期产出是：...
-先解释应该怎么开始，再决定要不要升级成项目型协作。</code></pre>
-          </section>
-
-          <section id="quick-demo" class="card prose-card">
-            <h2>如果你只有三分钟</h2>
-            <p>如果你暂时不想跑命令，先看这个快速 Demo。</p>
-            <ul>
-              <li><a href="https://github.com/Marcus-AI4SS/codex-research-stack/tree/main/examples/quick-demo">3 分钟快速 Demo</a></li>
-              <li><code>demo-prompt.md</code>：用户怎么提需求</li>
-              <li><code>route-explanation-card.md</code>：系统怎么解释路线</li>
-              <li><code>.codex/dispatch/demo-run.yaml</code>：项目怎么生成 agent dispatch</li>
-              <li><code>logs/project-state/current.json</code>：项目状态怎么留痕</li>
-              <li><code>gate.literature-producer.json</code>：reviewer gate 怎么阻断弱产出</li>
-            </ul>
-            <p>这个 Demo 展示一个研究任务如何先被解释路线、如何变成明确的 agent 分工，又如何因为正式引用还没核验而被 reviewer gate 阻断。</p>
-          </section>
-
-          <section id="no-command" class="card prose-card">
-            <h2>如果你完全不想折腾命令</h2>
-            <p>那你现在只需要记住一句话：先说清楚你的主题、问题、材料和想要的产出，让系统先给出路线，再开始做。</p>
-            <p>这就是最核心的用法。也就是说，哪怕你还不会跑命令、看脚本、管目录，也可以先用这套思路开始。</p>
-          </section>
-
-          <section id="new-project" class="card prose-card">
-            <h2>新项目怎么开始</h2>
-            <ol>
-              <li>选一个项目目录</li>
-              <li>初始化项目骨架</li>
-              <li>看几个最重要的文件</li>
-              <li>让系统先解释路线</li>
-            </ol>
-            <p>先看下面几个文件就够了：</p>
-            <ul>
-              <li><code>AGENTS.md</code>：项目规则</li>
-              <li><code>research-map.md</code>：项目地图</li>
-              <li><code>findings-memory.md</code>：已确认的发现</li>
-              <li><code>logs/project-state/current.json</code>：当前项目状态</li>
-            </ul>
-            <p>很多人第一次看到这些文件会紧张。其实可以把它们理解成：项目规则、项目地图、已确认的发现和当前状态。</p>
-            <p>对大多数普通研究者来说，平时最常用的其实只有两件事：开项目和查状态。</p>
-          </section>
-
-          <section id="real-multi-agent" class="card prose-card">
-            <h2>项目为什么会进入多智能体协作</h2>
-            <p>小任务先走单一流程。只有项目变大、步骤变多、需要分工和复核时，才会进入多智能体协作。</p>
-            <p>真正的多智能体协作不是“一个人分饰几角”，而是把项目分工、复核和交接真正写进文件。</p>
-            <ul>
-              <li>不同角色有不同身份</li>
-              <li>不同角色有各自的输入</li>
-              <li>不同角色有各自的输出位置</li>
-              <li>至少有明确的复核关系</li>
-              <li>项目里会留下可回看的痕迹</li>
-            </ul>
-          </section>
-
-          <section id="live-project" class="card prose-card">
-            <h2>项目跑起来后，你最该看什么</h2>
-            <p>项目一旦跑起来，最重要的不是“它调用了多少工具”，而是三件事是否清楚：</p>
-            <ol>
-              <li>它现在在做哪一步</li>
-              <li>下一步该谁来做</li>
-              <li>有没有哪一步其实还不能继续</li>
-            </ol>
-            <p>所以最重要的一句话是：不要先盯着工具，先看任务判断和项目状态。</p>
-          </section>
-
-          <section id="important-files" class="card prose-card">
-            <h2>最值得先看的文件</h2>
-            <ol>
-              <li><code>AGENTS.md</code></li>
-              <li><code>research-map.md</code></li>
-              <li><code>findings-memory.md</code></li>
-              <li><code>material-passport.yaml</code></li>
-              <li><code>evidence-ledger.yaml</code></li>
-              <li><code>logs/project-state/current.json</code></li>
-              <li><code>logs/quality-gates/pipeline-status.json</code></li>
-            </ol>
-            <p>如果你只想知道项目现在怎么样，这几份文件基本够了。</p>
-          </section>
-
-          <section id="use-cases" class="card prose-card">
-            <h2>这套系统适合哪些场景</h2>
-            <ul>
-              <li><strong>文献综述</strong>：提出问题、收集文献、核验引用、形成综合稿</li>
-              <li><strong>社媒或平台案例</strong>：采集浏览器可见内容、保留来源、准备后续编码材料</li>
-              <li><strong>计算社会科学项目</strong>：把文献、材料、分析、写作和复现串起来</li>
-              <li><strong>写作与投稿</strong>：草稿、引文检查、写作质量和投稿材料整理</li>
-            </ul>
-          </section>
-
-          <section id="integrations" class="card prose-card">
-            <h2>它和 Zotero、Obsidian 这些工具是什么关系</h2>
-            <p>一句话说：Zotero 管正式文献，Obsidian 管长期笔记，项目目录管运行中的状态和痕迹。</p>
-            <p>对于平台与网页案例，这套仓库默认更保守：优先看浏览器可见内容，明确保留来源，把“我看到了什么”和“我怎么解释它”分开。</p>
-            <p>产品规则很简单：保留足够清楚的来源上下文，让别人能回看证据从哪里来。</p>
-          </section>
-
-          <section id="repo-and-app" class="card prose-card">
-            <h2>当前仓库和未来 App 是什么关系</h2>
-            <p>最容易理解的说法是：</p>
-            <ul>
-              <li>当前仓库是“规则和说明书”</li>
-              <li>未来 app 是“更顺手的界面”</li>
-            </ul>
-            <p>产品层面的关系很简单：仓库定义工作流包，app 让这个工作流更容易启动、查看和继续。</p>
-            <p><strong>仓库是源头，app 是界面。</strong></p>
-          </section>
-
-          <section id="troubleshooting" class="card prose-card">
-            <h2>如果出问题，先看哪里</h2>
-            <ol>
-              <li><strong>先看项目卡在哪</strong>：<code>logs/project-state/current.json</code></li>
-              <li><strong>再看项目在做什么</strong>：<code>research-map.md</code> 和 <code>findings-memory.md</code></li>
-              <li><strong>再看是不是有检查没过</strong>：<code>logs/quality-gates/pipeline-status.json</code></li>
-              <li><strong>最后才怀疑仓库本身</strong>：运行 <code>python .\scripts\validate_research_stack.py</code></li>
-            </ol>
-          </section>
-
-          <section id="roadmap" class="card prose-card">
-            <h2>接下来还会补什么</h2>
-            <ul>
-              <li>更好的公开示例项目</li>
-              <li>更清楚的视觉 walkthrough</li>
-              <li>更稳的可移植默认值</li>
-              <li>更清楚的外部集成安装说明</li>
-            </ul>
-          </section>
-
-          <section class="card prose-card">
-            <h2>最后给普通用户的一句话</h2>
-            <p><strong>先把你的研究主题、问题、材料和预期产出说清楚，让系统先告诉你应该怎么开始，而不是一上来就执行。</strong></p>
-          </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>Codex 交接</h2>
+          <p>交接范围要足够小，使复核成为可能。</p>
+        </div>
+        <article class="card">
+          <pre><code>任务：
+相关文件：
+约束：
+预期输出：
+已知缺口：
+复核标准：</code></pre>
         </article>
       </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>VELA 与 HELM</h2>
+          <p>VELA 可以单独运行。HELM 后续可以作为可选本地看板读取同一套项目状态。</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h3>VELA</h3><p>面向 Codex 的可移植科研工作流环境。</p></article>
+          <article class="card"><h3>HELM</h3><p>用于展示状态、证据、交付物、环境健康和交接准备度的本地看板。</p></article>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        Markdown 版本见 <a href="../manual.zh-CN.md">docs/manual.zh-CN.md</a>。
+      </div>
     </main>
   </body>
 </html>
