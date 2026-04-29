@@ -33,7 +33,7 @@ VELA is a portable research workflow environment for Codex: structure materials,
 Current URL:
 
 ```text
-https://marcus-ai4ss.github.io/VELA-workflow/
+https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/
 ```
 
 ## Topics
