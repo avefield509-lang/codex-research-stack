@@ -7,6 +7,7 @@
     <a href="./README.md">English</a>
     · <a href="https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/">Pages</a>
     · <a href="./docs/getting-started.md">快速开始</a>
+    · <a href="./docs/imports/vela-helm-interface.md">HELM 接口</a>
     · <a href="./docs/workflow-core.md">工作流核心</a>
     · <a href="./docs/evidence-lifecycle.md">证据生命周期</a>
     · <a href="./docs/quality-checks.md">质量检查</a>
@@ -15,7 +16,7 @@
 
 VELA 是一套可以放进用户自己 Codex 工作空间的可移植科研工作流环境。它给研究项目提供稳定的运行层：材料、证据、主张、方法说明、交付物和 Codex 交接保持分层、可读、可复核。
 
-它不是桌面 app，不是聊天界面，也不是黑箱论文生成器。VELA 是工作流包；HELM 是可选本地科研看板，后续可以读取同一套项目状态。
+它不是桌面 app，不是聊天界面，也不是黑箱论文生成器。VELA 是工作流包；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选本地科研看板，可以读取同一套项目状态。
 
 ## 五分钟开始
 
@@ -80,12 +81,20 @@ my-research-project/
 
 只需要可移植工作流时，单独使用 VELA。需要本地可视化看板时，再接入 HELM。
 
+共享导入契约有两个方向：
+
+- `vela.project.context.v1`：VELA 暴露项目状态，供 HELM 读取。
+- `helm.codex.handoff.v1`：HELM 生成有边界的 Codex 交接包，供 VELA 存入 `handoffs/`。
+
+见 [VELA 与 HELM 导入接口](./docs/imports/vela-helm-interface.md)。
+
 ## 继续阅读
 
 - [快速开始](./docs/getting-started.md)
 - [工作流核心](./docs/workflow-core.md)
 - [证据生命周期](./docs/evidence-lifecycle.md)
 - [质量检查](./docs/quality-checks.md)
+- [VELA 与 HELM 导入接口](./docs/imports/vela-helm-interface.md)
 - [使用场景](./docs/use-cases.md)
 - [可选集成](./docs/integrations.md)
 - [FAQ](./docs/faq.md)
@@ -95,6 +104,8 @@ my-research-project/
 | 路径 | 用途 |
 | --- | --- |
 | `docs/` | 公开文档、GitHub Pages 和确认后的视觉资产 |
+| `docs/imports/` | VELA 与 HELM 的导入契约 |
+| `docs/sync-log/` | 本地跨仓同步记录 |
 | `examples/` | 可检查的最小项目和快速演示 |
 | `scripts/` | 初始化、验证和本地维护辅助脚本 |
 | `skills/` | Codex skill、profile、schema 和模板层 |

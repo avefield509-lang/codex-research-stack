@@ -7,6 +7,7 @@
     <a href="./README.zh-CN.md">中文</a>
     · <a href="https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/">Pages</a>
     · <a href="./docs/getting-started.md">Getting started</a>
+    · <a href="./docs/imports/vela-helm-interface.md">HELM interface</a>
     · <a href="./docs/workflow-core.md">Workflow core</a>
     · <a href="./docs/evidence-lifecycle.md">Evidence lifecycle</a>
     · <a href="./docs/quality-checks.md">Quality checks</a>
@@ -15,7 +16,7 @@
 
 VELA is a portable research workflow environment you can place inside your own Codex workspace. It gives a research project a stable operating layer: materials, evidence, claims, method notes, deliverables, and Codex handoffs remain separate, readable, and reviewable.
 
-It is not a desktop app. It is not a chat interface. It is not a black-box paper generator. VELA is the workflow package; HELM is the optional local research board that can later read the same project state.
+It is not a desktop app. It is not a chat interface. It is not a black-box paper generator. VELA is the workflow package; [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional local research board that can read the same project state.
 
 ## Start In Five Minutes
 
@@ -76,9 +77,16 @@ The handoff is intentionally small. Codex should receive enough context to do th
 | Product | Role | Can Stand Alone? |
 | --- | --- | --- |
 | **VELA** | Research workflow environment for Codex | Yes |
-| **HELM** | Local research board for status, evidence, deliverables, environment health, and handoffs | Yes |
+| **HELM** | Local research board for status, evidence, deliverables, environment health, and Codex handoffs | Yes |
 
 Use VELA by itself when you want a portable workflow. Add HELM when you want a visual local board over the same project state.
+
+The shared import contract has two directions:
+
+- `vela.project.context.v1`: VELA exposes project state that HELM can read.
+- `helm.codex.handoff.v1`: HELM prepares a bounded Codex handoff packet that VELA can store under `handoffs/`.
+
+See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 
 ## Read Next
 
@@ -86,6 +94,7 @@ Use VELA by itself when you want a portable workflow. Add HELM when you want a v
 - [Workflow core](./docs/workflow-core.md)
 - [Evidence lifecycle](./docs/evidence-lifecycle.md)
 - [Quality checks](./docs/quality-checks.md)
+- [VELA and HELM import interface](./docs/imports/vela-helm-interface.md)
 - [Use cases](./docs/use-cases.md)
 - [Integrations](./docs/integrations.md)
 - [FAQ](./docs/faq.md)
@@ -95,6 +104,8 @@ Use VELA by itself when you want a portable workflow. Add HELM when you want a v
 | Path | Purpose |
 | --- | --- |
 | `docs/` | Public documentation, GitHub Pages, and approved visual assets |
+| `docs/imports/` | VELA and HELM import contracts |
+| `docs/sync-log/` | Local cross-repository synchronization notes |
 | `examples/` | Minimal project and quick demo for inspection |
 | `scripts/` | Setup, validation, and local maintenance helpers |
 | `skills/` | Codex skill, profile, schema, and template layer |

@@ -26,7 +26,8 @@
           <div class="hero-actions">
             <a class="button button-primary" href="./getting-started.html">Start using VELA</a>
             <a class="button" href="./installation.html">Download notes</a>
-            <a class="button" href="./use-cases.html">Use cases</a>
+            <a class="button" href="./imports.html">Connect HELM</a>
+            <a class="button" href="https://github.com/Marcus-AI4SS/HELM">HELM repo</a>
           </div>
         </div>
       </section>
@@ -41,6 +42,17 @@
           <article class="card"><h3>Evidence Discipline</h3><p>Materials remain drafts until source, access time, verification, and rights or ethics fields are visible.</p></article>
           <article class="card"><h3>Codex Handoffs</h3><p>Tasks sent to Codex include files, constraints, expected output, and known gaps.</p></article>
           <article class="card"><h3>Optional Board</h3><p>HELM can read the same project state, but VELA does not depend on HELM.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Two Independent Brands, One Shared Contract</h2>
+          <p>VELA can be installed without HELM. HELM can run without VELA. Together they exchange explicit local files rather than hidden app state.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h3>VELA to HELM</h3><p>Expose <code>vela.project.context.v1</code> so HELM can import project paths, evidence counts, deliverables, health, and handoff readiness.</p></article>
+          <article class="card"><h3>HELM to VELA</h3><p>Import <code>helm.codex.handoff.v1</code> as a bounded Codex handoff packet under the project <code>handoffs/</code> layer.</p></article>
         </div>
       </section>
 

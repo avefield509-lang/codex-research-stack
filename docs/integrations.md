@@ -10,6 +10,8 @@ Codex receives bounded handoffs: task, files, constraints, expected output, and 
 
 HELM is the optional local research board. It can show status, evidence, deliverables, environment health, and handoff readiness. VELA remains usable without it.
 
+The VELA and HELM boundary is file-based. HELM imports `vela.project.context.v1`; VELA imports `helm.codex.handoff.v1`. See [VELA and HELM import interface](./imports/vela-helm-interface.md).
+
 ## Zotero And Obsidian
 
 Zotero can manage formal references. Obsidian can hold long-lived notes. VELA should point to those tools without copying private databases into the public workflow package.

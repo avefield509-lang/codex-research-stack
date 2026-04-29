@@ -26,7 +26,8 @@
           <div class="hero-actions">
             <a class="button button-primary" href="../getting-started.html">开始使用 VELA</a>
             <a class="button" href="../installation.html">下载说明</a>
-            <a class="button" href="../use-cases.html">使用场景</a>
+            <a class="button" href="../imports.html">连接 HELM</a>
+            <a class="button" href="https://github.com/Marcus-AI4SS/HELM">HELM 仓库</a>
           </div>
         </div>
       </section>
@@ -41,6 +42,17 @@
           <article class="card"><h3>证据纪律</h3><p>材料不是证据；只有来源、访问时间、核验、权利或伦理字段可见后，材料才进入证据层。</p></article>
           <article class="card"><h3>Codex 交接</h3><p>交给 Codex 的任务包含文件、约束、预期输出和已知缺口。</p></article>
           <article class="card"><h3>可选看板</h3><p>HELM 可以读取同一套项目状态，但 VELA 不依赖 HELM。</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>两个独立品牌，一套共享契约</h2>
+          <p>VELA 不需要 HELM 也能安装使用。HELM 不需要 VELA 也能运行。组合使用时，两者通过显式本地文件交换状态，而不是依赖隐藏 app 状态。</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h3>VELA 到 HELM</h3><p>暴露 <code>vela.project.context.v1</code>，让 HELM 导入项目路径、证据计数、交付物、环境健康和交接准备度。</p></article>
+          <article class="card"><h3>HELM 到 VELA</h3><p>导入 <code>helm.codex.handoff.v1</code>，作为有边界的 Codex 交接包存入项目 <code>handoffs/</code> 层。</p></article>
         </div>
       </section>
 
