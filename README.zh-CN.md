@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA 分层帆形标志" width="132">
   <h1>VELA</h1>
-  <p><strong>面向 Codex 科研工作的工作流环境包</strong></p>
+  <p><strong>面向 Codex 科研工作的便携式 workflow wrapper</strong></p>
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.md">English</a>
@@ -14,30 +14,24 @@
   </p>
 </div>
 
-VELA 是一套可以放进用户自己 Codex 工作空间的可移植科研工作流环境。它给研究项目提供稳定的运行层：材料、证据、主张、方法说明、交付物和 Codex 交接保持分层、可读、可复核。
+VELA 给 Codex 一个有边界、证据感知、可复核的科研任务操作层。它封装项目结构、`AGENTS.md` 指令、Codex 交接合约、证据台账、验证报告和 HELM 可读状态。
 
-它不是桌面 app，不是聊天界面，也不是黑箱论文生成器。VELA 是工作流包；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选本地科研看板，可以读取同一套项目状态。
+它不是桌面 app，不是聊天界面，不是论文生成器，也不是隐藏自动执行的 agent。VELA 准备有边界的任务，Codex 执行，用户复核；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选本地科研看板，可以读取同一套项目状态。
 
 ## 五分钟开始
 
 ```powershell
-git clone REPOSITORY_URL vela
+git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
 cd vela
+.\install.ps1
+.\vela.ps1 init ..\my-research-project --skip-codex-trust
+cd ..\my-research-project
+python ..\vela\scripts\vela.py handoff new --template claim-check
+python ..\vela\scripts\vela.py handoff lint handoffs\H001.yaml
+python ..\vela\scripts\vela.py validate . --repair-context
 ```
 
-然后在旁边创建你的研究项目文件夹：
-
-```text
-my-research-project/
-  materials/
-  evidence/
-  claims/
-  methods/
-  deliverables/
-  handoffs/
-```
-
-`REPOSITORY_URL` 指当前公开 VELA 仓库地址。
+生成的项目会包含 `materials/`、`evidence/`、`claims/`、`methods/`、`deliverables/`、`handoffs/`、`logs/`、`.codex/` 和 `.vela/context.json`。
 
 ## VELA 帮你解决什么
 
@@ -46,6 +40,7 @@ my-research-project/
 | 启动项目时不丢结构 | 给研究问题、范围、来源和预期交付物一个清楚位置 |
 | 保持证据诚实 | 区分已收集材料和已核验证据的生命周期 |
 | 和 Codex 协作但不失控 | 交接提示必须说明任务、文件、约束、预期输出和已知缺口 |
+| 接入 HELM | 通过 `.vela/context.json` 暴露 `vela.project.context.v1` |
 | 准备可分享产物 | 在交付物离开项目之前暴露无支持主张和私人材料风险 |
 
 ## 工作流分层
@@ -61,13 +56,20 @@ my-research-project/
 
 ## 一个合格的 Codex 交接
 
-```markdown
-任务：
-相关文件：
-约束：
-预期输出：
-已知缺口：
-复核标准：
+```yaml
+schema_version: vela.codex.handoff.v1
+handoff_id: H001
+scope:
+  task: 检查某个 claim 是否被指定 evidence 支持
+  relevant_files:
+    - claims/C001.md
+    - evidence/E001.yaml
+constraints:
+  - 不新增主张
+expected_output:
+  path: logs/codex-runs/H001-result.md
+review_standard:
+  - 每个支撑判断必须指向 evidence_id
 ```
 
 交接应该足够小。Codex 需要获得完成任务所需的上下文，而不是获得重写整个项目的开放授权。
@@ -76,7 +78,7 @@ my-research-project/
 
 | 产品 | 角色 | 能否独立存在 |
 | --- | --- | --- |
-| **VELA** | 面向 Codex 的科研工作流环境 | 可以 |
+| **VELA** | 面向 Codex 的便携式工作流封装包 | 可以 |
 | **HELM** | 展示状态、证据、交付物、环境健康和交接情况的本地科研看板 | 可以 |
 
 只需要可移植工作流时，单独使用 VELA。需要本地可视化看板时，再接入 HELM。
@@ -107,5 +109,7 @@ my-research-project/
 | `docs/imports/` | VELA 与 HELM 的导入契约 |
 | `docs/sync-log/` | 本地跨仓同步记录 |
 | `examples/` | 可检查的最小项目和快速演示 |
+| `package/` | `vela init` 复制到研究项目里的 starter package |
+| `schemas/` | context 和 handoff 的机器可读 schema |
 | `scripts/` | 初始化、验证和本地维护辅助脚本 |
 | `skills/` | Codex skill、profile、schema 和模板层 |

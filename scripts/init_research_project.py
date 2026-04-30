@@ -11,8 +11,10 @@ from typing import Any
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from scripts import public_release_env as pre
+    from scripts import vela_contract as contract
 else:
     from scripts import public_release_env as pre
+    from scripts import vela_contract as contract
 
 
 PROJECT_AGENT_TEMPLATES: list[dict[str, Any]] = [
@@ -221,10 +223,14 @@ def register_project(project_root: Path, route_hint: str | None = None) -> None:
 def initialize_project(project_root: Path, skip_codex_trust: bool = False, route_hint: str | None = None) -> dict[str, Any]:
     project_root = project_root.expanduser().resolve()
     project_name = project_root.name
+    project_root.mkdir(parents=True, exist_ok=True)
 
     root_agents_path = pre.SKILLS_ROOT / "AGENTS.md"
     if not root_agents_path.exists():
         raise FileNotFoundError(f"公开版 skills/AGENTS.md 不存在：{root_agents_path}")
+
+    contract.install_starter_package(project_root)
+    contract.ensure_wrapper_dirs(project_root)
 
     project_agents_dir = project_root / ".codex" / "agents"
     dispatch_dir = project_root / ".codex" / "dispatch"
@@ -233,6 +239,9 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
     handoff_logs_dir = project_root / "logs" / "agent-handoffs"
     gate_logs_dir = project_root / "logs" / "quality-gates"
     project_state_dir = project_root / "logs" / "project-state"
+    helm_handoffs_dir = project_root / "handoffs" / "helm"
+    codex_runs_dir = project_root / "logs" / "codex-runs"
+    privacy_scans_dir = project_root / "logs" / "privacy-scans"
 
     for path in (
         project_agents_dir,
@@ -240,7 +249,10 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
         context_packets_dir,
         agent_runs_dir,
         handoff_logs_dir,
+        helm_handoffs_dir,
+        codex_runs_dir,
         gate_logs_dir,
+        privacy_scans_dir,
         project_state_dir,
     ):
         path.mkdir(parents=True, exist_ok=True)
@@ -264,13 +276,13 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
                 "",
                 "- A Git repository when Git is available",
                 "- Project-level AGENTS.md",
-                "- .codex/agents starter definitions",
-                "- Canonical dispatch, handoff, gate, and project-state directories",
-                "- Pipeline status and writing-quality report templates",
+                "- .codex command templates for bounded Codex work",
+                "- Materials, evidence, claims, methods, deliverables, handoffs, and logs directories",
+                "- .vela/context.json for HELM and other local readers",
                 "",
                 "## Recommended next step",
                 "",
-                "Use the desktop app or the public bridge to preview a route and scaffold the first research squad.",
+                "Run `vela validate . --repair-context`, then create the first bounded Codex handoff with `vela handoff new --project .`.",
             ]
         )
         + "\n",
@@ -397,11 +409,14 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
         trust_updated = _append_codex_trust(project_root)
 
     register_project(project_root, route_hint=route_hint)
+    context = contract.write_project_context(project_root)
 
     return {
         "ok": True,
         "project_root": str(project_root),
         "project_name": project_name,
+        "context_schema": context["schema_version"],
+        "context_path": str(project_root / ".vela" / "context.json"),
         "git_initialized": git_initialized,
         "codex_trust_updated": trust_updated,
         "route_hint": route_hint,
@@ -409,6 +424,7 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
             "project_agents_dir": str(project_agents_dir),
             "dispatch_dir": str(dispatch_dir),
             "context_packets_dir": str(context_packets_dir),
+            "helm_handoffs_dir": str(helm_handoffs_dir),
             "gate_logs_dir": str(gate_logs_dir),
             "project_state_dir": str(project_state_dir),
         },

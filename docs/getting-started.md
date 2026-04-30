@@ -1,23 +1,32 @@
 # Getting Started
 
-Use VELA when you want Codex to work from a clear research state rather than from loose conversation history.
+Use VELA when you want Codex to work from a bounded project state rather than loose conversation history. VELA is a workflow wrapper package around Codex, not a desktop app or a hidden agent loop.
 
 ## 1. Download VELA
 
 Clone or download the repository you are viewing:
 
 ```powershell
-git clone REPOSITORY_URL vela
+git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
 cd vela
+.\install.ps1
 ```
 
-`REPOSITORY_URL` is the URL of this public VELA repository.
+On macOS or Linux:
 
-## 2. Create A Project Folder
+```bash
+git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
+cd vela
+sh ./install.sh
+```
 
-Create a folder for your research project. Keep private data in your project folder, not in the VELA repository.
+## 2. Initialize A Project
 
-Suggested top-level sections:
+```powershell
+.\vela.ps1 init ..\my-research-project --skip-codex-trust
+```
+
+This creates:
 
 - `materials/`
 - `evidence/`
@@ -25,8 +34,11 @@ Suggested top-level sections:
 - `methods/`
 - `deliverables/`
 - `handoffs/`
+- `logs/`
+- `.codex/`
+- `.vela/context.json`
 
-The names can change, but the distinction should remain.
+Keep private data in your project folder, not in the VELA repository.
 
 ## 3. Capture Materials
 
@@ -45,16 +57,24 @@ A material becomes evidence only when the project records:
 
 ## 5. Ask Codex For Bounded Work
 
-Before asking Codex to work, write a handoff that states:
+Before asking Codex to work, create a handoff:
 
-- task;
-- relevant files;
-- constraints;
-- expected output;
-- known gaps.
+```powershell
+python ..\vela\scripts\vela.py handoff new --project .
+python ..\vela\scripts\vela.py handoff lint handoffs\H001.yaml
+python ..\vela\scripts\vela.py handoff render handoffs\H001.yaml --out handoffs\H001.prompt.md
+```
 
 This keeps Codex work reviewable and prevents a broad prompt from silently changing the research record.
 
-## 6. Add HELM Later If Useful
+## 6. Validate And Refresh HELM Context
+
+```powershell
+python ..\vela\scripts\vela.py validate . --repair-context
+```
+
+HELM reads `.vela/context.json` when you want a local board over the same project state.
+
+## 7. Add HELM Later If Useful
 
 HELM is optional. Use it when you want a local board for project status, evidence, deliverables, environment health, and Codex handoffs.

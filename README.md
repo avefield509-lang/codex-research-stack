@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA layered sail mark" width="132">
   <h1>VELA</h1>
-  <p><strong>Workflow Environment Package for Codex-based research</strong></p>
+  <p><strong>Portable workflow wrapper package for Codex-based research</strong></p>
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
@@ -14,30 +14,25 @@
   </p>
 </div>
 
-VELA is a portable research workflow environment you can place inside your own Codex workspace. It gives a research project a stable operating layer: materials, evidence, claims, method notes, deliverables, and Codex handoffs remain separate, readable, and reviewable.
+VELA gives Codex a bounded, evidence-aware operating layer for research work. It packages project scaffolds, `AGENTS.md` instructions, Codex handoff contracts, evidence ledgers, claim checks, validation reports, and HELM-readable local state.
 
-It is not a desktop app. It is not a chat interface. It is not a black-box paper generator. VELA is the workflow package; [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional local research board that can read the same project state.
+VELA is not a desktop app, chat interface, paper generator, citation manager, hidden autonomous agent, or private memory store. VELA prepares bounded work for Codex; Codex performs the task; people review the result. [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional local research board that can read the same project state.
 
 ## Start In Five Minutes
 
 ```powershell
-git clone REPOSITORY_URL vela
+git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
 cd vela
+.\install.ps1
+.\vela.ps1 init ..\my-research-project --skip-codex-trust
+cd ..\my-research-project
+python ..\vela\scripts\vela.py handoff new --template claim-check
+python ..\vela\scripts\vela.py handoff lint handoffs\H001.yaml
+python ..\vela\scripts\vela.py handoff render handoffs\H001.yaml --out handoffs\H001.prompt.md
+python ..\vela\scripts\vela.py validate . --repair-context
 ```
 
-Then create your research project folder next to it:
-
-```text
-my-research-project/
-  materials/
-  evidence/
-  claims/
-  methods/
-  deliverables/
-  handoffs/
-```
-
-Use `REPOSITORY_URL` as the URL of the public VELA repository you are viewing.
+The generated project contains `materials/`, `evidence/`, `claims/`, `methods/`, `deliverables/`, `handoffs/`, `logs/`, `.codex/`, and `.vela/context.json`.
 
 ## What VELA Helps You Do
 
@@ -45,7 +40,8 @@ Use `REPOSITORY_URL` as the URL of the public VELA repository you are viewing.
 | --- | --- |
 | Start a project without losing structure | A clear place for question, scope, sources, and expected deliverables |
 | Keep evidence honest | A lifecycle that separates collected material from verified evidence |
-| Work with Codex safely | Handoff prompts that name the task, files, constraints, expected output, and known gaps |
+| Work with Codex safely | Handoff packets that name the task, files, constraints, expected output, and review standard |
+| Connect to HELM | `.vela/context.json` using `vela.project.context.v1` |
 | Prepare shareable outputs | Checks that reveal unsupported claims and private material before a deliverable leaves the project |
 
 ## The Workflow
@@ -61,13 +57,20 @@ Use `REPOSITORY_URL` as the URL of the public VELA repository you are viewing.
 
 ## A Good Codex Handoff
 
-```markdown
-Task:
-Relevant files:
-Constraints:
-Expected output:
-Known gaps:
-Review standard:
+```yaml
+schema_version: vela.codex.handoff.v1
+handoff_id: H001
+scope:
+  task: Check whether a claim is supported by named evidence.
+  relevant_files:
+    - claims/C001.md
+    - evidence/E001.yaml
+constraints:
+  - Do not add new claims.
+expected_output:
+  path: logs/codex-runs/H001-result.md
+review_standard:
+  - Every support judgment must cite an evidence_id.
 ```
 
 The handoff is intentionally small. Codex should receive enough context to do the task, not an unbounded invitation to rewrite the project.
@@ -76,7 +79,7 @@ The handoff is intentionally small. Codex should receive enough context to do th
 
 | Product | Role | Can Stand Alone? |
 | --- | --- | --- |
-| **VELA** | Research workflow environment for Codex | Yes |
+| **VELA** | Portable Codex workflow wrapper package | Yes |
 | **HELM** | Local research board for status, evidence, deliverables, environment health, and Codex handoffs | Yes |
 
 Use VELA by itself when you want a portable workflow. Add HELM when you want a visual local board over the same project state.
@@ -107,5 +110,7 @@ See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 | `docs/imports/` | VELA and HELM import contracts |
 | `docs/sync-log/` | Local cross-repository synchronization notes |
 | `examples/` | Minimal project and quick demo for inspection |
+| `package/` | Starter package copied into a research project by `vela init` |
+| `schemas/` | Machine-readable context and handoff schemas |
 | `scripts/` | Setup, validation, and local maintenance helpers |
 | `skills/` | Codex skill, profile, schema, and template layer |

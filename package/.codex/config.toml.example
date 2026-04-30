@@ -1,0 +1,17 @@
+# Project-scoped Codex configuration example.
+# VELA provides this template but does not modify global Codex config automatically.
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[profiles.read_only_research]
+approval_policy = "on-request"
+sandbox_mode = "read-only"
+
+[profiles.edit_with_approval]
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[profiles.public_export_review]
+approval_policy = "on-request"
+sandbox_mode = "read-only"
