@@ -5,7 +5,7 @@
   <p><em>Versioned Evidence Lifecycle Architecture</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
-    · <a href="https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/">Pages</a>
+    · <a href="https://marcus-ai4ss.github.io/VELA/">Pages</a>
     · <a href="./docs/getting-started.md">Getting started</a>
     · <a href="./docs/imports/vela-helm-interface.md">HELM interface</a>
     · <a href="./docs/workflow-core.md">Workflow core</a>
@@ -21,15 +21,15 @@ VELA is not a desktop app, chat interface, paper generator, citation manager, hi
 ## Start In Five Minutes
 
 ```powershell
-git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
+git clone https://github.com/Marcus-AI4SS/VELA.git vela
 cd vela
 .\install.ps1
 .\vela.ps1 init ..\my-research-project --skip-codex-trust
 cd ..\my-research-project
-python ..\vela\scripts\vela.py handoff new --template claim-check
-python ..\vela\scripts\vela.py handoff lint handoffs\H001.yaml
-python ..\vela\scripts\vela.py handoff render handoffs\H001.yaml --out handoffs\H001.prompt.md
-python ..\vela\scripts\vela.py validate . --repair-context
+..\vela\vela.ps1 handoff new --template claim-check
+..\vela\vela.ps1 handoff lint handoffs\H001.yaml
+..\vela\vela.ps1 handoff render handoffs\H001.yaml --out handoffs\H001.prompt.md
+..\vela\vela.ps1 validate . --repair-context
 ```
 
 The generated project contains `materials/`, `evidence/`, `claims/`, `methods/`, `deliverables/`, `handoffs/`, `logs/`, `.codex/`, and `.vela/context.json`.
@@ -87,7 +87,7 @@ Use VELA by itself when you want a portable workflow. Add HELM when you want a v
 The shared import contract has two directions:
 
 - `vela.project.context.v1`: VELA exposes project state that HELM can read.
-- `helm.codex.handoff.v1`: HELM prepares a bounded Codex handoff packet that VELA can store under `handoffs/`.
+- `helm.codex.handoff.v1`: HELM prepares a bounded Codex handoff packet for the user to copy back into Codex; VELA should only store it after an explicit user save or export action.
 
 See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 

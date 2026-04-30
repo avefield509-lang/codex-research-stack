@@ -4,10 +4,10 @@
   "description": "VELA workflow core for Codex research projects with routing, evidence discipline, and review gates.",
   "author": {
     "name": "VELA Contributors",
-    "url": "https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture"
+    "url": "https://github.com/Marcus-AI4SS/VELA"
   },
-  "homepage": "https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/",
-  "repository": "https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture",
+  "homepage": "https://marcus-ai4ss.github.io/VELA/",
+  "repository": "https://github.com/Marcus-AI4SS/VELA",
   "license": "MIT",
   "keywords": [
     "codex",
@@ -29,9 +29,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/",
-    "privacyPolicyURL": "https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture/blob/main/PRIVACY-BOUNDARIES.md",
-    "termsOfServiceURL": "https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture/blob/main/PRIVACY-BOUNDARIES.md",
+    "websiteURL": "https://marcus-ai4ss.github.io/VELA/",
+    "privacyPolicyURL": "https://github.com/Marcus-AI4SS/VELA/blob/main/PRIVACY-BOUNDARIES.md",
+    "termsOfServiceURL": "https://github.com/Marcus-AI4SS/VELA/blob/main/PRIVACY-BOUNDARIES.md",
     "defaultPrompt": [
       "Route this research task automatically and explain the plan before execution.",
       "Show which research route, quality gates, and profiles this task needs.",

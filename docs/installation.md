@@ -5,7 +5,7 @@ VELA is a repository-based Codex workflow wrapper. There is no desktop installer
 ## Download
 
 ```powershell
-git clone https://github.com/Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture.git vela
+git clone https://github.com/Marcus-AI4SS/VELA.git vela
 cd vela
 .\install.ps1
 ```
@@ -19,8 +19,8 @@ Initialize a project and then return to Codex with a bounded handoff:
 ```powershell
 .\vela.ps1 init ..\my-research-project --skip-codex-trust
 cd ..\my-research-project
-python ..\vela\scripts\vela.py handoff new --project .
-python ..\vela\scripts\vela.py validate . --repair-context
+..\vela\vela.ps1 handoff new --project .
+..\vela\vela.ps1 validate . --repair-context
 ```
 
 VELA provides `.codex/config.toml.example` and `AGENTS.md` templates, but it does not silently rewrite your global Codex configuration.

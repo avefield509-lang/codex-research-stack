@@ -52,7 +52,8 @@
   },
   "helm": {
     "import_ready": true,
-    "handoff_dir": "handoffs/helm"
+    "handoff_dir": "handoffs/helm",
+    "handoff_policy": "explicit_user_export_only"
   },
   "deliverables": [],
   "handoffs": []

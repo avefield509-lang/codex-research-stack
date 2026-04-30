@@ -172,6 +172,7 @@ def build_project_context(project_root: Path) -> dict[str, Any]:
         "helm": {
             "import_ready": not bool(missing_truth),
             "handoff_dir": "handoffs/helm",
+            "handoff_policy": "explicit_user_export_only",
         },
         "deliverables": [],
         "handoffs": [],

@@ -16,4 +16,6 @@
 
 - HELM should read `.vela/context.json` first.
 - Legacy truth files remain a fallback path.
-- HELM handoffs should be written under `handoffs/helm/` as `helm.codex.handoff.v1`.
+- HELM prepares copyable `helm.codex.handoff.v1` packets for Codex.
+- HELM must not silently write `handoffs/helm/*.json`.
+- If a HELM handoff packet is stored in `handoffs/helm/`, it must come from an explicit user save or export action.
