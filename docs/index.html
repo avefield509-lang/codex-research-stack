@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VELA · Codex Workflow Wrapper</title>
-    <meta name="description" content="VELA is a portable workflow wrapper package for Codex-based research.">
+    <title>VELA · Versatile Experiment Lab &amp; Automation</title>
+    <meta name="description" content="VELA is a portable Codex workflow package: Versatile Experiment Lab &amp; Automation.">
     <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>
@@ -20,9 +20,9 @@
       <section class="hero compact">
         <div>
           <img class="hero-mark" src="./assets/brand/vela-workflow-mark.png" alt="VELA layered sail mark">
-          <div class="eyebrow">Codex Workflow Wrapper</div>
+          <div class="eyebrow">Versatile Experiment Lab &amp; Automation</div>
           <h1>VELA</h1>
-          <p>Install VELA next to Codex to give each research project a bounded, evidence-aware operating layer: AGENTS instructions, handoff packets, validators, logs, and HELM-readable context.</p>
+          <p>VELA gives Codex a portable project lab: folders, rules, handoff templates, evidence structure, validators, and HELM-readable local context.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="./getting-started.html">Start using VELA</a>
             <a class="button" href="./installation.html">Download notes</a>
@@ -32,27 +32,46 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head">
-          <h2>What VELA Gives Codex</h2>
-          <p>A portable wrapper package that stays useful even when no app is installed.</p>
+      <section class="section identity-strip">
+        <div>
+          <div class="eyebrow">Shared product language</div>
+          <h2>VELA and HELM are one workflow pair with two separate jobs.</h2>
         </div>
-        <div class="grid-4">
-          <article class="card"><h3>Starter Package</h3><p><code>vela init</code> creates project folders, AGENTS rules, Codex command templates, logs, and machine-readable state.</p></article>
-          <article class="card"><h3>Evidence Discipline</h3><p>Materials remain drafts until source, access time, verification, and rights or ethics fields are visible.</p></article>
-          <article class="card"><h3>Codex Handoffs</h3><p>Tasks sent to Codex include files, constraints, expected output, review standard, and validation context.</p></article>
-          <article class="card"><h3>Optional Board</h3><p>HELM can read the same project state, but VELA does not depend on HELM.</p></article>
+        <div class="brand-pair">
+          <article class="role-card active">
+            <strong>VELA</strong>
+            <span>Versatile Experiment Lab &amp; Automation</span>
+            <p>Prepares portable project structure and bounded Codex work.</p>
+          </article>
+          <article class="role-card">
+            <strong>HELM</strong>
+            <span>Hub for Evidence, Logs &amp; Monitoring</span>
+            <p>Reads local state and turns it into a clear dashboard.</p>
+          </article>
         </div>
       </section>
 
       <section class="section">
         <div class="section-head">
-          <h2>Two Independent Brands, One Shared Contract</h2>
+          <h2>What VELA Gives Codex</h2>
+          <p>A portable workflow package that stays useful even when no desktop app is installed.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card"><h3>Project Lab</h3><p><code>vela init</code> creates the project folders, AGENTS rules, templates, logs, and machine-readable state.</p></article>
+          <article class="card"><h3>Evidence Lifecycle</h3><p>Materials stay separate from evidence until source, access, verification, and rights or ethics fields are visible.</p></article>
+          <article class="card"><h3>Codex Automation Boundary</h3><p>Handoffs name the task, files, constraints, expected output, review standard, and validation context.</p></article>
+          <article class="card"><h3>HELM Connection</h3><p>HELM can read the same project state as a dashboard, but VELA does not depend on HELM.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>How VELA And HELM Work Together</h2>
           <p>VELA can be installed without HELM. HELM can run without VELA. Together they exchange explicit local files rather than hidden app state.</p>
         </div>
         <div class="grid-2">
-          <article class="card"><h3>VELA to HELM</h3><p>Expose <code>vela.project.context.v1</code> so HELM can import project paths, evidence counts, deliverables, health, and handoff readiness.</p></article>
-          <article class="card"><h3>HELM to VELA</h3><p>HELM prepares <code>helm.codex.handoff.v1</code> as a copyable Codex handoff. VELA should only store it when the user explicitly saves or exports it.</p></article>
+          <article class="card"><h3>VELA → HELM</h3><p>VELA writes <code>vela.project.context.v1</code> so HELM can show paths, status, evidence counts, files, blockers, and local checks.</p></article>
+          <article class="card"><h3>HELM → Codex / VELA</h3><p>HELM prepares <code>helm.codex.handoff.v1</code> as a copyable Codex note. VELA stores it only after an explicit user save or export.</p></article>
         </div>
       </section>
 
@@ -62,10 +81,11 @@
         </div>
         <div class="grid-3">
           <article class="card"><h3>1. Install</h3><p>Run <code>install.ps1</code> or <code>install.sh</code> in the repository you cloned.</p></article>
-          <article class="card"><h3>2. Initialize</h3><p>Run <code>vela init my-project</code> to create a VELA project with <code>.vela/context.json</code>.</p></article>
-          <article class="card"><h3>3. Hand Off</h3><p>Run <code>vela handoff new</code>, lint it, render a prompt, and take the bounded task back to Codex.</p></article>
+          <article class="card"><h3>2. Initialize</h3><p>Run <code>vela init my-project</code> to create a project with a readable local context file.</p></article>
+          <article class="card"><h3>3. Hand Off</h3><p>Create a bounded task, lint it, render a prompt, and take that task back to Codex.</p></article>
         </div>
       </section>
+      <footer>VELA = Versatile Experiment Lab &amp; Automation. HELM = Hub for Evidence, Logs &amp; Monitoring.</footer>
 
     </main>
   </body>

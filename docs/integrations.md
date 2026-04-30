@@ -8,7 +8,7 @@ Codex receives bounded handoffs: task, files, constraints, expected output, and 
 
 ## HELM
 
-HELM is the optional local research board. It can show status, evidence, deliverables, environment health, and handoff readiness. VELA remains usable without it.
+HELM is the optional Hub for Evidence, Logs & Monitoring. It can show status, evidence, files, logs, local checks, and Codex handoff readiness. VELA remains usable without it.
 
 The VELA and HELM boundary is file-based. HELM imports `vela.project.context.v1`; VELA imports `helm.codex.handoff.v1`. See [VELA and HELM import interface](./imports/vela-helm-interface.md).
 

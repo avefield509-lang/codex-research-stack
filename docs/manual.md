@@ -81,8 +81,8 @@ VELA and HELM are separate products:
 
 | Product | Role | Can stand alone? |
 | --- | --- | --- |
-| VELA | Research workflow environment | Yes |
-| HELM | Local research board | Yes |
+| VELA | Versatile Experiment Lab & Automation | Yes |
+| HELM | Hub for Evidence, Logs & Monitoring | Yes |
 
 HELM can later read VELA project state for status, evidence, deliverables, environment health, and handoff readiness. VELA remains usable without HELM.
 
