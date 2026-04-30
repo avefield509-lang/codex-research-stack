@@ -2,7 +2,7 @@
 
 ## Scope
 
-- VELA productization as a Codex workflow wrapper package.
+- VELA productization as the Versatile Experiment Lab & Automation package for Codex.
 - HELM import readiness through `.vela/context.json`.
 
 ## VELA Changes

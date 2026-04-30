@@ -16,8 +16,8 @@
       <section class="hero compact">
         <div>
           <div class="eyebrow">Import Interface</div>
-          <h1><span class="sans">Explicit local files, no hidden coupling.</span></h1>
-          <p>VELA and HELM stay independent. Their integration is a pair of small, inspectable JSON packets stored inside the local research project.</p>
+          <h1><span class="sans">Two products, explicit local files.</span></h1>
+          <p>VELA = Versatile Experiment Lab &amp; Automation. HELM = Hub for Evidence, Logs &amp; Monitoring. They stay independent and exchange inspectable JSON packets inside the local research project.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="./imports/vela-helm-interface.md">Read the contract</a>
             <a class="button" href="https://github.com/Marcus-AI4SS/HELM">Open HELM</a>
@@ -25,8 +25,8 @@
         </div>
       </section>
       <section class="section grid-2">
-        <article class="card"><h3>VELA to HELM</h3><p><code>vela.project.context.v1</code> lets HELM import paths, status, evidence counts, deliverables, environment health, and handoff readiness.</p></article>
-        <article class="card"><h3>HELM to VELA</h3><p><code>helm.codex.handoff.v1</code> is a copyable handoff packet. VELA stores it only after explicit user save or export, never as a silent HELM side effect.</p></article>
+        <article class="card"><h3>VELA → HELM</h3><p><code>vela.project.context.v1</code> lets HELM read paths, status, evidence counts, files, blockers, and local checks.</p></article>
+        <article class="card"><h3>HELM → Codex / VELA</h3><p><code>helm.codex.handoff.v1</code> is a copyable Codex note. VELA stores it only after explicit user save or export, never as a silent HELM side effect.</p></article>
       </section>
     </main>
   </body>

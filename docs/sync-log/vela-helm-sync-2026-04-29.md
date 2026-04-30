@@ -4,11 +4,11 @@
 
 - VELA repository: `Marcus-AI4SS/VELA`
 - HELM public repository: `Marcus-AI4SS/HELM`
-- HELM private/self-use repository verified separately: `Marcus-AI4SS/skills-app-own`
+- Self-use HELM work was verified separately and kept outside the public release lane.
 
 ## Boundary Decision
 
-VELA and HELM remain independent products. VELA is the portable workflow environment. HELM is the local research board. The two repositories share visual language, page structure, and import contracts, but neither product controls the other.
+VELA and HELM remain independent products. VELA is the Versatile Experiment Lab & Automation package. HELM is the Hub for Evidence, Logs & Monitoring. The two repositories share visual language, page structure, and import contracts, but neither product controls the other.
 
 ## Synchronized Items
 
@@ -17,9 +17,9 @@ VELA and HELM remain independent products. VELA is the portable workflow environ
 - Import contract added at `docs/imports/vela-helm-interface.md`.
 - Machine-readable schema added at `docs/imports/vela-helm-interface.schema.json`.
 - Shared direction names:
-  - `vela.project.context.v1`: VELA to HELM project context import.
-  - `helm.codex.handoff.v1`: HELM to VELA Codex handoff import.
+  - `vela.project.context.v1`: VELA → HELM project context import.
+  - `helm.codex.handoff.v1`: HELM → Codex / VELA handoff import.
 
 ## Local Note
 
-The private HELM/self-use line is not the public Pages target. Public homepage and Pages work should land in `Marcus-AI4SS/HELM`, not `skills-app-own`.
+The self-use HELM line is not the public Pages target. Public homepage and Pages work should land in `Marcus-AI4SS/HELM`.

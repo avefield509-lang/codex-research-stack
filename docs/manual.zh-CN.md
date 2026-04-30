@@ -2,7 +2,7 @@
 
 更新：2026-04-26
 
-VELA 是面向 Codex 的可移植科研工作流环境。它是一套文件化工作方法，不是桌面 app，也不是自动化服务。
+VELA = **Versatile Experiment Lab & Automation**。它是面向 Codex 的便携式项目工作包和自动化边界，不是桌面 app，也不是后台自动化服务。
 
 ## VELA 是什么
 
@@ -81,8 +81,8 @@ VELA 与 HELM 是两个独立产品：
 
 | 产品 | 角色 | 能否独立使用 |
 | --- | --- | --- |
-| VELA | 科研工作流环境 | 可以 |
-| HELM | 本地科研看板 | 可以 |
+| VELA | Versatile Experiment Lab & Automation | 可以 |
+| HELM | Hub for Evidence, Logs & Monitoring | 可以 |
 
 HELM 后续可以读取 VELA 项目状态，用于展示状态、证据、交付物、环境健康和交接准备度。VELA 本身不依赖 HELM。
 

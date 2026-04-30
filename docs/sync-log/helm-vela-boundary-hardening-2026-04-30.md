@@ -4,7 +4,7 @@
 
 - Public HELM main includes `025d089 Harden HELM VELA context boundary`.
 - Public HELM PR #7 superseded the earlier write-back behavior.
-- The old self-use HELM draft PR was closed unmerged because it mixed historical private app payload with the smaller VELA context idea.
+- The old self-use HELM draft PR was closed unmerged because it mixed historical app payload with the smaller VELA context idea.
 
 ## Accepted Boundary
 

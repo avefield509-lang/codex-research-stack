@@ -1,8 +1,8 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA 分层帆形标志" width="132">
   <h1>VELA</h1>
-  <p><strong>面向 Codex 科研工作的便携式 workflow wrapper</strong></p>
-  <p><em>Versioned Evidence Lifecycle Architecture</em></p>
+  <p><strong>Versatile Experiment Lab &amp; Automation</strong></p>
+  <p><em>面向 Codex 科研工作的便携式项目工作包</em></p>
   <p>
     <a href="./README.md">English</a>
     · <a href="https://marcus-ai4ss.github.io/VELA/">Pages</a>
@@ -14,9 +14,9 @@
   </p>
 </div>
 
-VELA 给 Codex 一个有边界、证据感知、可复核的科研任务操作层。它封装项目结构、`AGENTS.md` 指令、Codex 交接合约、证据台账、验证报告和 HELM 可读状态。
+VELA = **Versatile Experiment Lab & Automation**。它给 Codex 一个有边界、证据感知、可复核的科研任务操作层，封装项目结构、`AGENTS.md` 指令、Codex 交接合约、证据台账、验证报告和 HELM 可读状态。
 
-它不是桌面 app，不是聊天界面，不是论文生成器，也不是隐藏自动执行的 agent。VELA 准备有边界的任务，Codex 执行，用户复核；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选本地科研看板，可以读取同一套项目状态。
+它不是桌面 app，不是聊天界面，不是论文生成器，也不是隐藏自动执行的 agent。VELA 准备有边界的任务，Codex 执行，用户复核；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选的 Hub for Evidence, Logs & Monitoring，可以读取同一套项目状态。
 
 ## 五分钟开始
 
@@ -78,8 +78,8 @@ review_standard:
 
 | 产品 | 角色 | 能否独立存在 |
 | --- | --- | --- |
-| **VELA** | 面向 Codex 的便携式工作流封装包 | 可以 |
-| **HELM** | 展示状态、证据、交付物、环境健康和交接情况的本地科研看板 | 可以 |
+| **VELA** = Versatile Experiment Lab & Automation | 便携式项目实验室、自动化边界和 Codex 工作包 | 可以 |
+| **HELM** = Hub for Evidence, Logs & Monitoring | 展示状态、证据、日志、文件、本地检查和 Codex 说明的本地看板 | 可以 |
 
 只需要可移植工作流时，单独使用 VELA。需要本地可视化看板时，再接入 HELM。
 

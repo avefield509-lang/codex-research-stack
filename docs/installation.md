@@ -1,6 +1,6 @@
 # Installation
 
-VELA is a repository-based Codex workflow wrapper. There is no desktop installer; the install scripts create a local `vela` shim and a small install receipt under `~/.vela`.
+VELA is a repository-based Codex project workflow package. There is no desktop installer; the install scripts create a local `vela` shim and a small install receipt under `~/.vela`.
 
 ## Download
 
@@ -31,4 +31,4 @@ Do not put private notes, PDFs, browser sessions, Zotero databases, Obsidian vau
 
 ## Optional HELM
 
-HELM is a separate local board. It can make VELA project state easier to inspect, but it is not required to use VELA.
+HELM is a separate Hub for Evidence, Logs & Monitoring. It can make VELA project state easier to inspect, but it is not required to use VELA.

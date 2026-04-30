@@ -1,8 +1,8 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA layered sail mark" width="132">
   <h1>VELA</h1>
-  <p><strong>Portable workflow wrapper package for Codex-based research</strong></p>
-  <p><em>Versioned Evidence Lifecycle Architecture</em></p>
+  <p><strong>Versatile Experiment Lab &amp; Automation</strong></p>
+  <p><em>Portable project workflow package for Codex-based research</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
     · <a href="https://marcus-ai4ss.github.io/VELA/">Pages</a>
@@ -14,9 +14,9 @@
   </p>
 </div>
 
-VELA gives Codex a bounded, evidence-aware operating layer for research work. It packages project scaffolds, `AGENTS.md` instructions, Codex handoff contracts, evidence ledgers, claim checks, validation reports, and HELM-readable local state.
+VELA = **Versatile Experiment Lab & Automation**. It gives Codex a bounded, evidence-aware operating layer for research work. It packages project scaffolds, `AGENTS.md` instructions, Codex handoff contracts, evidence ledgers, claim checks, validation reports, and HELM-readable local state.
 
-VELA is not a desktop app, chat interface, paper generator, citation manager, hidden autonomous agent, or private memory store. VELA prepares bounded work for Codex; Codex performs the task; people review the result. [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional local research board that can read the same project state.
+VELA is not a desktop app, chat interface, paper generator, citation manager, hidden autonomous agent, or private memory store. VELA prepares bounded work for Codex; Codex performs the task; people review the result. [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional Hub for Evidence, Logs & Monitoring that can read the same project state.
 
 ## Start In Five Minutes
 
@@ -79,8 +79,8 @@ The handoff is intentionally small. Codex should receive enough context to do th
 
 | Product | Role | Can Stand Alone? |
 | --- | --- | --- |
-| **VELA** | Portable Codex workflow wrapper package | Yes |
-| **HELM** | Local research board for status, evidence, deliverables, environment health, and Codex handoffs | Yes |
+| **VELA** = Versatile Experiment Lab & Automation | Portable project lab, automation boundary, and Codex workflow package | Yes |
+| **HELM** = Hub for Evidence, Logs & Monitoring | Local board for status, evidence, logs, files, checks, and Codex notes | Yes |
 
 Use VELA by itself when you want a portable workflow. Add HELM when you want a visual local board over the same project state.
 
