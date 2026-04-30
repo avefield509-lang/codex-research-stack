@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/schemas/vela.project.context.v1.schema.json",
+  "$id": "https://marcus-ai4ss.github.io/VELA/schemas/vela.project.context.v1.schema.json",
   "title": "VELA project context",
   "type": "object",
   "required": ["schema_version", "generated_at", "project", "paths", "truth_files", "counts", "quality", "helm"],
@@ -71,7 +71,8 @@
       "additionalProperties": true,
       "properties": {
         "import_ready": { "type": "boolean" },
-        "handoff_dir": { "type": "string" }
+        "handoff_dir": { "type": "string" },
+        "handoff_policy": { "enum": ["explicit_user_export_only", "copy_only_by_default"] }
       }
     }
   }

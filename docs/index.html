@@ -52,7 +52,7 @@
         </div>
         <div class="grid-2">
           <article class="card"><h3>VELA to HELM</h3><p>Expose <code>vela.project.context.v1</code> so HELM can import project paths, evidence counts, deliverables, health, and handoff readiness.</p></article>
-          <article class="card"><h3>HELM to VELA</h3><p>Import <code>helm.codex.handoff.v1</code> as a bounded Codex handoff packet under the project <code>handoffs/</code> layer.</p></article>
+          <article class="card"><h3>HELM to VELA</h3><p>HELM prepares <code>helm.codex.handoff.v1</code> as a copyable Codex handoff. VELA should only store it when the user explicitly saves or exports it.</p></article>
         </div>
       </section>
 

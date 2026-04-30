@@ -63,7 +63,8 @@ Minimal packet:
   },
   "helm": {
     "import_ready": true,
-    "handoff_dir": "handoffs/helm"
+    "handoff_dir": "handoffs/helm",
+    "handoff_policy": "explicit_user_export_only"
   }
 }
 ```
@@ -72,9 +73,9 @@ HELM must treat missing fields as unknown, not as success.
 
 ## Direction 2: HELM to VELA
 
-VELA imports a HELM handoff packet when HELM prepares a bounded continuation task for Codex.
+HELM prepares a bounded continuation task for Codex using `helm.codex.handoff.v1`. In the public HELM app this packet is copyable user-facing output, not an automatic project mutation.
 
-Recommended path:
+There is no automatic write path. If a user explicitly saves or exports the packet for audit, use the reserved project path:
 
 ```text
 project-root/handoffs/helm/2026-04-29-codex-handoff.json
@@ -99,12 +100,13 @@ Minimal packet:
 }
 ```
 
-VELA should store the packet as a handoff record. It should not execute the task automatically.
+VELA may store a manually saved or explicitly exported packet as a handoff record. It must not require `handoffs/helm/*.json` to exist for HELM import readiness, and it must not execute the task automatically.
 
 ## Shared Boundary Rules
 
 - Either product can be used alone.
-- Import packets are local files that users can inspect, copy, commit, or delete.
+- VELA to HELM import is file-based through `.vela/context.json`.
+- HELM to VELA handoff is copy-first. File storage is allowed only after explicit user save or export.
 - The interface does not authorize cloud sync, background execution, hidden agent scheduling, or automatic citation claims.
 - VELA owns workflow state. HELM owns local dashboard presentation and handoff preparation.
 

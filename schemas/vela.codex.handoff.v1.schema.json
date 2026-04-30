@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/schemas/vela.codex.handoff.v1.schema.json",
+  "$id": "https://marcus-ai4ss.github.io/VELA/schemas/vela.codex.handoff.v1.schema.json",
   "title": "VELA Codex handoff",
   "type": "object",
   "required": ["schema_version", "handoff_id", "created_at", "scope", "constraints", "expected_output", "review_standard", "completion"],

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://marcus-ai4ss.github.io/VELA-Versioned-Evidence-Lifecycle-Architecture/schemas/helm.codex.handoff.v1.schema.json",
+  "$id": "https://marcus-ai4ss.github.io/VELA/schemas/helm.codex.handoff.v1.schema.json",
   "title": "HELM Codex handoff",
   "type": "object",
   "required": ["schema_version", "generated_at", "project", "recommended_action", "relevant_files", "constraints", "missing_inputs", "validation_context", "human_review_required", "text"],

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- VELA repository: `Marcus-AI4SS/VELA-Versioned-Evidence-Lifecycle-Architecture`
+- VELA repository: `Marcus-AI4SS/VELA`
 - HELM public repository: `Marcus-AI4SS/HELM`
 - HELM private/self-use repository verified separately: `Marcus-AI4SS/skills-app-own`
 
