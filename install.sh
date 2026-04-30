@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+set -eu
+
+REPO_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PYTHON_BIN=${PYTHON:-python3}
+VELA_HOME=${VELA_HOME:-"$HOME/.vela"}
+STATE_DIR="$VELA_HOME/state"
+BIN_DIR="$VELA_HOME/bin"
+mkdir -p "$STATE_DIR" "$BIN_DIR"
+
+SHIM="$BIN_DIR/vela"
+SCRIPT="$REPO_ROOT/scripts/vela.py"
+cat > "$SHIM" <<EOF
+#!/usr/bin/env sh
+exec "$PYTHON_BIN" "$SCRIPT" "\$@"
+EOF
+chmod +x "$SHIM"
+
+cat > "$STATE_DIR/install.json" <<EOF
+{
+  "schema_version": "vela.install.receipt.v1",
+  "installed_at": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "repo_root": "$REPO_ROOT",
+  "vela_home": "$VELA_HOME",
+  "shim": "$SHIM",
+  "codex_home": "${CODEX_HOME:-$HOME/.codex}"
+}
+EOF
+
+"$PYTHON_BIN" "$SCRIPT" doctor
+printf '\nVELA shim created: %s\n' "$SHIM"
+printf 'Add this directory to PATH if you want to run vela directly: %s\n' "$BIN_DIR"

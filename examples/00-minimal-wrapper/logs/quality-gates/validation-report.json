@@ -1,0 +1,7 @@
+{
+  "schema_version": "vela.validation.report.v1",
+  "scope": ".",
+  "decision": "pass",
+  "errors": [],
+  "warnings": []
+}
