@@ -1,5 +1,6 @@
 param(
-  [string]$Python = "python"
+  [string]$Python = "python",
+  [switch]$SkipDependencyInstall
 )
 
 $ErrorActionPreference = "Stop"
@@ -8,6 +9,11 @@ $VelaHome = if ($env:VELA_HOME) { $env:VELA_HOME } else { Join-Path $HOME ".vela
 $StateDir = Join-Path $VelaHome "state"
 $BinDir = Join-Path $VelaHome "bin"
 New-Item -ItemType Directory -Force -Path $StateDir, $BinDir | Out-Null
+
+$Requirements = Join-Path $RepoRoot "requirements.txt"
+if (-not $SkipDependencyInstall -and (Test-Path -LiteralPath $Requirements)) {
+  & $Python -m pip install -r $Requirements
+}
 
 $Shim = Join-Path $BinDir "vela.cmd"
 $Script = Join-Path $RepoRoot "scripts\vela.py"
@@ -20,6 +26,7 @@ $Receipt = @{
   schema_version = "vela.install.receipt.v1"
   installed_at = (Get-Date).ToUniversalTime().ToString("o")
   repo_root = $RepoRoot
+  python = $Python
   vela_home = $VelaHome
   shim = $Shim
   codex_home = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }

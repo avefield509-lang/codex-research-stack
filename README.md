@@ -60,6 +60,10 @@ The generated project contains `materials/`, `evidence/`, `claims/`, `methods/`,
 ```yaml
 schema_version: vela.codex.handoff.v1
 handoff_id: H001
+created_at: "2026-05-05T00:00:00Z"
+created_by: human
+surface: cli
+mode: review_only
 scope:
   task: Check whether a claim is supported by named evidence.
   relevant_files:
@@ -71,9 +75,13 @@ expected_output:
   path: logs/codex-runs/H001-result.md
 review_standard:
   - Every support judgment must cite an evidence_id.
+completion:
+  validation_commands:
+    - vela handoff lint handoffs/H001.yaml
+  human_review_required: true
 ```
 
-The handoff is intentionally small. Codex should receive enough context to do the task, not an unbounded invitation to rewrite the project.
+The handoff is intentionally small and schema-validated. Codex should receive enough context to do the task, not an unbounded invitation to rewrite the project.
 
 ## VELA And HELM
 

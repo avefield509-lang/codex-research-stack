@@ -9,8 +9,10 @@ if __package__ in {None, ""}:
 
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from scripts import vela_contract as contract
+    from scripts import vela_schema
 else:
     from scripts import vela_contract as contract
+    from scripts import vela_schema
 
 
 SCHEMA_VERSION = "vela.project.initializer.v1"
@@ -65,8 +67,24 @@ def _write_json_if_missing(path: Path, payload: dict[str, Any]) -> bool:
 
 def validate_manifest(manifest: dict[str, Any] | None = None) -> dict[str, Any]:
     payload = manifest if manifest is not None else load_manifest()
+    scope = "inline-initializer-manifest" if manifest is not None else str(default_manifest_path())
     errors: list[str] = []
     warnings: list[str] = []
+    schema_errors = vela_schema.validate_payload(payload, SCHEMA_VERSION, scope)
+    errors.extend(schema_errors)
+
+    if not isinstance(payload, dict):
+        return vela_schema.validation_report(
+            validator="initializer_manifest",
+            scope=scope,
+            errors=errors + ["initializer manifest root must be an object"],
+            warnings=warnings,
+            checks=[
+                {"name": "schema", "passed": False},
+                {"name": "path_safety", "passed": False},
+            ],
+            manifest_schema=None,
+        )
 
     if payload.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"schema_version must be {SCHEMA_VERSION}")
@@ -123,12 +141,17 @@ def validate_manifest(manifest: dict[str, Any] | None = None) -> dict[str, Any]:
             if not isinstance(agent_payload, dict):
                 errors.append(f"project agent payload must be an object: {file_name}")
 
-    return {
-        "ok": not errors,
-        "schema_version": "vela.validation.result.v1",
-        "errors": errors,
-        "warnings": warnings,
-    }
+    return vela_schema.validation_report(
+        validator="initializer_manifest",
+        scope=scope,
+        errors=errors,
+        warnings=warnings,
+        checks=[
+            {"name": "schema", "passed": not schema_errors},
+            {"name": "path_safety", "passed": not any("inside the project" in error for error in errors)},
+        ],
+        manifest_schema=payload.get("schema_version") if isinstance(payload, dict) else None,
+    )
 
 
 def materialize_project(project_root: Path, route_hint: str | None = None, manifest_path: Path | None = None) -> dict[str, Any]:

@@ -13,6 +13,7 @@ class VelaInitializerTests(unittest.TestCase):
     def test_initializer_manifest_is_valid(self) -> None:
         result = vela_initializer.validate_manifest()
         self.assertTrue(result["ok"], result)
+        self.assertEqual(result["schema_version"], "vela.validation.report.v1")
         self.assertEqual(result["errors"], [])
 
     def test_manifest_materializes_public_project_without_app_agents(self) -> None:

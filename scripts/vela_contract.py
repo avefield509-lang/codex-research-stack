@@ -6,6 +6,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+if __package__ in {None, ""}:
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from scripts import vela_schema
+else:
+    from scripts import vela_schema
+
 
 SCHEMA_VERSION = "vela.project.context.v1"
 HELM_HANDOFF_SCHEMA_VERSION = "helm.codex.handoff.v1"
@@ -187,6 +195,9 @@ def write_project_context(project_root: Path) -> dict[str, Any]:
     ensure_wrapper_dirs(project_root)
     context = build_project_context(project_root)
     target = project_root / ".vela" / "context.json"
+    schema_errors = vela_schema.validate_payload(context, SCHEMA_VERSION, str(target))
+    if schema_errors:
+        raise ValueError("Invalid VELA project context: " + "; ".join(schema_errors))
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(context, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return context
@@ -199,6 +210,8 @@ def read_project_context(project_root: Path) -> dict[str, Any] | None:
     data = _load_json(target)
     if data.get("schema_version") != SCHEMA_VERSION:
         return None
+    if vela_schema.validate_payload(data, SCHEMA_VERSION, str(target)):
+        return None
     return data
 
 
@@ -207,34 +220,43 @@ def validate_project(project_root: Path, repair_context: bool = False) -> dict[s
     if repair_context:
         write_project_context(project_root)
     required_paths = [
-        *RESEARCH_DIRS,
-        "handoffs",
-        "handoffs/helm",
-        "logs",
-        ".codex",
-        ".vela/context.json",
-        "AGENTS.md",
+        *((relative, "directory") for relative in RESEARCH_DIRS),
+        ("handoffs", "directory"),
+        ("handoffs/helm", "directory"),
+        ("logs", "directory"),
+        (".codex", "directory"),
+        (".vela/context.json", "file"),
+        ("AGENTS.md", "file"),
     ]
     checks = []
-    for relative in required_paths:
+    for relative, expected_kind in required_paths:
         path = project_root / relative
         checks.append(
             {
                 "path": relative,
                 "exists": path.exists(),
-                "kind": "directory" if path.is_dir() else "file",
+                "kind": expected_kind,
             }
         )
-    context = read_project_context(project_root)
     errors = [f"Missing required path: {row['path']}" for row in checks if not row["exists"]]
-    if context is None:
-        errors.append("Missing or invalid .vela/context.json")
-    return {
-        "schema_version": "vela.validation.report.v1",
-        "project_root": str(project_root),
-        "decision": "pass" if not errors else "needs_review",
-        "errors": errors,
-        "warnings": [],
-        "checks": checks,
-        "context_schema": context.get("schema_version") if context else None,
-    }
+    context_path = project_root / ".vela" / "context.json"
+    context_payload: dict[str, Any] | None = None
+    if context_path.exists():
+        payload, parse_errors = vela_schema.load_json_or_yaml(context_path)
+        errors.extend(parse_errors)
+        if payload is None:
+            context_payload = None
+        elif not isinstance(payload, dict):
+            errors.append(f"{context_path}:root-must-be-object")
+        else:
+            context_payload = payload
+            errors.extend(vela_schema.validate_payload(context_payload, SCHEMA_VERSION, str(context_path)))
+    return vela_schema.validation_report(
+        validator="project_validate",
+        scope=str(project_root),
+        errors=errors,
+        warnings=[],
+        checks=checks,
+        project_root=str(project_root),
+        context_schema=context_payload.get("schema_version") if context_payload else None,
+    )

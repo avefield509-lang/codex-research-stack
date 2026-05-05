@@ -9,42 +9,20 @@ from pathlib import Path
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from scripts import init_research_project
+    from scripts import vela_handoff
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
     from scripts import vela_initializer as initializer
 else:
     from scripts import init_research_project
+    from scripts import vela_handoff
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
     from scripts import vela_initializer as initializer
 
 
-HANDOFF_REQUIRED_MARKERS = (
-    "schema_version:",
-    "handoff_id:",
-    "task:",
-    "relevant_files:",
-    "constraints:",
-    "expected_output:",
-    "review_standard:",
-)
-
-
 def _print_json(payload: object) -> None:
     print(json.dumps(payload, ensure_ascii=False, indent=2))
-
-
-def _next_handoff_id(handoffs_dir: Path) -> str:
-    handoffs_dir.mkdir(parents=True, exist_ok=True)
-    existing = sorted(handoffs_dir.glob("H*.yaml"))
-    if not existing:
-        return "H001"
-    numbers = []
-    for path in existing:
-        stem = path.stem.upper()
-        if stem.startswith("H") and stem[1:].isdigit():
-            numbers.append(int(stem[1:]))
-    return f"H{(max(numbers) + 1 if numbers else 1):03d}"
 
 
 def cmd_doctor(_args: argparse.Namespace) -> int:
@@ -80,101 +58,25 @@ def cmd_init(args: argparse.Namespace) -> int:
     return 0
 
 
-def _handoff_template(handoff_id: str, template: str) -> str:
-    task = "Review whether a claim is supported by named evidence." if template == "claim-check" else "Read the relevant files and produce a bounded next-step note."
-    return "\n".join(
-        [
-            "schema_version: vela.codex.handoff.v1",
-            f"handoff_id: {handoff_id}",
-            f"created_at: {contract.utc_now()}",
-            "created_by: human",
-            "surface: cli",
-            "mode: review_only",
-            "project:",
-            "  title: TODO",
-            "  stage: research_design",
-            "scope:",
-            f"  task: {task}",
-            "  relevant_files:",
-            "    - research-map.md",
-            "    - evidence-ledger.yaml",
-            "  excluded_files:",
-            "    - private-notes/",
-            "    - credentials/",
-            "constraints:",
-            "  - Do not add new claims.",
-            "  - Do not treat material notes as verified evidence.",
-            "expected_output:",
-            "  format: markdown",
-            f"  path: logs/codex-runs/{handoff_id}-result.md",
-            "review_standard:",
-            "  - Every support judgment must cite an evidence_id.",
-            "  - Unsupported or uncertain claims must remain marked as needs_review.",
-            "completion:",
-            "  validation_commands:",
-            f"    - vela handoff lint handoffs/{handoff_id}.yaml",
-            "  human_review_required: true",
-            "",
-        ]
-    )
-
-
 def cmd_handoff_new(args: argparse.Namespace) -> int:
-    project_root = Path(args.project or ".").expanduser().resolve()
-    handoffs_dir = project_root / "handoffs"
-    handoff_id = _next_handoff_id(handoffs_dir)
-    target = handoffs_dir / f"{handoff_id}.yaml"
-    target.write_text(_handoff_template(handoff_id, args.template), encoding="utf-8")
-    prompt_target = handoffs_dir / f"{handoff_id}.prompt.md"
-    prompt_target.write_text(_render_handoff_prompt(target), encoding="utf-8")
-    _print_json({"ok": True, "handoff": str(target), "prompt": str(prompt_target)})
-    return 0
-
-
-def _lint_handoff(path: Path) -> dict[str, object]:
-    text = path.read_text(encoding="utf-8") if path.exists() else ""
-    errors = []
-    if not path.exists():
-        errors.append(f"Handoff file not found: {path}")
-    for marker in HANDOFF_REQUIRED_MARKERS:
-        if marker not in text:
-            errors.append(f"Missing marker: {marker}")
-    return {
-        "schema_version": "vela.validation.report.v1",
-        "scope": str(path),
-        "decision": "pass" if not errors else "needs_review",
-        "errors": errors,
-        "warnings": [],
-    }
+    result = vela_handoff.create_handoff(Path(args.project or "."), args.template)
+    _print_json(result)
+    return 0 if result.get("ok") else 1
 
 
 def cmd_handoff_lint(args: argparse.Namespace) -> int:
-    result = _lint_handoff(Path(args.path))
+    result = vela_handoff.lint_handoff(Path(args.path))
     _print_json(result)
-    return 0 if result["decision"] == "pass" else 1
-
-
-def _render_handoff_prompt(path: Path) -> str:
-    text = path.read_text(encoding="utf-8")
-    return "\n".join(
-        [
-            "# VELA Codex Handoff",
-            "",
-            "Read this bounded handoff before acting. Do not expand scope unless the user approves.",
-            "",
-            "```yaml",
-            text.rstrip(),
-            "```",
-            "",
-            "Return changed files, validation results, unsupported claims, and remaining blockers.",
-            "",
-        ]
-    )
+    return 0 if result["ok"] else 1
 
 
 def cmd_handoff_render(args: argparse.Namespace) -> int:
     path = Path(args.path)
-    rendered = _render_handoff_prompt(path)
+    try:
+        rendered = vela_handoff.render_handoff_prompt(path)
+    except ValueError:
+        _print_json(vela_handoff.lint_handoff(path))
+        return 1
     if args.out:
         target = Path(args.out)
         target.parent.mkdir(parents=True, exist_ok=True)

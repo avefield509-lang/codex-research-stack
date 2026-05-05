@@ -8,6 +8,10 @@ STATE_DIR="$VELA_HOME/state"
 BIN_DIR="$VELA_HOME/bin"
 mkdir -p "$STATE_DIR" "$BIN_DIR"
 
+if [ "${VELA_SKIP_DEP_INSTALL:-0}" != "1" ] && [ -f "$REPO_ROOT/requirements.txt" ]; then
+  "$PYTHON_BIN" -m pip install -r "$REPO_ROOT/requirements.txt"
+fi
+
 SHIM="$BIN_DIR/vela"
 SCRIPT="$REPO_ROOT/scripts/vela.py"
 cat > "$SHIM" <<EOF
@@ -21,6 +25,7 @@ cat > "$STATE_DIR/install.json" <<EOF
   "schema_version": "vela.install.receipt.v1",
   "installed_at": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
   "repo_root": "$REPO_ROOT",
+  "python": "$PYTHON_BIN",
   "vela_home": "$VELA_HOME",
   "shim": "$SHIM",
   "codex_home": "${CODEX_HOME:-$HOME/.codex}"

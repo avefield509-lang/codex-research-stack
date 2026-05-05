@@ -59,6 +59,10 @@ cd ..\my-research-project
 ```yaml
 schema_version: vela.codex.handoff.v1
 handoff_id: H001
+created_at: "2026-05-05T00:00:00Z"
+created_by: human
+surface: cli
+mode: review_only
 scope:
   task: 检查某个 claim 是否被指定 evidence 支持
   relevant_files:
@@ -70,9 +74,13 @@ expected_output:
   path: logs/codex-runs/H001-result.md
 review_standard:
   - 每个支撑判断必须指向 evidence_id
+completion:
+  validation_commands:
+    - vela handoff lint handoffs/H001.yaml
+  human_review_required: true
 ```
 
-交接应该足够小。Codex 需要获得完成任务所需的上下文，而不是获得重写整个项目的开放授权。
+交接应该足够小，并且必须通过 schema 校验。Codex 需要获得完成任务所需的上下文，而不是获得重写整个项目的开放授权。
 
 ## VELA 与 HELM
 
