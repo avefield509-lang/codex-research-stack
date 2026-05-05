@@ -141,8 +141,8 @@ Create:
 scripts/vela_schema.py
 scripts/vela_handoff.py
 schemas/vela.validation.report.v1.schema.json
-skills/tests/test_vela_schema.py
-skills/tests/test_vela_handoff.py
+tests/test_vela_schema.py
+tests/test_vela_handoff.py
 ```
 
 Modify:
@@ -173,7 +173,7 @@ If removing is too disruptive, keep it as a compatibility schema but stop using 
 Files:
 
 - Create: `scripts/vela_schema.py`
-- Test: `skills/tests/test_vela_schema.py`
+- Test: `tests/test_vela_schema.py`
 
 Required API:
 
@@ -242,7 +242,7 @@ Files:
 
 - Create: `scripts/vela_handoff.py`
 - Modify: `scripts/vela.py`
-- Test: `skills/tests/test_vela_handoff.py`
+- Test: `tests/test_vela_handoff.py`
 
 Required API:
 
@@ -274,7 +274,7 @@ Behavior:
 Files:
 
 - Modify: `scripts/vela_contract.py`
-- Test: `skills/tests/test_vela_contract.py` or extend existing tests.
+- Test: `tests/test_vela_contract.py` or extend existing tests.
 
 Behavior:
 
@@ -288,7 +288,7 @@ Behavior:
 Files:
 
 - Modify: `scripts/vela_initializer.py`
-- Test: `skills/tests/test_vela_initializer.py`
+- Test: `tests/test_vela_initializer.py`
 
 Behavior:
 
@@ -348,7 +348,7 @@ python -m py_compile `
 ```
 
 ```powershell
-python -m unittest discover -s skills\tests
+python -m unittest discover -s tests
 ```
 
 ```powershell

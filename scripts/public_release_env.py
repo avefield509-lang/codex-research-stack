@@ -5,39 +5,35 @@ import sys
 from pathlib import Path
 
 def _detect_repo_root() -> Path:
-    for override_name in ("VELA_ROOT", "CODEX_RESEARCH_STACK_ROOT"):
+    for override_name in ("VELA_ROOT",):
         override = os.environ.get(override_name)
         if not override:
             continue
         candidate = Path(override).expanduser().resolve()
-        if (candidate / "docs").exists() and (candidate / "skills").exists():
+        if (candidate / "docs").exists() and (candidate / "package").exists() and (candidate / "schemas").exists():
             return candidate
 
     if getattr(sys, "frozen", False):
         mei = getattr(sys, "_MEIPASS", "")
         if mei:
             candidate = Path(mei).resolve()
-            if (candidate / "docs").exists() and (candidate / "skills").exists():
+            if (candidate / "docs").exists() and (candidate / "package").exists() and (candidate / "schemas").exists():
                 return candidate
         exe_root = Path(sys.executable).resolve().parent
         for candidate in [exe_root, *exe_root.parents]:
-            if (candidate / "docs").exists() and (candidate / "skills").exists():
+            if (candidate / "docs").exists() and (candidate / "package").exists() and (candidate / "schemas").exists():
                 return candidate
 
     candidate = Path(__file__).resolve().parents[1]
-    if (candidate / "docs").exists() and (candidate / "skills").exists():
+    if (candidate / "docs").exists() and (candidate / "package").exists() and (candidate / "schemas").exists():
         return candidate
     return candidate
 
 
 REPO_ROOT = _detect_repo_root()
+PACKAGE_ROOT = REPO_ROOT / "package"
+SCHEMAS_DIR = REPO_ROOT / "schemas"
 SKILLS_ROOT = REPO_ROOT / "skills"
-CATALOG_DIR = SKILLS_ROOT / "catalog"
-SCHEMAS_DIR = SKILLS_ROOT / "schemas"
-PROFILES_DIR = SKILLS_ROOT / "profiles"
-TEMPLATES_DIR = SKILLS_ROOT / "templates"
-PLUGIN_DIR = SKILLS_ROOT / "plugins" / "research-autopilot"
-PLUGIN_SKILLS_DIR = PLUGIN_DIR / "skills"
 DOCS_DIR = REPO_ROOT / "docs"
 BRAND_ASSETS_DIR = DOCS_DIR / "assets" / "brand"
 EXAMPLES_DIR = REPO_ROOT / "examples"
@@ -54,7 +50,6 @@ DOWNLOADS_DIR = ARTIFACTS_DIR / "downloads"
 REPORTS_DIR = SKILLS_ROOT / "outputs" / "reports"
 APP_STATE_HOME = Path(
     os.environ.get("VELA_HOME")
-    or os.environ.get("CODEX_RESEARCH_STACK_HOME")
     or str(Path.home() / ".vela")
 ).expanduser()
 APP_STATE_DIR = APP_STATE_HOME / "state"

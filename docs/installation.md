@@ -12,6 +12,8 @@ cd vela
 
 You can also download the repository as a ZIP from GitHub and unpack it wherever your Codex environment can read it.
 
+The installer uses `requirements.txt` to install `jsonschema` and `PyYAML` for local contract validation.
+
 ## Use With Codex
 
 Initialize a project and then return to Codex with a bounded handoff:
@@ -21,6 +23,7 @@ Initialize a project and then return to Codex with a bounded handoff:
 cd ..\my-research-project
 ..\vela\vela.ps1 handoff new --project .
 ..\vela\vela.ps1 validate . --repair-context
+..\vela\vela.ps1 privacy scan .
 ```
 
 VELA provides `.codex/config.toml.example` and `AGENTS.md` templates, but it does not silently rewrite your global Codex configuration.

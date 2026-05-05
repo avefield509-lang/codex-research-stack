@@ -38,9 +38,7 @@ The local research environment contains broader governance and harness ideas. VE
 
 Deferred for later releases:
 
-- privacy scan and public export command;
 - dedicated evidence, claim, and deliverable validators;
-- five focused VELA skills for material intake, evidence promotion, claim linking, handoff building, and deliverable review;
 - optional Codex execution bridge after prompt rendering and validation are stable.
 
 This boundary keeps VELA usable as an installable workflow package rather than a private research automation platform.

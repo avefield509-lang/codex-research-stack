@@ -2,14 +2,13 @@
 
 ## Near Term
 
-- Provide a compact downloadable VELA starter package.
+- Harden `vela privacy scan` and `vela export public` with more project fixtures.
 - Add example project templates for literature review, platform research, computational social science, and paper preparation.
-- Publish a clean handoff template for Codex tasks.
+- Add dedicated evidence, claim, and deliverable validators.
 
 ## Later
 
-- Document how HELM reads VELA project state.
-- Add optional health checks for project folders.
 - Add more examples for evidence lifecycle and deliverable review.
+- Add optional Codex execution bridge after prompt rendering and validation remain stable.
 
 VELA will remain usable without HELM.

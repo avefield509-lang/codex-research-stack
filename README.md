@@ -30,6 +30,7 @@ cd ..\my-research-project
 ..\vela\vela.ps1 handoff lint handoffs\H001.yaml
 ..\vela\vela.ps1 handoff render handoffs\H001.yaml --out handoffs\H001.prompt.md
 ..\vela\vela.ps1 validate . --repair-context
+..\vela\vela.ps1 privacy scan .
 ```
 
 The generated project contains `materials/`, `evidence/`, `claims/`, `methods/`, `deliverables/`, `handoffs/`, `logs/`, `.codex/`, and `.vela/context.json`.
@@ -72,6 +73,7 @@ scope:
 constraints:
   - Do not add new claims.
 expected_output:
+  format: markdown
   path: logs/codex-runs/H001-result.md
 review_standard:
   - Every support judgment must cite an evidence_id.
@@ -107,6 +109,8 @@ See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 - [Project structure](./docs/architecture.md)
 - [Evidence lifecycle](./docs/evidence-lifecycle.md)
 - [Quality checks](./docs/quality-checks.md)
+- [Handoff contract](./docs/handoff-contract.md)
+- [Public export](./docs/public-export.md)
 - [VELA and HELM import interface](./docs/imports/vela-helm-interface.md)
 - [Use cases](./docs/use-cases.md)
 - [Integrations](./docs/integrations.md)
@@ -119,9 +123,11 @@ See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 | `docs/` | Public documentation, GitHub Pages, and approved visual assets |
 | `docs/imports/` | VELA and HELM import contracts |
 | `docs/sync-log/` | Local cross-repository synchronization notes |
+| `archive/legacy-research-stack/` | Historical private environment assets, kept out of VELA runtime |
 | `examples/` | Minimal project and quick demo for inspection |
 | `package/` | Starter package copied into a research project by `vela init` |
-| `package/.vela/initializer-manifest.json` | Schema-driven initializer manifest for default project files and agents |
+| `package/.vela/initializer-manifest.json` | Schema-driven initializer manifest for default project directories and files |
 | `schemas/` | Machine-readable context, handoff, initializer, and validation schemas |
 | `scripts/` | CLI, schema-driven initializer, validation, and local maintenance helpers |
-| `skills/` | Codex skill, profile, schema, and template layer |
+| `skills/` | Public VELA Codex skill entrypoints |
+| `tests/` | Runtime contract tests |

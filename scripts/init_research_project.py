@@ -91,9 +91,9 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
     project_name = project_root.name
     project_root.mkdir(parents=True, exist_ok=True)
 
-    root_agents_path = pre.SKILLS_ROOT / "AGENTS.md"
+    root_agents_path = contract.package_root() / "AGENTS.md"
     if not root_agents_path.exists():
-        raise FileNotFoundError(f"VELA skills/AGENTS.md was not found: {root_agents_path}")
+        raise FileNotFoundError(f"VELA package AGENTS.md was not found: {root_agents_path}")
 
     manifest_report = initializer.validate_manifest()
     if not manifest_report["ok"]:
@@ -125,9 +125,8 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
         "codex_trust_updated": trust_updated,
         "route_hint": route_hint,
         "paths": {
-            "project_agents_dir": str(project_root / ".codex" / "agents"),
-            "dispatch_dir": str(project_root / ".codex" / "dispatch"),
-            "context_packets_dir": str(project_root / ".codex" / "context-packets"),
+            "codex_commands_dir": str(project_root / ".codex" / "commands"),
+            "codex_profiles_dir": str(project_root / ".codex" / "profiles"),
             "helm_handoffs_dir": str(project_root / "handoffs" / "helm"),
             "gate_logs_dir": str(project_root / "logs" / "quality-gates"),
             "project_state_dir": str(project_root / "logs" / "project-state"),

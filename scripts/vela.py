@@ -10,12 +10,16 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from scripts import init_research_project
     from scripts import vela_handoff
+    from scripts import vela_privacy
+    from scripts import vela_public_export
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
     from scripts import vela_initializer as initializer
 else:
     from scripts import init_research_project
     from scripts import vela_handoff
+    from scripts import vela_privacy
+    from scripts import vela_public_export
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
     from scripts import vela_initializer as initializer
@@ -99,6 +103,18 @@ def cmd_export_helm_context(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_privacy_scan(args: argparse.Namespace) -> int:
+    result = vela_privacy.scan_project(Path(args.path))
+    _print_json(result)
+    return 0 if result["ok"] else 1
+
+
+def cmd_export_public(args: argparse.Namespace) -> int:
+    result = vela_public_export.build_public_export(Path(args.path), Path(args.out), force=args.force)
+    _print_json(result)
+    return 0 if result["ok"] else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="VELA workflow wrapper CLI.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -121,6 +137,20 @@ def build_parser() -> argparse.ArgumentParser:
     export = sub.add_parser("export-helm-context", help="Regenerate .vela/context.json for HELM.")
     export.add_argument("path", nargs="?", default=".", help="Project root path.")
     export.set_defaults(func=cmd_export_helm_context)
+
+    privacy = sub.add_parser("privacy", help="Run privacy checks before sharing project outputs.")
+    privacy_sub = privacy.add_subparsers(dest="privacy_command", required=True)
+    privacy_scan = privacy_sub.add_parser("scan", help="Scan a VELA project for private paths and secret-like content.")
+    privacy_scan.add_argument("path", nargs="?", default=".", help="Project root path.")
+    privacy_scan.set_defaults(func=cmd_privacy_scan)
+
+    export_group = sub.add_parser("export", help="Create bounded project exports.")
+    export_sub = export_group.add_subparsers(dest="export_command", required=True)
+    export_public = export_sub.add_parser("public", help="Create a public-safe export package.")
+    export_public.add_argument("path", nargs="?", default=".", help="Project root path.")
+    export_public.add_argument("--out", required=True, help="Export output directory.")
+    export_public.add_argument("--force", action="store_true", help="Write export even when privacy scan has errors.")
+    export_public.set_defaults(func=cmd_export_public)
 
     handoff = sub.add_parser("handoff", help="Create, lint, or render Codex handoffs.")
     handoff_sub = handoff.add_subparsers(dest="handoff_command", required=True)

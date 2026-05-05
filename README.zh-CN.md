@@ -29,6 +29,7 @@ cd ..\my-research-project
 ..\vela\vela.ps1 handoff new --template claim-check
 ..\vela\vela.ps1 handoff lint handoffs\H001.yaml
 ..\vela\vela.ps1 validate . --repair-context
+..\vela\vela.ps1 privacy scan .
 ```
 
 生成的项目会包含 `materials/`、`evidence/`、`claims/`、`methods/`、`deliverables/`、`handoffs/`、`logs/`、`.codex/` 和 `.vela/context.json`。
@@ -71,6 +72,7 @@ scope:
 constraints:
   - 不新增主张
 expected_output:
+  format: markdown
   path: logs/codex-runs/H001-result.md
 review_standard:
   - 每个支撑判断必须指向 evidence_id
@@ -106,6 +108,8 @@ completion:
 - [项目结构](./docs/architecture.md)
 - [证据生命周期](./docs/evidence-lifecycle.md)
 - [质量检查](./docs/quality-checks.md)
+- [Handoff contract](./docs/handoff-contract.md)
+- [公共导出](./docs/public-export.md)
 - [VELA 与 HELM 导入接口](./docs/imports/vela-helm-interface.md)
 - [使用场景](./docs/use-cases.md)
 - [可选集成](./docs/integrations.md)
@@ -118,9 +122,11 @@ completion:
 | `docs/` | 公开文档、GitHub Pages 和确认后的视觉资产 |
 | `docs/imports/` | VELA 与 HELM 的导入契约 |
 | `docs/sync-log/` | 本地跨仓同步记录 |
+| `archive/legacy-research-stack/` | 历史私有环境资产，不再属于 VELA runtime |
 | `examples/` | 可检查的最小项目和快速演示 |
 | `package/` | `vela init` 复制到研究项目里的 starter package |
-| `package/.vela/initializer-manifest.json` | 默认项目文件、目录和 agent 的 schema-driven 初始化清单 |
+| `package/.vela/initializer-manifest.json` | 默认项目目录和文件的 schema-driven 初始化清单 |
 | `schemas/` | context、handoff、initializer 和 validation 的机器可读 schema |
 | `scripts/` | CLI、schema-driven 初始化、验证和本地维护辅助脚本 |
-| `skills/` | Codex skill、profile、schema 和模板层 |
+| `skills/` | 公开 VELA Codex skill 入口 |
+| `tests/` | runtime contract 测试 |

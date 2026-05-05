@@ -22,8 +22,7 @@ class VelaInitializerTests(unittest.TestCase):
             result = vela_initializer.materialize_project(project_root, route_hint="literature-review")
             self.assertTrue(result["ok"])
             self.assertTrue((project_root / "research-map.md").exists())
-            self.assertTrue((project_root / ".codex" / "agents" / "reviewer.json").exists())
-            self.assertFalse((project_root / ".codex" / "agents" / "app-qa-reviewer.json").exists())
+            self.assertFalse((project_root / ".codex" / "agents").exists())
 
             pipeline = json.loads((project_root / "logs" / "quality-gates" / "pipeline-status.json").read_text(encoding="utf-8"))
             self.assertEqual(pipeline["route_id"], "literature-review")

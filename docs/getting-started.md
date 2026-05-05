@@ -67,14 +67,23 @@ Before asking Codex to work, create a handoff:
 
 This keeps Codex work reviewable and prevents a broad prompt from silently changing the research record.
 
-## 6. Validate And Refresh HELM Context
+## 6. Validate, Scan, And Refresh HELM Context
 
 ```powershell
 ..\vela\vela.ps1 validate . --repair-context
+..\vela\vela.ps1 privacy scan .
 ```
 
 HELM reads `.vela/context.json` when you want a local board over the same project state.
 
-## 7. Add HELM Later If Useful
+## 7. Prepare A Public Export When Needed
+
+```powershell
+..\vela\vela.ps1 export public . --out public-export
+```
+
+The export command writes a manifest and quality report before copying public-safe project files.
+
+## 8. Add HELM Later If Useful
 
 HELM is optional. Use it when you want a local board for project status, evidence, deliverables, environment health, and Codex handoffs.

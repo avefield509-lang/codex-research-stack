@@ -17,9 +17,12 @@ VELA quality checks are plain questions a researcher can answer before sharing a
 - Are constraints explicit?
 - Is the expected output clear?
 - Are known gaps listed?
+- Does `vela handoff lint handoffs/Hxxx.yaml` pass?
 
 ## Before Sharing A Deliverable
 
 - Are unsupported claims labeled as unsupported?
 - Are private materials excluded?
 - Is the evidence path inspectable by another person?
+- Does `vela privacy scan .` report no errors?
+- If exporting, did `vela export public . --out public-export` create a manifest and quality report?

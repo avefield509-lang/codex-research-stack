@@ -1,6 +1,6 @@
 schema_version: vela.codex.handoff.v1
 handoff_id: H000
-created_at: 2026-04-30T00:00:00Z
+created_at: "2026-04-30T00:00:00Z"
 created_by: human
 surface: cli
 mode: review_only
@@ -25,5 +25,5 @@ review_standard:
   - Uncertain support must be marked partial or needs_review.
 completion:
   validation_commands:
-    - python scripts/vela.py handoff lint handoffs/H000.example.yaml
+    - vela handoff lint handoffs/H000.example.yaml
   human_review_required: true

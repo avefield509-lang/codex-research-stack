@@ -1,11 +1,15 @@
-# Skills Layer
+# VELA Skills
 
-This directory contains the public VELA workflow assets that are safe and useful to share:
+This directory contains small Codex skill entrypoints for VELA projects.
 
-- `catalog/` for routing and gate metadata
-- `catalog/research_team_playbooks.json` for route-aligned research squads
-- `profiles/` for profile examples
-- `schemas/` for dispatch and agent contracts
-- `templates/` for reusable project and note scaffolds
-- `plugins/research-autopilot/` for the internal compatibility plugin bundle
-- `tests/` for lightweight public checks
+These skills are public wrapper skills. They do not assume private MCP routing, Zotero/Obsidian state, or a desktop app.
+
+Core skills:
+
+- `vela-material-intake/`
+- `vela-evidence-promote/`
+- `vela-claim-linker/`
+- `vela-handoff-builder/`
+- `vela-deliverable-review/`
+
+Legacy research-stack assets were moved to `archive/legacy-research-stack/` so the public VELA surface stays focused on Codex handoffs, project contracts, validation, and audit.
