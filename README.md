@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA layered sail mark" width="132">
   <h1>VELA</h1>
-  <p><strong>Versatile Experiment Lab &amp; Automation</strong></p>
+  <p><strong>Versioned Evidence Lifecycle Architecture</strong></p>
   <p><em>Portable project workflow package for Codex-based research</em></p>
   <p>
     <a href="./README.zh-CN.md">中文</a>
@@ -14,7 +14,7 @@
   </p>
 </div>
 
-VELA = **Versatile Experiment Lab & Automation**. It gives Codex a bounded, evidence-aware operating layer for research work. It packages project scaffolds, `AGENTS.md` instructions, Codex handoff contracts, evidence ledgers, claim checks, validation reports, and HELM-readable local state.
+VELA = **Versioned Evidence Lifecycle Architecture**. It gives Codex a bounded, evidence-aware operating layer for research work. It packages project scaffolds, `AGENTS.md` instructions, Codex handoff contracts, evidence ledgers, claim checks, validation reports, and HELM-readable local state.
 
 VELA is not a desktop app, chat interface, paper generator, citation manager, hidden autonomous agent, or private memory store. VELA prepares bounded work for Codex; Codex performs the task; people review the result. [HELM](https://github.com/Marcus-AI4SS/HELM) is the optional Hub for Evidence, Logs & Monitoring that can read the same project state.
 
@@ -79,7 +79,7 @@ The handoff is intentionally small. Codex should receive enough context to do th
 
 | Product | Role | Can Stand Alone? |
 | --- | --- | --- |
-| **VELA** = Versatile Experiment Lab & Automation | Portable project lab, automation boundary, and Codex workflow package | Yes |
+| **VELA** = Versioned Evidence Lifecycle Architecture | Portable project lab, workflow boundary, and Codex workflow package | Yes |
 | **HELM** = Hub for Evidence, Logs & Monitoring | Local board for status, evidence, logs, files, checks, and Codex notes | Yes |
 
 Use VELA by itself when you want a portable workflow. Add HELM when you want a visual local board over the same project state.
@@ -94,7 +94,9 @@ See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 ## Read Next
 
 - [Getting started](./docs/getting-started.md)
+- [Codex wrapper contract](./docs/codex-wrapper.md)
 - [Workflow core](./docs/workflow-core.md)
+- [Project structure](./docs/architecture.md)
 - [Evidence lifecycle](./docs/evidence-lifecycle.md)
 - [Quality checks](./docs/quality-checks.md)
 - [VELA and HELM import interface](./docs/imports/vela-helm-interface.md)
@@ -111,6 +113,7 @@ See [VELA and HELM import interface](./docs/imports/vela-helm-interface.md).
 | `docs/sync-log/` | Local cross-repository synchronization notes |
 | `examples/` | Minimal project and quick demo for inspection |
 | `package/` | Starter package copied into a research project by `vela init` |
-| `schemas/` | Machine-readable context and handoff schemas |
-| `scripts/` | Setup, validation, and local maintenance helpers |
+| `package/.vela/initializer-manifest.json` | Schema-driven initializer manifest for default project files and agents |
+| `schemas/` | Machine-readable context, handoff, initializer, and validation schemas |
+| `scripts/` | CLI, schema-driven initializer, validation, and local maintenance helpers |
 | `skills/` | Codex skill, profile, schema, and template layer |

@@ -4,19 +4,19 @@
 
 **VELA**
 
-Expanded meaning: **Versatile Experiment Lab & Automation**
+Expanded meaning: **Versioned Evidence Lifecycle Architecture**
 
-Chinese subtitle: **便携式项目实验室与自动化边界**
+Chinese subtitle: **便携式项目实验室与工作流边界**
 
 VELA is the portable project workflow brand. HELM is the separate local dashboard brand. They can be used together, but neither product should be described as depending on the other.
 
 ## Positioning
 
-VELA is a portable project lab and automation boundary for Codex. It gives research projects a stable file-based structure for materials, evidence, claims, methods, deliverables, handoffs, validators, and HELM-readable context.
+VELA is a portable project lab and workflow boundary for Codex. It gives research projects a stable file-based structure for materials, evidence, claims, methods, deliverables, handoffs, validators, and HELM-readable context.
 
 Chinese positioning:
 
-VELA 是一套可放入用户自己 Codex 工作空间的便携式项目实验室和自动化边界，用文件化结构管理材料、证据、主张、方法、交付物、交接、本地检查和 HELM 可读状态。
+VELA 是一套可放入用户自己 Codex 工作空间的便携式项目实验室和工作流边界，用文件化结构管理材料、证据、主张、方法、交付物、交接、本地检查和 HELM 可读状态。
 
 ## Brand Line
 
@@ -39,7 +39,7 @@ Avoid chatbot mascots, automation pipelines, heavy cyberpunk colors, and app-onl
 
 | Brand | Role | Public subtitle |
 | --- | --- | --- |
-| **VELA** | Versatile Experiment Lab & Automation | 便携式项目实验室与自动化边界 |
+| **VELA** | Versioned Evidence Lifecycle Architecture | 便携式项目实验室与工作流边界 |
 | **HELM** | Hub for Evidence, Logs & Monitoring | 本地证据、日志和状态看板 |
 
 Use: “VELA can run alone. HELM can later read the same project state.”
@@ -66,6 +66,6 @@ Do not use: “HELM controls VELA” or “VELA requires the app.”
 
 ## Voice
 
-Say: versatile experiment lab, automation boundary, evidence lifecycle, traceable handoff, project state, reviewable artifact, optional local board.
+Say: versioned evidence lifecycle architecture, workflow boundary, evidence lifecycle, traceable handoff, project state, reviewable artifact, optional local board.
 
 Avoid: fully autonomous, magic, app command center for everything, chatbot replacement, research automation brand language.

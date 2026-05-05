@@ -1,6 +1,6 @@
 # VELA and HELM Import Interface
 
-VELA and HELM are separate products. VELA is the Versatile Experiment Lab & Automation package for Codex. HELM is the Hub for Evidence, Logs & Monitoring. The integration boundary is explicit local files, not app memory, telemetry, or hidden automation.
+VELA and HELM are separate products. VELA is the Versioned Evidence Lifecycle Architecture package for Codex. HELM is the Hub for Evidence, Logs & Monitoring. The integration boundary is explicit local files, not app memory, telemetry, or hidden automation.
 
 ## Direction 1: VELA → HELM
 

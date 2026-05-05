@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marcus-ai4ss.github.io/VELA/schemas/vela.validation.result.v1.schema.json",
+  "title": "VELA Validation Result",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "ok",
+    "errors",
+    "warnings"
+  ],
+  "properties": {
+    "ok": {
+      "type": "boolean"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

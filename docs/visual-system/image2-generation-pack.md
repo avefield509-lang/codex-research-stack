@@ -44,4 +44,4 @@ Create a refined brand board for VELA, a workflow environment package for resear
 
 ## Dual-Brand Prompt
 
-Create a dual-brand relationship board for VELA and HELM. VELA is Versatile Experiment Lab & Automation; HELM is Hub for Evidence, Logs & Monitoring. Show two independent products sharing one visual language. VELA uses a layered sail and evidence path; HELM uses a navigation ring and pointer. Pale blue and white, calm, premium, no app-controls-workflow hierarchy, no automation pipeline metaphor.
+Create a dual-brand relationship board for VELA and HELM. VELA is Versioned Evidence Lifecycle Architecture; HELM is Hub for Evidence, Logs & Monitoring. Show two independent products sharing one visual language. VELA uses a layered sail and evidence path; HELM uses a navigation ring and pointer. Pale blue and white, calm, premium, no app-controls-workflow hierarchy, no automation pipeline metaphor.

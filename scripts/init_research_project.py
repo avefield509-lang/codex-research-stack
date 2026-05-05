@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -12,152 +13,11 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
+    from scripts import vela_initializer as initializer
 else:
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
-
-
-PROJECT_AGENT_TEMPLATES: list[dict[str, Any]] = [
-    {
-        "file": "project-manager.json",
-        "payload": {
-            "agent_id": "project-manager",
-            "display_name": "Project Manager Agent",
-            "preferred_model": None,
-            "role": "manager",
-            "enabled": True,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": ["research-stack-manager", "project-retrospective-evolver"],
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": "sequential_multi_agent_execution",
-            "required_inputs": ["route_id", "clarification_card", "dispatch_contract"],
-            "expected_outputs": ["summary.md", "result.json"],
-            "review_gate": None,
-        },
-    },
-    {
-        "file": "literature-producer.json",
-        "payload": {
-            "agent_id": "literature-producer",
-            "display_name": "Literature Agent",
-            "preferred_model": None,
-            "role": "producer",
-            "enabled": False,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": None,
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": None,
-            "required_inputs": ["clarification_card", "project_truth_sources"],
-            "expected_outputs": ["summary.md", "result.json"],
-            "review_gate": "mandatory-review-when-required",
-        },
-    },
-    {
-        "file": "social-platform-producer.json",
-        "payload": {
-            "agent_id": "social-platform-producer",
-            "display_name": "Platform Evidence Agent",
-            "preferred_model": None,
-            "role": "producer",
-            "enabled": False,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": None,
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": None,
-            "required_inputs": ["clarification_card", "evidence_scope"],
-            "expected_outputs": ["summary.md", "result.json"],
-            "review_gate": "mandatory-review-when-required",
-        },
-    },
-    {
-        "file": "analysis-producer.json",
-        "payload": {
-            "agent_id": "analysis-producer",
-            "display_name": "Analysis Agent",
-            "preferred_model": None,
-            "role": "producer",
-            "enabled": False,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": None,
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": None,
-            "required_inputs": ["dataset_scope", "analysis_plan"],
-            "expected_outputs": ["summary.md", "result.json"],
-            "review_gate": "mandatory-review-when-required",
-        },
-    },
-    {
-        "file": "writing-producer.json",
-        "payload": {
-            "agent_id": "writing-producer",
-            "display_name": "Writing Agent",
-            "preferred_model": None,
-            "role": "producer",
-            "enabled": False,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": None,
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": None,
-            "required_inputs": ["writing_scope", "verified_citations"],
-            "expected_outputs": ["summary.md", "result.json"],
-            "review_gate": "mandatory-review-when-required",
-        },
-    },
-    {
-        "file": "reviewer.json",
-        "payload": {
-            "agent_id": "reviewer",
-            "display_name": "Reviewer Agent",
-            "preferred_model": None,
-            "role": "reviewer",
-            "enabled": True,
-            "isolation_method": None,
-            "parallel_safe": None,
-            "integration_review_required": None,
-            "capability_tags_subset": None,
-            "allowed_skills_mcp_subset": [
-                "citation-verifier",
-                "academic-paper-review",
-                "openalex-mcp",
-                "semantic-scholar-mcp",
-            ],
-            "write_scope_subset": ["outputs/agent-runs/<run_id>/<agent_id>/"],
-            "max_execution_mode": "sequential_multi_agent_execution",
-            "required_inputs": ["target_agent_result", "target_agent_summary"],
-            "expected_outputs": ["review.<target_agent_id>.md", "gate.<target_agent_id>.json"],
-            "review_gate": "target-specific",
-        },
-    },
-]
-
-
-def _write_json_if_missing(target: Path, payload: Any) -> None:
-    if target.exists():
-        return
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def _write_text_if_missing(target: Path, content: str) -> None:
-    if target.exists():
-        return
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(content, encoding="utf-8")
+    from scripts import vela_initializer as initializer
 
 
 def _ensure_git_repo(project_root: Path) -> bool:
@@ -175,11 +35,16 @@ def _append_codex_trust(project_root: Path) -> bool:
         return False
     pre.CODEX_CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
     project_key = f"[projects.'{project_root.as_posix()}']"
-    desired_block = f'{project_key}\ntrust_level = "trusted"\n'
+    desired_block = f'{project_key}\ntrust_level = "trusted"'
     config_text = pre.CODEX_CONFIG_PATH.read_text(encoding="utf-8")
-    if project_key in config_text:
-        return True
-    updated = config_text.rstrip() + "\n\n" + desired_block
+    escaped_key = re.escape(project_key)
+    trust_pattern = re.compile(rf"(?ms){escaped_key}\s*\r?\ntrust_level\s*=\s*\"[^\"]*\"")
+    if trust_pattern.search(config_text):
+        updated = trust_pattern.sub(desired_block, config_text)
+    elif re.search(escaped_key, config_text):
+        updated = re.sub(escaped_key, desired_block, config_text)
+    else:
+        updated = config_text.rstrip() + "\n\n" + desired_block + "\n"
     pre.CODEX_CONFIG_PATH.write_text(updated, encoding="utf-8")
     return True
 
@@ -207,6 +72,7 @@ def register_project(project_root: Path, route_hint: str | None = None) -> None:
     if existing:
         if route_hint:
             existing[0]["route_hint"] = route_hint
+        existing[0]["source"] = "vela"
         _save_registry(registry)
         return
     rows.append(
@@ -214,7 +80,7 @@ def register_project(project_root: Path, route_hint: str | None = None) -> None:
             "name": project_root.name,
             "path": normalized,
             "route_hint": route_hint,
-            "source": "local",
+            "source": "vela",
         }
     )
     _save_registry(registry)
@@ -227,182 +93,16 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
 
     root_agents_path = pre.SKILLS_ROOT / "AGENTS.md"
     if not root_agents_path.exists():
-        raise FileNotFoundError(f"公开版 skills/AGENTS.md 不存在：{root_agents_path}")
+        raise FileNotFoundError(f"VELA skills/AGENTS.md was not found: {root_agents_path}")
 
-    contract.install_starter_package(project_root)
+    manifest_report = initializer.validate_manifest()
+    if not manifest_report["ok"]:
+        raise ValueError("Invalid VELA initializer manifest: " + "; ".join(manifest_report["errors"]))
+
     contract.ensure_wrapper_dirs(project_root)
-
-    project_agents_dir = project_root / ".codex" / "agents"
-    dispatch_dir = project_root / ".codex" / "dispatch"
-    context_packets_dir = project_root / ".codex" / "context-packets"
-    agent_runs_dir = project_root / "outputs" / "agent-runs"
-    handoff_logs_dir = project_root / "logs" / "agent-handoffs"
-    gate_logs_dir = project_root / "logs" / "quality-gates"
-    project_state_dir = project_root / "logs" / "project-state"
-    helm_handoffs_dir = project_root / "handoffs" / "helm"
-    codex_runs_dir = project_root / "logs" / "codex-runs"
-    privacy_scans_dir = project_root / "logs" / "privacy-scans"
-
-    for path in (
-        project_agents_dir,
-        dispatch_dir,
-        context_packets_dir,
-        agent_runs_dir,
-        handoff_logs_dir,
-        helm_handoffs_dir,
-        codex_runs_dir,
-        gate_logs_dir,
-        privacy_scans_dir,
-        project_state_dir,
-    ):
-        path.mkdir(parents=True, exist_ok=True)
-
     git_initialized = _ensure_git_repo(project_root)
-
-    _write_text_if_missing(
-        project_root / ".gitignore",
-        ".venv/\n__pycache__/\n.ipynb_checkpoints/\noutputs/\nartifacts/\n*.log\n*.tmp\n.env\n.env.*\n",
-    )
-
-    _write_text_if_missing(
-        project_root / "README.md",
-        "\n".join(
-            [
-                f"# {project_name}",
-                "",
-                "This project was initialized from VELA.",
-                "",
-                "## What you get",
-                "",
-                "- A Git repository when Git is available",
-                "- Project-level AGENTS.md",
-                "- .codex command templates for bounded Codex work",
-                "- Materials, evidence, claims, methods, deliverables, handoffs, and logs directories",
-                "- .vela/context.json for HELM and other local readers",
-                "",
-                "## Recommended next step",
-                "",
-                "Run `vela validate . --repair-context`, then create the first bounded Codex handoff with `vela handoff new --project .`.",
-            ]
-        )
-        + "\n",
-    )
-
-    _write_text_if_missing(
-        project_root / "AGENTS.md",
-        "\n".join(
-            [
-                "# AGENTS",
-                "",
-                "This project inherits the global constraints from skills/AGENTS.md in the VELA repository.",
-                "Project rules may only become stricter; they must not expand permissions or bypass the required citation, evidence, writing-capture, or reproducibility chains.",
-                "",
-                "```yaml",
-                "agent_constraints:",
-                "  forbid_skills_mcp: []",
-                "  forbid_write_roots: []",
-                "  max_execution_mode: null",
-                "  require_review_for:",
-                "    - paper_draft",
-                "    - revision_package",
-                "    - submission_package",
-                "    - figures_tables",
-                "    - reproducibility_bundle",
-                "    - literature_synthesis",
-                "    - case_dataset",
-                "    - project_map",
-                "  project_truth_sources:",
-                "    - research-map.md",
-                "    - findings-memory.md",
-                "    - material-passport.yaml",
-                "    - evidence-ledger.yaml",
-                "```",
-            ]
-        )
-        + "\n",
-    )
-
-    _write_text_if_missing(
-        project_root / "research-map.md",
-        "# Research Map\n\n- Research question:\n- Active route:\n- Current stage:\n- Expected deliverables:\n",
-    )
-    _write_text_if_missing(
-        project_root / "findings-memory.md",
-        "# Findings Memory\n\n- Confirmed facts:\n- Rejected paths:\n- Pending verification:\n",
-    )
-    _write_text_if_missing(
-        project_root / "material-passport.yaml",
-        "\n".join(
-            [
-                f"project_name: {project_name}",
-                f"route_id: {route_hint if route_hint else 'null'}",
-                "current_stage: research_design",
-                "data_access_level: public_open",
-                "materials: []",
-                "ethics_notes: []",
-                "truth_sources:",
-                "  - research-map.md",
-                "  - findings-memory.md",
-                "  - material-passport.yaml",
-                "  - evidence-ledger.yaml",
-            ]
-        )
-        + "\n",
-    )
-    _write_text_if_missing(project_root / "evidence-ledger.yaml", "entries: []\n")
-
-    _write_json_if_missing(
-        gate_logs_dir / "pipeline-status.json",
-        {
-            "route_id": route_hint,
-            "current_stage": "research_design",
-            "completed_stages": [],
-            "gate_decisions": {},
-            "allowed_to_advance": False,
-        },
-    )
-    _write_json_if_missing(
-        gate_logs_dir / "writing-quality-report.json",
-        {
-            "status": "pending",
-            "checked_deliverable": None,
-            "target_paths": [],
-            "checks": {
-                "style_calibration": {"decision": "pending", "notes": []},
-                "argument_chain_closure": {"decision": "pending", "notes": []},
-                "citation_alignment": {"decision": "pending", "notes": []},
-                "empty_phrase_scan": {"decision": "pending", "hits": [], "notes": []},
-            },
-            "banned_phrases": ["总而言之", "双刃剑", "多维度视角"],
-            "generated_by": None,
-            "updated_at": None,
-        },
-    )
-    _write_json_if_missing(
-        project_state_dir / "current.json",
-        {
-            "project_name": project_name,
-            "route_id": route_hint,
-            "project_type": None,
-            "dispatch_run_id": None,
-            "dispatch_stage": "planning",
-            "pipeline_stage": "research_design",
-            "status": "initialized",
-            "current_owner_agent_id": "project-manager",
-            "current_owner_display_name": "Project Manager Agent",
-            "blockers": [],
-            "next_quality_gates": [],
-            "selected_agents": [],
-            "selected_producers": [],
-            "selected_reviewers": [],
-            "review_agents": {},
-            "milestones": [{"id": "project_initialized", "label": "Project initialized", "status": "complete"}],
-        },
-    )
-    _write_text_if_missing(project_state_dir / "history.md", "# Project State History\n\n- Project initialized.\n")
-
-    for template in PROJECT_AGENT_TEMPLATES:
-        _write_json_if_missing(project_agents_dir / template["file"], template["payload"])
+    manifest_result = initializer.materialize_project(project_root, route_hint=route_hint)
+    contract.install_starter_package(project_root)
 
     trust_updated = False
     if not skip_codex_trust:
@@ -417,16 +117,20 @@ def initialize_project(project_root: Path, skip_codex_trust: bool = False, route
         "project_name": project_name,
         "context_schema": context["schema_version"],
         "context_path": str(project_root / ".vela" / "context.json"),
+        "initializer_schema": manifest_result["schema_version"],
+        "initializer_manifest": manifest_result["manifest_path"],
+        "created_files": manifest_result["created_files"],
+        "created_agents": manifest_result["created_agents"],
         "git_initialized": git_initialized,
         "codex_trust_updated": trust_updated,
         "route_hint": route_hint,
         "paths": {
-            "project_agents_dir": str(project_agents_dir),
-            "dispatch_dir": str(dispatch_dir),
-            "context_packets_dir": str(context_packets_dir),
-            "helm_handoffs_dir": str(helm_handoffs_dir),
-            "gate_logs_dir": str(gate_logs_dir),
-            "project_state_dir": str(project_state_dir),
+            "project_agents_dir": str(project_root / ".codex" / "agents"),
+            "dispatch_dir": str(project_root / ".codex" / "dispatch"),
+            "context_packets_dir": str(project_root / ".codex" / "context-packets"),
+            "helm_handoffs_dir": str(project_root / "handoffs" / "helm"),
+            "gate_logs_dir": str(project_root / "logs" / "quality-gates"),
+            "project_state_dir": str(project_root / "logs" / "project-state"),
         },
     }
 

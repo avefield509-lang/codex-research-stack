@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schemas/vela.project.initializer.v1.schema.json",
+  "schema_version": "vela.project.initializer.v1",
+  "generated_at": "2026-05-05T00:00:00Z",
+  "directories": [
+    "materials",
+    "evidence",
+    "claims",
+    "methods",
+    "deliverables",
+    "handoffs",
+    "handoffs/helm",
+    "logs",
+    "logs/codex-runs",
+    "logs/privacy-scans",
+    "logs/quality-gates",
+    "logs/project-state",
+    "logs/agent-handoffs",
+    ".codex",
+    ".codex/agents",
+    ".codex/commands",
+    ".codex/context-packets",
+    ".codex/dispatch",
+    ".codex/profiles",
+    ".vela",
+    "outputs/agent-runs"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "kind": "text",
+      "content": ".venv/\n__pycache__/\n.ipynb_checkpoints/\noutputs/\nartifacts/\n*.log\n*.tmp\n.env\n.env.*\n"
+    },
+    {
+      "path": "README.md",
+      "kind": "text",
+      "content": "# {project_name}\n\nThis project was initialized from VELA.\n\n## What you get\n\n- A Git repository when Git is available\n- Project-level AGENTS.md\n- .codex command templates for bounded Codex work\n- Materials, evidence, claims, methods, deliverables, handoffs, and logs directories\n- .vela/context.json for HELM and other local readers\n\n## Recommended next step\n\nRun `vela validate . --repair-context`, then create the first bounded Codex handoff with `vela handoff new --project .`.\n"
+    },
+    {
+      "path": "AGENTS.md",
+      "kind": "text",
+      "content": "# AGENTS\n\nThis project inherits the global constraints from skills/AGENTS.md in the VELA repository.\nProject rules may only become stricter; they must not expand permissions or bypass the required citation, evidence, writing-capture, or reproducibility chains.\n\n```yaml\nagent_constraints:\n  forbid_skills_mcp: []\n  forbid_write_roots: []\n  max_execution_mode: null\n  require_review_for:\n    - paper_draft\n    - revision_package\n    - submission_package\n    - figures_tables\n    - reproducibility_bundle\n    - literature_synthesis\n    - case_dataset\n    - project_map\n  project_truth_sources:\n    - research-map.md\n    - findings-memory.md\n    - material-passport.yaml\n    - evidence-ledger.yaml\n```\n"
+    },
+    {
+      "path": "research-map.md",
+      "kind": "text",
+      "content": "# Research Map\n\n- Research question:\n- Active route:\n- Current stage:\n- Expected deliverables:\n"
+    },
+    {
+      "path": "findings-memory.md",
+      "kind": "text",
+      "content": "# Findings Memory\n\n- Confirmed facts:\n- Rejected paths:\n- Pending verification:\n"
+    },
+    {
+      "path": "material-passport.yaml",
+      "kind": "text",
+      "content": "project_name: {project_name}\nroute_id: {route_hint_yaml}\ncurrent_stage: research_design\ndata_access_level: public_open\nmaterials: []\nethics_notes: []\ntruth_sources:\n  - research-map.md\n  - findings-memory.md\n  - material-passport.yaml\n  - evidence-ledger.yaml\n"
+    },
+    {
+      "path": "evidence-ledger.yaml",
+      "kind": "text",
+      "content": "entries: []\n"
+    },
+    {
+      "path": "logs/quality-gates/pipeline-status.json",
+      "kind": "json",
+      "content": {
+        "route_id": "{route_hint_json}",
+        "current_stage": "research_design",
+        "completed_stages": [],
+        "gate_decisions": {},
+        "allowed_to_advance": false
+      }
+    },
+    {
+      "path": "logs/quality-gates/writing-quality-report.json",
+      "kind": "json",
+      "content": {
+        "status": "pending",
+        "checked_deliverable": null,
+        "target_paths": [],
+        "checks": {
+          "style_calibration": {
+            "decision": "pending",
+            "notes": []
+          },
+          "argument_chain_closure": {
+            "decision": "pending",
+            "notes": []
+          },
+          "citation_alignment": {
+            "decision": "pending",
+            "notes": []
+          },
+          "empty_phrase_scan": {
+            "decision": "pending",
+            "hits": [],
+            "notes": []
+          }
+        },
+        "banned_phrases": [
+          "总而言之",
+          "双刃剑",
+          "多维度视角"
+        ],
+        "generated_by": null,
+        "updated_at": null
+      }
+    },
+    {
+      "path": "logs/project-state/current.json",
+      "kind": "json",
+      "content": {
+        "project_name": "{project_name}",
+        "route_id": "{route_hint_json}",
+        "project_type": null,
+        "dispatch_run_id": null,
+        "dispatch_stage": "planning",
+        "pipeline_stage": "research_design",
+        "status": "initialized",
+        "current_owner_agent_id": "project-manager",
+        "current_owner_display_name": "Project Manager Agent",
+        "blockers": [],
+        "next_quality_gates": [],
+        "selected_agents": [],
+        "selected_producers": [],
+        "selected_reviewers": [],
+        "review_agents": {},
+        "milestones": [
+          {
+            "id": "project_initialized",
+            "label": "Project initialized",
+            "status": "complete"
+          }
+        ]
+      }
+    },
+    {
+      "path": "logs/project-state/history.md",
+      "kind": "text",
+      "content": "# Project State History\n\n- Project initialized.\n"
+    }
+  ],
+  "project_agents": {
+    "project-manager.json": {
+      "agent_id": "project-manager",
+      "display_name": "Project Manager Agent",
+      "preferred_model": null,
+      "role": "manager",
+      "enabled": true,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": [
+        "research-stack-manager",
+        "project-retrospective-evolver"
+      ],
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": "sequential_multi_agent_execution",
+      "required_inputs": [
+        "route_id",
+        "clarification_card",
+        "dispatch_contract"
+      ],
+      "expected_outputs": [
+        "summary.md",
+        "result.json"
+      ],
+      "review_gate": null
+    },
+    "literature-producer.json": {
+      "agent_id": "literature-producer",
+      "display_name": "Literature Agent",
+      "preferred_model": null,
+      "role": "producer",
+      "enabled": false,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": null,
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": null,
+      "required_inputs": [
+        "clarification_card",
+        "project_truth_sources"
+      ],
+      "expected_outputs": [
+        "summary.md",
+        "result.json"
+      ],
+      "review_gate": "mandatory-review-when-required"
+    },
+    "social-platform-producer.json": {
+      "agent_id": "social-platform-producer",
+      "display_name": "Platform Evidence Agent",
+      "preferred_model": null,
+      "role": "producer",
+      "enabled": false,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": null,
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": null,
+      "required_inputs": [
+        "clarification_card",
+        "evidence_scope"
+      ],
+      "expected_outputs": [
+        "summary.md",
+        "result.json"
+      ],
+      "review_gate": "mandatory-review-when-required"
+    },
+    "analysis-producer.json": {
+      "agent_id": "analysis-producer",
+      "display_name": "Analysis Agent",
+      "preferred_model": null,
+      "role": "producer",
+      "enabled": false,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": null,
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": null,
+      "required_inputs": [
+        "dataset_scope",
+        "analysis_plan"
+      ],
+      "expected_outputs": [
+        "summary.md",
+        "result.json"
+      ],
+      "review_gate": "mandatory-review-when-required"
+    },
+    "writing-producer.json": {
+      "agent_id": "writing-producer",
+      "display_name": "Writing Agent",
+      "preferred_model": null,
+      "role": "producer",
+      "enabled": false,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": null,
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": null,
+      "required_inputs": [
+        "writing_scope",
+        "verified_citations"
+      ],
+      "expected_outputs": [
+        "summary.md",
+        "result.json"
+      ],
+      "review_gate": "mandatory-review-when-required"
+    },
+    "reviewer.json": {
+      "agent_id": "reviewer",
+      "display_name": "Reviewer Agent",
+      "preferred_model": null,
+      "role": "reviewer",
+      "enabled": true,
+      "isolation_method": null,
+      "parallel_safe": null,
+      "integration_review_required": null,
+      "capability_tags_subset": null,
+      "allowed_skills_mcp_subset": [
+        "citation-verifier",
+        "academic-paper-review",
+        "openalex-mcp",
+        "semantic-scholar-mcp"
+      ],
+      "write_scope_subset": [
+        "outputs/agent-runs/<run_id>/<agent_id>/"
+      ],
+      "max_execution_mode": "sequential_multi_agent_execution",
+      "required_inputs": [
+        "target_agent_result",
+        "target_agent_summary"
+      ],
+      "expected_outputs": [
+        "review.<target_agent_id>.md",
+        "gate.<target_agent_id>.json"
+      ],
+      "review_gate": "target-specific"
+    }
+  }
+}

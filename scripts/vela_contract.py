@@ -116,6 +116,7 @@ def build_project_context(project_root: Path) -> dict[str, Any]:
     state = _load_json(project_root / "logs" / "project-state" / "current.json")
     generated_at = utc_now()
     stage = str(state.get("pipeline_stage") or state.get("current_stage") or "research_design")
+    route_id = state.get("route_id")
     status = str(state.get("status") or "initialized")
     blockers = [str(item) for item in state.get("blockers", []) if str(item).strip()]
     truth_files = [_file_row(project_root, name) for name in TRUTH_FILES]
@@ -138,6 +139,7 @@ def build_project_context(project_root: Path) -> dict[str, Any]:
             "name": str(state.get("project_name") or project_root.name),
             "title": str(state.get("project_name") or project_root.name),
             "root": str(project_root),
+            "route_id": route_id,
             "stage": stage,
             "status": status,
         },

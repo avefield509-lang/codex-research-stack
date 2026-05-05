@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/assets/brand/vela-workflow-mark.png" alt="VELA 分层帆形标志" width="132">
   <h1>VELA</h1>
-  <p><strong>Versatile Experiment Lab &amp; Automation</strong></p>
+  <p><strong>Versioned Evidence Lifecycle Architecture</strong></p>
   <p><em>面向 Codex 科研工作的便携式项目工作包</em></p>
   <p>
     <a href="./README.md">English</a>
@@ -14,7 +14,7 @@
   </p>
 </div>
 
-VELA = **Versatile Experiment Lab & Automation**。它给 Codex 一个有边界、证据感知、可复核的科研任务操作层，封装项目结构、`AGENTS.md` 指令、Codex 交接合约、证据台账、验证报告和 HELM 可读状态。
+VELA = **Versioned Evidence Lifecycle Architecture**。它给 Codex 一个有边界、证据感知、可复核的科研任务操作层，封装项目结构、`AGENTS.md` 指令、Codex 交接合约、证据台账、验证报告和 HELM 可读状态。
 
 它不是桌面 app，不是聊天界面，不是论文生成器，也不是隐藏自动执行的 agent。VELA 准备有边界的任务，Codex 执行，用户复核；[HELM](https://github.com/Marcus-AI4SS/HELM) 是可选的 Hub for Evidence, Logs & Monitoring，可以读取同一套项目状态。
 
@@ -78,7 +78,7 @@ review_standard:
 
 | 产品 | 角色 | 能否独立存在 |
 | --- | --- | --- |
-| **VELA** = Versatile Experiment Lab & Automation | 便携式项目实验室、自动化边界和 Codex 工作包 | 可以 |
+| **VELA** = Versioned Evidence Lifecycle Architecture | 便携式项目实验室、工作流边界和 Codex 工作包 | 可以 |
 | **HELM** = Hub for Evidence, Logs & Monitoring | 展示状态、证据、日志、文件、本地检查和 Codex 说明的本地看板 | 可以 |
 
 只需要可移植工作流时，单独使用 VELA。需要本地可视化看板时，再接入 HELM。
@@ -93,7 +93,9 @@ review_standard:
 ## 继续阅读
 
 - [快速开始](./docs/getting-started.md)
+- [Codex wrapper contract](./docs/codex-wrapper.md)
 - [工作流核心](./docs/workflow-core.md)
+- [项目结构](./docs/architecture.md)
 - [证据生命周期](./docs/evidence-lifecycle.md)
 - [质量检查](./docs/quality-checks.md)
 - [VELA 与 HELM 导入接口](./docs/imports/vela-helm-interface.md)
@@ -110,6 +112,7 @@ review_standard:
 | `docs/sync-log/` | 本地跨仓同步记录 |
 | `examples/` | 可检查的最小项目和快速演示 |
 | `package/` | `vela init` 复制到研究项目里的 starter package |
-| `schemas/` | context 和 handoff 的机器可读 schema |
-| `scripts/` | 初始化、验证和本地维护辅助脚本 |
+| `package/.vela/initializer-manifest.json` | 默认项目文件、目录和 agent 的 schema-driven 初始化清单 |
+| `schemas/` | context、handoff、initializer 和 validation 的机器可读 schema |
+| `scripts/` | CLI、schema-driven 初始化、验证和本地维护辅助脚本 |
 | `skills/` | Codex skill、profile、schema 和模板层 |

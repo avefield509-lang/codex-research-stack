@@ -11,10 +11,12 @@ if __package__ in {None, ""}:
     from scripts import init_research_project
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
+    from scripts import vela_initializer as initializer
 else:
     from scripts import init_research_project
     from scripts import public_release_env as pre
     from scripts import vela_contract as contract
+    from scripts import vela_initializer as initializer
 
 
 HANDOFF_REQUIRED_MARKERS = (
@@ -48,6 +50,7 @@ def _next_handoff_id(handoffs_dir: Path) -> str:
 def cmd_doctor(_args: argparse.Namespace) -> int:
     pre.ensure_app_state_dirs()
     codex_home = pre.CODEX_HOME
+    initializer_report = initializer.validate_manifest()
     payload = {
         "ok": True,
         "vela_repo": str(pre.REPO_ROOT),
@@ -56,10 +59,13 @@ def cmd_doctor(_args: argparse.Namespace) -> int:
         "codex_home_exists": codex_home.exists(),
         "vela_home": str(pre.APP_STATE_HOME),
         "package_exists": contract.package_root().exists(),
+        "initializer_manifest": str(initializer.default_manifest_path()),
+        "initializer_manifest_ok": initializer_report["ok"],
+        "initializer_manifest_errors": initializer_report["errors"],
         "git": shutil.which("git"),
         "next_action": "Run `vela init <project>` or `python scripts/vela.py init <project>`.",
     }
-    payload["ok"] = bool(payload["package_exists"])
+    payload["ok"] = bool(payload["package_exists"] and payload["initializer_manifest_ok"])
     _print_json(payload)
     return 0 if payload["ok"] else 1
 

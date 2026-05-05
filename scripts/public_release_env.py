@@ -5,8 +5,10 @@ import sys
 from pathlib import Path
 
 def _detect_repo_root() -> Path:
-    override = os.environ.get("CODEX_RESEARCH_STACK_ROOT")
-    if override:
+    for override_name in ("VELA_ROOT", "CODEX_RESEARCH_STACK_ROOT"):
+        override = os.environ.get(override_name)
+        if not override:
+            continue
         candidate = Path(override).expanduser().resolve()
         if (candidate / "docs").exists() and (candidate / "skills").exists():
             return candidate

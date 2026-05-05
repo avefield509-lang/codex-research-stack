@@ -1,6 +1,6 @@
 # Getting Started
 
-Use VELA when you want Codex to work from a bounded project state rather than loose conversation history. VELA is the Versatile Experiment Lab & Automation package around Codex, not a desktop app or a hidden agent loop.
+Use VELA when you want Codex to work from a bounded project state rather than loose conversation history. VELA is the Versioned Evidence Lifecycle Architecture around Codex, not a desktop app or a hidden agent loop.
 
 ## 1. Download VELA
 

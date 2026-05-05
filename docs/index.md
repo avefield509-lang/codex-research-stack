@@ -1,6 +1,6 @@
 # VELA
 
-VELA = **Versatile Experiment Lab & Automation**. It is a portable project lab and automation boundary for Codex, giving each project a readable structure before work spreads across files, notes, citations, datasets, and handoffs.
+VELA = **Versioned Evidence Lifecycle Architecture**. It is a portable project lab and workflow boundary for Codex, giving each project a readable structure before work spreads across files, notes, citations, datasets, and handoffs.
 
 ## Start Here
 
